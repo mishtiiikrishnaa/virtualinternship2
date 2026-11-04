@@ -1,138 +1,211 @@
+<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a id="readme-top"></a>
+<!--
+*** Thanks for checking out the Best-README-Template. If you have a suggestion
+*** that would make this better, please fork the repo and create a pull request
+*** or simply open an issue with the tag "enhancement".
+*** Don't forget to give the project a star!
+*** Thanks again! Now go create something AMAZING! :D
+-->
 
-[![Contributors](https://img.shields.io/github/contributors/mishtiiikrishnaa/virtualinternship2.svg?style=for-the-badge)](https://github.com/mishtiiikrishnaa/virtualinternship2/graphs/contributors)
-[![Forks](https://img.shields.io/github/forks/mishtiiikrishnaa/virtualinternship2.svg?style=for-the-badge)](https://github.com/mishtiiikrishnaa/virtualinternship2/network/members)
-[![Stargazers](https://img.shields.io/github/stars/mishtiiikrishnaa/virtualinternship2.svg?style=for-the-badge)](https://github.com/mishtiiikrishnaa/virtualinternship2/stargazers)
-[![Issues](https://img.shields.io/github/issues/mishtiiikrishnaa/virtualinternship2.svg?style=for-the-badge)](https://github.com/mishtiiikrishnaa/virtualinternship2/issues)
-[![Python](https://img.shields.io/badge/python-3.13-blue?style=for-the-badge)](https://www.python.org/)
-[![License: none](https://img.shields.io/badge/license-none-red?style=for-the-badge)](#license)
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![Python][python-shield]][python-url]
+[![License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-### virtualinternship2
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/mishtiiikrishnaa/virtualinternship2">
+    <img src="weeks/week1/figures/fig2_learner_journey.png" alt="Learner journey from never coded to built something" width="640" height="228">
+  </a>
 
-one repository for the four-week virtual programming fundamentals internship in ahmedabad. the internship runs from 2 november to 30 november 2026. the offer was received on 2 november 2026 and the week 1 report was prepared on 4 november 2026.
+<h3 align="center">Virtual Programming Fundamentals Internship — Project Plan and Scope Definition</h3>
 
-this repo holds the week one project plan and scope definition for a programming fundamentals module for non-programmers, plus everything needed to rebuild it. weeks 2 to 4 will get their own folders when their tasks are announced. i have not invented them here.
+  <p align="center">
+    A week 1 project plan for a programming fundamentals module for non-programmers — written for people who have never written a line of code.
+    <br />
+    <a href="#usage"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="weeks/week1/reports/Project_Plan_Scope_Definition_Week1.docx">View the Week 1 Report</a>
+    &middot;
+    <a href="https://github.com/mishtiiikrishnaa/virtualinternship2/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    &middot;
+    <a href="https://github.com/mishtiiikrishnaa/virtualinternship2/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+  </p>
+</div>
 
-[**Explore the docs »**](#usage) · [View Week 1 Report](#usage) · [Report Bug](https://github.com/mishtiiikrishnaa/virtualinternship2/issues/new) · [Request Feature](https://github.com/mishtiiikrishnaa/virtualinternship2/issues/new)
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#weeks">Weeks</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#layout">Layout</a></li>
+    <li><a href="#why-one-repository">Why One Repository</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-## table of contents
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-- [about the project](#about-the-project)
-- [weeks](#weeks)
-- [built with](#built-with)
-- [getting started](#getting-started)
-- [usage](#usage)
-- [layout](#layout)
-- [roadmap](#roadmap)
-- [why one repository](#why-one-repository)
-- [contributing](#contributing)
-- [license](#license)
-- [contact](#contact)
-- [acknowledgments](#acknowledgments)
+[![Curriculum structure — 10 modules building to a capstone][product-screenshot]]
 
-## about the project
+There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need — I think this is it.
 
-[![week 1 docx](https://img.shields.io/badge/report-week%201%20docx%20%7C%20~6%2C734%20words%20%7C%20348%20KB%20%7C%20word%20%7C%20docx-orange?style=for-the-badge)](weeks/week1/reports/Project_Plan_Scope_Definition_Week1.docx)
+Here's why:
 
-many great readme templates exist on github. this one follows [othneildrew/Best-README-Template](https://github.com/othneildrew/Best-README-Template) because it is clear and familiar. the project underneath it is simpler: a week 1 plan written for people who have never coded.
+- Your time should be focused on creating something amazing. A project that solves a problem and helps others
+- You shouldn't be doing the same tasks over and over like creating a README from scratch
+- You should implement DRY principles to the rest of your life 😄
 
-here is why the plan is organised this way:
+In this repository the "something amazing" is smaller and more practical: a week 1 project plan written for people who have never coded. It uses the same README structure as the template because that structure is clear and familiar, so a reviewer can find the weeks table, the layout, and the rebuild commands without hunting around.
 
-- your time should go into learning and teaching, not into assembling a report from scratch
-- non-programmers should not need to ask what a word means halfway through a document
-- planning documents should show milestones and resources, not just good intentions
+Of course, no one template will serve all projects since your needs may be different. You may also suggest changes by forking this repo and creating a pull request or opening an issue.
 
-of course, no single template fits every project. i have kept the factual structure of this internship repo (weeks table, layout, run commands) and dressed it in the template style so it is easy to navigate and easy to rebuild.
+<!-- Weeks -->
+### Weeks
 
-([back to top](#readme-top))
-
-## weeks
-
-| week | focus | status |
+| Week | Focus | Status |
 |---|---|---|
-| 1 | project planning and scope definition | ready to submit |
-| 2 | not started (focus added when announced) | not started |
-| 3 | not started (focus added when announced) | not started |
-| 4 | not started (focus added when announced) | not started |
+| 1 | Project planning and scope definition | Ready to submit |
+| 2 | Not started (focus added when announced) | Not started |
+| 3 | Not started (focus added when announced) | Not started |
+| 4 | Not started (focus added when announced) | Not started |
 
-week 1 deliverable: `weeks/week1/reports/Project_Plan_Scope_Definition_Week1.docx` — a full plan for a 30 hour programming fundamentals module for non-programmers, with a real table of contents field, tables, and six diagrams. there is also a pdf preview in the same folder.
+Week 1 deliverable: `weeks/week1/reports/Project_Plan_Scope_Definition_Week1.docx` — a full plan for a 30-hour programming fundamentals module for non-programmers, with a real table of contents field, tables, and six diagrams. There is also a PDF preview in the same folder.
 
-([back to top](#readme-top))
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## built with
+<!-- BUILT WITH -->
+### Built With
 
-this section lists the major tools used to build the week 1 report. smaller helpers are listed under acknowledgments.
+This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgments section. Here are a few examples.
 
-- [![Python](https://img.shields.io/badge/python-3.13-3776AB?style=flat-square)](https://www.python.org/)
-- [![python-docx](https://img.shields.io/badge/python--docx%201.2%20%7C%20docx%20build-4B0082?style=flat-square)](https://python-docx.readthedocs.io/)
-- [![matplotlib](https://img.shields.io/badge/matplotlib%20%7C%20figures-11557f?style=flat-square)](https://matplotlib.org/)
-- [![pytest](https://img.shields.io/badge/pytest%20%7C%20checks-0A9EDC?style=flat-square)](https://docs.pytest.org/)
-- [![LibreOffice](https://img.shields.io/badge/libreoffice%20%7C%20pdf%20preview-18A303?style=flat-square)](https://www.libreoffice.org/)
-- [![GitHub](https://img.shields.io/badge/github-181717?style=flat-square)](https://github.com/)
-- [![Google Colab](https://img.shields.io/badge/google%20colab%20%7C%20browser%20editor-F9AB00?style=flat-square)](https://colab.research.google.com/)
+* [![Python][Python.js]][Python-url]
+* [![python-docx][python-docx.js]][python-docx-url]
+* [![matplotlib][matplotlib.js]][matplotlib-url]
+* [![pytest][pytest.js]][pytest-url]
+* [![LibreOffice][LibreOffice.js]][LibreOffice-url]
+* [![GitHub][GitHub.js]][GitHub-url]
+* [![Google Colab][Colab.js]][Colab-url]
 
-([back to top](#readme-top))
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## getting started
+<!-- GETTING STARTED -->
+## Getting Started
 
-this is how you rebuild the week 1 report from a clean clone. the commands work from the repository root.
+This is an example of how you may give instructions on setting up your project locally. To get a local copy up and running follow these simple example steps.
 
-### prerequisites
+### Prerequisites
 
-you need python and pip. libreoffice is optional, it is only used for the pdf preview and for checking that the table of contents renders.
+This is an example of how to list things you need to use the software and how to install them.
 
-- python 3.10 or newer
-- pip
-- git
+* python 3.10 or newer
 
-```sh
-python3 --version
-pip3 --version
-```
+  ```sh
+  python3 --version
+  ```
 
-### installation
+* pip
 
-1. clone the repo
+  ```sh
+  pip3 --version
+  ```
 
-```sh
-git clone git@github.com:mishtiiikrishnaa/virtualinternship2.git
-cd virtualinternship2
-```
+* git
 
-2. install the python dependencies
+  ```sh
+  git --version
+  ```
 
-```sh
-pip install -r weeks/week1/requirements.txt
-```
+* libreoffice (optional — only for the PDF preview)
 
-3. build the figures and the report
+  ```sh
+  soffice --version
+  ```
 
-```sh
-make week1
-```
+### Installation
 
-4. change git remote url to avoid accidental pushes to the wrong place
+1. Clone the repo
 
-```sh
-git remote set-url origin git@github.com:mishtiiikrishnaa/virtualinternship2.git
-git remote -v # confirm the changes
-```
+   ```sh
+   git clone git@github.com:mishtiiikrishnaa/virtualinternship2.git
+   cd virtualinternship2
+   ```
 
-([back to top](#readme-top))
+2. Install Python dependencies
 
-## usage
+   ```sh
+   pip install -r weeks/week1/requirements.txt
+   ```
 
-use this section to open and check the report.
+3. Build the figures and the report
 
-- open `weeks/week1/reports/Project_Plan_Scope_Definition_Week1.docx` in microsoft word
-- use the table of contents field at the start of the document to jump between sections (right-click, update field, if page numbers need refreshing)
-- read the pdf preview at `weeks/week1/reports/Project_Plan_Scope_Definition_Week1.pdf` for a quick visual check of figures and tables
+   ```sh
+   make week1
+   ```
 
-for what each module covers and how the plan is structured, see [weeks/week1/README.md](weeks/week1/README.md).
+4. Run the checks
 
-([back to top](#readme-top))
+   ```sh
+   make check
+   ```
 
-## layout
+5. Change git remote url to avoid accidental pushes to base project
+
+   ```sh
+   git remote set-url origin git@github.com:mishtiiikrishnaa/virtualinternship2.git
+   git remote -v # confirm the changes
+   ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+
+* Open `weeks/week1/reports/Project_Plan_Scope_Definition_Week1.docx` in Microsoft Word. Use the table of contents field at the start of the document to jump between sections (right-click → Update Field if the numbers need refreshing).
+* Read the PDF preview at `weeks/week1/reports/Project_Plan_Scope_Definition_Week1.pdf` for a quick visual check of the figures and tables.
+* For what each module covers and how the plan is structured, see [weeks/week1/README.md](weeks/week1/README.md).
+
+_For more examples, please refer to the [Documentation](weeks/week1/README.md)_
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LAYOUT -->
+## Layout
 
 ```
 virtualinternship2/
@@ -150,68 +223,117 @@ virtualinternship2/
       tests/           validation tests
 ```
 
-weeks 2 to 4 get their own folders only when their tasks are released. nothing from a later week overwrites an earlier one.
+Weeks 2 to 4 get their own folders only when their tasks are released. Nothing from a later week overwrites an earlier one.
 
-([back to top](#readme-top))
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## roadmap
+<!-- WHY ONE REPOSITORY -->
+## Why One Repository
 
-- [x] week 1: project planning and scope definition
-  - add changelog
-  - keep dates honest (planned baseline 5 november 2026, all section 9 dates labelled planned)
-  - keep docx under 2 mb
-- [ ] week 2: not started (focus added when announced)
-- [ ] week 3: not started (focus added when announced)
-- [ ] week 4: not started (focus added when announced)
+The four weeks belong together. They share the same cohort of learners, the same planning language, and the same design decisions. Keeping them in one repo makes that link clear and lets later weeks build on Week 1 without copying files around. When a new week is announced it will get its own folder here, and nothing will overwrite an earlier week.
 
-see the [open issues](https://github.com/mishtiiikrishnaa/virtualinternship2/issues) for a full list of proposed features and known issues.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-([back to top](#readme-top))
+<!-- ROADMAP -->
+## Roadmap
 
-## why one repository
+- [x] Week 1: Project planning and scope definition
+  - Add CHANGELOG
+  - Keep dates honest (planned baseline 5 November 2026, all Section 9 dates labelled planned)
+  - Keep the .docx under 2 MB
+- [ ] Week 2: Not started (focus added when announced)
+- [ ] Week 3: Not started (focus added when announced)
+- [ ] Week 4: Not started (focus added when announced)
 
-the four weeks belong together. they share the same cohort of learners, the same planning language, and the same design decisions. keeping them in one repo makes that link clear and lets later weeks build on week 1 without copying files around. when a new week is announced it will get its own folder here, and nothing will overwrite an earlier week.
+See the [open issues](https://github.com/mishtiiikrishnaa/virtualinternship2/issues) for a full list of proposed features (and known issues).
 
-([back to top](#readme-top))
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## contributing
+<!-- CONTRIBUTING -->
+## Contributing
 
-this is a solo internship repo, so contributions are not open in the usual sense. if you find a mistake, please open an issue with the tag "enhancement" or "bug" and i will look at it. the usual open source steps are still a useful starting point if you fork it for your own internship:
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-1. fork the project
-2. create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. push to the branch (`git push origin feature/AmazingFeature`)
-5. open a pull request
+This is a solo internship repo, so contributions are not open in the usual sense. If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement". Don't forget to give the project a star! Thanks again!
 
-([back to top](#readme-top))
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## license
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-no license file is included in this repository. it is for internship submission and review only. please ask before reusing the text or figures.
+### Top contributors:
 
-([back to top](#readme-top))
+<a href="https://github.com/mishtiiikrishnaa/virtualinternship2/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=mishtiiikrishnaa/virtualinternship2" alt="contrib.rocks image" />
+</a>
 
-## contact
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-mishti krishna - [github @mishtiiikrishnaa](https://github.com/mishtiiikrishnaa)
+<!-- LICENSE -->
+## License
 
-project link: [https://github.com/mishtiiikrishnaa/virtualinternship2](https://github.com/mishtiiikrishnaa/virtualinternship2)
+No license file is included in this repository. It is for internship submission and review only. Please ask before reusing the text or figures.
 
-([back to top](#readme-top))
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## acknowledgments
+<!-- CONTACT -->
+## Contact
 
-use this space to credit the people and tools that made the report possible.
+Mishti Krishna - GitHub [@mishtiiikrishnaa](https://github.com/mishtiiikrishnaa)
 
-- [othneildrew/Best-README-Template](https://github.com/othneildrew/Best-README-Template) for the readme structure and badges. thanks.
-- [harvard cs50x](https://cs50.harvard.edu/x/), [python for everybody](https://www.py4e.com/), [automate the boring stuff with python](https://automatetheboringstuff.com/2e/), [code.org](https://code.org/en-US/curriculum/computer-science-fundamentals) for public beginner course structures
-- [mit teaching and learning lab](https://tll.mit.edu/teaching-resources/how-people-learn/worked-examples/) and [raspberry pi foundation](https://www.raspberrypi.org/blog/supporting-learners-with-programming-tasks-through-ai-generated-parsons-problems/) for worked examples and parsons problems
-- [shields.io](https://shields.io) for the badges
-- [choose an open source license](https://choosealicense.com) for the license note
+Project Link: [https://github.com/mishtiiikrishnaa/virtualinternship2](https://github.com/mishtiiikrishnaa/virtualinternship2)
 
-this repository was drafted with ai assistance and reviewed by me.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-thanks for reading. mishti.
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
 
-([back to top](#readme-top))
+Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+
+* [othneildrew/Best-README-Template](https://github.com/othneildrew/Best-README-Template) for the README structure and badges
+* [Harvard CS50x](https://cs50.harvard.edu/x/), [Python for Everybody](https://www.py4e.com/), [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/2e/), [Code.org](https://code.org/en-US/curriculum/computer-science-fundamentals) for public beginner course structures
+* [MIT Teaching and Learning Lab](https://tll.mit.edu/teaching-resources/how-people-learn/worked-examples/) and [Raspberry Pi Foundation](https://www.raspberrypi.org/blog/supporting-learners-with-programming-tasks-through-ai-generated-parsons-problems/) for worked examples and Parsons problems
+* [Shields.io](https://shields.io) for the badges
+* [Choose an Open Source License](https://choosealicense.com)
+
+This repository was drafted with AI assistance and reviewed by me.
+
+Thanks for reading. Mishti.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/mishtiiikrishnaa/virtualinternship2.svg?style=for-the-badge
+[contributors-url]: https://github.com/mishtiiikrishnaa/virtualinternship2/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/mishtiiikrishnaa/virtualinternship2.svg?style=for-the-badge
+[forks-url]: https://github.com/mishtiiikrishnaa/virtualinternship2/network/members
+[stars-shield]: https://img.shields.io/github/stars/mishtiiikrishnaa/virtualinternship2.svg?style=for-the-badge
+[stars-url]: https://github.com/mishtiiikrishnaa/virtualinternship2/stargazers
+[issues-shield]: https://img.shields.io/github/issues/mishtiiikrishnaa/virtualinternship2.svg?style=for-the-badge
+[issues-url]: https://github.com/mishtiiikrishnaa/virtualinternship2/issues
+[license-shield]: https://img.shields.io/badge/license-none-red.svg?style=for-the-badge
+[license-url]: #license
+[python-shield]: https://img.shields.io/badge/python-3.13-blue.svg?style=for-the-badge
+[python-url]: https://www.python.org/
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/
+[product-screenshot]: weeks/week1/figures/fig1_curriculum_structure.png
+<!-- Shields.io badges. You can a comprehensive list with many more badges at: https://github.com/inttter/md-badges -->
+[Python.js]: https://img.shields.io/badge/python-3.13-3776AB?style=for-the-badge&logo=python&logoColor=white
+[Python-url]: https://www.python.org/
+[python-docx.js]: https://img.shields.io/badge/python--docx-4B0082?style=for-the-badge
+[python-docx-url]: https://python-docx.readthedocs.io/
+[matplotlib.js]: https://img.shields.io/badge/matplotlib-11557f?style=for-the-badge
+[matplotlib-url]: https://matplotlib.org/
+[pytest.js]: https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white
+[pytest-url]: https://docs.pytest.org/
+[LibreOffice.js]: https://img.shields.io/badge/libreoffice-18A303?style=for-the-badge&logo=libreoffice&logoColor=white
+[LibreOffice-url]: https://www.libreoffice.org/
+[GitHub.js]: https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white
+[GitHub-url]: https://github.com/
+[Colab.js]: https://img.shields.io/badge/google%20colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=black
+[Colab-url]: https://colab.research.google.com/
