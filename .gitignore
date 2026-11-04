@@ -1,0 +1,5 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+weeks/week1/figures/*.tmp
