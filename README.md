@@ -251,7 +251,6 @@ No license file is included. This repository is for internship submission and re
 * [Shields.io](https://shields.io), for the badges
 * [Choose an Open Source License](https://choosealicense.com)
 
-This repository was drafted with AI assistance and reviewed by me.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
