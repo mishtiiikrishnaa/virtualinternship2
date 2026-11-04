@@ -277,7 +277,7 @@ Use this space to list resources you find helpful and would like to give credit 
 
 This repository was drafted with AI assistance and reviewed by me.
 
-Thanks for reading. Mishti.
+Thanks for reading. Meghana.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -221,7 +221,7 @@ r.font.size = Pt(13); r.font.color.rgb = RGBColor(0x2A, 0x9D, 0x8F); r.font.name
 doc.add_paragraph()
 sub = doc.add_paragraph()
 sub.alignment = WD_ALIGN_PARAGRAPH.CENTER
-r = sub.add_run(f"Author: Mishti Krishna\nWeek 1 of 4 | Offer received {OFFER_DATE}\nInternship period: {PERIOD}\nReport prepared on {REPORT_DATE}")
+r = sub.add_run(f"Author: Meghana Krishnakumar Nair\nWeek 1 of 4 | Offer received {OFFER_DATE}\nInternship period: {PERIOD}\nReport prepared on {REPORT_DATE}")
 r.font.size = Pt(11); r.font.name = "Georgia"
 doc.add_paragraph()
 n = doc.add_paragraph()
@@ -569,7 +569,7 @@ styled_table(
         ["D3", "10 modules, 30 teaching hours", "Scope fits one cohort with a capstone"],
     ],
 )
-para("Author: Mishti Krishna. This plan was prepared for Week 1 of the Virtual Programming Fundamentals Internship in Ahmedabad. Figures were generated with matplotlib in a consistent palette and saved as PNGs embedded in this document. The build is reproducible from the repository with the commands in the README.")
+para("Author: Meghana Krishnakumar Nair. This plan was prepared for Week 1 of the Virtual Programming Fundamentals Internship in Ahmedabad. Figures were generated with matplotlib in a consistent palette and saved as PNGs embedded in this document. The build is reproducible from the repository with the commands in the README.")
 
 # --- update-on-open ---
 settings = doc.settings.element
