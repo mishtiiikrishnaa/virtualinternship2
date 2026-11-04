@@ -71,7 +71,6 @@
     <li><a href="#honest-limitations">Honest Limitations</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -81,15 +80,9 @@
 
 [![Curriculum structure — 10 modules building to a capstone][product-screenshot]]
 
-There are many great README templates available on GitHub. This one follows [othneildrew/Best-README-Template](https://github.com/othneildrew/Best-README-Template). What changed is the shape of the content: it is a rebuild guide for a single internship week.
+This folder holds the Week 1 project plan for a programming fundamentals module for non-programmers. It is written for people who have never coded, so every jargon term is explained.
 
-Here's why this folder is organised the way it is:
-
-- Your time should be focused on creating something amazing. The report should be reproducible from scripts, not hand-edited after generation
-- You shouldn't be doing the same tasks over and over like rebuilding figures by hand
-- You should implement DRY principles to the rest of your life 😄 — figures and tests live beside the report they support
-
-Of course, no one template will serve all projects since your needs may be different. You may also suggest changes by forking this repo and creating a pull request or opening an issue.
+The report is reproducible from scripts (not hand-edited after generation), and figures and tests live beside the report they support.
 
 <!-- MODULE SUMMARY -->
 ### The Module in 5 Lines
@@ -269,15 +262,6 @@ This is a solo internship repo. If you have a suggestion that would make this be
 ## License
 
 No license file is included in this repository. It is for internship submission and review only. Please ask before reusing the text or figures.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTACT -->
-## Contact
-
-Mishti Krishna - GitHub [@mishtiiikrishnaa](https://github.com/mishtiiikrishnaa)
-
-Project Link: [https://github.com/mishtiiikrishnaa/virtualinternship2](https://github.com/mishtiiikrishnaa/virtualinternship2)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

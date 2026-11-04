@@ -22,7 +22,6 @@
 [![Issues][issues-shield]][issues-url]
 [![Python][python-shield]][python-url]
 [![License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -71,7 +70,6 @@
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -81,17 +79,9 @@
 
 [![Curriculum structure — 10 modules building to a capstone][product-screenshot]]
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need — I think this is it.
+One repository for the four-week Virtual Programming Fundamentals Internship in Ahmedabad. The internship runs from 2 to 30 November 2026; this Week 1 report was prepared on 4 November 2026.
 
-Here's why:
-
-- Your time should be focused on creating something amazing. A project that solves a problem and helps others
-- You shouldn't be doing the same tasks over and over like creating a README from scratch
-- You should implement DRY principles to the rest of your life 😄
-
-In this repository the "something amazing" is smaller and more practical: a week 1 project plan written for people who have never coded. It uses the same README structure as the template because that structure is clear and familiar, so a reviewer can find the weeks table, the layout, and the rebuild commands without hunting around.
-
-Of course, no one template will serve all projects since your needs may be different. You may also suggest changes by forking this repo and creating a pull request or opening an issue.
+This repo holds the Week 1 project plan and scope definition for a programming fundamentals module for non-programmers, plus everything needed to rebuild it. Weeks 2 to 4 will get their own folders when their tasks are announced.
 
 <!-- Weeks -->
 ### Weeks
@@ -279,21 +269,12 @@ No license file is included in this repository. It is for internship submission 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CONTACT -->
-## Contact
-
-Mishti Krishna - GitHub [@mishtiiikrishnaa](https://github.com/mishtiiikrishnaa)
-
-Project Link: [https://github.com/mishtiiikrishnaa/virtualinternship2](https://github.com/mishtiiikrishnaa/virtualinternship2)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
-* [othneildrew/Best-README-Template](https://github.com/othneildrew/Best-README-Template) for the README structure and badges
+* [Best-README-Template by othneildrew](https://github.com/othneildrew/Best-README-Template) for the README structure and badges
 * [Harvard CS50x](https://cs50.harvard.edu/x/), [Python for Everybody](https://www.py4e.com/), [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/2e/), [Code.org](https://code.org/en-US/curriculum/computer-science-fundamentals) for public beginner course structures
 * [MIT Teaching and Learning Lab](https://tll.mit.edu/teaching-resources/how-people-learn/worked-examples/) and [Raspberry Pi Foundation](https://www.raspberrypi.org/blog/supporting-learners-with-programming-tasks-through-ai-generated-parsons-problems/) for worked examples and Parsons problems
 * [Shields.io](https://shields.io) for the badges
@@ -319,8 +300,6 @@ Thanks for reading. Mishti.
 [license-url]: #license
 [python-shield]: https://img.shields.io/badge/python-3.13-blue.svg?style=for-the-badge
 [python-url]: https://www.python.org/
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/
 [product-screenshot]: weeks/week1/figures/fig1_curriculum_structure.png
 <!-- Shields.io badges. You can a comprehensive list with many more badges at: https://github.com/inttter/md-badges -->
 [Python.js]: https://img.shields.io/badge/python-3.13-3776AB?style=for-the-badge&logo=python&logoColor=white
