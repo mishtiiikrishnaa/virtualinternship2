@@ -3,3 +3,5 @@ __pycache__/
 .pytest_cache/
 .DS_Store
 weeks/week1/figures/*.tmp
+.pytest_cache/
+__pycache__/
