@@ -337,38 +337,37 @@ Session A (90 minutes): introduce and practise
 
 
 
-Session A blocks sum to 90 minutes (90 minutes).
+Session A blocks sum to 90 minutes.
 
 Session B (90 minutes): consolidate and extend
          minute range                    block type                 facilitator does                  learners do                materials
 
- 1-10                           arrive_recall                 recall question (review +       paired practice            starter + colab
-                                                              extension)
+ 1-10                           arrive_recall                 recall question in a new        mixed small groups         starter + colab
+                                                              topic order
 
- 11-30                          worked_example                worked example (review          paired practice            starter + colab
-                                                              + extension)
+ 11-30                          worked_example                worked example in a             mixed small groups         starter + colab
+                                                              new topic order
 
- 31-55                          pair_task                     parsons problem (review         paired practice            starter + colab
+ 31-55                          pair_task                     parsons problem in a            mixed small groups         starter + colab
 
 
                         Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 9
          minute range                    block type              facilitator does               learners do                   materials
 
-                                                            + extension)
+                                                            new topic order
 
- 56-75                          predict_run_modify          predict-run-modify           paired practice             starter + colab
-                                                            (review + extension)
+ 56-75                          predict_run_modify          predict-run-modify in a      mixed small groups          starter + colab
+                                                            new topic order
 
- 76-85                          exit_ticket                 exit ticket (review +        paired practice             starter + colab
-                                                            extension)
+ 76-85                          exit_ticket                 exit ticket in a new topic   mixed small groups          starter + colab
+                                                            order
 
- 86-90                          buffer                      buffer / recap (review +     paired practice             starter + colab
-                                                            extension)
+ 86-90                          buffer                      buffer / recap in a new      mixed small groups          starter + colab
+                                                            topic order
 
 
 
-Session B blocks sum to 90 minutes (90 minutes). Module totals 180 minutes (180 planned), balanced to module
-length.
+Session B blocks sum to 90 minutes.
 
 activities
 activity m1-p1 (type parsons), serves objectives m1-o1, time budget 25 minutes.
@@ -398,11 +397,10 @@ hint 2: talk first, type second.
 
 common misconceptions
 misconception m1-m1: a program is a paragraph of prose
-
+real error or wrong output: wrong mental model checked with a recipe card
 
                         Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 10
-real error or wrong output: wrong mental model checked with a recipe card
-facilitator response: show a recipe card vs a recipe sentence; code is instruction-like.
+facilitator response: show a recipe card vs a recipe sentence; code is instruction-like.
 
 formative assessment
 quiz m1-q1: what does a computer program do?
@@ -445,11 +443,11 @@ worked example: a complete runnable program
 
 
 name = "meghana"
+age = 26
 
 
                   Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 11
-age = 26
-height_cm = 165.5
+height_cm = 165.5
 print(name)
 print(age)
 print(height_cm)
@@ -498,45 +496,43 @@ Session A (90 minutes): introduce and practise
 
  56-75                          predict_run_modify               predict-run-modify               predict, run, modify          starter + colab
 
+ 76-85                          exit_ticket                      exit ticket                      one question +                starter + colab
+
                         Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 12
          minute range                    block type              facilitator does               learners do                   materials
 
-
-
- 76-85                          exit_ticket                 exit ticket                  one question +              starter + colab
                                                                                          confidence
 
  86-90                          buffer                      buffer / recap               recap and housekeep         starter + colab
 
 
 
-Session A blocks sum to 90 minutes (90 minutes).
+Session A blocks sum to 90 minutes.
 
 Session B (90 minutes): consolidate and extend
          minute range                    block type              facilitator does               learners do                   materials
 
- 1-10                           arrive_recall               recall question (review +    paired practice             starter + colab
-                                                            extension)
+ 1-10                           arrive_recall               recall question in a new     mixed small groups          starter + colab
+                                                            topic order
 
- 11-30                          worked_example              worked example (review       paired practice             starter + colab
-                                                            + extension)
+ 11-30                          worked_example              worked example in a          mixed small groups          starter + colab
+                                                            new topic order
 
- 31-55                          pair_task                   debug-this (review +         paired practice             starter + colab
-                                                            extension)
+ 31-55                          pair_task                   debug-this in a new topic    mixed small groups          starter + colab
+                                                            order
 
- 56-75                          predict_run_modify          predict-run-modify           paired practice             starter + colab
-                                                            (review + extension)
+ 56-75                          predict_run_modify          predict-run-modify in a      mixed small groups          starter + colab
+                                                            new topic order
 
- 76-85                          exit_ticket                 exit ticket (review +        paired practice             starter + colab
-                                                            extension)
+ 76-85                          exit_ticket                 exit ticket in a new topic   mixed small groups          starter + colab
+                                                            order
 
- 86-90                          buffer                      buffer / recap (review +     paired practice             starter + colab
-                                                            extension)
+ 86-90                          buffer                      buffer / recap in a new      mixed small groups          starter + colab
+                                                            topic order
 
 
 
-Session B blocks sum to 90 minutes (90 minutes). Module totals 180 minutes (180 planned), balanced to module
-length.
+Session B blocks sum to 90 minutes.
 
 activities
 activity m2-mis (type debug-this), serves objectives m2-o1, time budget 25 minutes.
@@ -554,11 +550,12 @@ expected result / success criteria: pair predicts 12 before running.
 hint ladder:
 hint 1: say the answer out loud.
 hint 2: predict in words first.
+activity m2-prm (type predict-run-modify), serves objectives m2-o1, m2-o2, time budget 20 minutes.
+instructions in plain words: predict the output, run it, modify one thing.
+
 
                         Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 13
-activity m2-prm (type predict-run-modify), serves objectives m2-o1, m2-o2, time budget 20 minutes.
-instructions in plain words: predict the output, run it, modify one thing.
-starter code: age = 12 print(age) # predict
+starter code: age = 12 print(age) # predict
 expected result / success criteria: output is 12.
 hint ladder:
 hint 1: what is 12 plus nothing?
@@ -598,10 +595,11 @@ predict before run makes the variable misconception visible [R8].
 Module 3: Input And Output
 module m3 of 10 - input and output. duration 120 minutes. prerequisites: m2.
 objectives: m3-o1.
-                   Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 14
-plain english and the real-life analogy
+
+plain english and the real-life analogy
 a program talks to the person through input and output: ask, remember, show.
-real-life analogy: ordering food at a restaurant: you say what you want (input), the kitchen writes it down
+                   Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 14
+real-life analogy: ordering food at a restaurant: you say what you want (input), the kitchen writes it down
 (variable), the waiter brings the dish (output).
 where this analogy breaks down: the kitchen cannot answer follow-up questions; it just follows the written ticket.
 
@@ -636,18 +634,18 @@ figure for the hardest idea in this module
 
 
 
-           Figure 3: file read / write flow. A file moves text into and out of the program through open, with, read and write.
+             Figure 3: file read / write flow. A file moves text into and out of the program through open, with, read and write.
 
-                                            Image description: diagram for m3: file read / write flow
+                                                 Image description: diagram for m3: file read / write flow
 
+One 120-minute session: introduce, practise, reflect
+        minute range                   block type                   facilitator does                    learners do              materials
 
+ 1-10                          arrive_recall                  recall question                   what did we learn last   starter + colab
 
+                       Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 15
+         minute range                    block type              facilitator does                learners do                  materials
 
-                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 15
-Session A (90 minutes): introduce and practise
-         minute range                    block type              facilitator does               learners do                   materials
-
- 1-10                           arrive_recall               recall question              what did we learn last      starter + colab
                                                                                          week?
 
  11-30                          worked_example              worked example               instructor types, thinks    starter + colab
@@ -660,37 +658,13 @@ figure for the hardest idea in this module
  76-85                          exit_ticket                 exit ticket                  one question +              starter + colab
                                                                                          confidence
 
- 86-90                          buffer                      buffer / recap               extra practice / recap      starter + colab
+ 86-100                         buffer                      buffer / recap               extra practice / recap      starter + colab
+
+ 101-120                        extended practice           extra exercises              independent work            starter + colab
 
 
 
-Session A blocks sum to 90 minutes (90 minutes).
-
-Session B (90 minutes): consolidate and extend
-         minute range                    block type              facilitator does               learners do                   materials
-
- 1-10                           arrive_recall               recall question (review +    paired practice             starter + colab
-                                                            extension)
-
- 11-30                          worked_example              worked example (review       paired practice             starter + colab
-                                                            + extension)
-
- 31-55                          pair_task                   pair task (review +          paired practice             starter + colab
-                                                            extension)
-
- 56-75                          predict_run_modify          predict-run-modify           paired practice             starter + colab
-                                                            (review + extension)
-
- 76-85                          exit_ticket                 exit ticket (review +        paired practice             starter + colab
-                                                            extension)
-
- 86-90                          buffer                      buffer / recap (review +     paired practice             starter + colab
-                                                            extension)
-
-
-
-Session B blocks sum to 90 minutes (90 minutes). Module totals 180 minutes (180 planned), balanced to module
-length.
+This single 120-minute table is the full module plan.
 
 activities
 activity m3-prm (type predict-run-modify), serves objectives m3-o1, time budget 20 minutes.
@@ -704,8 +678,7 @@ activity m3-a2 (type pair_task), serves objectives m3-o1, time budget 25 minutes
 instructions in plain words: talk through the prediction before typing.
 starter code: city = input("which city? ")
 expected result / success criteria: pair predicts the note.
-                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 16
-hint ladder:
+hint ladder:
 hint 1: what will be printed?
 hint 2: input returns text.
 activity m3-a3 (type debug-this), serves objectives m3-o1, time budget 25 minutes.
@@ -720,8 +693,8 @@ common misconceptions
 misconception m3-m1: input gives a number automatically
 real error or wrong output: input always gives text; int() converts
 facilitator response: show input then int() side by side.
-
-formative assessment
+                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 16
+formative assessment
 quiz m3-q1: what does input do?
 correct answer: asks the user and returns the typed text
 wrong option rationale: gives a number - it detects the misconception that input gives a number.
@@ -747,8 +720,10 @@ why it is designed this way
 a quick win through output early sustains motivation [R9].
 input/print are introduced together so the habit forms fast.
 
+
+
+
                   Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 17
-Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 18
 Module 4: Conditionals (If / Else)
 module m4 of 10 - conditionals (if / else). duration 180 minutes. prerequisites: m3.
 objectives: m4-o1.
@@ -792,7 +767,7 @@ welcome back, teacher
 
 
 
-                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 19
+                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 18
 figure for the hardest idea in this module
 
 
@@ -822,38 +797,37 @@ Session A (90 minutes): introduce and practise
 
 
 
-Session A blocks sum to 90 minutes (90 minutes).
+Session A blocks sum to 90 minutes.
 
 Session B (90 minutes): consolidate and extend
          minute range                    block type                    facilitator does                    learners do                     materials
 
- 1-10                           arrive_recall                    recall question (review +        paired practice                  starter + colab
-                                                                 extension)
+ 1-10                           arrive_recall                    recall question in a new         mixed small groups               starter + colab
+                                                                 topic order
 
- 11-30                          worked_example                   worked example (review           paired practice                  starter + colab
+ 11-30                          worked_example                   worked example in a              mixed small groups               starter + colab
 
 
-                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 20
+                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 19
          minute range                    block type              facilitator does               learners do                   materials
 
-                                                            + extension)
+                                                            new topic order
 
- 31-55                          pair_task                   parsons problem (review      paired practice             starter + colab
-                                                            + extension)
+ 31-55                          pair_task                   parsons problem in a         mixed small groups          starter + colab
+                                                            new topic order
 
- 56-75                          predict_run_modify          predict-run-modify           paired practice             starter + colab
-                                                            (review + extension)
+ 56-75                          predict_run_modify          predict-run-modify in a      mixed small groups          starter + colab
+                                                            new topic order
 
- 76-85                          exit_ticket                 exit ticket (review +        paired practice             starter + colab
-                                                            extension)
+ 76-85                          exit_ticket                 exit ticket in a new topic   mixed small groups          starter + colab
+                                                            order
 
- 86-90                          buffer                      buffer / recap (review +     paired practice             starter + colab
-                                                            extension)
+ 86-90                          buffer                      buffer / recap in a new      mixed small groups          starter + colab
+                                                            topic order
 
 
 
-Session B blocks sum to 90 minutes (90 minutes). Module totals 180 minutes (180 planned), balanced to module
-length.
+Session B blocks sum to 90 minutes.
 
 activities
 activity m4-p1 (type parsons), serves objectives m4-o1, time budget 25 minutes.
@@ -882,7 +856,8 @@ common misconceptions
 misconception m4-m1: the computer reads the story we tell it
 real error or wrong output: the computer runs only the taken branch
 facilitator response: trace which branch runs with a real run.
-                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 21
+
+                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 20
 misconception m4-m2: if means always
 real error or wrong output: if is a condition, not a constant
 facilitator response: show an if that is always true and one that is false.
@@ -927,7 +902,7 @@ written, not assumed.
 worked example: a complete runnable program
 
 
-                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 22
+                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 21
 total = 0
 for i in range(3):
      total = total + 1
@@ -966,7 +941,7 @@ figure for the hardest idea in this module
 
 
 
-                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 23
+                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 22
 Session A (90 minutes): introduce and practise
          minute range                    block type              facilitator does               learners do                   materials
 
@@ -987,33 +962,32 @@ figure for the hardest idea in this module
 
 
 
-Session A blocks sum to 90 minutes (90 minutes).
+Session A blocks sum to 90 minutes.
 
 Session B (90 minutes): consolidate and extend
          minute range                    block type              facilitator does               learners do                   materials
 
- 1-10                           arrive_recall               recall question (review +    paired practice             starter + colab
-                                                            extension)
+ 1-10                           arrive_recall               recall question in a new     mixed small groups          starter + colab
+                                                            topic order
 
- 11-30                          worked_example              worked example (review       paired practice             starter + colab
-                                                            + extension)
+ 11-30                          worked_example              worked example in a          mixed small groups          starter + colab
+                                                            new topic order
 
- 31-55                          pair_task                   parsons problem (review      paired practice             starter + colab
-                                                            + extension)
+ 31-55                          pair_task                   parsons problem in a         mixed small groups          starter + colab
+                                                            new topic order
 
- 56-75                          predict_run_modify          predict-run-modify           paired practice             starter + colab
-                                                            (review + extension)
+ 56-75                          predict_run_modify          predict-run-modify in a      mixed small groups          starter + colab
+                                                            new topic order
 
- 76-85                          exit_ticket                 exit ticket (review +        paired practice             starter + colab
-                                                            extension)
+ 76-85                          exit_ticket                 exit ticket in a new topic   mixed small groups          starter + colab
+                                                            order
 
- 86-90                          buffer                      buffer / recap (review +     paired practice             starter + colab
-                                                            extension)
+ 86-90                          buffer                      buffer / recap in a new      mixed small groups          starter + colab
+                                                            topic order
 
 
 
-Session B blocks sum to 90 minutes (90 minutes). Module totals 180 minutes (180 planned), balanced to module
-length.
+Session B blocks sum to 90 minutes.
 
 activities
 activity m5-p1 (type parsons), serves objectives m5-o1, time budget 25 minutes.
@@ -1027,7 +1001,9 @@ activity m5-prm (type predict-run-modify), serves objectives m5-o1, time budget 
 instructions in plain words: predict, run, modify.
 starter code: total = 0 for i in range(3): total = total + 1 print(total) # check
 expected result / success criteria: output is 3.
-                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 24
+
+
+                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 23
 hint ladder:
 hint 1: how many times?
 hint 2: what does range(3) mean?
@@ -1069,7 +1045,7 @@ pacing checkpoints: check stop condition each session.
 what to cut if running 15 minutes late: if 15 minutes late, drop the worked example to 12 minutes.
 setup checklist: open colab, type example live.
 
-                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 25
+                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 24
 why it is designed this way
 tracing is how novices read loops; loop trace figure supports this [R7].
 parsons problems lower load for ordering loops [R2][R3].
@@ -1077,7 +1053,7 @@ parsons problems lower load for ordering loops [R2][R3].
 
 
 
-                 Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 26
+                 Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 25
 Module 6: Functions (Reusable Steps)
 module m6 of 10 - functions (reusable steps). duration 180 minutes. prerequisites: m5.
 objectives: m6-o1.
@@ -1119,7 +1095,7 @@ captured real output for this variant:
 
 
 
-                 Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 27
+                 Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 26
 figure for the hardest idea in this module
 
 
@@ -1149,36 +1125,35 @@ Session A (90 minutes): introduce and practise
 
 
 
-Session A blocks sum to 90 minutes (90 minutes).
+Session A blocks sum to 90 minutes.
 
 Session B (90 minutes): consolidate and extend
          minute range                    block type                   facilitator does                    learners do                 materials
 
- 1-10                           arrive_recall                   recall question (review +         paired practice             starter + colab
-                                                                extension)
+ 1-10                           arrive_recall                   recall question in a new          mixed small groups          starter + colab
+                                                                topic order
 
- 11-30                          worked_example                  worked example (review            paired practice             starter + colab
-                                                                + extension)
+ 11-30                          worked_example                  worked example in a               mixed small groups          starter + colab
+                                                                new topic order
 
- 31-55                          pair_task                       pair task (review +               paired practice             starter + colab
-                                                                extension)
+ 31-55                          pair_task                       pair task in a new topic          mixed small groups          starter + colab
+                                                                order
 
- 56-75                          predict_run_modify              predict-run-modify                paired practice             starter + colab
-                                                                (review + extension)
+ 56-75                          predict_run_modify              predict-run-modify in a           mixed small groups          starter + colab
+                                                                new topic order
 
-                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 28
+                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 27
          minute range                    block type              facilitator does               learners do                   materials
 
- 76-85                          exit_ticket                 exit ticket (review +        paired practice             starter + colab
-                                                            extension)
+ 76-85                          exit_ticket                 exit ticket in a new topic   mixed small groups          starter + colab
+                                                            order
 
- 86-90                          buffer                      buffer / recap (review +     paired practice             starter + colab
-                                                            extension)
+ 86-90                          buffer                      buffer / recap in a new      mixed small groups          starter + colab
+                                                            topic order
 
 
 
-Session B blocks sum to 90 minutes (90 minutes). Module totals 180 minutes (180 planned), balanced to module
-length.
+Session B blocks sum to 90 minutes.
 
 activities
 activity m6-p1 (type parsons), serves objectives m6-o1, time budget 25 minutes.
@@ -1212,7 +1187,8 @@ real error or wrong output: return sends back; print shows
 facilitator response: show a function that returns and a caller that prints.
 
 
-                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 29
+
+                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 28
 formative assessment
 quiz m6-q1: what does a function return?
 correct answer: one value the caller can use
@@ -1259,7 +1235,7 @@ print(len(shopping))
 
 
 
-                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 30
+                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 29
 contacts = {"meghana": "9876543210", "arjun": "9123456780"}
 print(contacts["meghana"])
 
@@ -1306,7 +1282,7 @@ Session A (90 minutes): introduce and practise
  31-55                          pair_task                       parsons problem                  order list append / index   starter + colab
 
 
-                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 31
+                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 30
          minute range                    block type              facilitator does                learners do                  materials
 
                                                                                          lines
@@ -1320,33 +1296,32 @@ Session A (90 minutes): introduce and practise
 
 
 
-Session A blocks sum to 90 minutes (90 minutes).
+Session A blocks sum to 90 minutes.
 
 Session B (90 minutes): consolidate and extend
          minute range                    block type              facilitator does                learners do                  materials
 
- 1-10                           arrive_recall               recall question (review +    paired practice             starter + colab
-                                                            extension)
+ 1-10                           arrive_recall               recall question in a new     mixed small groups          starter + colab
+                                                            topic order
 
- 11-30                          worked_example              worked example (review       paired practice             starter + colab
-                                                            + extension)
+ 11-30                          worked_example              worked example in a          mixed small groups          starter + colab
+                                                            new topic order
 
- 31-55                          pair_task                   parsons problem (review      paired practice             starter + colab
-                                                            + extension)
+ 31-55                          pair_task                   parsons problem in a         mixed small groups          starter + colab
+                                                            new topic order
 
- 56-75                          predict_run_modify          predict-run-modify           paired practice             starter + colab
-                                                            (review + extension)
+ 56-75                          predict_run_modify          predict-run-modify in a      mixed small groups          starter + colab
+                                                            new topic order
 
- 76-85                          exit_ticket                 exit ticket (review +        paired practice             starter + colab
-                                                            extension)
+ 76-85                          exit_ticket                 exit ticket in a new topic   mixed small groups          starter + colab
+                                                            order
 
- 86-90                          buffer                      buffer / recap (review +     paired practice             starter + colab
-                                                            extension)
+ 86-90                          buffer                      buffer / recap in a new      mixed small groups          starter + colab
+                                                            topic order
 
 
 
-Session B blocks sum to 90 minutes (90 minutes). Module totals 180 minutes (180 planned), balanced to module
-length.
+Session B blocks sum to 90 minutes.
 
 activities
 activity m7-p1 (type parsons), serves objectives m7-o1, time budget 25 minutes.
@@ -1363,11 +1338,10 @@ expected result / success criteria: output is rice.
 hint ladder:
 hint 1: what did you append?
 hint 2: index 0.
+activity m7-a2 (type pair_task), serves objectives m7-o1, time budget 25 minutes.
 
-
-                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 32
-activity m7-a2 (type pair_task), serves objectives m7-o1, time budget 25 minutes.
-instructions in plain words: talk through the collection.
+                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 31
+instructions in plain words: talk through the collection.
 starter code: contacts = {"meghana": "9876543210"}
 expected result / success criteria: pair reads the key.
 hint ladder:
@@ -1407,12 +1381,10 @@ setup checklist: open colab, type example live.
 why it is designed this way
 collections are how real tasks store many values; lists before dictionaries [R9].
 
-
-
-                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 33
-Module 8: Files And Simple Data
+Module 8: Files And Simple Data
 module m8 of 10 - files and simple data. duration 180 minutes. prerequisites: m7.
-objectives: m8-o1.
+                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 32
+objectives: m8-o1.
 
 plain english and the real-life analogy
 programs can read what a person wrote in a file and write results back into a file.
@@ -1453,7 +1425,7 @@ ARJUN
 
 
 
-                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 34
+                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 33
 figure for the hardest idea in this module
 
 
@@ -1483,38 +1455,37 @@ Session A (90 minutes): introduce and practise
 
 
 
-Session A blocks sum to 90 minutes (90 minutes).
+Session A blocks sum to 90 minutes.
 
 Session B (90 minutes): consolidate and extend
          minute range                    block type                  facilitator does                    learners do                 materials
 
- 1-10                           arrive_recall                  recall question (review +         paired practice             starter + colab
-                                                               extension)
+ 1-10                           arrive_recall                  recall question in a new          mixed small groups          starter + colab
+                                                               topic order
 
- 11-30                          worked_example                 worked example (review            paired practice             starter + colab
-                                                               + extension)
+ 11-30                          worked_example                 worked example in a               mixed small groups          starter + colab
+                                                               new topic order
 
- 31-55                          pair_task                      pair task (review +               paired practice             starter + colab
-                                                               extension)
+ 31-55                          pair_task                      pair task in a new topic          mixed small groups          starter + colab
+                                                               order
 
- 56-75                          predict_run_modify             predict-run-modify                paired practice             starter + colab
-                                                               (review + extension)
+ 56-75                          predict_run_modify             predict-run-modify in a           mixed small groups          starter + colab
+                                                               new topic order
 
- 76-85                          exit_ticket                    exit ticket (review +             paired practice             starter + colab
-                                                               extension)
+ 76-85                          exit_ticket                    exit ticket in a new topic        mixed small groups          starter + colab
+                                                               order
 
- 86-90                          buffer                         buffer / recap (review +          paired practice             starter + colab
+ 86-90                          buffer                         buffer / recap in a new           mixed small groups          starter + colab
 
 
-                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 35
+                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 34
       minute range                   block type               facilitator does               learners do                   materials
 
-                                                         extension)
+                                                         topic order
 
 
 
-Session B blocks sum to 90 minutes (90 minutes). Module totals 180 minutes (180 planned), balanced to module
-length.
+Session B blocks sum to 90 minutes.
 
 activities
 activity m8-p1 (type debug-this), serves objectives m8-o1, time budget 25 minutes.
@@ -1550,7 +1521,8 @@ correct answer: opens and closes the file safely
 wrong option rationale: writes faster - it detects the misconception that with is optional.
 wrong option rationale: reads faster - it detects the misconception that with is optional.
 objective tested: m8-o1, bloom level apply.
-                     Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 36
+
+                     Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 35
 quiz m8-q2: what mode writes a file?
 correct answer: w
 wrong option rationale: r - it detects the misconception that mode x is write.
@@ -1602,7 +1574,7 @@ total = 10
 
 
 
-                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 37
+                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 36
 for i in range(5):
         total = total + i
 print(total)
@@ -1642,34 +1614,33 @@ Session A (90 minutes): introduce and practise
 
 
 
-Session A blocks sum to 90 minutes (90 minutes).
+Session A blocks sum to 90 minutes.
 
-                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 38
+                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 37
 Session B (90 minutes): consolidate and extend
          minute range                    block type              facilitator does               learners do                   materials
 
- 1-10                           arrive_recall               recall question (review +    paired practice             starter + colab
-                                                            extension)
+ 1-10                           arrive_recall               recall question in a new     mixed small groups          starter + colab
+                                                            topic order
 
- 11-30                          worked_example              worked example (review       paired practice             starter + colab
-                                                            + extension)
+ 11-30                          worked_example              worked example in a          mixed small groups          starter + colab
+                                                            new topic order
 
- 31-55                          pair_task                   debug-this (review +         paired practice             starter + colab
-                                                            extension)
+ 31-55                          pair_task                   debug-this in a new topic    mixed small groups          starter + colab
+                                                            order
 
- 56-75                          predict_run_modify          predict-run-modify           paired practice             starter + colab
-                                                            (review + extension)
+ 56-75                          predict_run_modify          predict-run-modify in a      mixed small groups          starter + colab
+                                                            new topic order
 
- 76-85                          exit_ticket                 exit ticket (review +        paired practice             starter + colab
-                                                            extension)
+ 76-85                          exit_ticket                 exit ticket in a new topic   mixed small groups          starter + colab
+                                                            order
 
- 86-90                          buffer                      buffer / recap (review +     paired practice             starter + colab
-                                                            extension)
+ 86-90                          buffer                      buffer / recap in a new      mixed small groups          starter + colab
+                                                            topic order
 
 
 
-Session B blocks sum to 90 minutes (90 minutes). Module totals 180 minutes (180 planned), balanced to module
-length.
+Session B blocks sum to 90 minutes.
 
 activities
 activity m9-p1 (type debug-this), serves objectives m9-o1, time budget 25 minutes.
@@ -1694,11 +1665,10 @@ hint ladder:
 hint 1: is input text or a number?
 hint 2: int() converts.
 
-
-                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 39
-common misconceptions
+common misconceptions
 misconception m9-m1: an error means I am bad at coding
-real error or wrong output: errors are messages; reading them is a skill
+                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 38
+real error or wrong output: errors are messages; reading them is a skill
 facilitator response: normalise: fix one, run again.
 misconception m9-m2: the first line of the traceback is the bug
 real error or wrong output: the LAST line names the error kind
@@ -1738,12 +1708,12 @@ learners build one small useful program from their own real-life task.
 real-life analogy: writing a recipe for a dish only they cook.
 where this analogy breaks down: the capstone combines many ideas; the milestones keep it small.
 
-
-                   Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 40
-worked example: a complete runnable program
+worked example: a complete runnable program
 
 
-name = input("what is your name? ")
+
+                   Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 39
+name = input("what is your name? ")
 print("hello " + name + ", welcome back")
 def add(a, b):
     return a + b
@@ -1778,60 +1748,85 @@ figure for the hardest idea in this module
 
 
 
-                 Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 41
-                 Figure 10: capstone architecture and milestone timeline. One small program is built in five milestones.
+              Figure 10: capstone architecture and milestone timeline. One small program is built in five milestones.
 
-                                         Image description: diagram for m10: capstone architecture and milestone timeline
-
-Session A (90 minutes): introduce and practise
-         minute range                    block type                     facilitator does                   learners do                materials
-
- 1-10                           arrive_recall                     recall question                  what did we learn last     starter + colab
-                                                                                                   week?
-
- 11-30                          worked_example                    worked example                   instructor types, thinks   starter + colab
-                                                                                                   aloud
-
- 31-55                          pair_task                         mini-challenge                   first capstone milestone   starter + colab
-
- 56-75                          predict_run_modify                predict-run-modify               predict, run, modify       starter + colab
-
- 76-85                          exit_ticket                       exit ticket                      one question +             starter + colab
-                                                                                                   confidence
-
- 86-90                          buffer                            buffer / recap                   recap and housekeep        starter + colab
+                                Image description: diagram for m10: capstone architecture and milestone timeline
 
 
 
-Session A blocks sum to 90 minutes (90 minutes).
+                 Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 40
+Session A (90): introduce and practise
+         minute range                    block type              facilitator does               learners do                   materials
 
-Session B (90 minutes): consolidate and extend
-         minute range                    block type                     facilitator does                   learners do                materials
+ 1-10                           arrive_recall               recall question in the       mixed small groups          starter + colab
+                                                            same topic order
 
- 1-10                           arrive_recall                     recall question (review +        paired practice            starter + colab
-                                                                  extension)
+ 11-30                          worked_example              worked example in the        mixed small groups          starter + colab
+                                                            same topic order
 
- 11-30                          worked_example                    worked example (review           paired practice            starter + colab
-                                                                  + extension)
+ 31-55                          pair_task                   mini-challenge in the        mixed small groups          starter + colab
+                                                            same topic order
 
- 31-55                          pair_task                         mini-challenge (review +         paired practice            starter + colab
-                                                                  extension)
+ 56-75                          predict_run_modify          predict-run-modify in        mixed small groups          starter + colab
+                                                            the same topic order
 
- 56-75                          predict_run_modify                predict-run-modify               paired practice            starter + colab
-                                                                  (review + extension)
+ 76-85                          exit_ticket                 exit ticket in the same      mixed small groups          starter + colab
+                                                            topic order
 
- 76-85                          exit_ticket                       exit ticket (review +            paired practice            starter + colab
-                                                                  extension)
-
- 86-90                          buffer                            buffer / recap (review +         paired practice            starter + colab
-                                                                  extension)
-
+ 86-90                          buffer                      buffer / recap in the same   mixed small groups          starter + colab
+                                                            topic order
 
 
-Session B blocks sum to 90 minutes (90 minutes). Module totals 180 minutes (180 planned), balanced to module
-length.
 
-activities
+Session A (90): introduce and practise blocks sum to 90 minutes.
+
+Session B (90): consolidate
+         minute range                    block type              facilitator does               learners do                   materials
+
+ 1-10                           arrive_recall               recall question in the       mixed small groups          starter + colab
+                                                            same topic order
+
+ 11-30                          worked_example              worked example in the        mixed small groups          starter + colab
+                                                            same topic order
+
+ 31-55                          pair_task                   mini-challenge in the        mixed small groups          starter + colab
+                                                            same topic order
+
+ 56-75                          predict_run_modify          predict-run-modify in        mixed small groups          starter + colab
+                                                            the same topic order
+
+ 76-85                          exit_ticket                 exit ticket in the same      mixed small groups          starter + colab
+                                                            topic order
+
+ 86-90                          buffer                      buffer / recap in the same   mixed small groups          starter + colab
+                                                            topic order
+
+
+
+Session B (90): consolidate blocks sum to 90 minutes.
+
+Session C (60): capstone
+         minute range                    block type              facilitator does               learners do                   materials
+
+ 1-10                           arrive_recall               recall question in the       mixed small groups          starter + colab
+                                                            same topic order
+
+ 11-30                          worked_example              worked example in the        mixed small groups          starter + colab
+                                                            same topic order
+
+ 31-55                          pair_task                   mini-challenge in the        mixed small groups          starter + colab
+                                                            same topic order
+
+ 56-60                          predict_run_modify          predict-run-modify in        mixed small groups          starter + colab
+                                                            the same topic order
+
+
+
+Session C (60): capstone blocks sum to 60 minutes.
+
+
+                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 41
+activities
 activity m10-m1 (type mini-challenge), serves objectives m10-o1, time budget 40 minutes.
 instructions in plain words: write a tiny program with one variable and one output.
 starter code: age = 12 print(age)
@@ -1841,8 +1836,7 @@ hint 1: one variable.
 hint 2: one print.
 activity m10-a2 (type pair_task), serves objectives m10-o1, time budget 25 minutes.
 instructions in plain words: plan the capstone task in pairs.
-                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 42
-starter code: task: count words in an essay
+starter code: task: count words in an essay
 expected result / success criteria: pair states the task.
 hint ladder:
 hint 1: use your own task.
@@ -1871,7 +1865,10 @@ differentiation
 learners who are stuck: use the m10-m1 starter and finish it.
 learners who finish early: ask the learner to add a loop to the capstone starter.
 
-facilitator notes
+
+
+                     Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 42
+facilitator notes
 pacing checkpoints: check milestone completion each session.
 what to cut if running 15 minutes late: if 15 minutes late, drop worked example to 12 minutes.
 setup checklist: open colab, set up milestone files.
@@ -1882,7 +1879,7 @@ milestones keep capstone small; rubric rewards process [D3].
 
 
 
-                   Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 43
+                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 43
 Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 44
 15 Assessment strategy
 assessment is gentle and frequent, then once deeply. formative checks include short quizzes, exit tickets, and small
@@ -2040,8 +2037,8 @@ m10-a3     m10                    debug-this              25                    
 
          Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 51
 Appendix B: quiz bank
-Module    ID                 Question         Correct           Wrong-            Misconcept       Objective         Bloom
-                                              answer            option            ion
+Module    ID                 Question         Correct           Wrong-             Misconcept      Objective         Bloom
+                                              answer            option             ion
                                                                 rationale /
                                                                 no entry
 m1        m1-q1              what does a      follows a list    guesses what                       m1-o1             remember
@@ -2054,10 +2051,88 @@ m1        m1-q2              breaking a       decomposition     debugging |     
                              smaller steps
                              is called
 
+m2        m2-q1              what does a      a value that      always the         variable is a   m2-o1             apply
+                             variable hold?   can change        same number |      box
+                                                                a fixed box
+                                                                type
+
+m2        m2-q2              what does        a value to the    stores a value |   print stores    m2-o1             apply
+                             print show?      user              fixes a bug
+
+m3        m3-q1              what does        asks the user     gives a            input gives a   m3-o1             understand
+                             input do?        and returns       number |           number
+                                              typed text        saves to a file
+
+m3        m3-q2              what does        shows text to     reads from a       print reads     m3-o1             understand
+                             print do?        the user          file | sends an
+                                                                email
+
+m4        m4-q1              what does an     whether a         whether a          if checks       m4-o1             apply
+                             if check?        condition is      variable exists    existence
+                                              true              | whether a
+                                                                file exists
+
+m4        m4-q2              what does else   the other         always runs |      else always     m4-o1             apply
+                             mean?            branch when       stops the          runs
+                                              the if is false   program
+
+m5        m5-q1              what does        three loop        three values to    range gives     m5-o1             apply
+                             range(3) give?   runs              add | three        values
+                                                                stored items
+
+m5        m5-q2              when does a      when the          after ten runs |   while has a     m5-o1             apply
+                             while loop       condition         never              default stop
+                             stop?            becomes false
+
+m6        m6-q1              what does a      one value the     nothing | all      function        m6-o1             apply
+                             function         caller can use    variables          returns
+                             return?                                               nothing
+
+m6        m6-q2              what is a        a name for an     the output |       parameter is    m6-o1             apply
+                             parameter?       input it          the function       the value
+                                              receives          name
+
+m7        m7-q1              what does        adds one item     adds at the        append adds     m7-o1             apply
+                             append do?       to the end        front |            at front
+                                                                removes item
+
+m7        m7-q2              how do you       use the key in    use a number |     dot notation    m7-o1             apply
+                             read one         brackets          use a dot          for dict
+                             dictionary
+                             value?
+
+m8        m8-q1              what does        opens and         writes faster |    with is         m8-o1             apply
+                                              closes a file
+
+               Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 52
+                         with do?           safely           reads faster     optional
+
+m8       m8-q2           what mode          w                r|x              mode x is        m8-o1             apply
+                         writes a file?                                       write
+
+m9       m9-q1           what does a        the error kind   the line you     traceback        m9-o1             analyse
+                         traceback          at the end       wrote first |    reads top-
+                         show first?                         your name        down
+
+m9       m9-q2           what is a logic    the code runs    will not run |   logic error      m9-o1             analyse
+                         error?             but gives        runs slowly      means crash
+                                            wrong output
+
+m10      m10-q1          what is the        one small        a new            capstone is a    m10-o1            create
+                         capstone?          useful           language | a     language
+                                            program built    test
+                                            from prior
+                                            ideas
+
+m10      m10-q2          what should        what it does     only the hours   explanation is   m10-o1            analyse
+                         you explain        and what you     spent | the      optional
+                         with your          would change     installation
+                         program?           next             steps
 
 
-Module                                  Exit ticket                                     Question
-m1                                      m1-et1                                          in your own words, what is an algorithm?
+
+Module                                 Exit ticket                                  Question
+m1                                     m1-et1                                       in your own words, what is an algorithm?
 
 m2
 
@@ -2080,7 +2155,7 @@ m10
 
 
 
-               Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 52
+           Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 53
 Appendix C: real error-message catalogue
 Error kind                                   Executed traceback excerpt                       Plain translation and location
                                              (captured)
@@ -2106,7 +2181,7 @@ SyntaxError                                  invalid syntax in def line.        
 
 
 
-                    Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 53
+                    Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 54
 Appendix D: glossary
 Term                                                               Plain definition
 algorithm                                                          a step-by-step set of instructions that solves a task
@@ -2171,7 +2246,7 @@ variable                                                           a named place
 
 
 
-                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 54
+                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 55
 Appendix E: readability and audit results
 Module                                Readability grade status                        Audit status
 m1                                    target 8 or lower                               all terms defined or in glossary
@@ -2197,7 +2272,7 @@ m10                                   target 8 or lower                         
 
 
 
-             Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 55
+             Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 56
 Appendix F: reference list
 ID                            Citation                            What it supports                    Status
 R1                            mit tll worked examples             novices benefit from studying a     verified source
@@ -2261,7 +2336,7 @@ D3                                        capstone pass mark 12 of 16 with      
 
 
 
-                Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 56
+                Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 57
 Appendix G: reproducibility
 Python version 3.13.7 (v3.13.7:bcee1c32211, Aug 14 2025, 19:10:51) [Clang 16.0.0 (clang-1600.0.26.6)]. Figures:
 python3 weeks/week2/src/make_figures.py. Document: python3 weeks/week2/src/build_docx.py. Pdf: soffice
@@ -2270,5 +2345,5 @@ headless. Tests: python3 -m pytest weeks/week1/tests/ weeks/week2/tests/ (21 pas
 
 
 
-                 Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 57
+                 Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 58
 

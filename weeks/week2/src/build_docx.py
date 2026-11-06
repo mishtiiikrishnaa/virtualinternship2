@@ -800,11 +800,11 @@ def lp_m10():
         plain_summary="learners build one small useful program from their own real-life task.",
         analogy="writing a recipe for a dish only they cook.",
         breaks_down="the capstone combines many ideas; the milestones keep it small.",
-        code_lines=["name = input(\"what is your name? \")", "print(\"hello \" + name + \", welcome back\")", "def add(a, b):", "    return a + b", "print(add(2, 3))"],
-        annotations="milestone mix: variables, input, function, print.",
-        captured_output="hello fatima, welcome back\n5",
-        varies_code=["name = input(\"what is your name? \")", "print(\"hello \" + name + \", welcome back\")", "def add(a, b):", "    return a + b", "print(add(2, 3))"],
-        varies_output="hello fatima, welcome back\n5",
+        code_lines=["count = 0", "for i in range(3):", "    count = count + 1", "print(\"count is \" + str(count))"],
+        annotations="simple counter plus print.",
+        captured_output="count is 3",
+        varies_code=["count = 0", "for i in range(2):", "    count = count + 1", "print(\"count is \" + str(count))"],
+        varies_output="count is 2",
         diagram_fig="fig12_capstone.png", diagram_caption="capstone architecture and milestone timeline",
         activity_specs=[
             dict(id="m10-m1", type="mini-challenge", objective_ids=["m10-o1"], minutes=40, instructions="write a tiny program with one variable and one output.", starter="age = 12\nprint(age)", success_criteria="output is 12.", hints=["one variable.", "one print."]),
@@ -877,6 +877,13 @@ para("validation plan: pilot the curriculum in week 3 with a small group, observ
 
 
 doc.add_page_break()
+h1("Capstone brief and rubric")
+para("Learners build one small useful program from an everyday task, for example a weekly spend tracker or to-do list saved to a file.")
+milestones=[["Milestone 1","Tiny program with one variable and one output","Session 18","m10-m1"],["Milestone 2","Add a conditional or loop","Session 19","m4, m5"],["Milestone 3","Add a function or collection","Session 19","m6, m7"],["Milestone 4","Add file handling or debugging","Session 20","m8, m9"],["Milestone 5","Integrate all parts and explain the program","Session 20","m10-o1"]]
+table(["Milestone","Deliverable","Timing","Objectives"], milestones)
+rubric=[["Criterion","Level 1","Level 2","Level 3","Level 4"],["Correctness","Does not run","Runs with wrong output","Runs correctly","Runs correctly and handles one small error"],["Use of ideas","Uses none","Uses one idea","Uses three ideas sensibly","Uses all ideas appropriately"],["Readability","Not readable","Barely follows steps","Follows steps in order","Steps clear and names sensible"],["Explanation","Cannot explain","Explains with help","Explains alone","Explains and explains one change"]]
+table(rubric[0], rubric[1:])
+para("Pass: 12 of 16, including at least two on Correctness. This is a design decision.")
 exec(open(str(__import__("pathlib").Path(__file__).resolve().parent / "appendices.py")).read())
 
 
