@@ -2400,25 +2400,25 @@ variable                                                           a named place
 Appendix E: readability and audit results
 Module                                     FK grade (plain summary +                       Status
                                            analogy)
-m1                                         -7.7                                            under target 8
+m1                                         7.6                                             under target 8
 
-m2                                         -7.0                                            under target 8
+m2                                         7.4                                             under target 8
 
-m3                                         -7.9                                            under target 8
+m3                                         8.5                                             missed target 8
 
-m4                                         -9.1                                            under target 8
+m4                                         6.3                                             under target 8
 
-m5                                         -6.7                                            under target 8
+m5                                         8.2                                             missed target 8
 
-m6                                         -7.4                                            under target 8
+m6                                         9.3                                             missed target 8
 
-m7                                         -9.5                                            under target 8
+m7                                         8.5                                             missed target 8
 
-m8                                         -9.0                                            under target 8
+m8                                         5.6                                             under target 8
 
-m9                                         -8.3                                            under target 8
+m9                                         7.0                                             under target 8
 
-m10                                        -10.2                                           under target 8
+m10                                        4.8                                             under target 8
 
 
 

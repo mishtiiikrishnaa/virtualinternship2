@@ -9,23 +9,22 @@ data = yaml.safe_load(open(Y, encoding="utf-8"))
 
 def _fk_grade(text):
     import re
-    words=text.split()
-    sentences=max(text.count("."),1)
-    vowels="aeiouy"
+    words=[w for w in re.split(r"[^A-Za-z]+", text) if w]
+    sentences=max(len(re.findall(r"[.!?]+", text)), 1)
     def syl(w):
-        w=w.lower().strip(".,!?")
+        w=w.lower().strip(".,!?()")
+        if not w: return 1
         c=0; prev=False
         for ch in w:
-            v=ch in vowels
+            v=ch in "aeiouy"
             if v and not prev: c+=1
             prev=v
         if w.endswith("e"): c=max(1,c-1)
         return max(1,c)
-    S=sum(syl(w) for w in words)
     W=max(1,len(words))
-    S=max(1,sentences)
-    grade=0.39*(W/S)+11.8*(S/W)-15.59
-    return round(grade,1)
+    S=sum(syl(w) for w in words)
+    grade=0.39*(W/sentences)+11.8*(S/W)-15.59
+    return round(max(0.0, grade), 1)
 def H1(t): doc.add_page_break(); doc.add_heading(t, level=1)
 def H2(t): doc.add_heading(t, level=2)
 def P(t): doc.add_paragraph(t)
