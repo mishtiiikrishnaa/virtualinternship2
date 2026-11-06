@@ -341,3 +341,28 @@ if __name__ == "__main__":
     fig1(); fig2(); fig3(); fig4(); fig5(); fig6(); fig7(); fig8(); fig9(); fig10(); fig11(); fig12()
     total = sum(p.stat().st_size for p in OUT.glob("*.png"))
     print(f"total png size: {total/1024:.0f} KB")
+
+def fig13():
+    fig, ax = plt.subplots(figsize=(9,4.5))
+    ax.set_xlim(0,10); ax.set_ylim(0,5); ax.axis("off")
+    ax.set_title("Figure: sequence decomposition", color=NAVY, pad=12)
+    box(ax,0.5,2.8,2.6,1.4,"1. Open the diary",TEAL)
+    box(ax,3.5,2.8,2.6,1.4,"2. Turn to page 3",BLUE)
+    box(ax,6.5,2.8,2.6,1.4,"3. Read the entry",CORAL)
+    arrow(ax,3.1,3.5,3.5,3.5); arrow(ax,6.1,3.5,6.5,3.5)
+    ax.text(5,0.7,"Each step in order; the sequence is the first idea.",ha="center",fontsize=9,color=GREY)
+    save(fig, "fig_m1_sequence_decomposition.png")
+
+def fig14():
+    fig, ax = plt.subplots(figsize=(9,4.5))
+    ax.set_xlim(0,10); ax.set_ylim(0,5); ax.axis("off")
+    ax.set_title("Figure: input, program, output", color=NAVY, pad=12)
+    box(ax,0.5,2.2,2.6,1.4,"Input",TEAL)
+    box(ax,3.6,2.2,2.6,1.4,"Program",BLUE)
+    box(ax,6.7,2.2,2.6,1.4,"Output",CORAL)
+    arrow(ax,3.1,2.9,3.6,2.9); arrow(ax,6.2,2.9,6.7,2.9)
+    ax.text(1.8,0.8,"user types",ha="center",fontsize=8,color=GREY)
+    ax.text(4.9,0.8,"code checks",ha="center",fontsize=8,color=GREY)
+    ax.text(8.0,0.8,"result shows",ha="center",fontsize=8,color=GREY)
+    save(fig, "fig_m3_input_output.png")
+fig13(); fig14()

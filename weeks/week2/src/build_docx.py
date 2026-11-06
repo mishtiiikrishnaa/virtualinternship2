@@ -137,11 +137,7 @@ def table(headers, rows, col_widths=None):
     return table
 
 def add_toc_field():
-    para_toc = doc.add_paragraph()
-    run = para_toc.add_run()
-    run.font.size = Pt(9)
-    run.font.color.rgb = GREY
-    run.text = "Right-click the live field in Word after opening to refresh page numbers."
+
     para2 = doc.add_paragraph()
     run2 = para2.add_run()
     fld_begin = parse_xml(f'<w:fldChar {nsdecls("w")} w:fldCharType="begin"/>')
@@ -152,11 +148,13 @@ def add_toc_field():
     run2._r.append(instr)
     run2._r.append(fld_sep)
     ph = para2.add_run("Curriculum content development and lesson plans  ")
-    for txt in ["1 About this curriculum 5", "2 Research summary 8", "3 Curriculum architecture 11",
-                "4 Session-by-session plan 14", "5 Lesson plan: m1 18", "6 Lesson plan: m2 22",
-                "7 Lesson plan: m3 25", "8 Lesson plan: m4 28", "9 Lesson plan: m5 31",
-                "10 Lesson plan: m6 34", "11 Lesson plan: m7 37", "12 Lesson plan: m8 40",
-                "13 Lesson plan: m9 43", "14 Lesson plan: m10 46", "15 Assessment strategy 50",
+    for txt in ["1 About this curriculum 5", "2 Evidence map 8", "3 Curriculum architecture 11",
+                "4 Session-by-session plan 14", "5 Module 1: Computational Thinking And Problem Decomposition 18",
+                "6 Module 2: Variables And Data Types 22", "7 Module 3: Input And Output 25",
+                "8 Module 4: Conditionals (If / Else) 28", "9 Module 5: Loops (Repeat) 31",
+                "10 Module 6: Functions (Reusable Steps) 34", "11 Module 7: Lists And Dictionaries 37",
+                "12 Module 8: Files And Simple Data 40", "13 Module 9: Debugging And Reading Errors 43",
+                "14 Module 10: Final Mini-Project (Capstone) 46", "15 Assessment strategy 50",
                 "16 Supporting non-programmers 53", "17 Review and refinement log 56",
                 "18 Validation plan and known limitations 59", "Appendix A: activity catalogue 62",
                 "Appendix B: quiz bank 65", "Appendix C: error catalogue 68", "Appendix D: glossary 71",
@@ -323,7 +321,7 @@ def emit_lesson_plan(mid, title, duration_min, prerequisites, objective_ids, pla
                      code_lines, annotations, captured_output, varies_code, varies_output,
                      diagram_fig, diagram_caption, activity_specs, misconceptions,
                      quiz_specs, exit_spec, diff_stuck, diff_fast, facilitator, rationale):
-    h1(f"Module {mid[1:]}: {title.title()}")
+    h1(f"{int(mid[1:])+4} Module {mid[1:]}: {title.title()}")
     para(f"module {mid} of 10 - {title}. duration {duration_min} minutes. prerequisites: {prerequisites}.")
     para(f"objectives: {', '.join(objective_ids)}.")
     h2(f"plain english and the real-life analogy")
@@ -331,7 +329,10 @@ def emit_lesson_plan(mid, title, duration_min, prerequisites, objective_ids, pla
     para(f"real-life analogy: {analogy}")
     para(f"where this analogy breaks down: {breaks_down}.")
     h2(f"worked example: a complete runnable program")
-    add_code_block(code_lines, shade_hex="F4F6F7")
+    if code_lines:
+        add_code_block(code_lines, shade_hex="F4F6F7")
+    else:
+        para("No Python is run here. Pseudocode only: 1 open the diary, 2 turn to page 3, 3 read the entry, 4 close the diary.")
     para(f"line-by-line annotation: {annotations}")
     para(f"captured real output (executed in a sandbox, python 3.13):")
     add_code_block([captured_output], shade_hex="EAF2F1")
@@ -503,10 +504,10 @@ def lp_m1():
         breaks_down="the friend might read faster than you meant; in code the computer cannot improvise.",
         code_lines=[],
         annotations="line 1: we call the list of steps a variable called steps. line 4: each line is one instruction, in order, like a recipe.",
-        captured_output="recipe made of 4 steps",
+        captured_output="No run. Pseudocode is not executed.",
         varies_code=["steps = [", '    "boil water",', '    "add tea bag",', '    "wait four minutes",', '    "add milk",', "]", 'print("recipe made of " + str(len(steps)) + " steps")'],
         varies_output="recipe made of 4 steps",
-        diagram_fig="fig1_curriculum_map.png", diagram_caption="curriculum map: modules, hours and dependencies",
+        diagram_fig="fig_m1_sequence_decomposition.png", diagram_caption="sequence and decomposition: steps in order",
         activity_specs=[
             dict(id="m1-p1", type="parsons", objective_ids=["m1-o1"], minutes=25, instructions="read the plain-English steps and put them in the right order in the code.", starter="steps = []", success_criteria="the printed count equals 4 and the steps read in order.", hints=["think about what happens first.", "the print uses len(steps), the number of steps.", "order matters: sequence is the first idea."]),
             dict(id="m1-prm", type="predict-run-modify", objective_ids=["m1-o1", "m1-o2"], minutes=20, instructions="predict the output, run it, then change one thing.", starter="steps = [\n    \"open the diary\",\n]", success_criteria="output is the recipe line; changing order changes nothing visible here, so change the count.", hints=["predict before running.", "len() counts items.", "sequence means order."]),
@@ -570,7 +571,7 @@ def lp_m3():
         captured_output="hello meghana. you will be 27 next year.",
         varies_code=['city = input("which city are you in? ")', 'print("noted: " + city)'],
         varies_output="noted: ahmedabad",
-        diagram_fig="fig10_file_flow.png", diagram_caption="file read / write flow",
+        diagram_fig="fig_m3_input_output.png", diagram_caption="input, program and output",
         activity_specs=[
             dict(id="m3-prm", type="predict-run-modify", objective_ids=["m3-o1"], minutes=20, instructions="predict the output, run it, modify one thing.", starter='name = input("what is your name? ")\nprint("hi " + name)', success_criteria="output greets the typed name.", hints=["input returns text.", "plus joins strings."]),
             dict(id="m3-a2", type="pair_task", objective_ids=["m3-o1"], minutes=25, instructions="talk through the prediction before typing.", starter='city = input("which city? ")', success_criteria="pair predicts the note.", hints=["what will be printed?", "input returns text."]),
@@ -886,6 +887,18 @@ table(rubric[0], rubric[1:])
 para("Pass: 12 of 16, including at least two on Correctness. This is a design decision.")
 exec(open(str(__import__("pathlib").Path(__file__).resolve().parent / "appendices.py")).read())
 
+
+cp = doc.core_properties
+cp.title = "Content Development and Curriculum Building"
+cp.subject = "Programming fundamentals for non-programmers"
+cp.author = "Meghana Krishnakumar Nair"
+cp.keywords = "programming fundamentals, curriculum, lesson plans, Python, activities"
+from datetime import datetime
+now = datetime(2026,11,6,12,0,0)
+cp.created = now
+cp.modified = now
+cp.category = "curriculum"
+cp.comments = "Week 2 of the Virtual Programming Fundamentals Internship"
 
 settings = doc.settings.element
 update = parse_xml(f'<w:updateFields {nsdecls("w")} w:val="true"/>')
