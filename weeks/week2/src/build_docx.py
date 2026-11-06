@@ -487,7 +487,7 @@ def lp_m1():
         plain_summary="before any code, learners describe a task as a clear list of steps in plain words.",
         analogy="giving directions to a friend who has never seen the street: write the steps in order, one after another, no skipping.",
         breaks_down="the friend might read faster than you meant; in code the computer cannot improvise.",
-        code_lines=["steps = [", '    "open the diary",', '    "turn to page 3",', '    "read the entry",', '    "close the diary",', "]", 'print("recipe made of " + str(len(steps)) + " steps")'],
+        code_lines=[],
         annotations="line 1: we call the list of steps a variable called steps. line 4: each line is one instruction, in order, like a recipe.",
         captured_output="recipe made of 4 steps",
         varies_code=["steps = [", '    "boil water",', '    "add tea bag",', '    "wait four minutes",', '    "add milk",', "]", 'print("recipe made of " + str(len(steps)) + " steps")'],
@@ -527,8 +527,8 @@ def lp_m2():
         diagram_fig="fig5_variable_box.png", diagram_caption="variable as a labelled box: before and after assignment",
         activity_specs=[
             dict(id="m2-mis", type="debug-this", objective_ids=["m2-o1"], minutes=25, instructions="find the real bug in almost-correct code.", starter="name = \"meghana\"\nage = 26\nprint(name)\nprint(agex)", success_criteria="the code runs and prints meghana and 26.", hints=["run it and read the traceback.", "the last line names the bad token.", "did you mean age?"]),
-            dict(id="m2-pair", type="pair_task", objective_ids=["m2-o2"], minutes=25, instructions="talk through the prediction before typing.", starter="age = 12", success_criteria="pair predicts 12 before running.", hints=["say the answer out loud.", "predict in words first."]),
-            dict(id="m2-prm", type="predict-run-modify", objective_ids=["m2-o1", "m2-o2"], minutes=20, instructions="predict the output, run it, modify one thing.", starter="age = 12\nprint(age)", success_criteria="output is 12.", hints=["what is 12 plus nothing?", "just print age."]),
+            dict(id="m2-pair", type="pair_task", objective_ids=["m2-o2"], minutes=25, instructions="talk through the prediction before typing.", starter="age = 12 # talk only", success_criteria="pair predicts 12 before running.", hints=["say the answer out loud.", "predict in words first."]),
+            dict(id="m2-prm", type="predict-run-modify", objective_ids=["m2-o1", "m2-o2"], minutes=20, instructions="predict the output, run it, modify one thing.", starter="age = 12\nprint(age) # predict", success_criteria="output is 12.", hints=["what is 12 plus nothing?", "just print age."]),
         ],
         misconceptions=[
             dict(id="m2-m1", wrong_belief="the variable is a box that holds the value", real_error="a reassign creates a new value; the name points at it", response="use the labelled-box story and show the before/after diagram."),
@@ -553,7 +553,7 @@ def lp_m3():
         breaks_down="the kitchen cannot answer follow-up questions; it just follows the written ticket.",
         code_lines=['name = input("what is your name? ")', 'age = input("how old are you? ")', 'print("hello " + name + ". you will be " + str(int(age) + 1) + " next year.")'],
         annotations="line 1: input asks and remembers. line 2: int() turns the text into a number.",
-        captured_output="hello meghana. you will be 27 next year",
+        captured_output="hello meghana. you will be 27 next year.",
         varies_code=['city = input("which city are you in? ")', 'print("noted: " + city)'],
         varies_output="noted: ahmedabad",
         diagram_fig="fig10_file_flow.png", diagram_caption="file read / write flow",
@@ -595,7 +595,7 @@ def lp_m4():
         activity_specs=[
             dict(id="m4-p1", type="parsons", objective_ids=["m4-o1"], minutes=25, instructions="order the if / else lines.", starter="age = 12\nif age >= 13:\n    print(\"scary\")\nelse:\n    print(\"gentle\")", success_criteria="the condition is first and else pairs correctly.", hints=["condition goes first.", "else pairs with if."]),
             dict(id="m4-prm", type="predict-run-modify", objective_ids=["m4-o1"], minutes=20, instructions="predict, run, modify.", starter="age = 12\nif age >= 13:\n    print(\"scary\")", success_criteria="prints gentle cartoon.", hints=["12 is not 13.", "change the number."]),
-            dict(id="m4-a2", type="pair_task", objective_ids=["m4-o1"], minutes=25, instructions="talk through the branch.", starter="age = 12", success_criteria="pair states the branch.", hints=["what is 12 >= 13?", "false means else."]),
+            dict(id="m4-a2", type="pair_task", objective_ids=["m4-o1"], minutes=25, instructions="talk through the branch.", starter="age = 12 # branch choice", success_criteria="pair states the branch.", hints=["what is 12 >= 13?", "false means else."]),
         ],
         misconceptions=[
             dict(id="m4-m1", wrong_belief="the computer reads the story we tell it", real_error="the computer runs only the taken branch", response="trace which branch runs with a real run."),
@@ -627,7 +627,7 @@ def lp_m5():
         diagram_fig="fig7_loop_trace.png", diagram_caption="loop trace: variable values step by step",
         activity_specs=[
             dict(id="m5-p1", type="parsons", objective_ids=["m5-o1"], minutes=25, instructions="order the loop lines so the stop condition works.", starter="total = 0\nfor i in range(3):\n    total = total + 1\nprint(total)", success_criteria="output is 3.", hints=["range gives the count.", "the stop condition must end the loop."]),
-            dict(id="m5-prm", type="predict-run-modify", objective_ids=["m5-o1"], minutes=20, instructions="predict, run, modify.", starter="total = 0\nfor i in range(3):\n    total = total + 1\nprint(total)", success_criteria="output is 3.", hints=["how many times?", "what does range(3) mean?"]),
+            dict(id="m5-prm", type="predict-run-modify", objective_ids=["m5-o1"], minutes=20, instructions="predict, run, modify.", starter="total = 0\nfor i in range(3):\n    total = total + 1\nprint(total) # check", success_criteria="output is 3.", hints=["how many times?", "what does range(3) mean?"]),
             dict(id="m5-a2", type="pair_task", objective_ids=["m5-o1"], minutes=25, instructions="talk through the loop.", starter="total = 0", success_criteria="pair states the stop condition.", hints=["what changes each round?", "when does it stop?"]),
         ],
         misconceptions=[
@@ -663,7 +663,7 @@ def lp_m6():
         diagram_fig="fig8_function_machine.png", diagram_caption="function as a machine: inputs, return value and call",
         activity_specs=[
             dict(id="m6-p1", type="parsons", objective_ids=["m6-o1"], minutes=25, instructions="order the def / call lines.", starter="def add(a, b):\n    return a + b\nprint(add(2, 3))", success_criteria="output is 5.", hints=["def comes before call.", "parameters go in the def."]),
-            dict(id="m6-prm", type="predict-run-modify", objective_ids=["m6-o1"], minutes=20, instructions="predict, run, modify.", starter="def add(a, b):\n    return a + b\nprint(add(2, 3))", success_criteria="output is 5.", hints=["what is 2 + 3?", "change the numbers."]),
+            dict(id="m6-prm", type="predict-run-modify", objective_ids=["m6-o1"], minutes=20, instructions="predict, run, modify.", starter="def add(a, b):\n    return a + b\nprint(add(2, 3)) # review", success_criteria="output is 5.", hints=["what is 2 + 3?", "change the numbers."]),
             dict(id="m6-a2", type="pair_task", objective_ids=["m6-o1"], minutes=25, instructions="talk through the function.", starter="def add(a, b):", success_criteria="pair states the return.", hints=["what goes in?", "what comes out?"]),
         ],
         misconceptions=[
@@ -696,7 +696,7 @@ def lp_m7():
         diagram_fig="fig9_list_dict.png", diagram_caption="list vs dictionary: same data, two shapes",
         activity_specs=[
             dict(id="m7-p1", type="parsons", objective_ids=["m7-o1"], minutes=25, instructions="order the list append / index lines.", starter='shopping = ["rice", "oil", "tea"]\nshopping.append("salt")\nprint(shopping[0])', success_criteria="output is rice.", hints=["append adds at the end.", "index 0 is the first."]),
-            dict(id="m7-prm", type="predict-run-modify", objective_ids=["m7-o1"], minutes=20, instructions="predict, run, modify.", starter='shopping = ["rice", "oil", "tea"]\nshopping.append("salt")\nprint(shopping[0])', success_criteria="output is rice.", hints=["what did you append?", "index 0."]),
+            dict(id="m7-prm", type="predict-run-modify", objective_ids=["m7-o1"], minutes=20, instructions="predict, run, modify.", starter='shopping = ["rice", "oil", "tea"]\nshopping.append("salt")\nprint(shopping[0]) # p1', success_criteria="output is rice.", hints=["what did you append?", "index 0."]),
             dict(id="m7-a2", type="pair_task", objective_ids=["m7-o1"], minutes=25, instructions="talk through the collection.", starter='contacts = {"meghana": "9876543210"}', success_criteria="pair reads the key.", hints=["dictionary is name to value.", "key in quotes."]),
         ],
         misconceptions=[
@@ -762,7 +762,7 @@ def lp_m9():
         activity_specs=[
             dict(id="m9-p1", type="debug-this", objective_ids=["m9-o1"], minutes=25, instructions="read the traceback, find the line, fix.", starter='age = input("how old are you? ")\nprint("next year you will be " + str(int(age)) + " years old")', success_criteria="runs with numeric input.", hints=["read the last line.", "read the marked line."]),
             dict(id="m9-a2", type="pair_task", objective_ids=["m9-o1"], minutes=25, instructions="trace together.", starter='age = input("how old? ")', success_criteria="pair reads traceback.", hints=["last line first.", "marked line second."]),
-            dict(id="m9-a3", type="predict-run-modify", objective_ids=["m9-o1"], minutes=20, instructions="predict, run, modify.", starter='age = input("how old? ")\nprint("next year you will be " + str(int(age)) + " years old")', success_criteria="no traceback.", hints=["is input text or a number?", "int() converts."]),
+            dict(id="m9-a3", type="predict-run-modify", objective_ids=["m9-o1"], minutes=20, instructions="predict, run, modify.", starter='age = input("how old? ")\nprint("next year you will be " + str(int(age)) + " years old") # a3', success_criteria="no traceback.", hints=["is input text or a number?", "int() converts."]),
         ],
         misconceptions=[
             dict(id="m9-m1", wrong_belief="an error means I am bad at coding", real_error="errors are messages; reading them is a skill", response="normalise: fix one, run again."),
