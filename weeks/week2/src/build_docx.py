@@ -154,18 +154,18 @@ def add_toc_field():
     run2._r.append(instr)
     run2._r.append(fld_sep)
     ph = para2.add_run("Curriculum content development and lesson plans  ")
-    for txt in ["1 About this curriculum 5", "2 Evidence map 8", "3 Curriculum architecture 11",
-                "4 Session-by-session plan 14", "5 Module 1: Computational Thinking And Problem Decomposition 18",
-                "6 Module 2: Variables And Data Types 22", "7 Module 3: Input And Output 25",
-                "8 Module 4: Conditionals (If / Else) 28", "9 Module 5: Loops (Repeat) 31",
-                "10 Module 6: Functions (Reusable Steps) 34", "11 Module 7: Lists And Dictionaries 37",
-                "12 Module 8: Files And Simple Data 40", "13 Module 9: Debugging And Reading Errors 43",
-                "14 Module 10: Final Mini-Project (Capstone) 46", "15 Assessment strategy 50",
-                "16 Supporting non-programmers 53", "17 Review and refinement log 56",
-                "18 Validation plan and known limitations 59", "Appendix A: activity catalogue 62",
-                "Appendix B: quiz bank 65", "Appendix C: error catalogue 68", "Appendix D: glossary 71",
-                "Appendix E: readability and audit results 73", "Appendix F: reference list 75",
-                "Appendix G: reproducibility 77"]:
+    for txt in ["1 About this curriculum 4", "2 Evidence map 5", "3 Curriculum architecture 6",
+                "4 Session-by-session plan 7", "5 Module 1: Computational thinking and problem decomposition 8",
+                "6 Module 2: Variables and data types 11", "7 Module 3: Input and output 15",
+                "8 Module 4: Conditionals (if / else) 19", "9 Module 5: Loops (repeat) 23",
+                "10 Module 6: Functions (reusable steps) 27", "11 Module 7: Lists and dictionaries 30",
+                "12 Module 8: Files and simple data 34", "13 Module 9: Debugging and reading errors 38",
+                "14 Module 10: Final mini-project (capstone) 41", "15 Assessment strategy 47",
+                "16 Supporting non-programmers 48", "17 Review and refinement log 49",
+                "18 Validation plan and known limitations 50", "Appendix A: activity catalogue 52",
+                "Appendix B: quiz bank 54", "Appendix C: error catalogue 56", "Appendix D: glossary 57",
+                "Appendix E: readability and audit results 58", "Appendix F: reference list 60",
+                "Appendix G: reproducibility 61"]:
         para2.add_run("\n")
         rr = para2.add_run(txt)
         rr.font.size = Pt(9)
@@ -343,7 +343,8 @@ def emit_lesson_plan(mid, title, duration_min, prerequisites, objective_ids, pla
                      code_lines, annotations, captured_output, varies_code, varies_output,
                      diagram_fig, diagram_caption, activity_specs, misconceptions,
                      quiz_specs, exit_spec, diff_stuck, diff_fast, facilitator, rationale):
-    h1(f"{int(mid[1:])+4} Module {mid[1:]}: {title.title()}")
+    module_heading = (title[0].upper() + title[1:].lower()) if title else title
+    h1(f"{int(mid[1:])+4} Module {mid[1:]}: {module_heading}")
     para(f"module {mid} of 10 - {title}. duration {duration_min} minutes. prerequisites: {prerequisites}.")
     para(f"objectives: {', '.join(objective_ids)} ({'; '.join(objective_statements.get(o,o) for o in objective_ids)}).")
     h2(f"plain english and the real-life analogy")

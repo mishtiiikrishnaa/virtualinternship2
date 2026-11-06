@@ -24,31 +24,31 @@ Use the list below to find each section quickly. In Microsoft Word the entries a
 update automatically. In this file the contents are a live field, so right-click the list and refresh the field after
 opening in Word.
 Curriculum content development and lesson plans
-1 About this curriculum 5
-2 Evidence map 8
-3 Curriculum architecture 11
-4 Session-by-session plan 14
-5 Module 1: Computational Thinking And Problem Decomposition 18
-6 Module 2: Variables And Data Types 22
-7 Module 3: Input And Output 25
-8 Module 4: Conditionals (If / Else) 28
-9 Module 5: Loops (Repeat) 31
-10 Module 6: Functions (Reusable Steps) 34
-11 Module 7: Lists And Dictionaries 37
-12 Module 8: Files And Simple Data 40
-13 Module 9: Debugging And Reading Errors 43
-14 Module 10: Final Mini-Project (Capstone) 46
-15 Assessment strategy 50
-16 Supporting non-programmers 53
-17 Review and refinement log 56
-18 Validation plan and known limitations 59
-Appendix A: activity catalogue 62
-Appendix B: quiz bank 65
-Appendix C: error catalogue 68
-Appendix D: glossary 71
-Appendix E: readability and audit results 73
-Appendix F: reference list 75
-Appendix G: reproducibility 77
+1 About this curriculum 4
+2 Evidence map 5
+3 Curriculum architecture 6
+4 Session-by-session plan 7
+5 Module 1: Computational thinking and problem decomposition 8
+6 Module 2: Variables and data types 11
+7 Module 3: Input and output 15
+8 Module 4: Conditionals (if / else) 19
+9 Module 5: Loops (repeat) 23
+10 Module 6: Functions (reusable steps) 27
+11 Module 7: Lists and dictionaries 30
+12 Module 8: Files and simple data 34
+13 Module 9: Debugging and reading errors 38
+14 Module 10: Final mini-project (capstone) 41
+15 Assessment strategy 47
+16 Supporting non-programmers 48
+17 Review and refinement log 49
+18 Validation plan and known limitations 50
+Appendix A: activity catalogue 52
+Appendix B: quiz bank 54
+Appendix C: error catalogue 56
+Appendix D: glossary 57
+Appendix E: readability and audit results 58
+Appendix F: reference list 60
+Appendix G: reproducibility 61
 
 
 
@@ -267,7 +267,7 @@ No calendar dates are assigned here. Cohort scheduling fixes real dates. Session
 
 
                   Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 7
-5 Module 1: Computational Thinking And Problem Decomposition
+5 Module 1: Computational thinking and problem decomposition
 Module m1 of 10 - computational thinking and problem decomposition. Duration 180 minutes. Prerequisites: none.
 Objectives: m1-o1, m1-o2 (describe a small task as a sequence of steps in plain words; explain why the order of
 steps matters in a program).
@@ -442,7 +442,7 @@ why it is designed this way
 The worked example gives a success within minutes, which sustains motivation [R9].
 Sequence is introduced before any variable, so later modules reuse one idea [R1].
 
-6 Module 2: Variables And Data Types
+6 Module 2: Variables and data types
 Module m2 of 10 - variables and data types. Duration 180 minutes. Prerequisites: m1.
 Objectives: m2-o1, m2-o2 (name a variable and give it a value of the right type; predict what a short program will
 print before running it).
@@ -615,7 +615,7 @@ why it is designed this way
 The worked example reduces cognitive load for the first variable lesson [R1][R5].
 Predict before run makes the variable misconception visible [R8].
 
-7 Module 3: Input And Output
+7 Module 3: Input and output
 Module m3 of 10 - input and output. Duration 120 minutes. Prerequisites: m2.
 Objectives: m3-o1 (write a program that asks a question and shows an answer).
 
@@ -759,7 +759,7 @@ Input/print are introduced together so the habit forms fast.
 
 
                   Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 18
-8 Module 4: Conditionals (If / Else)
+8 Module 4: Conditionals (if / else)
 Module m4 of 10 - conditionals (if / else). Duration 180 minutes. Prerequisites: m3.
 Objectives: m4-o1 (choose an if or else branch that fits a real situation).
 
@@ -935,7 +935,7 @@ Conditions are the first real logic; worked example then pair task [R1].
 Prediction before run exposes condition misconceptions [R8].
 
                   Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 22
-9 Module 5: Loops (Repeat)
+9 Module 5: Loops (repeat)
 Module m5 of 10 - loops (repeat). Duration 180 minutes. Prerequisites: m4.
 Objectives: m5-o1 (write a loop that repeats steps until a stop condition).
 
@@ -1113,7 +1113,7 @@ Parsons problems lower load for ordering loops [R2][R3].
 
 
                   Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 26
-10 Module 6: Functions (Reusable Steps)
+10 Module 6: Functions (reusable steps)
 Module m6 of 10 - functions (reusable steps). Duration 180 minutes. Prerequisites: m5.
 Objectives: m6-o1 (write a function that takes an input and returns an output).
 
@@ -1284,7 +1284,7 @@ why it is designed this way
 Functions lower cognitive load by packaging steps [R1][R5].
 Pair work on ordering functions builds the habit.
 
-11 Module 7: Lists And Dictionaries
+11 Module 7: Lists and dictionaries
 Module m7 of 10 - lists and dictionaries. Duration 180 minutes. Prerequisites: m6.
 Objectives: m7-o1 (organise related values in a list or dictionary and read one value).
 
@@ -1464,7 +1464,7 @@ Setup checklist: open colab, type example live.
 why it is designed this way
 Collections are how real tasks store many values; lists before dictionaries [R9].
 
-12 Module 8: Files And Simple Data
+12 Module 8: Files and simple data
 Module m8 of 10 - files and simple data. Duration 180 minutes. Prerequisites: m7.
 Objectives: m8-o1 (read a text file and write a result back to a file).
 
@@ -1632,7 +1632,7 @@ Setup checklist: open colab, run file ops.
 why it is designed this way
 File handling makes programs useful for adults [R3].
 
-13 Module 9: Debugging And Reading Errors
+13 Module 9: Debugging and reading errors
 Module m9 of 10 - debugging and reading errors. Duration 180 minutes. Prerequisites: m1-m8.
 Objectives: m9-o1 (read a traceback and point to the line to fix first).
 
@@ -1800,7 +1800,7 @@ Setup checklist: open colab, run broken code.
 why it is designed this way
 Reading errors is a life skill; errors normalised from day one [R7].
 
-14 Module 10: Final Mini-Project (Capstone)
+14 Module 10: Final mini-project (capstone)
 Module m10 of 10 - final mini-project (capstone). Duration 240 minutes. Prerequisites: m1-m9.
 Objectives: m10-o1 (combine the taught concepts into one working small program and explain it in plain words).
 
