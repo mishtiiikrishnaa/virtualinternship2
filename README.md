@@ -8,7 +8,6 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![Python][python-shield]][python-url]
-[![License][license-shield]](#license)
 
 </div>
 
@@ -250,19 +249,6 @@ This is a solo internship repository, so contributions are not open in the usual
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Top contributors
-
-<a href="https://github.com/mishtiiikrishnaa/virtualinternship2/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=mishtiiikrishnaa/virtualinternship2" alt="contrib.rocks image" />
-</a>
-
-<!-- LICENSE -->
-## License
-
-No license file is included in this repository. It is for internship submission and review only. Please ask before reusing the text or figures.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
@@ -270,8 +256,6 @@ No license file is included in this repository. It is for internship submission 
 * [Harvard CS50x](https://cs50.harvard.edu/x/), [Python for Everybody](https://www.py4e.com/), [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/2e/) and [Code.org](https://code.org/en-US/curriculum/computer-science-fundamentals) for public beginner course structures
 * [MIT Teaching and Learning Lab](https://tll.mit.edu/teaching-resources/how-people-learn/worked-examples/) and the [Raspberry Pi Foundation](https://www.raspberrypi.org/blog/supporting-learners-with-programming-tasks-through-ai-generated-parsons-problems/) for worked examples and Parsons problems
 * [Shields.io](https://shields.io) for the badges
-* [Choose an Open Source License](https://choosealicense.com)
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
