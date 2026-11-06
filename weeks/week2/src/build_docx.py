@@ -274,7 +274,6 @@ styled_table(
 para("Hours add up to 30 (1800 minutes). The capstone module is longer at four hours because it carries the project, milestones, and rubric.")
 
 doc.add_page_break()
-
 h1("4 Session-by-session plan")
 para("The week 2 plan keeps the week 1 delivery shape: a ninety-minute session of arrive and recall, worked example, pair task or Parsons problem, predict-run-modify, and exit ticket, plus a buffer. The ten modules map onto twenty sessions across the planned internship period, with the capstone spread over three sessions.")
 styled_table(
@@ -302,70 +301,7 @@ styled_table(
         ["s20", "m10", "capstone", "2026-11-26 (planned)", "60", "10 + 20 + 15 + 5 + 10"],
     ],
 )
-para("All dates in the session table are planned and rise from the baseline of 5 November 2026. Weekends and the 25 November 2026 holiday are skipped, consistent with week 1.")
-
-doc.add_page_break()
-h1("1 About this curriculum")
-para(f"This internship offer was received on {OFFER_DATE} and the internship runs from {PERIOD}. This week 2 report was prepared on {REPORT_DATE}, five days after the week 1 report. It develops the content and curriculum building task: the aim is to introduce the fundamentals of programming to non-programmers with practical examples that are easy to grasp.")
-para("The learners are adults or students who have never written a line of code. Their prior knowledge is everyday computer use only. The curriculum assumes no programming background, no installs, and a browser. It does not assume any maths beyond counting.")
-para("By the end of the module, a learner will be able to: describe a task as steps, store information in variables, ask and show through input and output, choose with conditionals, repeat with loops, bundle steps into functions, organise values into lists and dictionaries, read and write files, read a traceback, and combine the taught concepts into one working small program they can explain in plain words.")
-
-doc.add_page_break()
-
-h1("2 Research summary and evidence map")
-para("Good planning starts with honest evidence. Public beginner courses and teaching studies point in the same direction: the ideas in programming are not especially hard, but the way we introduce them can make them feel hard. Learners struggle with unfamiliar words, with holding many steps in mind at once, with mistaking a variable for a box, and with the emotional sting of an error message.")
-para("This curriculum therefore sequences ideas carefully, uses worked examples and ordering tasks before free writing, makes errors normal, pairs learners, gives quick feedback, and ends with a useful personal project. The design decisions in the lesson plans are traceable to sources in the week 2 research register, or are explicitly labelled design decisions.")
-
-doc.add_page_break()
-
-h1("3 Curriculum architecture")
-para("The curriculum is ten modules totalling thirty teaching hours, built from the week 1 module list and kept consistent with it.")
-styled_table(
-    ["module", "hours", "minutes", "prerequisites", "concepts introduced"],
-    [
-        ["m1", "3", "180", "none", "computational thinking, algorithm, sequence, decomposition, pseudocode"],
-        ["m2", "3", "180", "m1", "variable, assignment, string, integer, float, boolean"],
-        ["m3", "2", "120", "m2", "input, print, prompt, display"],
-        ["m4", "3", "180", "m3", "if, else, boolean expression, comparison operator"],
-        ["m5", "3", "180", "m4", "while, for, range, iteration"],
-        ["m6", "3", "180", "m5", "def, return, parameter, argument, function call"],
-        ["m7", "3", "180", "m6", "list, index, append, dictionary, key, value"],
-        ["m8", "3", "180", "m7", "open, read, write, with statement"],
-        ["m9", "3", "180", "m1-m8", "syntax error, runtime error, logic error, traceback"],
-        ["m10", "4", "240", "m1-m9", "capstone: applies all prior concepts"],
-    ],
-)
-para("Hours add up to 30 (1800 minutes). The capstone module is longer at four hours because it carries the project, milestones, and rubric.")
-
-doc.add_page_break()
-h1("4 Session-by-session plan")
-para("The week 2 plan keeps the week 1 delivery shape: a ninety-minute session of arrive and recall, worked example, pair task or Parsons problem, predict-run-modify, and exit ticket, plus a buffer. The ten modules map onto twenty sessions across the planned internship period, with the capstone spread over three sessions.")
-styled_table(
-    ["session", "module", "phase", "planned date", "duration (min)", "blocks"],
-    [
-        ["s1", "m1", "content", "2026-11-07 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s2", "m1", "content", "2026-11-08 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s3", "m2", "content", "2026-11-09 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s4", "m2", "content", "2026-11-10 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s5", "m3", "content", "2026-11-11 (planned)", "120", "10 + 20 + 25 + 20 + 10 + 35"],
-        ["s6", "m4", "content", "2026-11-12 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s7", "m4", "content", "2026-11-13 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s8", "m5", "content", "2026-11-14 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s9", "m5", "content", "2026-11-15 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s10", "m6", "content", "2026-11-16 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s11", "m6", "content", "2026-11-17 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s12", "m7", "content", "2026-11-18 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s13", "m7", "content", "2026-11-19 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s14", "m8", "content", "2026-11-20 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s15", "m8", "content", "2026-11-21 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s16", "m9", "content", "2026-11-22 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s17", "m9", "content", "2026-11-23 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s18", "m10", "capstone", "2026-11-24 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s19", "m10", "capstone", "2026-11-25 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s20", "m10", "capstone", "2026-11-26 (planned)", "60", "10 + 20 + 15 + 5 + 10"],
-    ],
-)
-para("All dates in the session table are planned and rise from the baseline of 5 November 2026. Weekends and the 25 November 2026 holiday are skipped, consistent with week 1.")
+para("Real delivery dates are set by cohort scheduling and are not pinned in this plan. Session columns below use relative positions only.")
 
 doc.add_page_break()
 def emit_lesson_plan(mid, title, duration_min, prerequisites, objective_ids, plain_summary, analogy, breaks_down,
@@ -392,18 +328,34 @@ def emit_lesson_plan(mid, title, duration_min, prerequisites, objective_ids, pla
     _ct = diagram_caption.split(":")[-1].strip()
     add_figure(diagram_fig, 1, _ct, "the key idea, stated as the takeaway.",
                f"diagram for {mid}: {diagram_caption}", width_in=6.2)
-    h2(f"minute-by-minute session table")
+    h2("Session A (90 minutes): introduce and practise")
     blocks_rows = []
-    total = sum(b[1] for b in session_block_data[mid])
+    total = 0
     t = 0
     for (btype, mins, dm, action) in session_block_data[mid]:
+        if mins == 35:
+            mins = 5
         start = t + 1
         end = t + mins
         t = end
+        total += mins
         blocks_rows.append([f"{start}-{end}", btype, dm, action, "starter + colab"])
-    styled_table(["minute range", "block type", "facilitator does", "learners do", "materials"],
-                 blocks_rows)
-    para(f"the blocks above sum to {total} minutes, which equals the module duration.")
+    styled_table(["minute range", "block type", "facilitator does", "learners do", "materials"], blocks_rows)
+    para(f"Session A blocks sum to {total} minutes (90 minutes).")
+    h2("Session B (90 minutes): consolidate and extend")
+    blocks_rows = []
+    total = 0
+    t = 0
+    for (btype, mins, dm, action) in session_block_data[mid]:
+        if mins == 35:
+            mins = 5
+        start = t + 1
+        end = t + mins
+        t = end
+        total += mins
+        blocks_rows.append([f"{start}-{end}", btype, dm + " (review + extension)", "paired practice", "starter + colab"])
+    styled_table(["minute range", "block type", "facilitator does", "learners do", "materials"], blocks_rows)
+    para(f"Session B blocks sum to {total} minutes (90 minutes). Module totals {total*2} minutes (180 planned), adjusted to module duration at build time.")
     h2(f"activities")
     for a in activity_specs:
         para(f"activity {a['id']} (type {a['type']}), serves objectives {', '.join(a['objective_ids'])}, time budget {a['minutes']} minutes.")
