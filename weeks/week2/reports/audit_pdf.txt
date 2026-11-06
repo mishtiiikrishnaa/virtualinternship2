@@ -264,7 +264,7 @@ No calendar dates are assigned here. Cohort scheduling fixes real dates. Session
 
 
                   Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 7
-Module 1: Computational Thinking And Problem Decomposition
+5 Module 1: Computational Thinking And Problem Decomposition
 module m1 of 10 - computational thinking and problem decomposition. duration 180 minutes. prerequisites: none.
 objectives: m1-o1, m1-o2.
 
@@ -425,7 +425,7 @@ why it is designed this way
 the worked example gives a success within minutes, which sustains motivation [R9].
 sequence is introduced before any variable, so later modules reuse one idea [R1].
 
-Module 2: Variables And Data Types
+6 Module 2: Variables And Data Types
 module m2 of 10 - variables and data types. duration 180 minutes. prerequisites: m1.
 objectives: m2-o1, m2-o2.
 
@@ -584,7 +584,7 @@ why it is designed this way
 the worked example reduces cognitive load for the first variable lesson [R1][R5].
 predict before run makes the variable misconception visible [R8].
 
-Module 3: Input And Output
+7 Module 3: Input And Output
 module m3 of 10 - input and output. duration 120 minutes. prerequisites: m2.
 objectives: m3-o1.
 
@@ -718,7 +718,7 @@ input/print are introduced together so the habit forms fast.
 
 
                   Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 17
-Module 4: Conditionals (If / Else)
+8 Module 4: Conditionals (If / Else)
 module m4 of 10 - conditionals (if / else). duration 180 minutes. prerequisites: m3.
 objectives: m4-o1.
 
@@ -882,7 +882,7 @@ why it is designed this way
 conditions are the first real logic; worked example then pair task [R1].
 prediction before run exposes condition misconceptions [R8].
 
-Module 5: Loops (Repeat)
+9 Module 5: Loops (Repeat)
 module m5 of 10 - loops (repeat). duration 180 minutes. prerequisites: m4.
 objectives: m5-o1.
 
@@ -1048,7 +1048,7 @@ parsons problems lower load for ordering loops [R2][R3].
 
 
                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 25
-Module 6: Functions (Reusable Steps)
+10 Module 6: Functions (Reusable Steps)
 module m6 of 10 - functions (reusable steps). duration 180 minutes. prerequisites: m5.
 objectives: m6-o1.
 
@@ -1209,7 +1209,7 @@ why it is designed this way
 functions lower cognitive load by packaging steps [R1][R5].
 pair work on ordering functions builds the habit.
 
-Module 7: Lists And Dictionaries
+11 Module 7: Lists And Dictionaries
 module m7 of 10 - lists and dictionaries. duration 180 minutes. prerequisites: m6.
 objectives: m7-o1.
 
@@ -1375,7 +1375,7 @@ setup checklist: open colab, type example live.
 why it is designed this way
 collections are how real tasks store many values; lists before dictionaries [R9].
 
-Module 8: Files And Simple Data
+12 Module 8: Files And Simple Data
 module m8 of 10 - files and simple data. duration 180 minutes. prerequisites: m7.
                   Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 32
 objectives: m8-o1.
@@ -1536,7 +1536,7 @@ setup checklist: open colab, run file ops.
 why it is designed this way
 file handling makes programs useful for adults [R3].
 
-Module 9: Debugging And Reading Errors
+13 Module 9: Debugging And Reading Errors
 module m9 of 10 - debugging and reading errors. duration 180 minutes. prerequisites: m1-m8.
 objectives: m9-o1.
 
@@ -1693,7 +1693,7 @@ setup checklist: open colab, run broken code.
 why it is designed this way
 reading errors is a life skill; errors normalised from day one [R7].
 
-Module 10: Final Mini-Project (Capstone)
+14 Module 10: Final Mini-Project (Capstone)
 module m10 of 10 - final mini-project (capstone). duration 240 minutes. prerequisites: m1-m9.
 objectives: m10-o1.
 
