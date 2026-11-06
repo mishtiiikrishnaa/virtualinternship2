@@ -97,6 +97,8 @@ The plan describes a module that:
 
 **Week 1 deliverable:** [`Project_Plan_Scope_Definition_Week1.docx`](weeks/week1/reports/Project_Plan_Scope_Definition_Week1.docx). It has a live table of contents, tables, and six diagrams, with a PDF preview alongside it.
 
+**Week 2 deliverable:** [`Curriculum_Lesson_Plans_Week2.docx`](weeks/week2/reports/Curriculum_Lesson_Plans_Week2.docx). It has a live table of contents, worked examples with captured output, Parsons problems, quizzes, and appendices A to G, with a PDF preview alongside it.
+
 ### What the Week 1 brief asked for, and where to find it
 
 | The brief asked for                                              | Where it is                                                        |
@@ -104,7 +106,7 @@ The plan describes a module that:
 | A clear table of contents                                        | Start of the `.docx` (a live Word field)                           |
 | Diagrams or flowcharts of the curriculum structure               | Six figures in the report, also in `weeks/week1/figures/`          |
 | A timeline with milestones and deadlines                         | Section 9 of the report (all dates labelled as planned)            |
-| Resource requirements                                            | The resource table in the report (120 planned hours)               |
+| Resource requirements                                            | The resource table in the report (30 planned teaching hours)       |
 | Research on public materials for teaching non-programmers        | `weeks/week1/docs/research_register.md`                            |
 | Target audience, teaching methods and assessment techniques      | Summarised in [The Module at a Glance](#the-module-at-a-glance)    |
 
@@ -118,7 +120,7 @@ The plan describes a module that:
 * [![pytest][pytest-shield]][pytest-url]
 * [![LibreOffice][libreoffice-shield]][libreoffice-url]
 
-`python-docx` builds the report, `matplotlib` draws the six figures, `pytest` validates the finished `.docx`, and LibreOffice (optional) produces the PDF preview.
+`python-docx` builds the report, `matplotlib` draws the figures, `pytest` validates the finished `.docx`, and LibreOffice (optional) produces the PDF preview.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -154,11 +156,11 @@ You only need this if you want to **rebuild** the report. To just read it, jump 
    ```
 2. Install the Python dependencies
    ```sh
-   pip install -r weeks/week1/requirements.txt
+   pip install -r weeks/week2/requirements.txt
    ```
 3. Build the figures and the report
    ```sh
-   make week1
+   make week2
    ```
 4. Run the checks
    ```sh
@@ -182,9 +184,9 @@ You only need this if you want to **rebuild** the report. To just read it, jump 
 | `assumptions_and_decisions.md`| Assumptions made and why           |
 | `submission_text.txt`         | The 275-word submission text       |
 
-**Want to rebuild it?** Run `make week1` to regenerate the figures and the `.docx`, then `make check` to run the tests.
+**Want to rebuild it?** Run `make week1` to regenerate the Week 1 figures and `.docx`, or `make week2` to regenerate the Week 2 curriculum, then `make check` to run the tests.
 
-For a full walkthrough of what each module covers, see the [Week 1 README](weeks/week1/README.md).
+For a full walkthrough of what each module covers, see the [Week 1 README](weeks/week1/README.md) and the [Week 2 README](weeks/week2/README.md).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -196,17 +198,27 @@ virtualinternship2/
 ├── Makefile
 ├── .gitignore
 └── weeks/
-    └── week1/
+    ├── week1/
+    │   ├── README.md
+    │   ├── requirements.txt
+    │   ├── docs/        research register, assumptions and decisions, submission text
+    │   ├── figures/     six PNG diagrams
+    │   ├── src/         make_figures.py, build_docx.py
+    │   ├── reports/     the .docx and its PDF preview
+    │   └── tests/       test_docx.py (pytest)
+    └── week2/
         ├── README.md
         ├── requirements.txt
-        ├── docs/        research register, assumptions and decisions, submission text
-        ├── figures/     six PNG diagrams
-        ├── src/         make_figures.py, build_docx.py
-        ├── reports/     the .docx and its PDF preview
-        └── tests/       test_docx.py (pytest)
+        ├── data/         curriculum.yaml
+        ├── docs/         submission text, audit, assumptions
+        ├── figures/      twelve PNG diagrams
+        ├── src/          make_figures.py, build_docx.py, appendices.py, audit_pdf.py
+        ├── reports/      the .docx and its PDF preview
+        ├── tests/        test_week2_docx.py (pytest)
+        └── activities/  starter exercise files
 ```
 
-Weeks 2 to 4 will each get their own `weeks/weekN/` folder as they are completed.
+Weeks 3 and 4 will each get their own `weeks/weekN/` folder as they are completed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -215,7 +227,10 @@ Weeks 2 to 4 will each get their own `weeks/weekN/` folder as they are completed
 - [x] **Week 1:** Project planning and scope definition
     - Keep dates honest: planned baseline is 5 November 2026, and every Section 9 date is labelled as planned
     - Keep the `.docx` under 2 MB
-- [ ] **Week 2:** Content Development and Curriculum Building
+- [x] **Week 2:** Content Development and Curriculum Building
+    - Complete the ten-module Python curriculum with lesson plans, figures, tests, and submission text
+    - Keep every worked example honest: pseudocode is marked not executed, runnable code carries captured output
+    - Keep the `.docx` under 2 MB
 - [ ] **Week 3:** Practical Application and Interactive Module Design
 - [ ] **Week 4:** Reflection, Evaluation, and Future Planning
 
@@ -227,7 +242,7 @@ See the [open issues](https://github.com/mishtiiikrishnaa/virtualinternship2/iss
 
 * **Dates are planned, not done.** Section 9 of the report uses a planned baseline of 5 November 2026, the first working day after the report date. It skips weekends and the 25 November 2026 holiday.
 * **References are public sources found on 4 November 2026.** Where only an abstract was available, the entry is marked to check before citing.
-* **Effort is a planning figure.** The 120 planned hours match the resource table and are not a quote.
+* **Effort is a planning figure.** The 30 planned teaching hours across the ten modules are a scope decision, not a quote.
 * **Page numbers in the `.docx` table of contents need a refresh.** It is a live Word field, so open the file in Word and choose *Update Field*.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -258,7 +273,7 @@ No license file is included. This repository is for internship submission and re
 <!-- LINKS -->
 [repo-url]: https://github.com/mishtiiikrishnaa/virtualinternship2
 [report-url]: weeks/week1/reports/Project_Plan_Scope_Definition_Week1.docx
-[status-shield]: https://img.shields.io/badge/status-week%201%20of%204-green.svg?style=for-the-badge
+[status-shield]: https://img.shields.io/badge/status-week%202%20of%204-green.svg?style=for-the-badge
 [python-shield]: https://img.shields.io/badge/python-3.10+-blue.svg?style=for-the-badge
 [docx-shield]: https://img.shields.io/badge/deliverable-docx-orange.svg?style=for-the-badge
 [license-shield]: https://img.shields.io/badge/license-none-red.svg?style=for-the-badge
