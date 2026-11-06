@@ -840,42 +840,10 @@ doc.add_page_break()
 h1("18 Validation plan and known limitations")
 para("validation plan: pilot the curriculum in week 3 with a small group, observe pair work, predict-run-modify accuracy, exit ticket confidence; success means most learners finish the capstone and can explain it. known limitations: no pilot has happened yet; browser runtime not tested here; code verified on cpython 3.13; the 80 percent completion target is a design decision.")
 
-doc.add_page_break()
-
-h1("Appendix A: activity catalogue")
-para("activity id, module, type, time, objectives, how to run. see weeks/week2/activities/ for starter files, reference solutions and checks.")
-for a in d_activities_catalogue():
-    doc.add_paragraph(f"{a['activity_id']} | {a['module_id']} | {a['type']} | {a['time_minutes']} min | objectives {', '.join(a['objective_ids'])} | {a['description']}")
 
 doc.add_page_break()
+exec(open(str(__import__("pathlib").Path(__file__).resolve().parent / "appendices.py")).read())
 
-h1("Appendix B: quiz bank")
-para("quiz bank with answers. two quiz questions per module plus one exit ticket each. answers and wrong-option rationales are listed per module in the lesson plans.")
-
-doc.add_page_break()
-
-h1("Appendix C: real error-message catalogue")
-para("captured tracebacks from the sandbox run, with plain-English translations. the m9 lesson uses the captured ValueError traceback.")
-
-doc.add_page_break()
-
-h1("Appendix D: glossary")
-para("plain-language definitions of every technical term used in the curriculum, drawn from the week 2 glossary data.")
-
-doc.add_page_break()
-
-h1("Appendix E: readability and audit results")
-para("readability: flesch-kincaid grade computed per module for learner-facing text; target grade 8 or lower. jargon audit: every technical term in learner-facing text is defined at first use or is in the glossary; build fails otherwise.")
-
-doc.add_page_break()
-
-h1("Appendix F: reference list")
-para("verified sources only. see weeks/week2/docs/research_register.md. design decisions are listed separately and are not research-backed.")
-
-doc.add_page_break()
-
-h1("Appendix G: reproducibility")
-para("python version used, commands, run times, test results. see weeks/week2/README.md, weeks/week2/requirements.txt and the root Makefile.")
 
 settings = doc.settings.element
 update = parse_xml(f'<w:updateFields {nsdecls("w")} w:val="true"/>')
