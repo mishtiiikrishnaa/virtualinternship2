@@ -18,7 +18,8 @@
 **A project plan and scope definition for a 30-hour programming module, written for people who have never written a line of code.**
 
 [View the Week 1 report](weeks/week1/reports/Project_Plan_Scope_Definition_Week1.docx) &nbsp;·&nbsp;
-[Read the Week 1 docs](weeks/week1/README.md) &nbsp;·&nbsp;
+[Read the Week 1 docs](weeks/week1/README.md) &middot;
+[View the Week 2 report](weeks/week2/reports/Curriculum_Lesson_Plans_Week2.docx) &nbsp;·&nbsp;
 [Report a bug](https://github.com/mishtiiikrishnaa/virtualinternship2/issues/new?labels=bug&template=bug-report---.md) &nbsp;·&nbsp;
 [Request a feature](https://github.com/mishtiiikrishnaa/virtualinternship2/issues/new?labels=enhancement&template=feature-request---.md)
 
