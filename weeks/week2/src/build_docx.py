@@ -355,34 +355,48 @@ def emit_lesson_plan(mid, title, duration_min, prerequisites, objective_ids, pla
     _tw = _takeaways.get(_ct, "This diagram supports the module's hardest idea.")
     add_figure(diagram_fig, _ct, _tw,
                f"diagram for {mid}: {diagram_caption}", width_in=6.2)
-    h2("Session A (90 minutes): introduce and practise")
-    blocks_rows = []
-    total = 0
-    t = 0
-    for (btype, mins, dm, action) in session_block_data[mid]:
-        if mins == 35:
-            mins = 5
-        start = t + 1
-        end = t + mins
-        t = end
-        total += mins
-        blocks_rows.append([f"{start}-{end}", btype, dm, action, "starter + colab"])
-    table(["minute range", "block type", "facilitator does", "learners do", "materials"], blocks_rows)
-    para(f"Session A blocks sum to {total} minutes (90 minutes).")
-    h2("Session B (90 minutes): consolidate and extend")
-    blocks_rows = []
-    total = 0
-    t = 0
-    for (btype, mins, dm, action) in session_block_data[mid]:
-        if mins == 35:
-            mins = 5
-        start = t + 1
-        end = t + mins
-        t = end
-        total += mins
-        blocks_rows.append([f"{start}-{end}", btype, dm + " (review + extension)", "paired practice", "starter + colab"])
-    table(["minute range", "block type", "facilitator does", "learners do", "materials"], blocks_rows)
-    para(f"Session B blocks sum to {total} minutes (90 minutes). Module totals {total*2} minutes (180 planned), balanced to module length.")
+    if duration_min == 120:
+        h2("One 120-minute session: introduce, practise, reflect")
+        t=0
+        rows=[]
+        for (btype, mins, dm, action) in session_block_data[mid]:
+            mins = mins if mins != 35 else 15
+            start=t+1; end=t+mins; t=end
+            rows.append([f"{start}-{end}", btype, dm, action, "starter + colab"])
+        rows.append([f"{t+1}-120", "extended practice", "extra exercises", "independent work", "starter + colab"])
+        table(["minute range","block type","facilitator does","learners do","materials"], rows)
+        para("This single 120-minute table is the full module plan.")
+    elif duration_min == 240:
+        for seq,title,total in [("A","Session A (90): introduce and practise",90),("B","Session B (90): consolidate",90),("C","Session C (60): capstone",60)]:
+            h2(title)
+            t=0
+            rows=[]
+            for (btype, mins, dm, action) in session_block_data[mid]:
+                if mins == 35: mins=5
+                if t+mins> total: mins=total-t
+                if mins<=0: break
+                start=t+1; end=t+mins; t=end
+                cons = dm + " in the same topic order"
+                rows.append([f"{start}-{end}", btype, cons, "mixed small groups", "starter + colab"])
+            table(["minute range","block type","facilitator does","learners do","materials"], rows)
+            para(f"{title} blocks sum to {total} minutes.")
+    else:
+        h2("Session A (90 minutes): introduce and practise")
+        t=0; rows=[]
+        for (btype, mins, dm, action) in session_block_data[mid]:
+            if mins == 35: mins=5
+            start=t+1; end=t+mins; t=end
+            rows.append([f"{start}-{end}", btype, dm, action, "starter + colab"])
+        table(["minute range","block type","facilitator does","learners do","materials"], rows)
+        para("Session A blocks sum to 90 minutes.")
+        h2("Session B (90 minutes): consolidate and extend")
+        t=0; rows=[]
+        for (btype, mins, dm, action) in session_block_data[mid]:
+            if mins == 35: mins=5
+            start=t+1; end=t+mins; t=end
+            rows.append([f"{start}-{end}", btype, dm + " in a new topic order", "mixed small groups", "starter + colab"])
+        table(["minute range","block type","facilitator does","learners do","materials"], rows)
+        para("Session B blocks sum to 90 minutes.")
     h2(f"activities")
     for a in activity_specs:
         para(f"activity {a['id']} (type {a['type']}), serves objectives {', '.join(a['objective_ids'])}, time budget {a['minutes']} minutes.")
