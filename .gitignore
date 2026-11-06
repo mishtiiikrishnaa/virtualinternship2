@@ -1,7 +1,4 @@
-__pycache__/
-*.py[cod]
-.pytest_cache/
 .DS_Store
-weeks/week1/figures/*.tmp
-.pytest_cache/
 __pycache__/
+.pytest_cache/
+*.pyc
