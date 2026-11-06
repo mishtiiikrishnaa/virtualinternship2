@@ -1,0 +1,14 @@
+activity m3-prm
+module: m3
+type: predict-run-modify
+time: 20 minutes
+objectives: m3-o1
+instructions: activity not detailed in source YAML; see lesson plan for {a['activity_id']}
+starter: |
+ none stored
+expected_result:
+ success criteria are in the lesson plan.
+hint ladder:
+ 1. re-read the worked example
+ 2. run the starter
+ 3. change one line only

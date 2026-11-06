@@ -1,0 +1,14 @@
+activity m1-a1
+module: m1
+type: pair_task
+time: 25 minutes
+objectives: m1-o1
+instructions: activity not detailed in source YAML; see lesson plan for {a['activity_id']}
+starter: |
+ none stored
+expected_result:
+ success criteria are in the lesson plan.
+hint ladder:
+ 1. re-read the worked example
+ 2. run the starter
+ 3. change one line only
