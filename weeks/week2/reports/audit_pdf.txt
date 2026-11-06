@@ -280,14 +280,6 @@ improvise.
 worked example: a complete runnable program
 
 
-steps = [
-     "open the diary",
-     "turn to page 3",
-     "read the entry",
-     "close the diary",
-]
-print("recipe made of " + str(len(steps)) + " steps")
-
 line-by-line annotation: line 1: we call the list of steps a variable called steps. line 4: each line is one instruction, in
 order, like a recipe.
 captured real output (executed in a sandbox, python 3.13):
@@ -557,7 +549,7 @@ hint 2: the last line names the bad token.
 hint 3: did you mean age?
 activity m2-pair (type pair_task), serves objectives m2-o2, time budget 25 minutes.
 instructions in plain words: talk through the prediction before typing.
-starter code: age = 12
+starter code: age = 12 # talk only
 expected result / success criteria: pair predicts 12 before running.
 hint ladder:
 hint 1: say the answer out loud.
@@ -566,7 +558,7 @@ hint 2: predict in words first.
                         Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 13
 activity m2-prm (type predict-run-modify), serves objectives m2-o1, m2-o2, time budget 20 minutes.
 instructions in plain words: predict the output, run it, modify one thing.
-starter code: age = 12 print(age)
+starter code: age = 12 print(age) # predict
 expected result / success criteria: output is 12.
 hint ladder:
 hint 1: what is 12 plus nothing?
@@ -624,7 +616,7 @@ line-by-line annotation: line 1: input asks and remembers. line 2: int() turns t
 captured real output (executed in a sandbox, python 3.13):
 
 
-hello meghana. you will be 27 next year
+hello meghana. you will be 27 next year.
 
 
 a second example that changes one thing
@@ -880,7 +872,7 @@ hint 1: 12 is not 13.
 hint 2: change the number.
 activity m4-a2 (type pair_task), serves objectives m4-o1, time budget 25 minutes.
 instructions in plain words: talk through the branch.
-starter code: age = 12
+starter code: age = 12 # branch choice
 expected result / success criteria: pair states the branch.
 hint ladder:
 hint 1: what is 12 >= 13?
@@ -1033,7 +1025,7 @@ hint 1: range gives the count.
 hint 2: the stop condition must end the loop.
 activity m5-prm (type predict-run-modify), serves objectives m5-o1, time budget 20 minutes.
 instructions in plain words: predict, run, modify.
-starter code: total = 0 for i in range(3): total = total + 1 print(total)
+starter code: total = 0 for i in range(3): total = total + 1 print(total) # check
 expected result / success criteria: output is 3.
                         Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 24
 hint ladder:
@@ -1198,7 +1190,7 @@ hint 1: def comes before call.
 hint 2: parameters go in the def.
 activity m6-prm (type predict-run-modify), serves objectives m6-o1, time budget 20 minutes.
 instructions in plain words: predict, run, modify.
-starter code: def add(a, b): return a + b print(add(2, 3))
+starter code: def add(a, b): return a + b print(add(2, 3)) # review
 expected result / success criteria: output is 5.
 hint ladder:
 hint 1: what is 2 + 3?
@@ -1366,7 +1358,7 @@ hint 1: append adds at the end.
 hint 2: index 0 is the first.
 activity m7-prm (type predict-run-modify), serves objectives m7-o1, time budget 20 minutes.
 instructions in plain words: predict, run, modify.
-starter code: shopping = ["rice", "oil", "tea"] shopping.append("salt") print(shopping[0])
+starter code: shopping = ["rice", "oil", "tea"] shopping.append("salt") print(shopping[0]) # p1
 expected result / success criteria: output is rice.
 hint ladder:
 hint 1: what did you append?
@@ -1696,7 +1688,7 @@ hint 1: last line first.
 hint 2: marked line second.
 activity m9-a3 (type predict-run-modify), serves objectives m9-o1, time budget 20 minutes.
 instructions in plain words: predict, run, modify.
-starter code: age = input("how old? ") print("next year you will be " + str(int(age)) + " years old")
+starter code: age = input("how old? ") print("next year you will be " + str(int(age)) + " years old") # a3
 expected result / success criteria: no traceback.
 hint ladder:
 hint 1: is input text or a number?

@@ -1,1445 +1,1850 @@
-# week 2 curriculum data — single source of truth
 week: 2
-task: "content development and curriculum building"
-title: "content development and curriculum building"
+task: content development and curriculum building
+title: content development and curriculum building
 total_teaching_hours: 30
-planned_baseline: "2026-11-05"
-report_date: "2026-11-06"
-offered_period: "2026-11-02 to 2026-11-30"
-author: "Meghana Krishnakumar Nair"
-internship: "virtual programming fundamentals internship"
-
+planned_baseline: '2026-11-05'
+report_date: '2026-11-06'
+offered_period: 2026-11-02 to 2026-11-30
+author: Meghana Krishnakumar Nair
+internship: virtual programming fundamentals internship
 session_shape:
   duration_minutes: 90
   instruction_share_fraction: 0.33
   practice_share_fraction: 0.67
   blocks:
-    - id: arrive_recall
-      minutes: 10
-      block_type: "arrive and recall"
-    - id: worked_example
-      minutes: 20
-      block_type: "short demonstration (worked example)"
-    - id: pair_task
-      minutes: 25
-      block_type: "pair task / parsons problem"
-    - id: predict_run_modify
-      minutes: 20
-      block_type: "predict-run-modify"
-    - id: exit_ticket
-      minutes: 10
-      block_type: "exit ticket"
-    - id: buffer
-      minutes: 5
-      block_type: "buffer / recap"
-
-activity_type_minutes:
   - id: arrive_recall
-    name: "arrive and recall"
     minutes: 10
+    block_type: arrive and recall
   - id: worked_example
-    name: "short demonstration"
     minutes: 20
+    block_type: short demonstration (worked example)
   - id: pair_task
-    name: "pair task / parsons problem"
     minutes: 25
+    block_type: pair task / parsons problem
   - id: predict_run_modify
-    name: "predict-run-modify"
     minutes: 20
+    block_type: predict-run-modify
   - id: exit_ticket
-    name: "exit ticket"
     minutes: 10
-
+    block_type: exit ticket
+  - id: buffer
+    minutes: 5
+    block_type: buffer / recap
+activity_type_minutes:
+- id: arrive_recall
+  name: arrive and recall
+  minutes: 10
+- id: worked_example
+  name: short demonstration
+  minutes: 20
+- id: pair_task
+  name: pair task / parsons problem
+  minutes: 25
+- id: predict_run_modify
+  name: predict-run-modify
+  minutes: 20
+- id: exit_ticket
+  name: exit ticket
+  minutes: 10
 modules:
-  - id: m1
-    position: 1
-    title: "computational thinking and problem decomposition"
-    duration_minutes: 180
-    prerequisites: []
-    concepts_introduced: ["computational thinking", "algorithm", "sequence", "decomposition", "pseudocode"]
-    concepts_reused: []
-    plain_english_summary: "before any code, learners describe a task as a clear list of steps in plain words."
-    analogy:
-      text: "giving directions to a friend who has never seen the street: write the steps in order, one after another, no skipping."
-      breaks_down: "the friend might read faster than you meant; in code the computer cannot improvise."
-    worked_example:
-      code: |
-        steps = [
-            "open the diary",
-            "turn to page 3",
-            "read the entry",
-            "close the diary",
-        ]
-        print("recipe made of " + str(len(steps)) + " steps")
-      captured_output: "recipe made of 4 steps"
-      varies_example:
-        code: |
-          steps = [
-              "boil water",
-              "add tea bag",
-              "wait four minutes",
-              "add milk",
-          ]
-          print("recipe made of " + str(len(steps)) + " steps")
-        captured_output: "recipe made of 4 steps"
-    diagram_id: "fig-curriculum-map"
-    activities:
-      - activity_id: "m1-p1"
-        type: "parsons"
-        objective_ids: ["m1-o1"]
-        minutes: 25
-      - activity_id: "m1-prm"
-        type: "predict-run-modify"
-        objective_ids: ["m1-o1", "m1-o2"]
-        minutes: 20
-      - activity_id: "m1-a1"
-        type: "pair_task"
-        objective_ids: ["m1-o1"]
-        minutes: 25
-    misconceptions:
-      - id: "m1-m1"
-        wrong_belief: "a program is a paragraph of prose"
-        real_error: "no code executed; wrong mental model"
-        facilitator_response: "show a recipe card vs a recipe sentence; code is instruction-like."
-    quiz:
-      - id: "m1-q1"
-        question: "what does a computer program do?"
-        correct_answer: "follows a list of instructions in order"
-        wrong_options: ["guesses what you mean", "thinks creatively"]
-        objective_id: "m1-o1"
-        bloom: "remember"
-      - id: "m1-q2"
-        question: "breaking a task into smaller steps is called"
-        correct_answer: "decomposition"
-        wrong_options: ["debugging", "compiling"]
-        objective_id: "m1-o1"
-        bloom: "understand"
-    exit_ticket:
-      id: "m1-et1"
-      question: "in your own words, what is an algorithm?"
-      objective_id: "m1-o1"
-      expected_keywords: ["steps", "instructions", "in order"]
-  - id: m2
-    position: 2
-    title: "variables and data types"
-    duration_minutes: 180
-    prerequisites: ["m1"]
-    concepts_introduced: ["variable", "assignment", "string", "integer", "float", "boolean"]
-    concepts_reused: ["algorithm", "sequence"]
-    plain_english_summary: "a variable is a name for a value the program can read and change, like a labelled box."
-    analogy:
-      text: "a labelled box where you can put a number or a word, and later take the label off and use a different value."
-      breaks_down: "the box is not a box; reassigning changes what the name points to, not the box."
-    worked_example:
-      code: |
-        name = "meghana"
-        age = 26
-        height_cm = 165.5
-        print(name)
-        print(age)
-        print(height_cm)
-      captured_output: "meghana\n26\n165.5"
-      varies_example:
-        code: |
-          name = "arjun"
-          age = 19
-          print("hello " + name + ", you are " + str(age) + " years old")
-        captured_output: "hello arjun, you are 19 years old"
-    diagram_id: "fig-variable-box"
-    activities:
-      - activity_id: "m2-mis"
-        type: "debug-this"
-        objective_ids: ["m2-o1"]
-        minutes: 25
-      - activity_id: "m2-pair"
-        type: "pair_task"
-        objective_ids: ["m2-o2"]
-        minutes: 25
-      - activity_id: "m2-prm"
-        type: "predict-run-modify"
-        objective_ids: ["m2-o1", "m2-o2"]
-        minutes: 20
-  - id: m3
-    position: 3
-    title: "input and output"
-    duration_minutes: 120
-    prerequisites: ["m2"]
-    concepts_introduced: ["input", "print", "prompt", "display"]
-    concepts_reused: ["variable", "assignment"]
-    plain_english_summary: "a program talks to the person through input and output: ask, remember, show."
-    analogy:
-      text: "ordering food at a restaurant: you say what you want (input), the kitchen writes it down (variable), the waiter brings the dish (output)."
-      breaks_down: "the kitchen cannot answer follow-up questions; it just follows the written ticket."
-    worked_example:
-      code: |
-        name = input("what is your name? ")
-        age = input("how old are you? ")
-        print("hello " + name + ". you will be " + str(int(age) + 1) + " next year.")
-      captured_output: "hello meghana. you will be 27 next year"
-      varies_example:
-        code: |
-          city = input("which city are you in? ")
-          print("noted: " + city)
-        captured_output: "noted: ahmedabad"
-    diagram_id: "fig-io"
-    activities:
-      - activity_id: "m3-prm"
-        type: "predict-run-modify"
-        objective_ids: ["m3-o1"]
-        minutes: 20
-      - activity_id: "m3-a2"
-        type: "pair_task"
-        objective_ids: ["m3-o1"]
-        minutes: 25
-      - activity_id: "m3-a3"
-        type: "debug-this"
-        objective_ids: ["m3-o1"]
-        minutes: 25
-  - id: m4
-    position: 4
-    title: "conditionals (if / else)"
-    duration_minutes: 180
-    prerequisites: ["m3"]
-    concepts_introduced: ["if", "else", "boolean expression", "comparison operator"]
-    concepts_reused: ["variable", "assignment", "sequence", "input", "print"]
-    plain_english_summary: "a program can choose between two or more paths based on a condition."
-    analogy:
-      text: "a traffic roundabout: if the light is green, go; if red, stop; otherwise follow the sign."
-      breaks_down: "a roundabout has many roads; an if/else has a binary choice and a condition you must write precisely."
-    worked_example:
-      code: |
-        age = 12
-        if age >= 13:
-            print("you can watch the scary movie")
-        else:
-            print("you must watch the gentle cartoon")
-      captured_output: "you must watch the gentle cartoon"
-      varies_example:
-        code: |
-          name = "fatima"
-          if name == "fatima":
-              print("welcome back, teacher")
-          else:
-              print("hello, stranger")
-        captured_output: "welcome back, teacher"
-    diagram_id: "fig-decision-flow"
-    activities:
-      - activity_id: "m4-p1"
-        type: "parsons"
-        objective_ids: ["m4-o1"]
-        minutes: 25
-      - activity_id: "m4-prm"
-        type: "predict-run-modify"
-        objective_ids: ["m4-o1"]
-        minutes: 20
-      - activity_id: "m4-a2"
-        type: "pair_task"
-        objective_ids: ["m4-o1"]
-        minutes: 25
-  - id: m5
-    position: 5
-    title: "loops (repeat)"
-    duration_minutes: 180
-    prerequisites: ["m4"]
-    concepts_introduced: ["while", "for", "range", "iteration"]
-    concepts_reused: ["variable", "assignment", "condition"]
-    plain_english_summary: "a loop repeats a block of steps until a condition becomes false, or for a known number of times."
-    analogy:
-      text: "asking a child to count from one to ten by pointing at each number on a number line, one at a time, ten times."
-      breaks_down: "the number line is physical; a for loop is a counter, and the stop condition must be written, not assumed."
-    worked_example:
-      code: |
-        total = 0
-        for i in range(3):
-            total = total + 1
-        print(total)
-      captured_output: "3"
-      varies_example:
-        code: |
-          count = 0
-          while count < 3:
-              count = count + 1
-          print("done counting to " + str(count))
-        captured_output: "done counting to 3"
-    diagram_id: "fig-loop-trace"
-    activities:
-      - activity_id: "m5-p1"
-        type: "parsons"
-        objective_ids: ["m5-o1"]
-        minutes: 25
-      - activity_id: "m5-prm"
-        type: "predict-run-modify"
-        objective_ids: ["m5-o1"]
-        minutes: 20
-      - activity_id: "m5-a2"
-        type: "pair_task"
-        objective_ids: ["m5-o1"]
-        minutes: 25
-  - id: m6
-    position: 6
-    title: "functions (reusable steps)"
-    duration_minutes: 180
-    prerequisites: ["m5"]
-    concepts_introduced: ["def", "return", "parameter", "argument", "function call"]
-    concepts_reused: ["sequence", "variable", "algorithm"]
-    plain_english_summary: "a function is a named, reusable bundle of steps that takes inputs and gives back one output."
-    analogy:
-      text: "a vending machine: you press a button (call), the machine follows its internal steps (function body), and gives you a snack (return)."
-      breaks_down: "a vending machine cannot take its own button as input; functions take parameters and return one value, not many."
-    worked_example:
-      code: |
-        def greet(name):
-            return "hello " + name + ", welcome back"
-        print(greet("fatima"))
-      captured_output: "hello fatima, welcome back"
-      varies_example:
-        code: |
-          def add(a, b):
-              return a + b
-          print(add(2, 3))
-        captured_output: "5"
-    diagram_id: "fig-function-machine"
-    activities:
-      - activity_id: "m6-p1"
-        type: "parsons"
-        objective_ids: ["m6-o1"]
-        minutes: 25
-      - activity_id: "m6-prm"
-        type: "predict-run-modify"
-        objective_ids: ["m6-o1"]
-        minutes: 20
-      - activity_id: "m6-a2"
-        type: "pair_task"
-        objective_ids: ["m6-o1"]
-        minutes: 25
-  - id: m7
-    position: 7
-    title: "lists and dictionaries"
-    duration_minutes: 180
-    prerequisites: ["m6"]
-    concepts_introduced: ["list", "index", "append", "dictionary", "key", "value", "iteration over collection"]
-    concepts_reused: ["variable", "assignment", "loop", "function"]
-    plain_english_summary: "collections help store many values: a list is an ordered pile, a dictionary maps names to values."
-    analogy:
-      text: "a shopping list (list) and a phone contacts list (dictionary)."
-      breaks_down: "lists keep order and allow duplicates; dictionaries allow any key, not just sequential numbers."
-    worked_example:
-      code: |
-        shopping = ["rice", "oil", "tea"]
-        shopping.append("salt")
-        print(shopping[0])
-        print(len(shopping))
-        contacts = {"meghana": "9876543210", "arjun": "9123456780"}
-        print(contacts["meghana"])
-      captured_output: "rice\n3\n9876543210"
-      varies_example:
-        code: |
-          scores = [10, 20, 30]
-          scores[0] = 11
-          print(sum(scores))
-        captured_output: "61"
-    diagram_id: "fig-list-dict"
-    activities:
-      - activity_id: "m7-p1"
-        type: "parsons"
-        objective_ids: ["m7-o1"]
-        minutes: 25
-      - activity_id: "m7-prm"
-        type: "predict-run-modify"
-        objective_ids: ["m7-o1"]
-        minutes: 20
-      - activity_id: "m7-a2"
-        type: "pair_task"
-        objective_ids: ["m7-o1"]
-        minutes: 25
-  - id: m8
-    position: 8
-    title: "files and simple data"
-    duration_minutes: 180
-    prerequisites: ["m7"]
-    concepts_introduced: ["open", "read", "write", "with statement"]
-    concepts_reused: ["variable", "function", "list"]
-    plain_english_summary: "programs can read what a person wrote in a file and write results back into a file."
-    analogy:
-      text: "writing a note on paper and filing it; later reading the note back."
-      breaks_down: "file handles are stateful and need closing; the with statement automates closing safely."
-    worked_example:
-      code: |
-        with open("todo.txt", "w") as f:
-            f.write("buy milk\n")
-        with open("todo.txt", "r") as f:
-            print(f.read())
-      captured_output: "buy milk"
-      varies_example:
-        code: |
-          with open("names.txt", "w") as f:
-            f.write("meghana\narjun\n")
-          with open("names.txt", "r") as f:
-            for line in f:
-              print(line.strip().upper())
-        captured_output: "MEGHANA\nARJUN"
-    diagram_id: "fig-file-flow"
-    activities:
-      - activity_id: "m8-p1"
-        type: "debug-this"
-        objective_ids: ["m8-o1"]
-        minutes: 25
-      - activity_id: "m8-a2"
-        type: "pair_task"
-        objective_ids: ["m8-o1"]
-        minutes: 25
-      - activity_id: "m8-a3"
-        type: "predict-run-modify"
-        objective_ids: ["m8-o1"]
-        minutes: 20
-  - id: m9
-    position: 9
-    title: "debugging and reading errors"
-    duration_minutes: 180
-    prerequisites: ["m1", "m2", "m3", "m4", "m5", "m6", "m7", "m8"]
-    concepts_introduced: ["syntax error", "runtime error", "logic error", "traceback"]
-    concepts_reused: ["variable", "function", "loop", "file"]
-    plain_english_summary: "errors are messages from the computer about what went wrong; reading them is a skill."
-    analogy:
-      text: "a recipe with a wrong ingredient amount: the kitchen stops and tells you which step and what is off."
-      breaks_down: "the message names a line and a kind, but not always the thinking error; you must connect it to your intention."
-    worked_example:
-      code: |
-        age = input("how old are you? ")
-        print("next year you will be " + str(int(age)) + " years old")
-      captured_output: "Traceback (most recent call last): ValueError: invalid literal for int() with base 10: 'abc'"
-      varies_example:
-        code: |
-          total = 10
-          for i in range(5):
-              total = total + i
-          print(total)
-        captured_output: "20"
-    diagram_id: "fig-traceback"
-    activities:
-      - activity_id: "m9-p1"
-        type: "debug-this"
-        objective_ids: ["m9-o1"]
-        minutes: 25
-      - activity_id: "m9-a2"
-        type: "pair_task"
-        objective_ids: ["m9-o1"]
-        minutes: 25
-      - activity_id: "m9-a3"
-        type: "predict-run-modify"
-        objective_ids: ["m9-o1"]
-        minutes: 20
-  - id: m10
-    position: 10
-    title: "final mini-project (capstone)"
-    duration_minutes: 240
-    prerequisites: ["m1", "m2", "m3", "m4", "m5", "m6", "m7", "m8", "m9"]
-    concepts_introduced: []
-    concepts_reused: ["all"]
-    plain_english_summary: "learners build one small useful program from their own real-life task."
-    diagram_id: "fig-capstone"
-    activities:
-      - activity_id: "m10-m1"
-        type: "mini-challenge"
-        objective_ids: ["m10-o1"]
-        minutes: 40
-      - activity_id: "m10-a2"
-        type: "pair_task"
-        objective_ids: ["m10-o1"]
-        minutes: 25
-      - activity_id: "m10-a3"
-        type: "debug-this"
-        objective_ids: ["m10-o1"]
-        minutes: 25
+- id: m1
+  position: 1
+  title: computational thinking and problem decomposition
+  duration_minutes: 180
+  prerequisites: []
+  concepts_introduced:
+  - computational thinking
+  - algorithm
+  - sequence
+  - decomposition
+  - pseudocode
+  concepts_reused: []
+  plain_english_summary: before any code, learners describe a task as a clear list
+    of steps in plain words.
+  analogy:
+    text: 'giving directions to a friend who has never seen the street: write the
+      steps in order, one after another, no skipping.'
+    breaks_down: the friend might read faster than you meant; in code the computer
+      cannot improvise.
+  worked_example:
+    code: "steps = [\n    \"open the diary\",\n    \"turn to page 3\",\n    \"read\
+      \ the entry\",\n    \"close the diary\",\n]\nprint(\"recipe made of \" + str(len(steps))\
+      \ + \" steps\")\n"
+    captured_output: recipe made of 4 steps
+    varies_example:
+      code: "steps = [\n    \"boil water\",\n    \"add tea bag\",\n    \"wait four\
+        \ minutes\",\n    \"add milk\",\n]\nprint(\"recipe made of \" + str(len(steps))\
+        \ + \" steps\")\n"
+      captured_output: recipe made of 4 steps
+  diagram_id: fig-curriculum-map
+  activities:
+  - activity_id: m1-p1
+    type: parsons
+    objective_ids:
+    - m1-o1
+    minutes: 25
+  - activity_id: m1-prm
+    type: predict-run-modify
+    objective_ids:
+    - m1-o1
+    - m1-o2
+    minutes: 20
+  - activity_id: m1-a1
+    type: pair_task
+    objective_ids:
+    - m1-o1
+    minutes: 25
+  misconceptions:
+  - id: m1-m1
+    wrong_belief: a program is a paragraph of prose
+    real_error: no code executed; wrong mental model
+    facilitator_response: show a recipe card vs a recipe sentence; code is instruction-like.
+  quiz:
+  - id: m1-q1
+    question: what does a computer program do?
+    correct_answer: follows a list of instructions in order
+    wrong_options:
+    - guesses what you mean
+    - thinks creatively
+    objective_id: m1-o1
+    bloom: remember
+  - id: m1-q2
+    question: breaking a task into smaller steps is called
+    correct_answer: decomposition
+    wrong_options:
+    - debugging
+    - compiling
+    objective_id: m1-o1
+    bloom: understand
+  exit_ticket:
+    id: m1-et1
+    question: in your own words, what is an algorithm?
+    objective_id: m1-o1
+    expected_keywords:
+    - steps
+    - instructions
+    - in order
+- id: m2
+  position: 2
+  title: variables and data types
+  duration_minutes: 180
+  prerequisites:
+  - m1
+  concepts_introduced:
+  - variable
+  - assignment
+  - string
+  - integer
+  - float
+  - boolean
+  concepts_reused:
+  - algorithm
+  - sequence
+  plain_english_summary: a variable is a name for a value the program can read and
+    change, like a labelled box.
+  analogy:
+    text: a labelled box where you can put a number or a word, and later take the
+      label off and use a different value.
+    breaks_down: the box is not a box; reassigning changes what the name points to,
+      not the box.
+  worked_example:
+    code: 'name = "meghana"
+
+      age = 26
+
+      height_cm = 165.5
+
+      print(name)
+
+      print(age)
+
+      print(height_cm)
+
+      '
+    captured_output: 'meghana
+
+      26
+
+      165.5'
+    varies_example:
+      code: 'name = "arjun"
+
+        age = 19
+
+        print("hello " + name + ", you are " + str(age) + " years old")
+
+        '
+      captured_output: hello arjun, you are 19 years old
+  diagram_id: fig-variable-box
+  activities:
+  - activity_id: m2-mis
+    type: debug-this
+    objective_ids:
+    - m2-o1
+    minutes: 25
+  - activity_id: m2-pair
+    type: pair_task
+    objective_ids:
+    - m2-o2
+    minutes: 25
+  - activity_id: m2-prm
+    type: predict-run-modify
+    objective_ids:
+    - m2-o1
+    - m2-o2
+    minutes: 20
+  quiz:
+  - id: m2-q1
+    question: what does a variable hold?
+    correct_answer: a value that can change
+    wrong_options:
+    - always the same number
+    - a fixed box type
+    misconception: variable is a box
+    objective_id: m2-o1
+    bloom: apply
+  - id: m2-q2
+    question: what does print show?
+    correct_answer: a value to the user
+    wrong_options:
+    - stores a value
+    - fixes a bug
+    misconception: print stores
+    objective_id: m2-o1
+    bloom: apply
+- id: m3
+  position: 3
+  title: input and output
+  duration_minutes: 120
+  prerequisites:
+  - m2
+  concepts_introduced:
+  - input
+  - print
+  - prompt
+  - display
+  concepts_reused:
+  - variable
+  - assignment
+  plain_english_summary: 'a program talks to the person through input and output:
+    ask, remember, show.'
+  analogy:
+    text: 'ordering food at a restaurant: you say what you want (input), the kitchen
+      writes it down (variable), the waiter brings the dish (output).'
+    breaks_down: the kitchen cannot answer follow-up questions; it just follows the
+      written ticket.
+  worked_example:
+    code: 'name = input("what is your name? ")
+
+      age = input("how old are you? ")
+
+      print("hello " + name + ". you will be " + str(int(age) + 1) + " next year.")
+
+      '
+    captured_output: hello meghana. you will be 27 next year
+    varies_example:
+      code: 'city = input("which city are you in? ")
+
+        print("noted: " + city)
+
+        '
+      captured_output: 'noted: ahmedabad'
+  diagram_id: fig-io
+  activities:
+  - activity_id: m3-prm
+    type: predict-run-modify
+    objective_ids:
+    - m3-o1
+    minutes: 20
+  - activity_id: m3-a2
+    type: pair_task
+    objective_ids:
+    - m3-o1
+    minutes: 25
+  - activity_id: m3-a3
+    type: debug-this
+    objective_ids:
+    - m3-o1
+    minutes: 25
+  quiz:
+  - id: m3-q1
+    question: what does input do?
+    correct_answer: asks the user and returns typed text
+    wrong_options:
+    - gives a number
+    - saves to a file
+    misconception: input gives a number
+    objective_id: m3-o1
+    bloom: understand
+  - id: m3-q2
+    question: what does print do?
+    correct_answer: shows text to the user
+    wrong_options:
+    - reads from a file
+    - sends an email
+    misconception: print reads
+    objective_id: m3-o1
+    bloom: understand
+- id: m4
+  position: 4
+  title: conditionals (if / else)
+  duration_minutes: 180
+  prerequisites:
+  - m3
+  concepts_introduced:
+  - if
+  - else
+  - boolean expression
+  - comparison operator
+  concepts_reused:
+  - variable
+  - assignment
+  - sequence
+  - input
+  - print
+  plain_english_summary: a program can choose between two or more paths based on a
+    condition.
+  analogy:
+    text: 'a traffic roundabout: if the light is green, go; if red, stop; otherwise
+      follow the sign.'
+    breaks_down: a roundabout has many roads; an if/else has a binary choice and a
+      condition you must write precisely.
+  worked_example:
+    code: "age = 12\nif age >= 13:\n    print(\"you can watch the scary movie\")\n\
+      else:\n    print(\"you must watch the gentle cartoon\")\n"
+    captured_output: you must watch the gentle cartoon
+    varies_example:
+      code: "name = \"fatima\"\nif name == \"fatima\":\n    print(\"welcome back,\
+        \ teacher\")\nelse:\n    print(\"hello, stranger\")\n"
+      captured_output: welcome back, teacher
+  diagram_id: fig-decision-flow
+  activities:
+  - activity_id: m4-p1
+    type: parsons
+    objective_ids:
+    - m4-o1
+    minutes: 25
+  - activity_id: m4-prm
+    type: predict-run-modify
+    objective_ids:
+    - m4-o1
+    minutes: 20
+  - activity_id: m4-a2
+    type: pair_task
+    objective_ids:
+    - m4-o1
+    minutes: 25
+  quiz:
+  - id: m4-q1
+    question: what does an if check?
+    correct_answer: whether a condition is true
+    wrong_options:
+    - whether a variable exists
+    - whether a file exists
+    misconception: if checks existence
+    objective_id: m4-o1
+    bloom: apply
+  - id: m4-q2
+    question: what does else mean?
+    correct_answer: the other branch when the if is false
+    wrong_options:
+    - always runs
+    - stops the program
+    misconception: else always runs
+    objective_id: m4-o1
+    bloom: apply
+- id: m5
+  position: 5
+  title: loops (repeat)
+  duration_minutes: 180
+  prerequisites:
+  - m4
+  concepts_introduced:
+  - while
+  - for
+  - range
+  - iteration
+  concepts_reused:
+  - variable
+  - assignment
+  - condition
+  plain_english_summary: a loop repeats a block of steps until a condition becomes
+    false, or for a known number of times.
+  analogy:
+    text: asking a child to count from one to ten by pointing at each number on a
+      number line, one at a time, ten times.
+    breaks_down: the number line is physical; a for loop is a counter, and the stop
+      condition must be written, not assumed.
+  worked_example:
+    code: "total = 0\nfor i in range(3):\n    total = total + 1\nprint(total)\n"
+    captured_output: '3'
+    varies_example:
+      code: "count = 0\nwhile count < 3:\n    count = count + 1\nprint(\"done counting\
+        \ to \" + str(count))\n"
+      captured_output: done counting to 3
+  diagram_id: fig-loop-trace
+  activities:
+  - activity_id: m5-p1
+    type: parsons
+    objective_ids:
+    - m5-o1
+    minutes: 25
+  - activity_id: m5-prm
+    type: predict-run-modify
+    objective_ids:
+    - m5-o1
+    minutes: 20
+  - activity_id: m5-a2
+    type: pair_task
+    objective_ids:
+    - m5-o1
+    minutes: 25
+  quiz:
+  - id: m5-q1
+    question: what does range(3) give?
+    correct_answer: three loop runs
+    wrong_options:
+    - three values to add
+    - three stored items
+    misconception: range gives values
+    objective_id: m5-o1
+    bloom: apply
+  - id: m5-q2
+    question: when does a while loop stop?
+    correct_answer: when the condition becomes false
+    wrong_options:
+    - after ten runs
+    - never
+    misconception: while has a default stop
+    objective_id: m5-o1
+    bloom: apply
+- id: m6
+  position: 6
+  title: functions (reusable steps)
+  duration_minutes: 180
+  prerequisites:
+  - m5
+  concepts_introduced:
+  - def
+  - return
+  - parameter
+  - argument
+  - function call
+  concepts_reused:
+  - sequence
+  - variable
+  - algorithm
+  plain_english_summary: a function is a named, reusable bundle of steps that takes
+    inputs and gives back one output.
+  analogy:
+    text: 'a vending machine: you press a button (call), the machine follows its internal
+      steps (function body), and gives you a snack (return).'
+    breaks_down: a vending machine cannot take its own button as input; functions
+      take parameters and return one value, not many.
+  worked_example:
+    code: "def greet(name):\n    return \"hello \" + name + \", welcome back\"\nprint(greet(\"\
+      fatima\"))\n"
+    captured_output: hello fatima, welcome back
+    varies_example:
+      code: "def add(a, b):\n    return a + b\nprint(add(2, 3))\n"
+      captured_output: '5'
+  diagram_id: fig-function-machine
+  activities:
+  - activity_id: m6-p1
+    type: parsons
+    objective_ids:
+    - m6-o1
+    minutes: 25
+  - activity_id: m6-prm
+    type: predict-run-modify
+    objective_ids:
+    - m6-o1
+    minutes: 20
+  - activity_id: m6-a2
+    type: pair_task
+    objective_ids:
+    - m6-o1
+    minutes: 25
+  quiz:
+  - id: m6-q1
+    question: what does a function return?
+    correct_answer: one value the caller can use
+    wrong_options:
+    - nothing
+    - all variables
+    misconception: function returns nothing
+    objective_id: m6-o1
+    bloom: apply
+  - id: m6-q2
+    question: what is a parameter?
+    correct_answer: a name for an input it receives
+    wrong_options:
+    - the output
+    - the function name
+    misconception: parameter is the value
+    objective_id: m6-o1
+    bloom: apply
+- id: m7
+  position: 7
+  title: lists and dictionaries
+  duration_minutes: 180
+  prerequisites:
+  - m6
+  concepts_introduced:
+  - list
+  - index
+  - append
+  - dictionary
+  - key
+  - value
+  - iteration over collection
+  concepts_reused:
+  - variable
+  - assignment
+  - loop
+  - function
+  plain_english_summary: 'collections help store many values: a list is an ordered
+    pile, a dictionary maps names to values.'
+  analogy:
+    text: a shopping list (list) and a phone contacts list (dictionary).
+    breaks_down: lists keep order and allow duplicates; dictionaries allow any key,
+      not just sequential numbers.
+  worked_example:
+    code: 'shopping = ["rice", "oil", "tea"]
+
+      shopping.append("salt")
+
+      print(shopping[0])
+
+      print(len(shopping))
+
+      contacts = {"meghana": "9876543210", "arjun": "9123456780"}
+
+      print(contacts["meghana"])
+
+      '
+    captured_output: 'rice
+
+      3
+
+      9876543210'
+    varies_example:
+      code: 'scores = [10, 20, 30]
+
+        scores[0] = 11
+
+        print(sum(scores))
+
+        '
+      captured_output: '61'
+  diagram_id: fig-list-dict
+  activities:
+  - activity_id: m7-p1
+    type: parsons
+    objective_ids:
+    - m7-o1
+    minutes: 25
+  - activity_id: m7-prm
+    type: predict-run-modify
+    objective_ids:
+    - m7-o1
+    minutes: 20
+  - activity_id: m7-a2
+    type: pair_task
+    objective_ids:
+    - m7-o1
+    minutes: 25
+  quiz:
+  - id: m7-q1
+    question: what does append do?
+    correct_answer: adds one item to the end
+    wrong_options:
+    - adds at the front
+    - removes item
+    misconception: append adds at front
+    objective_id: m7-o1
+    bloom: apply
+  - id: m7-q2
+    question: how do you read one dictionary value?
+    correct_answer: use the key in brackets
+    wrong_options:
+    - use a number
+    - use a dot
+    misconception: dot notation for dict
+    objective_id: m7-o1
+    bloom: apply
+- id: m8
+  position: 8
+  title: files and simple data
+  duration_minutes: 180
+  prerequisites:
+  - m7
+  concepts_introduced:
+  - open
+  - read
+  - write
+  - with statement
+  concepts_reused:
+  - variable
+  - function
+  - list
+  plain_english_summary: programs can read what a person wrote in a file and write
+    results back into a file.
+  analogy:
+    text: writing a note on paper and filing it; later reading the note back.
+    breaks_down: file handles are stateful and need closing; the with statement automates
+      closing safely.
+  worked_example:
+    code: "with open(\"todo.txt\", \"w\") as f:\n    f.write(\"buy milk\\n\")\nwith\
+      \ open(\"todo.txt\", \"r\") as f:\n    print(f.read())\n"
+    captured_output: buy milk
+    varies_example:
+      code: "with open(\"names.txt\", \"w\") as f:\n  f.write(\"meghana\\narjun\\\
+        n\")\nwith open(\"names.txt\", \"r\") as f:\n  for line in f:\n    print(line.strip().upper())\n"
+      captured_output: 'MEGHANA
+
+        ARJUN'
+  diagram_id: fig-file-flow
+  activities:
+  - activity_id: m8-p1
+    type: debug-this
+    objective_ids:
+    - m8-o1
+    minutes: 25
+  - activity_id: m8-a2
+    type: pair_task
+    objective_ids:
+    - m8-o1
+    minutes: 25
+  - activity_id: m8-a3
+    type: predict-run-modify
+    objective_ids:
+    - m8-o1
+    minutes: 20
+  quiz:
+  - id: m8-q1
+    question: what does with do?
+    correct_answer: opens and closes a file safely
+    wrong_options:
+    - writes faster
+    - reads faster
+    misconception: with is optional
+    objective_id: m8-o1
+    bloom: apply
+  - id: m8-q2
+    question: what mode writes a file?
+    correct_answer: w
+    wrong_options:
+    - r
+    - x
+    misconception: mode x is write
+    objective_id: m8-o1
+    bloom: apply
+- id: m9
+  position: 9
+  title: debugging and reading errors
+  duration_minutes: 180
+  prerequisites:
+  - m1
+  - m2
+  - m3
+  - m4
+  - m5
+  - m6
+  - m7
+  - m8
+  concepts_introduced:
+  - syntax error
+  - runtime error
+  - logic error
+  - traceback
+  concepts_reused:
+  - variable
+  - function
+  - loop
+  - file
+  plain_english_summary: errors are messages from the computer about what went wrong;
+    reading them is a skill.
+  analogy:
+    text: 'a recipe with a wrong ingredient amount: the kitchen stops and tells you
+      which step and what is off.'
+    breaks_down: the message names a line and a kind, but not always the thinking
+      error; you must connect it to your intention.
+  worked_example:
+    code: 'age = input("how old are you? ")
+
+      print("next year you will be " + str(int(age)) + " years old")
+
+      '
+    captured_output: 'Traceback (most recent call last): ValueError: invalid literal
+      for int() with base 10: ''abc'''
+    varies_example:
+      code: "total = 10\nfor i in range(5):\n    total = total + i\nprint(total)\n"
+      captured_output: '20'
+  diagram_id: fig-traceback
+  activities:
+  - activity_id: m9-p1
+    type: debug-this
+    objective_ids:
+    - m9-o1
+    minutes: 25
+  - activity_id: m9-a2
+    type: pair_task
+    objective_ids:
+    - m9-o1
+    minutes: 25
+  - activity_id: m9-a3
+    type: predict-run-modify
+    objective_ids:
+    - m9-o1
+    minutes: 20
+  quiz:
+  - id: m9-q1
+    question: what does a traceback show first?
+    correct_answer: the error kind at the end
+    wrong_options:
+    - the line you wrote first
+    - your name
+    misconception: traceback reads top-down
+    objective_id: m9-o1
+    bloom: analyse
+  - id: m9-q2
+    question: what is a logic error?
+    correct_answer: the code runs but gives wrong output
+    wrong_options:
+    - will not run
+    - runs slowly
+    misconception: logic error means crash
+    objective_id: m9-o1
+    bloom: analyse
+- id: m10
+  position: 10
+  title: final mini-project (capstone)
+  duration_minutes: 240
+  prerequisites:
+  - m1
+  - m2
+  - m3
+  - m4
+  - m5
+  - m6
+  - m7
+  - m8
+  - m9
+  concepts_introduced: []
+  concepts_reused:
+  - all
+  plain_english_summary: learners build one small useful program from their own real-life
+    task.
+  diagram_id: fig-capstone
+  activities:
+  - activity_id: m10-m1
+    type: mini-challenge
+    objective_ids:
+    - m10-o1
+    minutes: 40
+  - activity_id: m10-a2
+    type: pair_task
+    objective_ids:
+    - m10-o1
+    minutes: 25
+  - activity_id: m10-a3
+    type: debug-this
+    objective_ids:
+    - m10-o1
+    minutes: 25
+  quiz:
+  - id: m10-q1
+    question: what is the capstone?
+    correct_answer: one small useful program built from prior ideas
+    wrong_options:
+    - a new language
+    - a test
+    misconception: capstone is a language
+    objective_id: m10-o1
+    bloom: create
+  - id: m10-q2
+    question: what should you explain with your program?
+    correct_answer: what it does and what you would change next
+    wrong_options:
+    - only the hours spent
+    - the installation steps
+    misconception: explanation is optional
+    objective_id: m10-o1
+    bloom: analyse
 objectives:
-  - id: "m1-o1"
-    module_id: "m1"
-    statement: "describe a small task as a sequence of steps in plain words"
-    bloom: "understand"
-    measurable: true
-  - id: "m1-o2"
-    module_id: "m1"
-    statement: "explain why the order of steps matters in a program"
-    bloom: "understand"
-    measurable: true
-  - id: "m2-o1"
-    module_id: "m2"
-    statement: "name a variable and give it a value of the right type"
-    bloom: "apply"
-    measurable: true
-  - id: "m2-o2"
-    module_id: "m2"
-    statement: "predict what a short program will print before running it"
-    bloom: "apply"
-    measurable: true
-  - id: "m3-o1"
-    module_id: "m3"
-    statement: "write a program that asks a question and shows an answer"
-    bloom: "apply"
-    measurable: true
-  - id: "m4-o1"
-    module_id: "m4"
-    statement: "choose an if or else branch that fits a real situation"
-    bloom: "apply"
-    measurable: true
-  - id: "m5-o1"
-    module_id: "m5"
-    statement: "write a loop that repeats steps until a stop condition"
-    bloom: "apply"
-    measurable: true
-  - id: "m6-o1"
-    module_id: "m6"
-    statement: "write a function that takes an input and returns an output"
-    bloom: "apply"
-    measurable: true
-  - id: "m7-o1"
-    module_id: "m7"
-    statement: "organise related values in a list or dictionary and read one value"
-    bloom: "apply"
-    measurable: true
-  - id: "m8-o1"
-    module_id: "m8"
-    statement: "read a text file and write a result back to a file"
-    bloom: "apply"
-    measurable: true
-  - id: "m9-o1"
-    module_id: "m9"
-    statement: "read a traceback and point to the line to fix first"
-    bloom: "analyse"
-    measurable: true
-  - id: "m10-o1"
-    module_id: "m10"
-    statement: "combine the taught concepts into one working small program and explain it in plain words"
-    bloom: "create"
-    measurable: true
-
+- id: m1-o1
+  module_id: m1
+  statement: describe a small task as a sequence of steps in plain words
+  bloom: understand
+  measurable: true
+- id: m1-o2
+  module_id: m1
+  statement: explain why the order of steps matters in a program
+  bloom: understand
+  measurable: true
+- id: m2-o1
+  module_id: m2
+  statement: name a variable and give it a value of the right type
+  bloom: apply
+  measurable: true
+- id: m2-o2
+  module_id: m2
+  statement: predict what a short program will print before running it
+  bloom: apply
+  measurable: true
+- id: m3-o1
+  module_id: m3
+  statement: write a program that asks a question and shows an answer
+  bloom: apply
+  measurable: true
+- id: m4-o1
+  module_id: m4
+  statement: choose an if or else branch that fits a real situation
+  bloom: apply
+  measurable: true
+- id: m5-o1
+  module_id: m5
+  statement: write a loop that repeats steps until a stop condition
+  bloom: apply
+  measurable: true
+- id: m6-o1
+  module_id: m6
+  statement: write a function that takes an input and returns an output
+  bloom: apply
+  measurable: true
+- id: m7-o1
+  module_id: m7
+  statement: organise related values in a list or dictionary and read one value
+  bloom: apply
+  measurable: true
+- id: m8-o1
+  module_id: m8
+  statement: read a text file and write a result back to a file
+  bloom: apply
+  measurable: true
+- id: m9-o1
+  module_id: m9
+  statement: read a traceback and point to the line to fix first
+  bloom: analyse
+  measurable: true
+- id: m10-o1
+  module_id: m10
+  statement: combine the taught concepts into one working small program and explain
+    it in plain words
+  bloom: create
+  measurable: true
 concept_ladder:
-  - concept: "sequence"
-    introduced: "m1"
-    reused: ["m2", "m3", "m4", "m5", "m6", "m7", "m8", "m9", "m10"]
-  - concept: "variable"
-    introduced: "m2"
-    reused: ["m1", "m3", "m4", "m5", "m6", "m7", "m8", "m9", "m10"]
-  - concept: "input and print"
-    introduced: "m3"
-    reused: ["m1", "m2", "m4", "m5", "m6", "m7", "m8", "m9", "m10"]
-  - concept: "if / else"
-    introduced: "m4"
-    reused: ["m5", "m6", "m7", "m8", "m9", "m10"]
-  - concept: "loop"
-    introduced: "m5"
-    reused: ["m6", "m7", "m8", "m9", "m10"]
-  - concept: "function"
-    introduced: "m6"
-    reused: ["m7", "m8", "m9", "m10"]
-  - concept: "collection"
-    introduced: "m7"
-    reused: ["m8", "m9", "m10"]
-  - concept: "file handling"
-    introduced: "m8"
-    reused: ["m9", "m10"]
-  - concept: "debugging"
-    introduced: "m9"
-    reused: ["m10"]
-
+- concept: sequence
+  introduced: m1
+  reused:
+  - m2
+  - m3
+  - m4
+  - m5
+  - m6
+  - m7
+  - m8
+  - m9
+  - m10
+- concept: variable
+  introduced: m2
+  reused:
+  - m1
+  - m3
+  - m4
+  - m5
+  - m6
+  - m7
+  - m8
+  - m9
+  - m10
+- concept: input and print
+  introduced: m3
+  reused:
+  - m1
+  - m2
+  - m4
+  - m5
+  - m6
+  - m7
+  - m8
+  - m9
+  - m10
+- concept: if / else
+  introduced: m4
+  reused:
+  - m5
+  - m6
+  - m7
+  - m8
+  - m9
+  - m10
+- concept: loop
+  introduced: m5
+  reused:
+  - m6
+  - m7
+  - m8
+  - m9
+  - m10
+- concept: function
+  introduced: m6
+  reused:
+  - m7
+  - m8
+  - m9
+  - m10
+- concept: collection
+  introduced: m7
+  reused:
+  - m8
+  - m9
+  - m10
+- concept: file handling
+  introduced: m8
+  reused:
+  - m9
+  - m10
+- concept: debugging
+  introduced: m9
+  reused:
+  - m10
 activities_catalogue:
-  - activity_id: "m1-p1"
-    module_id: "m1"
-    type: "parsons"
-    time_minutes: 25
-    objective_ids: ["m1-o1"]
-    description: "order scrambled lines into a working program"
-  - activity_id: "m1-prm"
-    module_id: "m1"
-    type: "predict-run-modify"
-    time_minutes: 20
-    objective_ids: ["m1-o1", "m1-o2"]
-    description: "predict output, run, modify one thing"
-  - activity_id: "m1-a1"
-    module_id: "m1"
-    type: "pair_task"
-    time_minutes: 25
-    objective_ids: ["m1-o1"]
-    description: "two learners order steps together"
-  - activity_id: "m2-mis"
-    module_id: "m2"
-    type: "debug-this"
-    time_minutes: 25
-    objective_ids: ["m2-o1"]
-    description: "find the real bug in almost-correct code"
-  - activity_id: "m2-pair"
-    module_id: "m2"
-    type: "pair_task"
-    time_minutes: 25
-    objective_ids: ["m2-o2"]
-    description: "talk through prediction before typing"
-  - activity_id: "m3-prm"
-    module_id: "m3"
-    type: "predict-run-modify"
-    time_minutes: 20
-    objective_ids: ["m3-o1"]
-    description: "predict output of input program"
-  - activity_id: "m4-p1"
-    module_id: "m4"
-    type: "parsons"
-    time_minutes: 25
-    objective_ids: ["m4-o1"]
-    description: "order if / else lines"
-  - activity_id: "m5-p1"
-    module_id: "m5"
-    type: "parsons"
-    time_minutes: 25
-    objective_ids: ["m5-o1"]
-    description: "order loop lines so stop condition works"
-  - activity_id: "m6-p1"
-    module_id: "m6"
-    type: "parsons"
-    time_minutes: 25
-    objective_ids: ["m6-o1"]
-    description: "order def / call lines"
-  - activity_id: "m7-p1"
-    module_id: "m7"
-    type: "parsons"
-    time_minutes: 25
-    objective_ids: ["m7-o1"]
-    description: "order list append / index lines"
-  - activity_id: "m8-p1"
-    module_id: "m8"
-    type: "debug-this"
-    time_minutes: 25
-    objective_ids: ["m8-o1"]
-    description: "fix file handle bug"
-  - activity_id: "m9-p1"
-    module_id: "m9"
-    type: "debug-this"
-    time_minutes: 25
-    objective_ids: ["m9-o1"]
-    description: "read traceback, find line, fix"
-  - activity_id: "m10-m1"
-    module_id: "m10"
-    type: "mini-challenge"
-    time_minutes: 40
-    objective_ids: ["m10-o1"]
-    description: "first capstone milestone: write a tiny program with one variable and one output"
-
+- activity_id: m1-p1
+  module_id: m1
+  type: parsons
+  time_minutes: 25
+  objective_ids:
+  - m1-o1
+  description: order scrambled lines into a working program
+- activity_id: m1-prm
+  module_id: m1
+  type: predict-run-modify
+  time_minutes: 20
+  objective_ids:
+  - m1-o1
+  - m1-o2
+  description: predict output, run, modify one thing
+- activity_id: m1-a1
+  module_id: m1
+  type: pair_task
+  time_minutes: 25
+  objective_ids:
+  - m1-o1
+  description: two learners order steps together
+- activity_id: m2-mis
+  module_id: m2
+  type: debug-this
+  time_minutes: 25
+  objective_ids:
+  - m2-o1
+  description: find the real bug in almost-correct code
+- activity_id: m2-pair
+  module_id: m2
+  type: pair_task
+  time_minutes: 25
+  objective_ids:
+  - m2-o2
+  description: talk through prediction before typing
+- activity_id: m3-prm
+  module_id: m3
+  type: predict-run-modify
+  time_minutes: 20
+  objective_ids:
+  - m3-o1
+  description: predict output of input program
+- activity_id: m4-p1
+  module_id: m4
+  type: parsons
+  time_minutes: 25
+  objective_ids:
+  - m4-o1
+  description: order if / else lines
+- activity_id: m5-p1
+  module_id: m5
+  type: parsons
+  time_minutes: 25
+  objective_ids:
+  - m5-o1
+  description: order loop lines so stop condition works
+- activity_id: m6-p1
+  module_id: m6
+  type: parsons
+  time_minutes: 25
+  objective_ids:
+  - m6-o1
+  description: order def / call lines
+- activity_id: m7-p1
+  module_id: m7
+  type: parsons
+  time_minutes: 25
+  objective_ids:
+  - m7-o1
+  description: order list append / index lines
+- activity_id: m8-p1
+  module_id: m8
+  type: debug-this
+  time_minutes: 25
+  objective_ids:
+  - m8-o1
+  description: fix file handle bug
+- activity_id: m9-p1
+  module_id: m9
+  type: debug-this
+  time_minutes: 25
+  objective_ids:
+  - m9-o1
+  description: read traceback, find line, fix
+- activity_id: m10-m1
+  module_id: m10
+  type: mini-challenge
+  time_minutes: 40
+  objective_ids:
+  - m10-o1
+  description: 'first capstone milestone: write a tiny program with one variable and
+    one output'
 glossary_terms:
-  - term: "algorithm"
-    plain: "a step-by-step set of instructions that solves a task"
-  - term: "boolean"
-    plain: "a true or false value, like yes or no"
-  - term: "breakpoint"
-    plain: "a pause point in code where the program stops so you can look at the values"
-  - term: "capstone"
-    plain: "the final mini-project where learners combine ideas into one finished program"
-  - term: "collection"
-    plain: "a group of values stored together, such as a list or a dictionary"
-  - term: "conditional"
-    plain: "a choice in a program that runs different steps depending on the situation"
-  - term: "debugging"
-    plain: "finding and fixing mistakes in a program"
-  - term: "dictionary"
-    plain: "a collection that pairs each name with a value, like a contacts list"
-  - term: "error message"
-    plain: "the computer note that explains what it did not understand or what went wrong"
-  - term: "float"
-    plain: "a number with a decimal point, like 3.5"
-  - term: "function"
-    plain: "a named, reusable set of steps that does one job"
-  - term: "integer"
-    plain: "a whole number, like 5, without a decimal point"
-  - term: "input"
-    plain: "how information travels into a program from the user"
-  - term: "iteration"
-    plain: "one pass through a loop, where the loop variable takes the next value"
-  - term: "list"
-    plain: "an ordered collection of items, like a shopping list"
-  - term: "loop"
-    plain: "a structure that repeats steps until a condition changes"
-  - term: "module"
-    plain: "one teaching unit, about three hours, that builds on the previous one"
-  - term: "Parsons problem"
-    plain: "a task where learners order scrambled lines of code instead of writing from scratch"
-  - term: "program"
-    plain: "the set of instructions a computer follows, written by a programmer"
-  - term: "Python"
-    plain: "the teaching language; it reads clearly and runs in a browser"
-  - term: "return"
-    plain: "the value a function sends back to whoever called it"
-  - term: "sequence"
-    plain: "the order in which steps happen, one after another"
-  - term: "string"
-    plain: "text, like a name or a sentence, written in quotes"
-  - term: "syntax error"
-    plain: "a mistake in the shape of a code sentence, so the computer cannot parse it"
-  - term: "variable"
-    plain: "a named place that holds a value that can change, like a label on a shelf"
-
+- term: algorithm
+  plain: a step-by-step set of instructions that solves a task
+- term: boolean
+  plain: a true or false value, like yes or no
+- term: breakpoint
+  plain: a pause point in code where the program stops so you can look at the values
+- term: capstone
+  plain: the final mini-project where learners combine ideas into one finished program
+- term: collection
+  plain: a group of values stored together, such as a list or a dictionary
+- term: conditional
+  plain: a choice in a program that runs different steps depending on the situation
+- term: debugging
+  plain: finding and fixing mistakes in a program
+- term: dictionary
+  plain: a collection that pairs each name with a value, like a contacts list
+- term: error message
+  plain: the computer note that explains what it did not understand or what went wrong
+- term: float
+  plain: a number with a decimal point, like 3.5
+- term: function
+  plain: a named, reusable set of steps that does one job
+- term: integer
+  plain: a whole number, like 5, without a decimal point
+- term: input
+  plain: how information travels into a program from the user
+- term: iteration
+  plain: one pass through a loop, where the loop variable takes the next value
+- term: list
+  plain: an ordered collection of items, like a shopping list
+- term: loop
+  plain: a structure that repeats steps until a condition changes
+- term: module
+  plain: one teaching unit, about three hours, that builds on the previous one
+- term: Parsons problem
+  plain: a task where learners order scrambled lines of code instead of writing from
+    scratch
+- term: program
+  plain: the set of instructions a computer follows, written by a programmer
+- term: Python
+  plain: the teaching language; it reads clearly and runs in a browser
+- term: return
+  plain: the value a function sends back to whoever called it
+- term: sequence
+  plain: the order in which steps happen, one after another
+- term: string
+  plain: text, like a name or a sentence, written in quotes
+- term: syntax error
+  plain: a mistake in the shape of a code sentence, so the computer cannot parse it
+- term: variable
+  plain: a named place that holds a value that can change, like a label on a shelf
 research_ids:
-  - id: "R1"
-    source: "mit tll worked examples"
-    claim: "novices benefit from studying a fully worked example with thinking made visible"
-  - id: "R2"
-    source: "raspberry pi parsons problems blog"
-    claim: "parsons problems as scrambled-line reordering suit text-based intro languages"
-  - id: "R3"
-    source: "kapor foundation parsons strategy guide"
-    claim: "scrambled lines format lowers cognitive load for ordering tasks"
-  - id: "R4"
-    source: "lui yap denner pair programming reviews"
-    claim: "pair work helps confidence and accuracy for novices"
-  - id: "R5"
-    source: "acm worked examples cognitive load"
-    claim: "worked examples reduce overload by showing steps before asking learners to produce them"
-  - id: "R6"
-    source: "sweller cognitive load"
-    claim: "worked example effect reduces extraneous load for novices"
-  - id: "R7"
-    source: "lister reading tracing novices"
-    claim: "novices benefit from tracing code step by step"
-  - id: "R8"
-    source: "qian lehman misconception review"
-    claim: "misconceptions like variable-as-box persist and must be surfaced"
-  - id: "R9"
-    source: "py4e tiny steps progression"
-    claim: "small success within minutes sustains motivation"
-  - id: "R10"
-    source: "code.org unplugged first"
-    claim: "unplugged activities before blocks support thinking in steps"
-  - id: "D1"
-    source: "design decision"
-    claim: "python chosen over scratch and javascript for readability and browser access"
-  - id: "D2"
-    source: "design decision"
-    claim: "colab chosen as browser runtime for zero installs"
-  - id: "D3"
-    source: "design decision"
-    claim: "10 modules and 30 teaching hours kept as scope decision"
-
+- id: R1
+  source: mit tll worked examples
+  claim: novices benefit from studying a fully worked example with thinking made visible
+- id: R2
+  source: raspberry pi parsons problems blog
+  claim: parsons problems as scrambled-line reordering suit text-based intro languages
+- id: R3
+  source: kapor foundation parsons strategy guide
+  claim: scrambled lines format lowers cognitive load for ordering tasks
+- id: R4
+  source: lui yap denner pair programming reviews
+  claim: pair work helps confidence and accuracy for novices
+- id: R5
+  source: acm worked examples cognitive load
+  claim: worked examples reduce overload by showing steps before asking learners to
+    produce them
+- id: R6
+  source: sweller cognitive load
+  claim: worked example effect reduces extraneous load for novices
+- id: R7
+  source: lister reading tracing novices
+  claim: novices benefit from tracing code step by step
+- id: R8
+  source: qian lehman misconception review
+  claim: misconceptions like variable-as-box persist and must be surfaced
+- id: R9
+  source: py4e tiny steps progression
+  claim: small success within minutes sustains motivation
+- id: R10
+  source: code.org unplugged first
+  claim: unplugged activities before blocks support thinking in steps
+- id: D1
+  source: design decision
+  claim: python chosen over scratch and javascript for readability and browser access
+- id: D2
+  source: design decision
+  claim: colab chosen as browser runtime for zero installs
+- id: D3
+  source: design decision
+  claim: 10 modules and 30 teaching hours kept as scope decision
 design_decisions:
-  - id: "D1"
-    decision: "teach python in the browser via colab"
-    rationale: "zero installs, fits virtual internship, matches week 1 decision"
-  - id: "D2"
-    decision: "90 minute session shape, 1/3 instruction, 2/3 practice"
-    rationale: "week 1 plan fixed this shape; consistent rhythm for new learners"
-  - id: "D3"
-    decision: "capstone pass mark 12 of 16 with correctness at least 2"
-    rationale: "week 1 rubric design, not research-backed"
-
+- id: D1
+  decision: teach python in the browser via colab
+  rationale: zero installs, fits virtual internship, matches week 1 decision
+- id: D2
+  decision: 90 minute session shape, 1/3 instruction, 2/3 practice
+  rationale: week 1 plan fixed this shape; consistent rhythm for new learners
+- id: D3
+  decision: capstone pass mark 12 of 16 with correctness at least 2
+  rationale: week 1 rubric design, not research-backed
 capstone:
-  task: "build one small useful program from a personal task"
+  task: build one small useful program from a personal task
   milestones:
-    - id: "ms-cap-1"
-      name: "milestone 1: tiny program with one variable and one output"
-      minutes: 60
-      objective_ids: ["m3-o1", "m6-o1"]
-    - id: "ms-cap-2"
-      name: "milestone 2: add one conditional or loop"
-      minutes: 60
-      objective_ids: ["m4-o1", "m5-o1"]
-    - id: "ms-cap-3"
-      name: "milestone 3: add one function or collection"
-      minutes: 60
-      objective_ids: ["m6-o1", "m7-o1"]
-    - id: "ms-cap-4"
-      name: "milestone 4: add file handling or debugging"
-      minutes: 60
-      objective_ids: ["m8-o1", "m9-o1"]
-    - id: "ms-cap-5"
-      name: "milestone 5: integrate all and explain in plain words"
-      minutes: 60
-      objective_ids: ["m10-o1"]
+  - id: ms-cap-1
+    name: 'milestone 1: tiny program with one variable and one output'
+    minutes: 60
+    objective_ids:
+    - m3-o1
+    - m6-o1
+  - id: ms-cap-2
+    name: 'milestone 2: add one conditional or loop'
+    minutes: 60
+    objective_ids:
+    - m4-o1
+    - m5-o1
+  - id: ms-cap-3
+    name: 'milestone 3: add one function or collection'
+    minutes: 60
+    objective_ids:
+    - m6-o1
+    - m7-o1
+  - id: ms-cap-4
+    name: 'milestone 4: add file handling or debugging'
+    minutes: 60
+    objective_ids:
+    - m8-o1
+    - m9-o1
+  - id: ms-cap-5
+    name: 'milestone 5: integrate all and explain in plain words'
+    minutes: 60
+    objective_ids:
+    - m10-o1
   rubric_criteria:
-    - id: "cap-c1"
-      name: "correctness"
-      levels:
-        "1": "does not run"
-        "2": "runs with wrong output"
-        "3": "runs correctly"
-        "4": "runs correctly and handles a small error"
-    - id: "cap-c2"
-      name: "use of ideas"
-      levels:
-        "1": "uses none"
-        "2": "uses one idea"
-        "3": "uses three ideas sensibly"
-        "4": "uses all ideas appropriately"
-    - id: "cap-c3"
-      name: "readability"
-      levels:
-        "1": "not readable"
-        "2": "barely follows steps"
-        "3": "follows steps in order"
-        "4": "follows steps and names are clear"
-    - id: "cap-c4"
-      name: "explanation"
-      levels:
-        "1": "cannot explain"
-        "2": "explains with help"
-        "3": "explains alone"
-        "4": "explains and explains a change"
+  - id: cap-c1
+    name: correctness
+    levels:
+      '1': does not run
+      '2': runs with wrong output
+      '3': runs correctly
+      '4': runs correctly and handles a small error
+  - id: cap-c2
+    name: use of ideas
+    levels:
+      '1': uses none
+      '2': uses one idea
+      '3': uses three ideas sensibly
+      '4': uses all ideas appropriately
+  - id: cap-c3
+    name: readability
+    levels:
+      '1': not readable
+      '2': barely follows steps
+      '3': follows steps in order
+      '4': follows steps and names are clear
+  - id: cap-c4
+    name: explanation
+    levels:
+      '1': cannot explain
+      '2': explains with help
+      '3': explains alone
+      '4': explains and explains a change
   pass_total: 12
   pass_correctness_min: 2
-  pass_threshold_note: "learner passes at 12 of 16 total, with correctness at least 2; neatness alone cannot pass"
-
+  pass_threshold_note: learner passes at 12 of 16 total, with correctness at least
+    2; neatness alone cannot pass
 assessment:
   quiz_per_module: 2
   quiz_minutes: 10
   exit_ticket_per_module: 1
   exit_ticket_minutes: 5
   exercises_per_module: 3
-
 sessions:
-  - session_id: "s1"
-    module_id: "m1"
-    phase: "content"
-    duration_minutes: 90
-    blocks:
-      - block_id: "s1-b1"
-        block_type: "arrive_recall"
-        minutes: 10
-        delivery_method: "recall question"
-      - block_id: "s1-b2"
-        block_type: "worked_example"
-        minutes: 20
-        delivery_method: "worked example"
-      - block_id: "s1-b3"
-        block_type: "pair_task"
-        minutes: 25
-        delivery_method: "parsons problem"
-      - block_id: "s1-b4"
-        block_type: "predict_run_modify"
-        minutes: 20
-        delivery_method: "predict-run-modify"
-      - block_id: "s1-b5"
-        block_type: "exit_ticket"
-        minutes: 10
-        delivery_method: "exit ticket"
-      - block_id: "s1-b6"
-        block_type: "buffer"
-        minutes: 5
-        delivery_method: "buffer / recap"
-  - session_id: "s2"
-    module_id: "m1"
-    phase: "content"
-    duration_minutes: 90
-    blocks:
-      - block_id: "s2-b1"
-        block_type: "arrive_recall"
-        minutes: 10
-        delivery_method: "recall question"
-      - block_id: "s2-b2"
-        block_type: "worked_example"
-        minutes: 20
-        delivery_method: "worked example"
-      - block_id: "s2-b3"
-        block_type: "pair_task"
-        minutes: 25
-        delivery_method: "debug-this"
-      - block_id: "s2-b4"
-        block_type: "predict_run_modify"
-        minutes: 20
-        delivery_method: "predict-run-modify"
-      - block_id: "s2-b5"
-        block_type: "exit_ticket"
-        minutes: 10
-        delivery_method: "exit ticket"
-      - block_id: "s2-b6"
-        block_type: "buffer"
-        minutes: 5
-        delivery_method: "buffer / recap"
-  - session_id: "s3"
-    module_id: "m2"
-    phase: "content"
-    duration_minutes: 90
-    blocks:
-      - block_id: "s3-b1"
-        block_type: "arrive_recall"
-        minutes: 10
-        delivery_method: "recall question"
-      - block_id: "s3-b2"
-        block_type: "worked_example"
-        minutes: 20
-        delivery_method: "worked example"
-      - block_id: "s3-b3"
-        block_type: "pair_task"
-        minutes: 25
-        delivery_method: "pair_task"
-      - block_id: "s3-b4"
-        block_type: "predict_run_modify"
-        minutes: 20
-        delivery_method: "predict-run-modify"
-      - block_id: "s3-b5"
-        block_type: "exit_ticket"
-        minutes: 10
-        delivery_method: "exit ticket"
-      - block_id: "s3-b6"
-        block_type: "buffer"
-        minutes: 5
-        delivery_method: "buffer / recap"
-  - session_id: "s4"
-    module_id: "m2"
-    phase: "content"
-    duration_minutes: 90
-    blocks:
-      - block_id: "s4-b1"
-        block_type: "arrive_recall"
-        minutes: 10
-        delivery_method: "recall question"
-      - block_id: "s4-b2"
-        block_type: "worked_example"
-        minutes: 20
-        delivery_method: "worked example"
-      - block_id: "s4-b3"
-        block_type: "pair_task"
-        minutes: 25
-        delivery_method: "debug-this"
-      - block_id: "s4-b4"
-        block_type: "predict_run_modify"
-        minutes: 20
-        delivery_method: "predict-run-modify"
-      - block_id: "s4-b5"
-        block_type: "exit_ticket"
-        minutes: 10
-        delivery_method: "exit ticket"
-      - block_id: "s4-b6"
-        block_type: "buffer"
-        minutes: 5
-        delivery_method: "buffer / recap"
-  - session_id: "s5"
-    module_id: "m3"
-    phase: "content"
-    duration_minutes: 120
-    blocks:
-      - block_id: "s5-b1"
-        block_type: "arrive_recall"
-        minutes: 10
-        delivery_method: "recall question"
-      - block_id: "s5-b2"
-        block_type: "worked_example"
-        minutes: 20
-        delivery_method: "worked example"
-      - block_id: "s5-b3"
-        block_type: "pair_task"
-        minutes: 25
-        delivery_method: "pair_task"
-      - block_id: "s5-b4"
-        block_type: "predict_run_modify"
-        minutes: 20
-        delivery_method: "predict-run-modify"
-      - block_id: "s5-b5"
-        block_type: "exit_ticket"
-        minutes: 10
-        delivery_method: "exit ticket"
-      - block_id: "s5-b6"
-        block_type: "buffer"
-        minutes: 35
-        delivery_method: "buffer / recap"
-  - session_id: "s6"
-    module_id: "m4"
-    phase: "content"
-    duration_minutes: 90
-    blocks:
-      - block_id: "s6-b1"
-        block_type: "arrive_recall"
-        minutes: 10
-        delivery_method: "recall question"
-      - block_id: "s6-b2"
-        block_type: "worked_example"
-        minutes: 20
-        delivery_method: "worked example"
-      - block_id: "s6-b3"
-        block_type: "pair_task"
-        minutes: 25
-        delivery_method: "parsons problem"
-      - block_id: "s6-b4"
-        block_type: "predict_run_modify"
-        minutes: 20
-        delivery_method: "predict-run-modify"
-      - block_id: "s6-b5"
-        block_type: "exit_ticket"
-        minutes: 10
-        delivery_method: "exit ticket"
-      - block_id: "s6-b6"
-        block_type: "buffer"
-        minutes: 5
-        delivery_method: "buffer / recap"
-  - session_id: "s7"
-    module_id: "m4"
-    phase: "content"
-    duration_minutes: 90
-    blocks:
-      - block_id: "s7-b1"
-        block_type: "arrive_recall"
-        minutes: 10
-        delivery_method: "recall question"
-      - block_id: "s7-b2"
-        block_type: "worked_example"
-        minutes: 20
-        delivery_method: "worked example"
-      - block_id: "s7-b3"
-        block_type: "pair_task"
-        minutes: 25
-        delivery_method: "parsons problem"
-      - block_id: "s7-b4"
-        block_type: "predict_run_modify"
-        minutes: 20
-        delivery_method: "predict-run-modify"
-      - block_id: "s7-b5"
-        block_type: "exit_ticket"
-        minutes: 10
-        delivery_method: "exit ticket"
-      - block_id: "s7-b6"
-        block_type: "buffer"
-        minutes: 5
-        delivery_method: "buffer / recap"
-  - session_id: "s8"
-    module_id: "m5"
-    phase: "content"
-    duration_minutes: 90
-    blocks:
-      - block_id: "s8-b1"
-        block_type: "arrive_recall"
-        minutes: 10
-        delivery_method: "recall question"
-      - block_id: "s8-b2"
-        block_type: "worked_example"
-        minutes: 20
-        delivery_method: "worked example"
-      - block_id: "s8-b3"
-        block_type: "pair_task"
-        minutes: 25
-        delivery_method: "parsons problem"
-      - block_id: "s8-b4"
-        block_type: "predict_run_modify"
-        minutes: 20
-        delivery_method: "predict-run-modify"
-      - block_id: "s8-b5"
-        block_type: "exit_ticket"
-        minutes: 10
-        delivery_method: "exit ticket"
-      - block_id: "s8-b6"
-        block_type: "buffer"
-        minutes: 5
-        delivery_method: "buffer / recap"
-  - session_id: "s9"
-    module_id: "m5"
-    phase: "content"
-    duration_minutes: 90
-    blocks:
-      - block_id: "s9-b1"
-        block_type: "arrive_recall"
-        minutes: 10
-        delivery_method: "recall question"
-      - block_id: "s9-b2"
-        block_type: "worked_example"
-        minutes: 20
-        delivery_method: "worked example"
-      - block_id: "s9-b3"
-        block_type: "pair_task"
-        minutes: 25
-        delivery_method: "pair_task"
-      - block_id: "s9-b4"
-        block_type: "predict_run_modify"
-        minutes: 20
-        delivery_method: "predict-run-modify"
-      - block_id: "s9-b5"
-        block_type: "exit_ticket"
-        minutes: 10
-        delivery_method: "exit ticket"
-      - block_id: "s9-b6"
-        block_type: "buffer"
-        minutes: 5
-        delivery_method: "buffer / recap"
-  - session_id: "s10"
-    module_id: "m6"
-    phase: "content"
-    duration_minutes: 90
-    blocks:
-      - block_id: "s10-b1"
-        block_type: "arrive_recall"
-        minutes: 10
-        delivery_method: "recall question"
-      - block_id: "s10-b2"
-        block_type: "worked_example"
-        minutes: 20
-        delivery_method: "worked example"
-      - block_id: "s10-b3"
-        block_type: "pair_task"
-        minutes: 25
-        delivery_method: "pair_task"
-      - block_id: "s10-b4"
-        block_type: "predict_run_modify"
-        minutes: 20
-        delivery_method: "predict-run-modify"
-      - block_id: "s10-b5"
-        block_type: "exit_ticket"
-        minutes: 10
-        delivery_method: "exit ticket"
-      - block_id: "s10-b6"
-        block_type: "buffer"
-        minutes: 5
-        delivery_method: "buffer / recap"
-  - session_id: "s11"
-    module_id: "m6"
-    phase: "content"
-    duration_minutes: 90
-    blocks:
-      - block_id: "s11-b1"
-        block_type: "arrive_recall"
-        minutes: 10
-        delivery_method: "recall question"
-      - block_id: "s11-b2"
-        block_type: "worked_example"
-        minutes: 20
-        delivery_method: "worked example"
-      - block_id: "s11-b3"
-        block_type: "pair_task"
-        minutes: 25
-        delivery_method: "parsons problem"
-      - block_id: "s11-b4"
-        block_type: "predict_run_modify"
-        minutes: 20
-        delivery_method: "predict-run-modify"
-      - block_id: "s11-b5"
-        block_type: "exit_ticket"
-        minutes: 10
-        delivery_method: "exit ticket"
-      - block_id: "s11-b6"
-        block_type: "buffer"
-        minutes: 5
-        delivery_method: "buffer / recap"
-  - session_id: "s12"
-    module_id: "m7"
-    phase: "content"
-    duration_minutes: 90
-    blocks:
-      - block_id: "s12-b1"
-        block_type: "arrive_recall"
-        minutes: 10
-        delivery_method: "recall question"
-      - block_id: "s12-b2"
-        block_type: "worked_example"
-        minutes: 20
-        delivery_method: "worked example"
-      - block_id: "s12-b3"
-        block_type: "pair_task"
-        minutes: 25
-        delivery_method: "parsons problem"
-      - block_id: "s12-b4"
-        block_type: "predict_run_modify"
-        minutes: 20
-        delivery_method: "predict-run-modify"
-      - block_id: "s12-b5"
-        block_type: "exit_ticket"
-        minutes: 10
-        delivery_method: "exit ticket"
-      - block_id: "s12-b6"
-        block_type: "buffer"
-        minutes: 5
-        delivery_method: "buffer / recap"
-  - session_id: "s13"
-    module_id: "m7"
-    phase: "content"
-    duration_minutes: 90
-    blocks:
-      - block_id: "s13-b1"
-        block_type: "arrive_recall"
-        minutes: 10
-        delivery_method: "recall question"
-      - block_id: "s13-b2"
-        block_type: "worked_example"
-        minutes: 20
-        delivery_method: "worked example"
-      - block_id: "s13-b3"
-        block_type: "pair_task"
-        minutes: 25
-        delivery_method: "pair_task"
-      - block_id: "s13-b4"
-        block_type: "predict_run_modify"
-        minutes: 20
-        delivery_method: "predict-run-modify"
-      - block_id: "s13-b5"
-        block_type: "exit_ticket"
-        minutes: 10
-        delivery_method: "exit ticket"
-      - block_id: "s13-b6"
-        block_type: "buffer"
-        minutes: 5
-        delivery_method: "buffer / recap"
-  - session_id: "s14"
-    module_id: "m8"
-    phase: "content"
-    duration_minutes: 90
-    blocks:
-      - block_id: "s14-b1"
-        block_type: "arrive_recall"
-        minutes: 10
-        delivery_method: "recall question"
-      - block_id: "s14-b2"
-        block_type: "worked_example"
-        minutes: 20
-        delivery_method: "worked example"
-      - block_id: "s14-b3"
-        block_type: "pair_task"
-        minutes: 25
-        delivery_method: "pair_task"
-      - block_id: "s14-b4"
-        block_type: "predict_run_modify"
-        minutes: 20
-        delivery_method: "predict-run-modify"
-      - block_id: "s14-b5"
-        block_type: "exit_ticket"
-        minutes: 10
-        delivery_method: "exit ticket"
-      - block_id: "s14-b6"
-        block_type: "buffer"
-        minutes: 5
-        delivery_method: "buffer / recap"
-  - session_id: "s15"
-    module_id: "m8"
-    phase: "content"
-    duration_minutes: 90
-    blocks:
-      - block_id: "s15-b1"
-        block_type: "arrive_recall"
-        minutes: 10
-        delivery_method: "recall question"
-      - block_id: "s15-b2"
-        block_type: "worked_example"
-        minutes: 20
-        delivery_method: "worked example"
-      - block_id: "s15-b3"
-        block_type: "pair_task"
-        minutes: 25
-        delivery_method: "pair_task"
-      - block_id: "s15-b4"
-        block_type: "predict_run_modify"
-        minutes: 20
-        delivery_method: "predict-run-modify"
-      - block_id: "s15-b5"
-        block_type: "exit_ticket"
-        minutes: 10
-        delivery_method: "exit ticket"
-      - block_id: "s15-b6"
-        block_type: "buffer"
-        minutes: 5
-        delivery_method: "buffer / recap"
-  - session_id: "s16"
-    module_id: "m9"
-    phase: "content"
-    duration_minutes: 90
-    blocks:
-      - block_id: "s16-b1"
-        block_type: "arrive_recall"
-        minutes: 10
-        delivery_method: "recall question"
-      - block_id: "s16-b2"
-        block_type: "worked_example"
-        minutes: 20
-        delivery_method: "worked example"
-      - block_id: "s16-b3"
-        block_type: "pair_task"
-        minutes: 25
-        delivery_method: "debug-this"
-      - block_id: "s16-b4"
-        block_type: "predict_run_modify"
-        minutes: 20
-        delivery_method: "predict-run-modify"
-      - block_id: "s16-b5"
-        block_type: "exit_ticket"
-        minutes: 10
-        delivery_method: "exit ticket"
-      - block_id: "s16-b6"
-        block_type: "buffer"
-        minutes: 5
-        delivery_method: "buffer / recap"
-  - session_id: "s17"
-    module_id: "m9"
-    phase: "content"
-    duration_minutes: 90
-    blocks:
-      - block_id: "s17-b1"
-        block_type: "arrive_recall"
-        minutes: 10
-        delivery_method: "recall question"
-      - block_id: "s17-b2"
-        block_type: "worked_example"
-        minutes: 20
-        delivery_method: "worked example"
-      - block_id: "s17-b3"
-        block_type: "pair_task"
-        minutes: 25
-        delivery_method: "debug-this"
-      - block_id: "s17-b4"
-        block_type: "predict_run_modify"
-        minutes: 20
-        delivery_method: "predict-run-modify"
-      - block_id: "s17-b5"
-        block_type: "exit_ticket"
-        minutes: 10
-        delivery_method: "exit ticket"
-      - block_id: "s17-b6"
-        block_type: "buffer"
-        minutes: 5
-        delivery_method: "buffer / recap"
-  - session_id: "s18"
-    module_id: "m10"
-    phase: "capstone"
-    duration_minutes: 90
-    blocks:
-      - block_id: "s18-b1"
-        block_type: "arrive_recall"
-        minutes: 10
-        delivery_method: "recall question"
-      - block_id: "s18-b2"
-        block_type: "worked_example"
-        minutes: 20
-        delivery_method: "worked example"
-      - block_id: "s18-b3"
-        block_type: "pair_task"
-        minutes: 25
-        delivery_method: "mini-challenge"
-      - block_id: "s18-b4"
-        block_type: "predict_run_modify"
-        minutes: 20
-        delivery_method: "predict-run-modify"
-      - block_id: "s18-b5"
-        block_type: "exit_ticket"
-        minutes: 10
-        delivery_method: "exit ticket"
-      - block_id: "s18-b6"
-        block_type: "buffer"
-        minutes: 5
-        delivery_method: "buffer / recap"
-  - session_id: "s19"
-    module_id: "m10"
-    phase: "capstone"
-    duration_minutes: 90
-    blocks:
-      - block_id: "s19-b1"
-        block_type: "arrive_recall"
-        minutes: 10
-        delivery_method: "recall question"
-      - block_id: "s19-b2"
-        block_type: "worked_example"
-        minutes: 20
-        delivery_method: "worked example"
-      - block_id: "s19-b3"
-        block_type: "pair_task"
-        minutes: 25
-        delivery_method: "pair_task"
-      - block_id: "s19-b4"
-        block_type: "predict_run_modify"
-        minutes: 20
-        delivery_method: "predict-run-modify"
-      - block_id: "s19-b5"
-        block_type: "exit_ticket"
-        minutes: 10
-        delivery_method: "exit ticket"
-      - block_id: "s19-b6"
-        block_type: "buffer"
-        minutes: 5
-        delivery_method: "buffer / recap"
-  - session_id: "s20"
-    module_id: "m10"
-    phase: "capstone"
-    duration_minutes: 60
-    blocks:
-      - block_id: "s20-b1"
-        block_type: "arrive_recall"
-        minutes: 10
-        delivery_method: "recall question"
-      - block_id: "s20-b2"
-        block_type: "worked_example"
-        minutes: 20
-        delivery_method: "worked example"
-      - block_id: "s20-b3"
-        block_type: "pair_task"
-        minutes: 15
-        delivery_method: "pair task"
-      - block_id: "s20-b4"
-        block_type: "predict_run_modify"
-        minutes: 5
-        delivery_method: "predict-run-modify"
-      - block_id: "s20-b5"
-        block_type: "exit_ticket"
-        minutes: 10
-        delivery_method: "exit ticket"
-
+- session_id: s1
+  module_id: m1
+  phase: content
+  duration_minutes: 90
+  blocks:
+  - block_id: s1-b1
+    block_type: arrive_recall
+    minutes: 10
+    delivery_method: recall question
+  - block_id: s1-b2
+    block_type: worked_example
+    minutes: 20
+    delivery_method: worked example
+  - block_id: s1-b3
+    block_type: pair_task
+    minutes: 25
+    delivery_method: parsons problem
+  - block_id: s1-b4
+    block_type: predict_run_modify
+    minutes: 20
+    delivery_method: predict-run-modify
+  - block_id: s1-b5
+    block_type: exit_ticket
+    minutes: 10
+    delivery_method: exit ticket
+  - block_id: s1-b6
+    block_type: buffer
+    minutes: 5
+    delivery_method: buffer / recap
+- session_id: s2
+  module_id: m1
+  phase: content
+  duration_minutes: 90
+  blocks:
+  - block_id: s2-b1
+    block_type: arrive_recall
+    minutes: 10
+    delivery_method: recall question
+  - block_id: s2-b2
+    block_type: worked_example
+    minutes: 20
+    delivery_method: worked example
+  - block_id: s2-b3
+    block_type: pair_task
+    minutes: 25
+    delivery_method: debug-this
+  - block_id: s2-b4
+    block_type: predict_run_modify
+    minutes: 20
+    delivery_method: predict-run-modify
+  - block_id: s2-b5
+    block_type: exit_ticket
+    minutes: 10
+    delivery_method: exit ticket
+  - block_id: s2-b6
+    block_type: buffer
+    minutes: 5
+    delivery_method: buffer / recap
+- session_id: s3
+  module_id: m2
+  phase: content
+  duration_minutes: 90
+  blocks:
+  - block_id: s3-b1
+    block_type: arrive_recall
+    minutes: 10
+    delivery_method: recall question
+  - block_id: s3-b2
+    block_type: worked_example
+    minutes: 20
+    delivery_method: worked example
+  - block_id: s3-b3
+    block_type: pair_task
+    minutes: 25
+    delivery_method: pair_task
+  - block_id: s3-b4
+    block_type: predict_run_modify
+    minutes: 20
+    delivery_method: predict-run-modify
+  - block_id: s3-b5
+    block_type: exit_ticket
+    minutes: 10
+    delivery_method: exit ticket
+  - block_id: s3-b6
+    block_type: buffer
+    minutes: 5
+    delivery_method: buffer / recap
+- session_id: s4
+  module_id: m2
+  phase: content
+  duration_minutes: 90
+  blocks:
+  - block_id: s4-b1
+    block_type: arrive_recall
+    minutes: 10
+    delivery_method: recall question
+  - block_id: s4-b2
+    block_type: worked_example
+    minutes: 20
+    delivery_method: worked example
+  - block_id: s4-b3
+    block_type: pair_task
+    minutes: 25
+    delivery_method: debug-this
+  - block_id: s4-b4
+    block_type: predict_run_modify
+    minutes: 20
+    delivery_method: predict-run-modify
+  - block_id: s4-b5
+    block_type: exit_ticket
+    minutes: 10
+    delivery_method: exit ticket
+  - block_id: s4-b6
+    block_type: buffer
+    minutes: 5
+    delivery_method: buffer / recap
+- session_id: s5
+  module_id: m3
+  phase: content
+  duration_minutes: 120
+  blocks:
+  - block_id: s5-b1
+    block_type: arrive_recall
+    minutes: 10
+    delivery_method: recall question
+  - block_id: s5-b2
+    block_type: worked_example
+    minutes: 20
+    delivery_method: worked example
+  - block_id: s5-b3
+    block_type: pair_task
+    minutes: 25
+    delivery_method: pair_task
+  - block_id: s5-b4
+    block_type: predict_run_modify
+    minutes: 20
+    delivery_method: predict-run-modify
+  - block_id: s5-b5
+    block_type: exit_ticket
+    minutes: 10
+    delivery_method: exit ticket
+  - block_id: s5-b6
+    block_type: buffer
+    minutes: 35
+    delivery_method: buffer / recap
+- session_id: s6
+  module_id: m4
+  phase: content
+  duration_minutes: 90
+  blocks:
+  - block_id: s6-b1
+    block_type: arrive_recall
+    minutes: 10
+    delivery_method: recall question
+  - block_id: s6-b2
+    block_type: worked_example
+    minutes: 20
+    delivery_method: worked example
+  - block_id: s6-b3
+    block_type: pair_task
+    minutes: 25
+    delivery_method: parsons problem
+  - block_id: s6-b4
+    block_type: predict_run_modify
+    minutes: 20
+    delivery_method: predict-run-modify
+  - block_id: s6-b5
+    block_type: exit_ticket
+    minutes: 10
+    delivery_method: exit ticket
+  - block_id: s6-b6
+    block_type: buffer
+    minutes: 5
+    delivery_method: buffer / recap
+- session_id: s7
+  module_id: m4
+  phase: content
+  duration_minutes: 90
+  blocks:
+  - block_id: s7-b1
+    block_type: arrive_recall
+    minutes: 10
+    delivery_method: recall question
+  - block_id: s7-b2
+    block_type: worked_example
+    minutes: 20
+    delivery_method: worked example
+  - block_id: s7-b3
+    block_type: pair_task
+    minutes: 25
+    delivery_method: parsons problem
+  - block_id: s7-b4
+    block_type: predict_run_modify
+    minutes: 20
+    delivery_method: predict-run-modify
+  - block_id: s7-b5
+    block_type: exit_ticket
+    minutes: 10
+    delivery_method: exit ticket
+  - block_id: s7-b6
+    block_type: buffer
+    minutes: 5
+    delivery_method: buffer / recap
+- session_id: s8
+  module_id: m5
+  phase: content
+  duration_minutes: 90
+  blocks:
+  - block_id: s8-b1
+    block_type: arrive_recall
+    minutes: 10
+    delivery_method: recall question
+  - block_id: s8-b2
+    block_type: worked_example
+    minutes: 20
+    delivery_method: worked example
+  - block_id: s8-b3
+    block_type: pair_task
+    minutes: 25
+    delivery_method: parsons problem
+  - block_id: s8-b4
+    block_type: predict_run_modify
+    minutes: 20
+    delivery_method: predict-run-modify
+  - block_id: s8-b5
+    block_type: exit_ticket
+    minutes: 10
+    delivery_method: exit ticket
+  - block_id: s8-b6
+    block_type: buffer
+    minutes: 5
+    delivery_method: buffer / recap
+- session_id: s9
+  module_id: m5
+  phase: content
+  duration_minutes: 90
+  blocks:
+  - block_id: s9-b1
+    block_type: arrive_recall
+    minutes: 10
+    delivery_method: recall question
+  - block_id: s9-b2
+    block_type: worked_example
+    minutes: 20
+    delivery_method: worked example
+  - block_id: s9-b3
+    block_type: pair_task
+    minutes: 25
+    delivery_method: pair_task
+  - block_id: s9-b4
+    block_type: predict_run_modify
+    minutes: 20
+    delivery_method: predict-run-modify
+  - block_id: s9-b5
+    block_type: exit_ticket
+    minutes: 10
+    delivery_method: exit ticket
+  - block_id: s9-b6
+    block_type: buffer
+    minutes: 5
+    delivery_method: buffer / recap
+- session_id: s10
+  module_id: m6
+  phase: content
+  duration_minutes: 90
+  blocks:
+  - block_id: s10-b1
+    block_type: arrive_recall
+    minutes: 10
+    delivery_method: recall question
+  - block_id: s10-b2
+    block_type: worked_example
+    minutes: 20
+    delivery_method: worked example
+  - block_id: s10-b3
+    block_type: pair_task
+    minutes: 25
+    delivery_method: pair_task
+  - block_id: s10-b4
+    block_type: predict_run_modify
+    minutes: 20
+    delivery_method: predict-run-modify
+  - block_id: s10-b5
+    block_type: exit_ticket
+    minutes: 10
+    delivery_method: exit ticket
+  - block_id: s10-b6
+    block_type: buffer
+    minutes: 5
+    delivery_method: buffer / recap
+- session_id: s11
+  module_id: m6
+  phase: content
+  duration_minutes: 90
+  blocks:
+  - block_id: s11-b1
+    block_type: arrive_recall
+    minutes: 10
+    delivery_method: recall question
+  - block_id: s11-b2
+    block_type: worked_example
+    minutes: 20
+    delivery_method: worked example
+  - block_id: s11-b3
+    block_type: pair_task
+    minutes: 25
+    delivery_method: parsons problem
+  - block_id: s11-b4
+    block_type: predict_run_modify
+    minutes: 20
+    delivery_method: predict-run-modify
+  - block_id: s11-b5
+    block_type: exit_ticket
+    minutes: 10
+    delivery_method: exit ticket
+  - block_id: s11-b6
+    block_type: buffer
+    minutes: 5
+    delivery_method: buffer / recap
+- session_id: s12
+  module_id: m7
+  phase: content
+  duration_minutes: 90
+  blocks:
+  - block_id: s12-b1
+    block_type: arrive_recall
+    minutes: 10
+    delivery_method: recall question
+  - block_id: s12-b2
+    block_type: worked_example
+    minutes: 20
+    delivery_method: worked example
+  - block_id: s12-b3
+    block_type: pair_task
+    minutes: 25
+    delivery_method: parsons problem
+  - block_id: s12-b4
+    block_type: predict_run_modify
+    minutes: 20
+    delivery_method: predict-run-modify
+  - block_id: s12-b5
+    block_type: exit_ticket
+    minutes: 10
+    delivery_method: exit ticket
+  - block_id: s12-b6
+    block_type: buffer
+    minutes: 5
+    delivery_method: buffer / recap
+- session_id: s13
+  module_id: m7
+  phase: content
+  duration_minutes: 90
+  blocks:
+  - block_id: s13-b1
+    block_type: arrive_recall
+    minutes: 10
+    delivery_method: recall question
+  - block_id: s13-b2
+    block_type: worked_example
+    minutes: 20
+    delivery_method: worked example
+  - block_id: s13-b3
+    block_type: pair_task
+    minutes: 25
+    delivery_method: pair_task
+  - block_id: s13-b4
+    block_type: predict_run_modify
+    minutes: 20
+    delivery_method: predict-run-modify
+  - block_id: s13-b5
+    block_type: exit_ticket
+    minutes: 10
+    delivery_method: exit ticket
+  - block_id: s13-b6
+    block_type: buffer
+    minutes: 5
+    delivery_method: buffer / recap
+- session_id: s14
+  module_id: m8
+  phase: content
+  duration_minutes: 90
+  blocks:
+  - block_id: s14-b1
+    block_type: arrive_recall
+    minutes: 10
+    delivery_method: recall question
+  - block_id: s14-b2
+    block_type: worked_example
+    minutes: 20
+    delivery_method: worked example
+  - block_id: s14-b3
+    block_type: pair_task
+    minutes: 25
+    delivery_method: pair_task
+  - block_id: s14-b4
+    block_type: predict_run_modify
+    minutes: 20
+    delivery_method: predict-run-modify
+  - block_id: s14-b5
+    block_type: exit_ticket
+    minutes: 10
+    delivery_method: exit ticket
+  - block_id: s14-b6
+    block_type: buffer
+    minutes: 5
+    delivery_method: buffer / recap
+- session_id: s15
+  module_id: m8
+  phase: content
+  duration_minutes: 90
+  blocks:
+  - block_id: s15-b1
+    block_type: arrive_recall
+    minutes: 10
+    delivery_method: recall question
+  - block_id: s15-b2
+    block_type: worked_example
+    minutes: 20
+    delivery_method: worked example
+  - block_id: s15-b3
+    block_type: pair_task
+    minutes: 25
+    delivery_method: pair_task
+  - block_id: s15-b4
+    block_type: predict_run_modify
+    minutes: 20
+    delivery_method: predict-run-modify
+  - block_id: s15-b5
+    block_type: exit_ticket
+    minutes: 10
+    delivery_method: exit ticket
+  - block_id: s15-b6
+    block_type: buffer
+    minutes: 5
+    delivery_method: buffer / recap
+- session_id: s16
+  module_id: m9
+  phase: content
+  duration_minutes: 90
+  blocks:
+  - block_id: s16-b1
+    block_type: arrive_recall
+    minutes: 10
+    delivery_method: recall question
+  - block_id: s16-b2
+    block_type: worked_example
+    minutes: 20
+    delivery_method: worked example
+  - block_id: s16-b3
+    block_type: pair_task
+    minutes: 25
+    delivery_method: debug-this
+  - block_id: s16-b4
+    block_type: predict_run_modify
+    minutes: 20
+    delivery_method: predict-run-modify
+  - block_id: s16-b5
+    block_type: exit_ticket
+    minutes: 10
+    delivery_method: exit ticket
+  - block_id: s16-b6
+    block_type: buffer
+    minutes: 5
+    delivery_method: buffer / recap
+- session_id: s17
+  module_id: m9
+  phase: content
+  duration_minutes: 90
+  blocks:
+  - block_id: s17-b1
+    block_type: arrive_recall
+    minutes: 10
+    delivery_method: recall question
+  - block_id: s17-b2
+    block_type: worked_example
+    minutes: 20
+    delivery_method: worked example
+  - block_id: s17-b3
+    block_type: pair_task
+    minutes: 25
+    delivery_method: debug-this
+  - block_id: s17-b4
+    block_type: predict_run_modify
+    minutes: 20
+    delivery_method: predict-run-modify
+  - block_id: s17-b5
+    block_type: exit_ticket
+    minutes: 10
+    delivery_method: exit ticket
+  - block_id: s17-b6
+    block_type: buffer
+    minutes: 5
+    delivery_method: buffer / recap
+- session_id: s18
+  module_id: m10
+  phase: capstone
+  duration_minutes: 90
+  blocks:
+  - block_id: s18-b1
+    block_type: arrive_recall
+    minutes: 10
+    delivery_method: recall question
+  - block_id: s18-b2
+    block_type: worked_example
+    minutes: 20
+    delivery_method: worked example
+  - block_id: s18-b3
+    block_type: pair_task
+    minutes: 25
+    delivery_method: mini-challenge
+  - block_id: s18-b4
+    block_type: predict_run_modify
+    minutes: 20
+    delivery_method: predict-run-modify
+  - block_id: s18-b5
+    block_type: exit_ticket
+    minutes: 10
+    delivery_method: exit ticket
+  - block_id: s18-b6
+    block_type: buffer
+    minutes: 5
+    delivery_method: buffer / recap
+- session_id: s19
+  module_id: m10
+  phase: capstone
+  duration_minutes: 90
+  blocks:
+  - block_id: s19-b1
+    block_type: arrive_recall
+    minutes: 10
+    delivery_method: recall question
+  - block_id: s19-b2
+    block_type: worked_example
+    minutes: 20
+    delivery_method: worked example
+  - block_id: s19-b3
+    block_type: pair_task
+    minutes: 25
+    delivery_method: pair_task
+  - block_id: s19-b4
+    block_type: predict_run_modify
+    minutes: 20
+    delivery_method: predict-run-modify
+  - block_id: s19-b5
+    block_type: exit_ticket
+    minutes: 10
+    delivery_method: exit ticket
+  - block_id: s19-b6
+    block_type: buffer
+    minutes: 5
+    delivery_method: buffer / recap
+- session_id: s20
+  module_id: m10
+  phase: capstone
+  duration_minutes: 60
+  blocks:
+  - block_id: s20-b1
+    block_type: arrive_recall
+    minutes: 10
+    delivery_method: recall question
+  - block_id: s20-b2
+    block_type: worked_example
+    minutes: 20
+    delivery_method: worked example
+  - block_id: s20-b3
+    block_type: pair_task
+    minutes: 15
+    delivery_method: pair task
+  - block_id: s20-b4
+    block_type: predict_run_modify
+    minutes: 5
+    delivery_method: predict-run-modify
+  - block_id: s20-b5
+    block_type: exit_ticket
+    minutes: 10
+    delivery_method: exit ticket
 sessions_by_module:
-  m1: ["s1", "s2"]
-  m2: ["s3", "s4"]
-  m3: ["s5"]
-  m4: ["s6", "s7"]
-  m5: ["s8", "s9"]
-  m6: ["s10", "s11"]
-  m7: ["s12", "s13"]
-  m8: ["s14", "s15"]
-  m9: ["s16", "s17"]
-  m10: ["s18", "s19", "s20"]
-
+  m1:
+  - s1
+  - s2
+  m2:
+  - s3
+  - s4
+  m3:
+  - s5
+  m4:
+  - s6
+  - s7
+  m5:
+  - s8
+  - s9
+  m6:
+  - s10
+  - s11
+  m7:
+  - s12
+  - s13
+  m8:
+  - s14
+  - s15
+  m9:
+  - s16
+  - s17
+  m10:
+  - s18
+  - s19
+  - s20
 figures:
-  - id: "fig-curriculum-map"
-    filename: "fig1_curriculum_map.png"
-    type: "curriculum map"
-    caption: "curriculum map showing modules, hours and dependencies"
-    takeaway: "each module assumes the one before it; the capstone joins everything."
-  - id: "fig-concept-ladder"
-    filename: "fig2_concept_ladder.png"
-    type: "concept ladder"
-    caption: "concept ladder showing what each module builds on"
-    takeaway: "concepts are introduced once and reused, never re-explained from scratch."
-  - id: "fig-time-allocation"
-    filename: "fig3_time_allocation.png"
-    type: "time allocation chart by activity type"
-    caption: "computed time allocation chart by activity type"
-    takeaway: "most contact time is learner practice, not instructor talk."
-  - id: "fig-alignment-heatmap"
-    filename: "fig4_alignment_heatmap.png"
-    type: "alignment heatmap"
-    caption: "objectives x activities x assessments alignment heatmap"
-    takeaway: "every objective has an activity and an assessment check."
-  - id: "fig-variable-box"
-    filename: "fig5_variable_box.png"
-    type: "variable as labelled box"
-    caption: "variable as a labelled box with before and after of assignment"
-    takeaway: "a variable is a name, not a box."
-  - id: "fig-decision-flow"
-    filename: "fig6_decision_flow.png"
-    type: "decision flowchart"
-    caption: "if / elif / else decision flowchart for an everyday rule"
-    takeaway: "the condition decides which branch runs."
-  - id: "fig-loop-trace"
-    filename: "fig7_loop_trace.png"
-    type: "loop trace"
-    caption: "loop trace following variable values step by step"
-    takeaway: "the loop repeats until the stop condition changes."
-  - id: "fig-function-machine"
-    filename: "fig8_function_machine.png"
-    type: "function machine"
-    caption: "function as machine with inputs, return value and call"
-    takeaway: "a function packages steps and returns one value."
-  - id: "fig-list-dict"
-    filename: "fig9_list_dict.png"
-    type: "list vs dictionary diagram"
-    caption: "list vs dictionary diagram using the same data"
-    takeaway: "a list is ordered; a dictionary maps names to values."
-  - id: "fig-file-flow"
-    filename: "fig10_file_flow.png"
-    type: "file read/write flow"
-    caption: "file read/write flow"
-    takeaway: "files move text in and out of the program."
-  - id: "fig-traceback"
-    filename: "fig11_traceback.png"
-    type: "annotated real traceback"
-    caption: "annotated real traceback pointing out which line to read first"
-    takeaway: "read the last line first; it names the error kind."
-  - id: "fig-capstone"
-    filename: "fig12_capstone.png"
-    type: "capstone architecture and milestone timeline"
-    caption: "capstone architecture and milestone timeline"
-    takeaway: "one small program built in five milestones."
-
+- id: fig-curriculum-map
+  filename: fig1_curriculum_map.png
+  type: curriculum map
+  caption: curriculum map showing modules, hours and dependencies
+  takeaway: each module assumes the one before it; the capstone joins everything.
+- id: fig-concept-ladder
+  filename: fig2_concept_ladder.png
+  type: concept ladder
+  caption: concept ladder showing what each module builds on
+  takeaway: concepts are introduced once and reused, never re-explained from scratch.
+- id: fig-time-allocation
+  filename: fig3_time_allocation.png
+  type: time allocation chart by activity type
+  caption: computed time allocation chart by activity type
+  takeaway: most contact time is learner practice, not instructor talk.
+- id: fig-alignment-heatmap
+  filename: fig4_alignment_heatmap.png
+  type: alignment heatmap
+  caption: objectives x activities x assessments alignment heatmap
+  takeaway: every objective has an activity and an assessment check.
+- id: fig-variable-box
+  filename: fig5_variable_box.png
+  type: variable as labelled box
+  caption: variable as a labelled box with before and after of assignment
+  takeaway: a variable is a name, not a box.
+- id: fig-decision-flow
+  filename: fig6_decision_flow.png
+  type: decision flowchart
+  caption: if / elif / else decision flowchart for an everyday rule
+  takeaway: the condition decides which branch runs.
+- id: fig-loop-trace
+  filename: fig7_loop_trace.png
+  type: loop trace
+  caption: loop trace following variable values step by step
+  takeaway: the loop repeats until the stop condition changes.
+- id: fig-function-machine
+  filename: fig8_function_machine.png
+  type: function machine
+  caption: function as machine with inputs, return value and call
+  takeaway: a function packages steps and returns one value.
+- id: fig-list-dict
+  filename: fig9_list_dict.png
+  type: list vs dictionary diagram
+  caption: list vs dictionary diagram using the same data
+  takeaway: a list is ordered; a dictionary maps names to values.
+- id: fig-file-flow
+  filename: fig10_file_flow.png
+  type: file read/write flow
+  caption: file read/write flow
+  takeaway: files move text in and out of the program.
+- id: fig-traceback
+  filename: fig11_traceback.png
+  type: annotated real traceback
+  caption: annotated real traceback pointing out which line to read first
+  takeaway: read the last line first; it names the error kind.
+- id: fig-capstone
+  filename: fig12_capstone.png
+  type: capstone architecture and milestone timeline
+  caption: capstone architecture and milestone timeline
+  takeaway: one small program built in five milestones.
 total_teaching_minutes: 1800
-total_teaching_hours: 30
