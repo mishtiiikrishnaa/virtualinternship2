@@ -265,21 +265,21 @@ No calendar dates are assigned here. Cohort scheduling fixes real dates. Session
 
                   Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 7
 5 Module 1: Computational Thinking And Problem Decomposition
-module m1 of 10 - computational thinking and problem decomposition. duration 180 minutes. prerequisites: none.
-objectives: m1-o1, m1-o2.
+Module m1 of 10 - computational thinking and problem decomposition. Duration 180 minutes. Prerequisites: none.
+Objectives: m1-o1, m1-o2.
 
 plain english and the real-life analogy
-before any code, learners describe a task as a clear list of steps in plain words.
-real-life analogy: giving directions to a friend who has never seen the street: write the steps in order, one after
+Before any code, learners describe a task as a clear list of steps in plain words.
+Real-life analogy: giving directions to a friend who has never seen the street: write the steps in order, one after
 another, no skipping.
-where this analogy breaks down: the friend might read faster than you meant; in code the computer cannot
+Where this analogy breaks down: the friend might read faster than you meant; in code the computer cannot
 improvise.
 
 worked example: a complete runnable program
 No Python is run here. Pseudocode only: 1 open the diary, 2 turn to page 3, 3 read the entry, 4 close the diary.
-line-by-line annotation: line 1: we call the list of steps a variable called steps. line 4: each line is one instruction, in
+Line-by-line annotation: line 1: we call the list of steps a variable called steps. Line 4: each line is one instruction, in
 order, like a recipe.
-captured real output (executed in a sandbox, python 3.13):
+Captured real output (executed in a sandbox, python 3.13):
 
 
 No run. Pseudocode is not executed.
@@ -296,7 +296,7 @@ steps = [
 ]
 print("recipe made of " + str(len(steps)) + " steps")
 
-captured real output for this variant:
+Captured real output for this variant:
 
 
 recipe made of 4 steps
@@ -358,7 +358,7 @@ Session B (90 minutes): consolidate and extend
 
 
                         Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 9
-      minute range                 block type             facilitator does          learners do               materials
+      minute range                 block type             facilitator does         learners do                materials
 
                                                      topic order
 
@@ -367,73 +367,73 @@ Session B (90 minutes): consolidate and extend
 Session B blocks sum to 90 minutes.
 
 activities
-activity m1-p1 (type parsons), serves objectives m1-o1, time budget 25 minutes.
-instructions in plain words: read the plain-English steps and put them in the right order in the code.
-starter code: steps = []
-expected result / success criteria: the printed count equals 4 and the steps read in order.
-hint ladder:
-hint 1: think about what happens first.
-hint 2: the print uses len(steps), the number of steps.
-hint 3: order matters: sequence is the first idea.
-activity m1-prm (type predict-run-modify), serves objectives m1-o1, m1-o2, time budget 20 minutes.
-instructions in plain words: predict the output, run it, then change one thing.
-starter code: steps = [ "open the diary", ]
-expected result / success criteria: output is the recipe line; changing order changes nothing visible here, so change
+Activity m1-p1 (type parsons), serves objectives m1-o1, time budget 25 minutes.
+Instructions in plain words: read the plain-English steps and put them in the right order in the code.
+Starter code: steps = []
+Expected result / success criteria: the printed count equals 4 and the steps read in order.
+Hint ladder:
+Hint 1: think about what happens first.
+Hint 2: the print uses len(steps), the number of steps.
+Hint 3: order matters: sequence is the first idea.
+Activity m1-prm (type predict-run-modify), serves objectives m1-o1, m1-o2, time budget 20 minutes.
+Instructions in plain words: predict the output, run it, then change one thing.
+Starter code: steps = [ "open the diary", ]
+Expected result / success criteria: output is the recipe line; changing order changes nothing visible here, so change
 the count.
-hint ladder:
-hint 1: predict before running.
-hint 2: len() counts items.
-hint 3: sequence means order.
-activity m1-a1 (type pair_task), serves objectives m1-o1, time budget 25 minutes.
-instructions in plain words: two learners order steps together on paper.
-starter code: paper list
-expected result / success criteria: both learners can state the steps in order.
-hint ladder:
-hint 1: one reads, one writes.
-hint 2: talk first, type second.
+Hint ladder:
+Hint 1: predict before running.
+Hint 2: len() counts items.
+Hint 3: sequence means order.
+Activity m1-a1 (type pair_task), serves objectives m1-o1, time budget 25 minutes.
+Instructions in plain words: two learners order steps together on paper.
+Starter code: paper list
+Expected result / success criteria: both learners can state the steps in order.
+Hint ladder:
+Hint 1: one reads, one writes.
+Hint 2: talk first, type second.
 
 common misconceptions
-misconception m1-m1: a program is a paragraph of prose
-real error or wrong output: wrong mental model checked with a recipe card
-facilitator response: show a recipe card vs a recipe sentence; code is instruction-like.
+Misconception m1-m1: a program is a paragraph of prose
+Real error or wrong output: wrong mental model checked with a recipe card
+Facilitator response: show a recipe card vs a recipe sentence; code is instruction-like.
 
 formative assessment
-quiz m1-q1: what does a computer program do?
-correct answer: follows a list of instructions in order
-wrong option rationale: guesses what you mean - it detects the misconception that the program guesses.
+Quiz m1-q1: what does a computer program do?
+Correct answer: follows a list of instructions in order
+Wrong option rationale: guesses what you mean - it detects the misconception that the program guesses.
                 Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 10
-wrong option rationale: thinks creatively - it detects the misconception that the program guesses.
-objective tested: m1-o1, bloom level remember.
-quiz m1-q2: breaking a task into smaller steps is called
-correct answer: decomposition
-wrong option rationale: debugging - it detects the misconception that decomposition is debugging.
-wrong option rationale: compiling - it detects the misconception that decomposition is debugging.
-objective tested: m1-o1, bloom level understand.
-exit ticket m1-et1: in your own words, what is an algorithm? (objective m1-o1).
+Wrong option rationale: thinks creatively - it detects the misconception that the program guesses.
+Objective tested: m1-o1, bloom level remember.
+Quiz m1-q2: breaking a task into smaller steps is called
+Correct answer: decomposition
+Wrong option rationale: debugging - it detects the misconception that decomposition is debugging.
+Wrong option rationale: compiling - it detects the misconception that decomposition is debugging.
+Objective tested: m1-o1, bloom level understand.
+Exit ticket m1-et1: in your own words, what is an algorithm? (objective m1-o1).
 
 differentiation
-learners who are stuck: give the m1-p1 starter with three steps already ordered and ask the learner to add one
+Learners who are stuck: give the m1-p1 starter with three steps already ordered and ask the learner to add one
 more.
-learners who finish early: ask the learner to write steps for making a cup of tea and run it.
+Learners who finish early: ask the learner to write steps for making a cup of tea and run it.
 
 facilitator notes
-pacing checkpoints: at minute 20 check that all pairs have an ordered set.
-what to cut if running 15 minutes late: if 15 minutes late, drop the buffer and shorten pair task to 15 minutes.
-setup checklist: open the colab link, confirm python runs, prepare scrambled lines.
+Pacing checkpoints: at minute 20 check that all pairs have an ordered set.
+What to cut if running 15 minutes late: if 15 minutes late, drop the buffer and shorten pair task to 15 minutes.
+Setup checklist: open the colab link, confirm python runs, prepare scrambled lines.
 
 why it is designed this way
-the worked example gives a success within minutes, which sustains motivation [R9].
-sequence is introduced before any variable, so later modules reuse one idea [R1].
+The worked example gives a success within minutes, which sustains motivation [R9].
+Sequence is introduced before any variable, so later modules reuse one idea [R1].
 
 6 Module 2: Variables And Data Types
-module m2 of 10 - variables and data types. duration 180 minutes. prerequisites: m1.
-objectives: m2-o1, m2-o2.
+Module m2 of 10 - variables and data types. Duration 180 minutes. Prerequisites: m1.
+Objectives: m2-o1, m2-o2.
 
 plain english and the real-life analogy
-a variable is a name for a value the program can read and change, like a labelled box.
-real-life analogy: a labelled box where you can put a number or a word, and later take the label off and use a
+A variable is a name for a value the program can read and change, like a labelled box.
+Real-life analogy: a labelled box where you can put a number or a word, and later take the label off and use a
 different value.
-where this analogy breaks down: the box is not a box; reassigning changes what the name points to, not the box.
+Where this analogy breaks down: the box is not a box; reassigning changes what the name points to, not the box.
 
 worked example: a complete runnable program
 
@@ -445,8 +445,8 @@ print(name)
 print(age)
 print(height_cm)
 
-line-by-line annotation: line 1: name holds the text meghana. line 2: age holds the whole number 26.
-captured real output (executed in a sandbox, python 3.13):
+Line-by-line annotation: line 1: name holds the text meghana. Line 2: age holds the whole number 26.
+Captured real output (executed in a sandbox, python 3.13):
 
                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 11
 meghana
@@ -461,7 +461,7 @@ name = "arjun"
 age = 19
 print("hello " + name + ", you are " + str(age) + " years old")
 
-captured real output for this variant:
+Captured real output for this variant:
 
 
 hello arjun, you are 19 years old
@@ -528,71 +528,71 @@ Session A blocks sum to 90 minutes.
 Session B blocks sum to 90 minutes.
 
 activities
-activity m2-mis (type debug-this), serves objectives m2-o1, time budget 25 minutes.
-instructions in plain words: find the real bug in almost-correct code.
-starter code: name = "meghana" age = 26 print(name) print(agex)
-expected result / success criteria: the code runs and prints meghana and 26.
-hint ladder:
-hint 1: run it and read the traceback.
-hint 2: the last line names the bad token.
-hint 3: did you mean age?
-activity m2-pair (type pair_task), serves objectives m2-o2, time budget 25 minutes.
-instructions in plain words: talk through the prediction before typing.
-starter code: age = 12 # talk only
-expected result / success criteria: pair predicts 12 before running.
-hint ladder:
-hint 1: say the answer out loud.
-hint 2: predict in words first.
-activity m2-prm (type predict-run-modify), serves objectives m2-o1, m2-o2, time budget 20 minutes.
-instructions in plain words: predict the output, run it, modify one thing.
-starter code: age = 12 print(age) # predict
-expected result / success criteria: output is 12.
-hint ladder:
-hint 1: what is 12 plus nothing?
-hint 2: just print age.
+Activity m2-mis (type debug-this), serves objectives m2-o1, time budget 25 minutes.
+Instructions in plain words: find the real bug in almost-correct code.
+Starter code: name = "meghana" age = 26 print(name) print(agex)
+Expected result / success criteria: the code runs and prints meghana and 26.
+Hint ladder:
+Hint 1: run it and read the traceback.
+Hint 2: the last line names the bad token.
+Hint 3: did you mean age?
+Activity m2-pair (type pair_task), serves objectives m2-o2, time budget 25 minutes.
+Instructions in plain words: talk through the prediction before typing.
+Starter code: age = 12 # talk only
+Expected result / success criteria: pair predicts 12 before running.
+Hint ladder:
+Hint 1: say the answer out loud.
+Hint 2: predict in words first.
+Activity m2-prm (type predict-run-modify), serves objectives m2-o1, m2-o2, time budget 20 minutes.
+Instructions in plain words: predict the output, run it, modify one thing.
+Starter code: age = 12 print(age) # predict
+Expected result / success criteria: output is 12.
+Hint ladder:
+Hint 1: what is 12 plus nothing?
+Hint 2: just print age.
 
 
                         Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 13
 common misconceptions
-misconception m2-m1: the variable is a box that holds the value
-real error or wrong output: a reassign creates a new value; the name points at it
-facilitator response: use the labelled-box story and show the before/after diagram.
+Misconception m2-m1: the variable is a box that holds the value
+Real error or wrong output: a reassign creates a new value; the name points at it
+Facilitator response: use the labelled-box story and show the before/after diagram.
 
 formative assessment
-quiz m2-q1: what does a variable hold?
-correct answer: a value that can change
-wrong option rationale: always the same number - it detects the misconception that variable is a box.
-wrong option rationale: a box - it detects the misconception that variable is a box.
-objective tested: m2-o1, bloom level apply.
-quiz m2-q2: what does print do?
-correct answer: shows a value to the user
-wrong option rationale: stores a value - it detects the misconception that print stores.
-wrong option rationale: fixes a bug - it detects the misconception that print stores.
-objective tested: m2-o1, bloom level understand.
-exit ticket m2-et1: what will this print: age = 3 then print(age)? (objective m2-o1).
+Quiz m2-q1: what does a variable hold?
+Correct answer: a value that can change
+Wrong option rationale: always the same number - it detects the misconception that variable is a box.
+Wrong option rationale: a box - it detects the misconception that variable is a box.
+Objective tested: m2-o1, bloom level apply.
+Quiz m2-q2: what does print do?
+Correct answer: shows a value to the user
+Wrong option rationale: stores a value - it detects the misconception that print stores.
+Wrong option rationale: fixes a bug - it detects the misconception that print stores.
+Objective tested: m2-o1, bloom level understand.
+Exit ticket m2-et1: what will this print: age = 3 then print(age)? (objective m2-o1).
 
 differentiation
-learners who are stuck: use the m2-mis starter and walk the traceback together.
-learners who finish early: ask the learner to add a second variable and print both.
+Learners who are stuck: use the m2-mis starter and walk the traceback together.
+Learners who finish early: ask the learner to add a second variable and print both.
 
 facilitator notes
-pacing checkpoints: check prediction accuracy at exit ticket.
-what to cut if running 15 minutes late: if 15 minutes late, shorten worked example to 12 minutes.
-setup checklist: open colab, type the example live.
+Pacing checkpoints: check prediction accuracy at exit ticket.
+What to cut if running 15 minutes late: if 15 minutes late, shorten worked example to 12 minutes.
+Setup checklist: open colab, type the example live.
 
 why it is designed this way
-the worked example reduces cognitive load for the first variable lesson [R1][R5].
-predict before run makes the variable misconception visible [R8].
+The worked example reduces cognitive load for the first variable lesson [R1][R5].
+Predict before run makes the variable misconception visible [R8].
 
 7 Module 3: Input And Output
-module m3 of 10 - input and output. duration 120 minutes. prerequisites: m2.
-objectives: m3-o1.
+Module m3 of 10 - input and output. Duration 120 minutes. Prerequisites: m2.
+Objectives: m3-o1.
 
 plain english and the real-life analogy
-a program talks to the person through input and output: ask, remember, show.
-real-life analogy: ordering food at a restaurant: you say what you want (input), the kitchen writes it down
+A program talks to the person through input and output: ask, remember, show.
+Real-life analogy: ordering food at a restaurant: you say what you want (input), the kitchen writes it down
 (variable), the waiter brings the dish (output).
-where this analogy breaks down: the kitchen cannot answer follow-up questions; it just follows the written ticket.
+Where this analogy breaks down: the kitchen cannot answer follow-up questions; it just follows the written ticket.
 
 worked example: a complete runnable program
 
@@ -602,8 +602,8 @@ worked example: a complete runnable program
 age = input("how old are you? ")
 print("hello " + name + ". you will be " + str(int(age) + 1) + " next year.")
 
-line-by-line annotation: line 1: input asks and remembers. line 2: int() turns the text into a number.
-captured real output (executed in a sandbox, python 3.13):
+Line-by-line annotation: line 1: input asks and remembers. Line 2: int() turns the text into a number.
+Captured real output (executed in a sandbox, python 3.13):
 
 
 hello meghana. you will be 27 next year.
@@ -615,7 +615,7 @@ a second example that changes one thing
 city = input("which city are you in? ")
 print("noted: " + city)
 
-captured real output for this variant:
+Captured real output for this variant:
 
 
 noted: ahmedabad
@@ -659,73 +659,73 @@ One 120-minute session: introduce, practise, reflect
 This single 120-minute table is the full module plan.
 
 activities
-activity m3-prm (type predict-run-modify), serves objectives m3-o1, time budget 20 minutes.
-instructions in plain words: predict the output, run it, modify one thing.
-starter code: name = input("what is your name? ") print("hi " + name)
-expected result / success criteria: output greets the typed name.
-hint ladder:
-hint 1: input returns text.
-hint 2: plus joins strings.
-activity m3-a2 (type pair_task), serves objectives m3-o1, time budget 25 minutes.
-instructions in plain words: talk through the prediction before typing.
-starter code: city = input("which city? ")
-expected result / success criteria: pair predicts the note.
-hint ladder:
-hint 1: what will be printed?
-hint 2: input returns text.
-activity m3-a3 (type debug-this), serves objectives m3-o1, time budget 25 minutes.
-instructions in plain words: find the real bug.
-starter code: age = input("how old? ") print("next year you will be " + str(int(age)) + " years old")
-expected result / success criteria: works when input is a number.
-hint ladder:
-hint 1: what does int() do?
-hint 2: what if the answer is a name?
+Activity m3-prm (type predict-run-modify), serves objectives m3-o1, time budget 20 minutes.
+Instructions in plain words: predict the output, run it, modify one thing.
+Starter code: name = input("what is your name? ") print("hi " + name)
+Expected result / success criteria: output greets the typed name.
+Hint ladder:
+Hint 1: input returns text.
+Hint 2: plus joins strings.
+Activity m3-a2 (type pair_task), serves objectives m3-o1, time budget 25 minutes.
+Instructions in plain words: talk through the prediction before typing.
+Starter code: city = input("which city? ")
+Expected result / success criteria: pair predicts the note.
+Hint ladder:
+Hint 1: what will be printed?
+Hint 2: input returns text.
+Activity m3-a3 (type debug-this), serves objectives m3-o1, time budget 25 minutes.
+Instructions in plain words: find the real bug.
+Starter code: age = input("how old? ") print("next year you will be " + str(int(age)) + " years old")
+Expected result / success criteria: works when input is a number.
+Hint ladder:
+Hint 1: what does int() do?
+Hint 2: what if the answer is a name?
 
 common misconceptions
-misconception m3-m1: input gives a number automatically
-real error or wrong output: input always gives text; int() converts
-facilitator response: show input then int() side by side.
+Misconception m3-m1: input gives a number automatically
+Real error or wrong output: input always gives text; int() converts
+Facilitator response: show input then int() side by side.
 
 formative assessment
-quiz m3-q1: what does input do?
-correct answer: asks the user and returns the typed text
-wrong option rationale: gives a number - it detects the misconception that input gives a number.
+Quiz m3-q1: what does input do?
+Correct answer: asks the user and returns the typed text
+Wrong option rationale: gives a number - it detects the misconception that input gives a number.
 
                      Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 16
-wrong option rationale: saves to a file - it detects the misconception that input gives a number.
-objective tested: m3-o1, bloom level understand.
-quiz m3-q2: what does print do?
-correct answer: shows text to the user
-wrong option rationale: reads from a file - it detects the misconception that print reads.
-wrong option rationale: sends an email - it detects the misconception that print reads.
-objective tested: m3-o1, bloom level understand.
-exit ticket m3-et1: what will this print: name = input(); print(name)? (objective m3-o1).
+Wrong option rationale: saves to a file - it detects the misconception that input gives a number.
+Objective tested: m3-o1, bloom level understand.
+Quiz m3-q2: what does print do?
+Correct answer: shows text to the user
+Wrong option rationale: reads from a file - it detects the misconception that print reads.
+Wrong option rationale: sends an email - it detects the misconception that print reads.
+Objective tested: m3-o1, bloom level understand.
+Exit ticket m3-et1: what will this print: name = input(); print(name)? (objective m3-o1).
 
 differentiation
-learners who are stuck: run the m3-a3 starter with a numeric answer.
-learners who finish early: ask the learner to add a second question and print both answers.
+Learners who are stuck: run the m3-a3 starter with a numeric answer.
+Learners who finish early: ask the learner to add a second question and print both answers.
 
 facilitator notes
-pacing checkpoints: check that input was used.
-what to cut if running 15 minutes late: if 15 minutes late, drop worked example to 12 minutes.
-setup checklist: open colab, test input flow.
+Pacing checkpoints: check that input was used.
+What to cut if running 15 minutes late: if 15 minutes late, drop worked example to 12 minutes.
+Setup checklist: open colab, test input flow.
 
 why it is designed this way
-a quick win through output early sustains motivation [R9].
-input/print are introduced together so the habit forms fast.
+A quick win through output early sustains motivation [R9].
+Input/print are introduced together so the habit forms fast.
 
 
 
 
                   Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 17
 8 Module 4: Conditionals (If / Else)
-module m4 of 10 - conditionals (if / else). duration 180 minutes. prerequisites: m3.
-objectives: m4-o1.
+Module m4 of 10 - conditionals (if / else). Duration 180 minutes. Prerequisites: m3.
+Objectives: m4-o1.
 
 plain english and the real-life analogy
-a program can choose between two or more paths based on a condition.
-real-life analogy: a traffic roundabout: if the light is green, go; if red, stop; otherwise follow the sign.
-where this analogy breaks down: a roundabout has many roads; an if/else has a binary choice and a condition you
+A program can choose between two or more paths based on a condition.
+Real-life analogy: a traffic roundabout: if the light is green, go; if red, stop; otherwise follow the sign.
+Where this analogy breaks down: a roundabout has many roads; an if/else has a binary choice and a condition you
 must write precisely.
 
 worked example: a complete runnable program
@@ -737,8 +737,8 @@ if age >= 13:
 else:
      print("you must watch the gentle cartoon")
 
-line-by-line annotation: line 2: the condition is checked. line 3 and 4: each branch is a step.
-captured real output (executed in a sandbox, python 3.13):
+Line-by-line annotation: line 2: the condition is checked. Line 3 and 4: each branch is a step.
+Captured real output (executed in a sandbox, python 3.13):
 
 
 you must watch the gentle cartoon
@@ -753,7 +753,7 @@ if name == "fatima":
 else:
      print("hello, stranger")
 
-captured real output for this variant:
+Captured real output for this variant:
 
 
 welcome back, teacher
@@ -824,74 +824,74 @@ Session B (90 minutes): consolidate and extend
 Session B blocks sum to 90 minutes.
 
 activities
-activity m4-p1 (type parsons), serves objectives m4-o1, time budget 25 minutes.
-instructions in plain words: order the if / else lines.
-starter code: age = 12 if age >= 13: print("scary") else: print("gentle")
-expected result / success criteria: the condition is first and else pairs correctly.
-hint ladder:
-hint 1: condition goes first.
-hint 2: else pairs with if.
-activity m4-prm (type predict-run-modify), serves objectives m4-o1, time budget 20 minutes.
-instructions in plain words: predict, run, modify.
-starter code: age = 12 if age >= 13: print("scary")
-expected result / success criteria: prints gentle cartoon.
-hint ladder:
-hint 1: 12 is not 13.
-hint 2: change the number.
-activity m4-a2 (type pair_task), serves objectives m4-o1, time budget 25 minutes.
-instructions in plain words: talk through the branch.
-starter code: age = 12 # branch choice
-expected result / success criteria: pair states the branch.
-hint ladder:
-hint 1: what is 12 >= 13?
-hint 2: false means else.
+Activity m4-p1 (type parsons), serves objectives m4-o1, time budget 25 minutes.
+Instructions in plain words: order the if / else lines.
+Starter code: age = 12 if age >= 13: print("scary") else: print("gentle")
+Expected result / success criteria: the condition is first and else pairs correctly.
+Hint ladder:
+Hint 1: condition goes first.
+Hint 2: else pairs with if.
+Activity m4-prm (type predict-run-modify), serves objectives m4-o1, time budget 20 minutes.
+Instructions in plain words: predict, run, modify.
+Starter code: age = 12 if age >= 13: print("scary")
+Expected result / success criteria: prints gentle cartoon.
+Hint ladder:
+Hint 1: 12 is not 13.
+Hint 2: change the number.
+Activity m4-a2 (type pair_task), serves objectives m4-o1, time budget 25 minutes.
+Instructions in plain words: talk through the branch.
+Starter code: age = 12 # branch choice
+Expected result / success criteria: pair states the branch.
+Hint ladder:
+Hint 1: what is 12 >= 13?
+Hint 2: false means else.
 
 common misconceptions
-misconception m4-m1: the computer reads the story we tell it
-real error or wrong output: the computer runs only the taken branch
-facilitator response: trace which branch runs with a real run.
+Misconception m4-m1: the computer reads the story we tell it
+Real error or wrong output: the computer runs only the taken branch
+Facilitator response: trace which branch runs with a real run.
 
                         Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 20
-misconception m4-m2: if means always
-real error or wrong output: if is a condition, not a constant
-facilitator response: show an if that is always true and one that is false.
+Misconception m4-m2: if means always
+Real error or wrong output: if is a condition, not a constant
+Facilitator response: show an if that is always true and one that is false.
 
 formative assessment
-quiz m4-q1: what does an if check?
-correct answer: whether a condition is true
-wrong option rationale: whether a variable exists - it detects the misconception that if checks existence.
-wrong option rationale: whether a file exists - it detects the misconception that if checks existence.
-objective tested: m4-o1, bloom level apply.
-quiz m4-q2: what does else mean?
-correct answer: the other branch when the if is not true
-wrong option rationale: always run this - it detects the misconception that else always runs.
-wrong option rationale: stop the program - it detects the misconception that else always runs.
-objective tested: m4-o1, bloom level apply.
-exit ticket m4-et1: in words, when should the gentle cartoon play? (objective m4-o1).
+Quiz m4-q1: what does an if check?
+Correct answer: whether a condition is true
+Wrong option rationale: whether a variable exists - it detects the misconception that if checks existence.
+Wrong option rationale: whether a file exists - it detects the misconception that if checks existence.
+Objective tested: m4-o1, bloom level apply.
+Quiz m4-q2: what does else mean?
+Correct answer: the other branch when the if is not true
+Wrong option rationale: always run this - it detects the misconception that else always runs.
+Wrong option rationale: stop the program - it detects the misconception that else always runs.
+Objective tested: m4-o1, bloom level apply.
+Exit ticket m4-et1: in words, when should the gentle cartoon play? (objective m4-o1).
 
 differentiation
-learners who are stuck: use the m4-p1 scrambled lines and sort them together.
-learners who finish early: ask the learner to add an elif for a second age group.
+Learners who are stuck: use the m4-p1 scrambled lines and sort them together.
+Learners who finish early: ask the learner to add an elif for a second age group.
 
 facilitator notes
-pacing checkpoints: check condition before branches.
-what to cut if running 15 minutes late: if 15 minutes late, drop predict-run-modify to 10 minutes.
-setup checklist: open colab, type example live.
+Pacing checkpoints: check condition before branches.
+What to cut if running 15 minutes late: if 15 minutes late, drop predict-run-modify to 10 minutes.
+Setup checklist: open colab, type example live.
 
 why it is designed this way
-conditions are the first real logic; worked example then pair task [R1].
-prediction before run exposes condition misconceptions [R8].
+Conditions are the first real logic; worked example then pair task [R1].
+Prediction before run exposes condition misconceptions [R8].
 
 9 Module 5: Loops (Repeat)
-module m5 of 10 - loops (repeat). duration 180 minutes. prerequisites: m4.
-objectives: m5-o1.
+Module m5 of 10 - loops (repeat). Duration 180 minutes. Prerequisites: m4.
+Objectives: m5-o1.
 
 plain english and the real-life analogy
-a loop repeats a block of steps until a condition becomes false, or for a known number of times.
-real-life analogy: asking a child to count from one to ten by pointing at each number on a number line, one at a
+A loop repeats a block of steps until a condition becomes false, or for a known number of times.
+Real-life analogy: asking a child to count from one to ten by pointing at each number on a number line, one at a
 time, ten times.
-where this analogy breaks down: the number line is physical; a for loop is a counter, and the stop condition must be
-written, not assumed.
+Where this analogy breaks down: the number line is physical; a for loop is a counter, and the stop condition must
+be written, not assumed.
 
 worked example: a complete runnable program
 
@@ -902,8 +902,8 @@ for i in range(3):
      total = total + 1
 print(total)
 
-line-by-line annotation: line 1: total starts at zero. line 2: loop runs three times. line 3: add one each time.
-captured real output (executed in a sandbox, python 3.13):
+Line-by-line annotation: line 1: total starts at zero. Line 2: loop runs three times. Line 3: add one each time.
+Captured real output (executed in a sandbox, python 3.13):
 
 
 3
@@ -917,7 +917,7 @@ while count < 3:
      count = count + 1
 print("done counting to " + str(count))
 
-captured real output for this variant:
+Captured real output for this variant:
 
 
 done counting to 3
@@ -984,80 +984,80 @@ Session B (90 minutes): consolidate and extend
 Session B blocks sum to 90 minutes.
 
 activities
-activity m5-p1 (type parsons), serves objectives m5-o1, time budget 25 minutes.
-instructions in plain words: order the loop lines so the stop condition works.
-starter code: total = 0 for i in range(3): total = total + 1 print(total)
-expected result / success criteria: output is 3.
-hint ladder:
-hint 1: range gives the count.
-hint 2: the stop condition must end the loop.
-activity m5-prm (type predict-run-modify), serves objectives m5-o1, time budget 20 minutes.
-instructions in plain words: predict, run, modify.
-starter code: total = 0 for i in range(3): total = total + 1 print(total) # check
-expected result / success criteria: output is 3.
+Activity m5-p1 (type parsons), serves objectives m5-o1, time budget 25 minutes.
+Instructions in plain words: order the loop lines so the stop condition works.
+Starter code: total = 0 for i in range(3): total = total + 1 print(total)
+Expected result / success criteria: output is 3.
+Hint ladder:
+Hint 1: range gives the count.
+Hint 2: the stop condition must end the loop.
+Activity m5-prm (type predict-run-modify), serves objectives m5-o1, time budget 20 minutes.
+Instructions in plain words: predict, run, modify.
+Starter code: total = 0 for i in range(3): total = total + 1 print(total) # check
+Expected result / success criteria: output is 3.
 
 
                         Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 23
-hint ladder:
-hint 1: how many times?
-hint 2: what does range(3) mean?
-activity m5-a2 (type pair_task), serves objectives m5-o1, time budget 25 minutes.
-instructions in plain words: talk through the loop.
-starter code: total = 0
-expected result / success criteria: pair states the stop condition.
-hint ladder:
-hint 1: what changes each round?
-hint 2: when does it stop?
+Hint ladder:
+Hint 1: how many times?
+Hint 2: what does range(3) mean?
+Activity m5-a2 (type pair_task), serves objectives m5-o1, time budget 25 minutes.
+Instructions in plain words: talk through the loop.
+Starter code: total = 0
+Expected result / success criteria: pair states the stop condition.
+Hint ladder:
+Hint 1: what changes each round?
+Hint 2: when does it stop?
 
 common misconceptions
-misconception m5-m1: a loop means repeat forever
-real error or wrong output: a loop needs a stop condition
-facilitator response: show a while loop that never ends and how to break.
-misconception m5-m2: the loop variable is the value
-real error or wrong output: i is a counter, not the data
-facilitator response: show with a list.
+Misconception m5-m1: a loop means repeat forever
+Real error or wrong output: a loop needs a stop condition
+Facilitator response: show a while loop that never ends and how to break.
+Misconception m5-m2: the loop variable is the value
+Real error or wrong output: i is a counter, not the data
+Facilitator response: show with a list.
 
 formative assessment
-quiz m5-q1: what does range(3) give?
-correct answer: three loop runs
-wrong option rationale: three values - it detects the misconception that range gives values.
-wrong option rationale: three numbers to add - it detects the misconception that range gives values.
-objective tested: m5-o1, bloom level apply.
-quiz m5-q2: when does a while loop stop?
-correct answer: when the condition becomes false
-wrong option rationale: after ten runs - it detects the misconception that while has a default stop.
-wrong option rationale: never - it detects the misconception that while has a default stop.
-objective tested: m5-o1, bloom level apply.
-exit ticket m5-et1: how many times will this loop run: for i in range(2)? (objective m5-o1).
+Quiz m5-q1: what does range(3) give?
+Correct answer: three loop runs
+Wrong option rationale: three values - it detects the misconception that range gives values.
+Wrong option rationale: three numbers to add - it detects the misconception that range gives values.
+Objective tested: m5-o1, bloom level apply.
+Quiz m5-q2: when does a while loop stop?
+Correct answer: when the condition becomes false
+Wrong option rationale: after ten runs - it detects the misconception that while has a default stop.
+Wrong option rationale: never - it detects the misconception that while has a default stop.
+Objective tested: m5-o1, bloom level apply.
+Exit ticket m5-et1: how many times will this loop run: for i in range(2)? (objective m5-o1).
 
 differentiation
-learners who are stuck: use the m5-p1 scrambled lines and sort them.
-learners who finish early: ask the learner to change range(3) to range(5) and predict the new total.
+Learners who are stuck: use the m5-p1 scrambled lines and sort them.
+Learners who finish early: ask the learner to change range(3) to range(5) and predict the new total.
 
 facilitator notes
-pacing checkpoints: check stop condition each session.
-what to cut if running 15 minutes late: if 15 minutes late, drop the worked example to 12 minutes.
-setup checklist: open colab, type example live.
+Pacing checkpoints: check stop condition each session.
+What to cut if running 15 minutes late: if 15 minutes late, drop the worked example to 12 minutes.
+Setup checklist: open colab, type example live.
 
                   Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 24
 why it is designed this way
-tracing is how novices read loops; loop trace figure supports this [R7].
-parsons problems lower load for ordering loops [R2][R3].
+Tracing is how novices read loops; loop trace figure supports this [R7].
+Parsons problems lower load for ordering loops [R2][R3].
 
 
 
 
                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 25
 10 Module 6: Functions (Reusable Steps)
-module m6 of 10 - functions (reusable steps). duration 180 minutes. prerequisites: m5.
-objectives: m6-o1.
+Module m6 of 10 - functions (reusable steps). Duration 180 minutes. Prerequisites: m5.
+Objectives: m6-o1.
 
 plain english and the real-life analogy
-a function is a named, reusable bundle of steps that takes inputs and gives back one output.
-real-life analogy: a vending machine: you press a button (call), the machine follows its internal steps (function
+A function is a named, reusable bundle of steps that takes inputs and gives back one output.
+Real-life analogy: a vending machine: you press a button (call), the machine follows its internal steps (function
 body), and gives you a snack (return).
-where this analogy breaks down: a vending machine cannot take its own button as input; functions take parameters
-and return one value, not many.
+Where this analogy breaks down: a vending machine cannot take its own button as input; functions take
+parameters and return one value, not many.
 
 worked example: a complete runnable program
 
@@ -1066,9 +1066,9 @@ def greet(name):
     return "hello " + name + ", welcome back"
 print(greet("fatima"))
 
-line-by-line annotation: line 1: def makes a function called greet with a name parameter. line 2: return sends back
+Line-by-line annotation: line 1: def makes a function called greet with a name parameter. Line 2: return sends back
 the greeting.
-captured real output (executed in a sandbox, python 3.13):
+Captured real output (executed in a sandbox, python 3.13):
 
 
 hello fatima, welcome back
@@ -1081,7 +1081,7 @@ def add(a, b):
     return a + b
 print(add(2, 3))
 
-captured real output for this variant:
+Captured real output for this variant:
 
 
 5
@@ -1150,73 +1150,73 @@ Session B (90 minutes): consolidate and extend
 Session B blocks sum to 90 minutes.
 
 activities
-activity m6-p1 (type parsons), serves objectives m6-o1, time budget 25 minutes.
-instructions in plain words: order the def / call lines.
-starter code: def add(a, b): return a + b print(add(2, 3))
-expected result / success criteria: output is 5.
-hint ladder:
-hint 1: def comes before call.
-hint 2: parameters go in the def.
-activity m6-prm (type predict-run-modify), serves objectives m6-o1, time budget 20 minutes.
-instructions in plain words: predict, run, modify.
-starter code: def add(a, b): return a + b print(add(2, 3)) # review
-expected result / success criteria: output is 5.
-hint ladder:
-hint 1: what is 2 + 3?
-hint 2: change the numbers.
-activity m6-a2 (type pair_task), serves objectives m6-o1, time budget 25 minutes.
-instructions in plain words: talk through the function.
-starter code: def add(a, b):
-expected result / success criteria: pair states the return.
-hint ladder:
-hint 1: what goes in?
-hint 2: what comes out?
+Activity m6-p1 (type parsons), serves objectives m6-o1, time budget 25 minutes.
+Instructions in plain words: order the def / call lines.
+Starter code: def add(a, b): return a + b print(add(2, 3))
+Expected result / success criteria: output is 5.
+Hint ladder:
+Hint 1: def comes before call.
+Hint 2: parameters go in the def.
+Activity m6-prm (type predict-run-modify), serves objectives m6-o1, time budget 20 minutes.
+Instructions in plain words: predict, run, modify.
+Starter code: def add(a, b): return a + b print(add(2, 3)) # review
+Expected result / success criteria: output is 5.
+Hint ladder:
+Hint 1: what is 2 + 3?
+Hint 2: change the numbers.
+Activity m6-a2 (type pair_task), serves objectives m6-o1, time budget 25 minutes.
+Instructions in plain words: talk through the function.
+Starter code: def add(a, b):
+Expected result / success criteria: pair states the return.
+Hint ladder:
+Hint 1: what goes in?
+Hint 2: what comes out?
 
 common misconceptions
-misconception m6-m1: a function is a name you type and forget
-real error or wrong output: a function must be called to run
-facilitator response: show def without call does nothing.
-misconception m6-m2: return means print
-real error or wrong output: return sends back; print shows
-facilitator response: show a function that returns and a caller that prints.
+Misconception m6-m1: a function is a name you type and forget
+Real error or wrong output: a function must be called to run
+Facilitator response: show def without call does nothing.
+Misconception m6-m2: return means print
+Real error or wrong output: return sends back; print shows
+Facilitator response: show a function that returns and a caller that prints.
 
 
 
                         Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 28
 formative assessment
-quiz m6-q1: what does a function return?
-correct answer: one value the caller can use
-wrong option rationale: nothing - it detects the misconception that function returns nothing.
-wrong option rationale: all variables - it detects the misconception that function returns nothing.
-objective tested: m6-o1, bloom level apply.
-quiz m6-q2: what is a parameter?
-correct answer: a name for an input the function receives
-wrong option rationale: the output - it detects the misconception that parameter is the value.
-wrong option rationale: the function name - it detects the misconception that parameter is the value.
-objective tested: m6-o1, bloom level apply.
-exit ticket m6-et1: what does your function return for input 3 and 4? (objective m6-o1).
+Quiz m6-q1: what does a function return?
+Correct answer: one value the caller can use
+Wrong option rationale: nothing - it detects the misconception that function returns nothing.
+Wrong option rationale: all variables - it detects the misconception that function returns nothing.
+Objective tested: m6-o1, bloom level apply.
+Quiz m6-q2: what is a parameter?
+Correct answer: a name for an input the function receives
+Wrong option rationale: the output - it detects the misconception that parameter is the value.
+Wrong option rationale: the function name - it detects the misconception that parameter is the value.
+Objective tested: m6-o1, bloom level apply.
+Exit ticket m6-et1: what does your function return for input 3 and 4? (objective m6-o1).
 
 differentiation
-learners who are stuck: use the m6-p1 scrambled lines and sort them.
-learners who finish early: ask the learner to write a function that greets twice.
+Learners who are stuck: use the m6-p1 scrambled lines and sort them.
+Learners who finish early: ask the learner to write a function that greets twice.
 
 facilitator notes
-pacing checkpoints: check def before call.
-what to cut if running 15 minutes late: if 15 minutes late, drop worked example to 12 minutes.
-setup checklist: open colab, type example live.
+Pacing checkpoints: check def before call.
+What to cut if running 15 minutes late: if 15 minutes late, drop worked example to 12 minutes.
+Setup checklist: open colab, type example live.
 
 why it is designed this way
-functions lower cognitive load by packaging steps [R1][R5].
-pair work on ordering functions builds the habit.
+Functions lower cognitive load by packaging steps [R1][R5].
+Pair work on ordering functions builds the habit.
 
 11 Module 7: Lists And Dictionaries
-module m7 of 10 - lists and dictionaries. duration 180 minutes. prerequisites: m6.
-objectives: m7-o1.
+Module m7 of 10 - lists and dictionaries. Duration 180 minutes. Prerequisites: m6.
+Objectives: m7-o1.
 
 plain english and the real-life analogy
-collections help store many values: a list is an ordered pile, a dictionary maps names to values.
-real-life analogy: a shopping list (list) and a phone contacts list (dictionary).
-where this analogy breaks down: lists keep order and allow duplicates; dictionaries allow any key, not just
+Collections help store many values: a list is an ordered pile, a dictionary maps names to values.
+Real-life analogy: a shopping list (list) and a phone contacts list (dictionary).
+Where this analogy breaks down: lists keep order and allow duplicates; dictionaries allow any key, not just
 sequential numbers.
 
 worked example: a complete runnable program
@@ -1233,8 +1233,9 @@ print(len(shopping))
 contacts = {"meghana": "9876543210", "arjun": "9123456780"}
 print(contacts["meghana"])
 
-line-by-line annotation: line 1: list of three items. line 2: append adds one. line 5: dictionary maps name to number.
-captured real output (executed in a sandbox, python 3.13):
+Line-by-line annotation: line 1: list of three items. Line 2: append adds one. Line 5: dictionary maps name to
+number.
+Captured real output (executed in a sandbox, python 3.13):
 
 
 rice
@@ -1249,7 +1250,7 @@ scores = [10, 20, 30]
 scores[0] = 11
 print(sum(scores))
 
-captured real output for this variant:
+Captured real output for this variant:
 
 
 61
@@ -1274,7 +1275,6 @@ Session A (90 minutes): introduce and practise
                                                                                                  aloud
 
  31-55                          pair_task                       parsons problem                  order list append / index   starter + colab
-
 
                         Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 30
          minute range                    block type              facilitator does                learners do                  materials
@@ -1318,84 +1318,84 @@ Session B (90 minutes): consolidate and extend
 Session B blocks sum to 90 minutes.
 
 activities
-activity m7-p1 (type parsons), serves objectives m7-o1, time budget 25 minutes.
-instructions in plain words: order the list append / index lines.
-starter code: shopping = ["rice", "oil", "tea"] shopping.append("salt") print(shopping[0])
-expected result / success criteria: output is rice.
-hint ladder:
-hint 1: append adds at the end.
-hint 2: index 0 is the first.
-activity m7-prm (type predict-run-modify), serves objectives m7-o1, time budget 20 minutes.
-instructions in plain words: predict, run, modify.
-starter code: shopping = ["rice", "oil", "tea"] shopping.append("salt") print(shopping[0]) # p1
-expected result / success criteria: output is rice.
-hint ladder:
-hint 1: what did you append?
-hint 2: index 0.
-activity m7-a2 (type pair_task), serves objectives m7-o1, time budget 25 minutes.
+Activity m7-p1 (type parsons), serves objectives m7-o1, time budget 25 minutes.
+Instructions in plain words: order the list append / index lines.
+Starter code: shopping = ["rice", "oil", "tea"] shopping.append("salt") print(shopping[0])
+Expected result / success criteria: output is rice.
+Hint ladder:
+Hint 1: append adds at the end.
+Hint 2: index 0 is the first.
+Activity m7-prm (type predict-run-modify), serves objectives m7-o1, time budget 20 minutes.
+Instructions in plain words: predict, run, modify.
+Starter code: shopping = ["rice", "oil", "tea"] shopping.append("salt") print(shopping[0]) # p1
+Expected result / success criteria: output is rice.
+Hint ladder:
+Hint 1: what did you append?
+Hint 2: index 0.
+Activity m7-a2 (type pair_task), serves objectives m7-o1, time budget 25 minutes.
 
                         Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 31
-instructions in plain words: talk through the collection.
-starter code: contacts = {"meghana": "9876543210"}
-expected result / success criteria: pair reads the key.
-hint ladder:
-hint 1: dictionary is name to value.
-hint 2: key in quotes.
+Instructions in plain words: talk through the collection.
+Starter code: contacts = {"meghana": "9876543210"}
+Expected result / success criteria: pair reads the key.
+Hint ladder:
+Hint 1: dictionary is name to value.
+Hint 2: key in quotes.
 
 common misconceptions
-misconception m7-m1: index starts at 1
-real error or wrong output: python indexes start at 0
-facilitator response: use the shopping list trace.
-misconception m7-m2: dictionary keys are numbers
-real error or wrong output: dictionary keys are names
-facilitator response: show a contacts list.
+Misconception m7-m1: index starts at 1
+Real error or wrong output: python indexes start at 0
+Facilitator response: use the shopping list trace.
+Misconception m7-m2: dictionary keys are numbers
+Real error or wrong output: dictionary keys are names
+Facilitator response: show a contacts list.
 
 formative assessment
-quiz m7-q1: what does append do?
-correct answer: adds one item to the end
-wrong option rationale: adds at the front - it detects the misconception that append adds at front.
-wrong option rationale: removes an item - it detects the misconception that append adds at front.
-objective tested: m7-o1, bloom level apply.
-quiz m7-q2: how do you read one dictionary value?
-correct answer: use the key in square brackets
-wrong option rationale: use a number - it detects the misconception that dot notation for dict.
-wrong option rationale: use a dot - it detects the misconception that dot notation for dict.
-objective tested: m7-o1, bloom level apply.
-exit ticket m7-et1: what is shopping[1] after appending salt? (objective m7-o1).
+Quiz m7-q1: what does append do?
+Correct answer: adds one item to the end
+Wrong option rationale: adds at the front - it detects the misconception that append adds at front.
+Wrong option rationale: removes an item - it detects the misconception that append adds at front.
+Objective tested: m7-o1, bloom level apply.
+Quiz m7-q2: how do you read one dictionary value?
+Correct answer: use the key in square brackets
+Wrong option rationale: use a number - it detects the misconception that dot notation for dict.
+Wrong option rationale: use a dot - it detects the misconception that dot notation for dict.
+Objective tested: m7-o1, bloom level apply.
+Exit ticket m7-et1: what is shopping[1] after appending salt? (objective m7-o1).
 
 differentiation
-learners who are stuck: use the m7-p1 scrambled lines and sort them.
-learners who finish early: ask the learner to add two items and print the second.
+Learners who are stuck: use the m7-p1 scrambled lines and sort them.
+Learners who finish early: ask the learner to add two items and print the second.
 
 facilitator notes
-pacing checkpoints: check index base.
-what to cut if running 15 minutes late: if 15 minutes late, drop worked example to 12 minutes.
-setup checklist: open colab, type example live.
+Pacing checkpoints: check index base.
+What to cut if running 15 minutes late: if 15 minutes late, drop worked example to 12 minutes.
+Setup checklist: open colab, type example live.
 
 why it is designed this way
-collections are how real tasks store many values; lists before dictionaries [R9].
+Collections are how real tasks store many values; lists before dictionaries [R9].
 
 12 Module 8: Files And Simple Data
-module m8 of 10 - files and simple data. duration 180 minutes. prerequisites: m7.
+Module m8 of 10 - files and simple data. Duration 180 minutes. Prerequisites: m7.
                   Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 32
-objectives: m8-o1.
+Objectives: m8-o1.
 
 plain english and the real-life analogy
-programs can read what a person wrote in a file and write results back into a file.
-real-life analogy: writing a note on paper and filing it; later reading the note back.
-where this analogy breaks down: file handles are stateful and need closing; the with statement automates closing
+Programs can read what a person wrote in a file and write results back into a file.
+Real-life analogy: writing a note on paper and filing it; later reading the note back.
+Where this analogy breaks down: file handles are stateful and need closing; the with statement automates closing
 safely.
 
 worked example: a complete runnable program
 
 
 with open("todo.txt", "w") as f:
-     f.write("buy milk\n")
+    f.write("buy milk\n")
 with open("todo.txt", "r") as f:
-     print(f.read())
+    print(f.read())
 
-line-by-line annotation: line 1: with opens the file and closes it when done. line 2: write puts text in.
-captured real output (executed in a sandbox, python 3.13):
+Line-by-line annotation: line 1: with opens the file and closes it when done. Line 2: write puts text in.
+Captured real output (executed in a sandbox, python 3.13):
 
 
 buy milk
@@ -1405,12 +1405,12 @@ a second example that changes one thing
 
 
 with open("names.txt", "w") as f:
-     f.write("meghana\narjun\n")
+    f.write("meghana\narjun\n")
 with open("names.txt", "r") as f:
-     for line in f:
+    for line in f:
           print(line.strip().upper())
 
-captured real output for this variant:
+Captured real output for this variant:
 
 
 MEGHANA
@@ -1482,69 +1482,69 @@ Session B (90 minutes): consolidate and extend
 Session B blocks sum to 90 minutes.
 
 activities
-activity m8-p1 (type debug-this), serves objectives m8-o1, time budget 25 minutes.
-instructions in plain words: fix the file handle bug.
-starter code: with open("todo.txt") as f: f.write("buy milk\n")
-expected result / success criteria: file written and read back.
-hint ladder:
-hint 1: use with for auto close.
-hint 2: mode w writes.
-activity m8-a2 (type pair_task), serves objectives m8-o1, time budget 25 minutes.
-instructions in plain words: talk through reading.
-starter code: with open("names.txt", "r") as f:
-expected result / success criteria: pair predicts the output.
-hint ladder:
-hint 1: with closes.
-hint 2: strip removes newline.
-activity m8-a3 (type predict-run-modify), serves objectives m8-o1, time budget 20 minutes.
-instructions in plain words: predict, run, modify.
-starter code: with open("todo.txt", "w") as f: f.write("buy milk\n") with open("todo.txt", "r") as f: print(f.read())
-expected result / success criteria: output is buy milk.
-hint ladder:
-hint 1: with is the safe way.
-hint 2: w then r.
+Activity m8-p1 (type debug-this), serves objectives m8-o1, time budget 25 minutes.
+Instructions in plain words: fix the file handle bug.
+Starter code: with open("todo.txt") as f: f.write("buy milk\n")
+Expected result / success criteria: file written and read back.
+Hint ladder:
+Hint 1: use with for auto close.
+Hint 2: mode w writes.
+Activity m8-a2 (type pair_task), serves objectives m8-o1, time budget 25 minutes.
+Instructions in plain words: talk through reading.
+Starter code: with open("names.txt", "r") as f:
+Expected result / success criteria: pair predicts the output.
+Hint ladder:
+Hint 1: with closes.
+Hint 2: strip removes newline.
+Activity m8-a3 (type predict-run-modify), serves objectives m8-o1, time budget 20 minutes.
+Instructions in plain words: predict, run, modify.
+Starter code: with open("todo.txt", "w") as f: f.write("buy milk\n") with open("todo.txt", "r") as f: print(f.read())
+Expected result / success criteria: output is buy milk.
+Hint ladder:
+Hint 1: with is the safe way.
+Hint 2: w then r.
 
 common misconceptions
-misconception m8-m1: open without with leaks the file
-real error or wrong output: file not closed / resource warning
-facilitator response: use with.
+Misconception m8-m1: open without with leaks the file
+Real error or wrong output: file not closed / resource warning
+Facilitator response: use with.
 
 formative assessment
-quiz m8-q1: what does with do?
-correct answer: opens and closes the file safely
-wrong option rationale: writes faster - it detects the misconception that with is optional.
-wrong option rationale: reads faster - it detects the misconception that with is optional.
-objective tested: m8-o1, bloom level apply.
+Quiz m8-q1: what does with do?
+Correct answer: opens and closes the file safely
+Wrong option rationale: writes faster - it detects the misconception that with is optional.
+Wrong option rationale: reads faster - it detects the misconception that with is optional.
+Objective tested: m8-o1, bloom level apply.
 
                      Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 35
-quiz m8-q2: what mode writes a file?
-correct answer: w
-wrong option rationale: r - it detects the misconception that mode x is write.
-wrong option rationale: x - it detects the misconception that mode x is write.
-objective tested: m8-o1, bloom level apply.
-exit ticket m8-et1: what mode do you use to add text to a file? (objective m8-o1).
+Quiz m8-q2: what mode writes a file?
+Correct answer: w
+Wrong option rationale: r - it detects the misconception that mode x is write.
+Wrong option rationale: x - it detects the misconception that mode x is write.
+Objective tested: m8-o1, bloom level apply.
+Exit ticket m8-et1: what mode do you use to add text to a file? (objective m8-o1).
 
 differentiation
-learners who are stuck: use the m8-p1 starter and add the with block.
-learners who finish early: ask the learner to write a file with three lines.
+Learners who are stuck: use the m8-p1 starter and add the with block.
+Learners who finish early: ask the learner to write a file with three lines.
 
 facilitator notes
-pacing checkpoints: check modes.
-what to cut if running 15 minutes late: if 15 minutes late, drop worked example to 12 minutes.
-setup checklist: open colab, run file ops.
+Pacing checkpoints: check modes.
+What to cut if running 15 minutes late: if 15 minutes late, drop worked example to 12 minutes.
+Setup checklist: open colab, run file ops.
 
 why it is designed this way
-file handling makes programs useful for adults [R3].
+File handling makes programs useful for adults [R3].
 
 13 Module 9: Debugging And Reading Errors
-module m9 of 10 - debugging and reading errors. duration 180 minutes. prerequisites: m1-m8.
-objectives: m9-o1.
+Module m9 of 10 - debugging and reading errors. Duration 180 minutes. Prerequisites: m1-m8.
+Objectives: m9-o1.
 
 plain english and the real-life analogy
-errors are messages from the computer about what went wrong; reading them is a skill.
-real-life analogy: a recipe with a wrong ingredient amount: the kitchen stops and tells you which step and what is
+Errors are messages from the computer about what went wrong; reading them is a skill.
+Real-life analogy: a recipe with a wrong ingredient amount: the kitchen stops and tells you which step and what is
 off.
-where this analogy breaks down: the message names a line and a kind, but not always the thinking error; you must
+Where this analogy breaks down: the message names a line and a kind, but not always the thinking error; you must
 connect it to your intention.
 
 worked example: a complete runnable program
@@ -1553,8 +1553,8 @@ worked example: a complete runnable program
 age = input("how old are you? ")
 print("next year you will be " + str(int(age)) + " years old")
 
-line-by-line annotation: line 2: int() tries to turn the text into a number.
-captured real output (executed in a sandbox, python 3.13):
+Line-by-line annotation: line 2: int() tries to turn the text into a number.
+Captured real output (executed in a sandbox, python 3.13):
 
 
 Traceback (most recent call last):
@@ -1573,7 +1573,7 @@ total = 10
         total = total + i
 print(total)
 
-captured real output for this variant:
+Captured real output for this variant:
 
 
 20
@@ -1637,70 +1637,70 @@ Session A blocks sum to 90 minutes.
 Session B blocks sum to 90 minutes.
 
 activities
-activity m9-p1 (type debug-this), serves objectives m9-o1, time budget 25 minutes.
-instructions in plain words: read the traceback, find the line, fix.
-starter code: age = input("how old are you? ") print("next year you will be " + str(int(age)) + " years old")
-expected result / success criteria: runs with numeric input.
-hint ladder:
-hint 1: read the last line.
-hint 2: read the marked line.
-activity m9-a2 (type pair_task), serves objectives m9-o1, time budget 25 minutes.
-instructions in plain words: trace together.
-starter code: age = input("how old? ")
-expected result / success criteria: pair reads traceback.
-hint ladder:
-hint 1: last line first.
-hint 2: marked line second.
-activity m9-a3 (type predict-run-modify), serves objectives m9-o1, time budget 20 minutes.
-instructions in plain words: predict, run, modify.
-starter code: age = input("how old? ") print("next year you will be " + str(int(age)) + " years old") # a3
-expected result / success criteria: no traceback.
-hint ladder:
-hint 1: is input text or a number?
-hint 2: int() converts.
+Activity m9-p1 (type debug-this), serves objectives m9-o1, time budget 25 minutes.
+Instructions in plain words: read the traceback, find the line, fix.
+Starter code: age = input("how old are you? ") print("next year you will be " + str(int(age)) + " years old")
+Expected result / success criteria: runs with numeric input.
+Hint ladder:
+Hint 1: read the last line.
+Hint 2: read the marked line.
+Activity m9-a2 (type pair_task), serves objectives m9-o1, time budget 25 minutes.
+Instructions in plain words: trace together.
+Starter code: age = input("how old? ")
+Expected result / success criteria: pair reads traceback.
+Hint ladder:
+Hint 1: last line first.
+Hint 2: marked line second.
+Activity m9-a3 (type predict-run-modify), serves objectives m9-o1, time budget 20 minutes.
+Instructions in plain words: predict, run, modify.
+Starter code: age = input("how old? ") print("next year you will be " + str(int(age)) + " years old") # a3
+Expected result / success criteria: no traceback.
+Hint ladder:
+Hint 1: is input text or a number?
+Hint 2: int() converts.
 
 common misconceptions
-misconception m9-m1: an error means I am bad at coding
+Misconception m9-m1: an error means I am bad at coding
                         Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 38
-real error or wrong output: errors are messages; reading them is a skill
-facilitator response: normalise: fix one, run again.
-misconception m9-m2: the first line of the traceback is the bug
-real error or wrong output: the LAST line names the error kind
-facilitator response: point to the final line first.
+Real error or wrong output: errors are messages; reading them is a skill
+Facilitator response: normalise: fix one, run again.
+Misconception m9-m2: the first line of the traceback is the bug
+Real error or wrong output: the LAST line names the error kind
+Facilitator response: point to the final line first.
 
 formative assessment
-quiz m9-q1: what does a traceback show first?
-correct answer: the error kind at the end
-wrong option rationale: the line you wrote first - it detects the misconception that traceback reads top-down.
-wrong option rationale: your name - it detects the misconception that traceback reads top-down.
-objective tested: m9-o1, bloom level analyse.
-quiz m9-q2: what is a logic error?
-correct answer: the code runs but gives wrong output
-wrong option rationale: the code will not run - it detects the misconception that logic error means crash.
-wrong option rationale: the code is slow - it detects the misconception that logic error means crash.
-objective tested: m9-o1, bloom level analyse.
-exit ticket m9-et1: what is the first thing you read in a traceback? (objective m9-o1).
+Quiz m9-q1: what does a traceback show first?
+Correct answer: the error kind at the end
+Wrong option rationale: the line you wrote first - it detects the misconception that traceback reads top-down.
+Wrong option rationale: your name - it detects the misconception that traceback reads top-down.
+Objective tested: m9-o1, bloom level analyse.
+Quiz m9-q2: what is a logic error?
+Correct answer: the code runs but gives wrong output
+Wrong option rationale: the code will not run - it detects the misconception that logic error means crash.
+Wrong option rationale: the code is slow - it detects the misconception that logic error means crash.
+Objective tested: m9-o1, bloom level analyse.
+Exit ticket m9-et1: what is the first thing you read in a traceback? (objective m9-o1).
 
 differentiation
-learners who are stuck: use the m9-p1 starter and read the traceback line by line.
-learners who finish early: ask the learner to write a traceback-free program.
+Learners who are stuck: use the m9-p1 starter and read the traceback line by line.
+Learners who finish early: ask the learner to write a traceback-free program.
 
 facilitator notes
-pacing checkpoints: read last line first.
-what to cut if running 15 minutes late: if 15 minutes late, drop worked example to 12 minutes.
-setup checklist: open colab, run broken code.
+Pacing checkpoints: read last line first.
+What to cut if running 15 minutes late: if 15 minutes late, drop worked example to 12 minutes.
+Setup checklist: open colab, run broken code.
 
 why it is designed this way
-reading errors is a life skill; errors normalised from day one [R7].
+Reading errors is a life skill; errors normalised from day one [R7].
 
 14 Module 10: Final Mini-Project (Capstone)
-module m10 of 10 - final mini-project (capstone). duration 240 minutes. prerequisites: m1-m9.
-objectives: m10-o1.
+Module m10 of 10 - final mini-project (capstone). Duration 240 minutes. Prerequisites: m1-m9.
+Objectives: m10-o1.
 
 plain english and the real-life analogy
-learners build one small useful program from their own real-life task.
-real-life analogy: writing a recipe for a dish only they cook.
-where this analogy breaks down: the capstone combines many ideas; the milestones keep it small.
+Learners build one small useful program from their own real-life task.
+Real-life analogy: writing a recipe for a dish only they cook.
+Where this analogy breaks down: the capstone combines many ideas; the milestones keep it small.
 
 worked example: a complete runnable program
 
@@ -1712,8 +1712,8 @@ for i in range(3):
         count = count + 1
 print("count is " + str(count))
 
-line-by-line annotation: simple counter plus print.
-captured real output (executed in a sandbox, python 3.13):
+Line-by-line annotation: simple counter plus print.
+Captured real output (executed in a sandbox, python 3.13):
 
 
 count is 3
@@ -1727,7 +1727,7 @@ for i in range(2):
         count = count + 1
 print("count is " + str(count))
 
-captured real output for this variant:
+Captured real output for this variant:
 
 
 count is 2
@@ -1817,55 +1817,55 @@ Session C (60): capstone
 Session C (60): capstone blocks sum to 60 minutes.
 
 activities
-activity m10-m1 (type mini-challenge), serves objectives m10-o1, time budget 40 minutes.
+Activity m10-m1 (type mini-challenge), serves objectives m10-o1, time budget 40 minutes.
 
                         Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 41
-instructions in plain words: write a tiny program with one variable and one output.
-starter code: age = 12 print(age)
-expected result / success criteria: output is 12.
-hint ladder:
-hint 1: one variable.
-hint 2: one print.
-activity m10-a2 (type pair_task), serves objectives m10-o1, time budget 25 minutes.
-instructions in plain words: plan the capstone task in pairs.
-starter code: task: count words in an essay
-expected result / success criteria: pair states the task.
-hint ladder:
-hint 1: use your own task.
-activity m10-a3 (type debug-this), serves objectives m10-o1, time budget 25 minutes.
-instructions in plain words: fix the capstone starter bug.
-starter code: age = input("how old? ") print(str(int(age)) + " years old")
-expected result / success criteria: runs.
-hint ladder:
-hint 1: int() on input.
-hint 2: str() for concatenation.
+Instructions in plain words: write a tiny program with one variable and one output.
+Starter code: age = 12 print(age)
+Expected result / success criteria: output is 12.
+Hint ladder:
+Hint 1: one variable.
+Hint 2: one print.
+Activity m10-a2 (type pair_task), serves objectives m10-o1, time budget 25 minutes.
+Instructions in plain words: plan the capstone task in pairs.
+Starter code: task: count words in an essay
+Expected result / success criteria: pair states the task.
+Hint ladder:
+Hint 1: use your own task.
+Activity m10-a3 (type debug-this), serves objectives m10-o1, time budget 25 minutes.
+Instructions in plain words: fix the capstone starter bug.
+Starter code: age = input("how old? ") print(str(int(age)) + " years old")
+Expected result / success criteria: runs.
+Hint ladder:
+Hint 1: int() on input.
+Hint 2: str() for concatenation.
 
 common misconceptions
-misconception m10-m1: the capstone needs everything at once
-real error or wrong output: milestones split it
-facilitator response: follow milestones in order.
+Misconception m10-m1: the capstone needs everything at once
+Real error or wrong output: milestones split it
+Facilitator response: follow milestones in order.
 
 formative assessment
-quiz m10-q1: what is the capstone?
-correct answer: one small useful program built from prior ideas
-wrong option rationale: a new language - it detects the misconception that capstone is a language.
-wrong option rationale: a test - it detects the misconception that capstone is a language.
-objective tested: m10-o1, bloom level create.
-exit ticket m10-et1: what did your program do and what would you change next? (objective m10-o1).
+Quiz m10-q1: what is the capstone?
+Correct answer: one small useful program built from prior ideas
+Wrong option rationale: a new language - it detects the misconception that capstone is a language.
+Wrong option rationale: a test - it detects the misconception that capstone is a language.
+Objective tested: m10-o1, bloom level create.
+Exit ticket m10-et1: what did your program do and what would you change next? (objective m10-o1).
 
 differentiation
-learners who are stuck: use the m10-m1 starter and finish it.
-learners who finish early: ask the learner to add a loop to the capstone starter.
+Learners who are stuck: use the m10-m1 starter and finish it.
+Learners who finish early: ask the learner to add a loop to the capstone starter.
 
 facilitator notes
-pacing checkpoints: check milestone completion each session.
-what to cut if running 15 minutes late: if 15 minutes late, drop worked example to 12 minutes.
+Pacing checkpoints: check milestone completion each session.
+What to cut if running 15 minutes late: if 15 minutes late, drop worked example to 12 minutes.
 
                      Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 42
-setup checklist: open colab, set up milestone files.
+Setup checklist: open colab, set up milestone files.
 
 why it is designed this way
-milestones keep capstone small; rubric rewards process [D3].
+Milestones keep capstone small; rubric rewards process [D3].
 
 
 
@@ -1873,7 +1873,7 @@ milestones keep capstone small; rubric rewards process [D3].
                   Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 43
 Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 44
 15 Assessment strategy
-assessment is gentle and frequent, then once deeply. formative checks include short quizzes, exit tickets, and small
+Assessment is gentle and frequent, then once deeply. Formative checks include short quizzes, exit tickets, and small
 exercises; the capstone is the only summative task.
                assessment                          when                           what it checks                     linked objectives
 
@@ -1893,35 +1893,35 @@ exercises; the capstone is the only summative task.
 
 
 
-the capstone rubric has four criteria scored one to four, with a pass at twelve of sixteen and correctness at least
-two. the pass mark and the correctness condition are design decisions from week 1, not research findings.
+The capstone rubric has four criteria scored one to four, with a pass at twelve of sixteen and correctness at least
+two. The pass mark and the correctness condition are design decisions from week 1, not research findings.
 
 
 
 
                       Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 45
 16 Supporting non-programmers
-anticipated difficulties: unfamiliar vocabulary, holding several steps in mind, variable-as-box, error sting. anxiety
-and confidence: early small wins, pair work, exit tickets. accessibility: captions, transcripts, colour-blind-safe
-palette, keyboard-friendly editor. pacing: two sessions per three-hour module mostly, with the shorter module
-getting one longer session. remedial paths: hint ladders, stuck-task buddies, tutor check-ins.
+Anticipated difficulties: unfamiliar vocabulary, holding several steps in mind, variable-as-box, error sting. Anxiety
+and confidence: early small wins, pair work, exit tickets. Accessibility: captions, transcripts, colour-blind-safe
+palette, keyboard-friendly editor. Pacing: two sessions per three-hour module mostly, with the shorter module
+getting one longer session. Remedial paths: hint ladders, stuck-task buddies, tutor check-ins.
 
 
 
 
                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 46
 17 Review and refinement log
-this report was written and reviewed against the week 2 task. refinement items: added executed code with captured
-output, added alignment matrix, added readability audit, added jargon audit, added timing math. changes since
-week 1 are listed in section 18.
+This report was written and reviewed against the week 2 task. Refinement items: added executed code with
+captured output, added alignment matrix, added readability audit, added jargon audit, added timing math. Changes
+since week 1 are listed in section 18.
 
 
 
 
                 Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 47
 18 Validation plan and known limitations
-validation plan: pilot the curriculum in week 3 with a small group, observe pair work, predict-run-modify accuracy,
-exit ticket confidence; success means most learners finish the capstone and can explain it. known limitations: no
+Validation plan: pilot the curriculum in week 3 with a small group, observe pair work, predict-run-modify accuracy,
+exit ticket confidence; success means most learners finish the capstone and can explain it. Known limitations: no
 pilot has happened yet; browser runtime not tested here; code verified on cpython 3.13; the 80 percent completion
 target is a design decision.
 
@@ -2279,31 +2279,87 @@ variable                                                           a named place
 
                   Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 55
 Appendix E: readability and audit results
-Module                                Readability grade status                        Audit status
-m1                                    target 8 or lower                               all terms defined or in glossary
+Module                                     FK grade (plain summary +                       Status
+                                           analogy)
+m1                                         -7.7                                            under target 8
 
-m2                                    target 8 or lower                               all terms defined or in glossary
+m2                                         -7.0                                            under target 8
 
-m3                                    target 8 or lower                               all terms defined or in glossary
+m3                                         -7.9                                            under target 8
 
-m4                                    target 8 or lower                               all terms defined or in glossary
+m4                                         -9.1                                            under target 8
 
-m5                                    target 8 or lower                               all terms defined or in glossary
+m5                                         -6.7                                            under target 8
 
-m6                                    target 8 or lower                               all terms defined or in glossary
+m6                                         -7.4                                            under target 8
 
-m7                                    target 8 or lower                               all terms defined or in glossary
+m7                                         -9.5                                            under target 8
 
-m8                                    target 8 or lower                               all terms defined or in glossary
+m8                                         -9.0                                            under target 8
 
-m9                                    target 8 or lower                               all terms defined or in glossary
+m9                                         -8.3                                            under target 8
 
-m10                                   target 8 or lower                               all terms defined or in glossary
-
-
+m10                                        -10.2                                           under target 8
 
 
-             Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 56
+
+Jargon check: every term from the glossary either appears defined in its first module or is in Appendix D.
+Term                                                               Module where first used
+algorithm                                                          listed module or glossary
+
+boolean                                                            listed module or glossary
+
+breakpoint                                                         listed module or glossary
+
+capstone                                                           listed module or glossary
+
+collection                                                         listed module or glossary
+
+conditional                                                        listed module or glossary
+
+debugging                                                          listed module or glossary
+
+dictionary                                                         listed module or glossary
+
+error message                                                      listed module or glossary
+
+float                                                              listed module or glossary
+
+function                                                           listed module or glossary
+
+integer                                                            listed module or glossary
+
+input                                                              listed module or glossary
+
+iteration                                                          listed module or glossary
+
+list                                                               listed module or glossary
+
+loop                                                               listed module or glossary
+
+module                                                             listed module or glossary
+
+Parsons problem                                                    listed module or glossary
+
+program                                                            listed module or glossary
+
+Python                                                             listed module or glossary
+
+return                                                             listed module or glossary
+
+sequence                                                           listed module or glossary
+
+string                                                             listed module or glossary
+
+                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 56
+syntax error                                                    listed module or glossary
+
+variable                                                        listed module or glossary
+
+
+
+
+               Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 57
 Appendix F: reference list
 ID                            Citation                            What it supports                    Status
 R1                            mit tll worked examples             novices benefit from studying a     verified source
@@ -2367,7 +2423,7 @@ D3                                        capstone pass mark 12 of 16 with      
 
 
 
-                Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 57
+                Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 58
 Appendix G: reproducibility
 Python version 3.13.7 (v3.13.7:bcee1c32211, Aug 14 2025, 19:10:51) [Clang 16.0.0 (clang-1600.0.26.6)]. Figures:
 python3 weeks/week2/src/make_figures.py. Document: python3 weeks/week2/src/build_docx.py. Pdf: soffice
@@ -2376,5 +2432,5 @@ headless. Tests: python3 -m pytest weeks/week1/tests/ weeks/week2/tests/ (21 pas
 
 
 
-                 Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 58
+                 Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 59
 

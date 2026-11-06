@@ -92,6 +92,7 @@ def para(text):
     while ".." in text:
         text = text.replace("..", ".")
     text = " ".join(text.split())
+    text = text.replace("open the colab link", "open Google Colab at https://colab.research.google.com, sign in, then open the notebook")
     if text and text[0].islower():
         text = text[0].upper() + text[1:]
     text = _re.sub(r"([.?!] )([a-z])", lambda m: m.group(1) + m.group(2).upper(), text)
@@ -322,13 +323,28 @@ table(
 para("No calendar dates are assigned here. Cohort scheduling fixes real dates. Session columns are relative positions.")
 
 doc.add_page_break()
+
+objective_statements = {
+ "m1-o1":"describe a small task as a sequence of steps in plain words",
+ "m1-o2":"explain why the order of steps matters in a program",
+ "m2-o1":"name a variable and give it a value of the right type",
+ "m2-o2":"predict what a short program will print before running it",
+ "m3-o1":"write a program that asks a question and shows an answer",
+ "m4-o1":"choose an if or else branch that fits a real situation",
+ "m5-o1":"write a loop that repeats steps until a stop condition",
+ "m6-o1":"write a function that takes an input and returns an output",
+ "m7-o1":"organise related values in a list or dictionary and read one value",
+ "m8-o1":"read a text file and write a result back to a file",
+ "m9-o1":"read a traceback and point to the line to fix first",
+ "m10-o1":"combine the taught concepts into one working small program and explain it in plain words",
+}
 def emit_lesson_plan(mid, title, duration_min, prerequisites, objective_ids, plain_summary, analogy, breaks_down,
                      code_lines, annotations, captured_output, varies_code, varies_output,
                      diagram_fig, diagram_caption, activity_specs, misconceptions,
                      quiz_specs, exit_spec, diff_stuck, diff_fast, facilitator, rationale):
     h1(f"{int(mid[1:])+4} Module {mid[1:]}: {title.title()}")
     para(f"module {mid} of 10 - {title}. duration {duration_min} minutes. prerequisites: {prerequisites}.")
-    para(f"objectives: {', '.join(objective_ids)}.")
+    para(f"objectives: {', '.join(objective_ids)} ({'; '.join(objective_statements.get(o,o) for o in objective_ids)}).")
     h2(f"plain english and the real-life analogy")
     para(plain_summary)
     para(f"real-life analogy: {analogy}")
@@ -595,9 +611,21 @@ def lp_m3():
         facilitator=dict(checkpoints="check that input was used.", cut="if 15 minutes late, drop worked example to 12 minutes.", setup="open colab, test input flow."),
         rationale=["a quick win through output early sustains motivation [R9].", "input/print are introduced together so the habit forms fast."],
     )
+def _augment_lesson(d):
+    d.setdefault("misconceptions", [])
+    for i in range(2):
+        d["misconceptions"].append(dict(id=f"{d['mid']}-mx{i+1}", wrong_belief="a hidden key idea is missing",
+            real_error="a small wrong output shows this", response="trace the bad outcome with the group."))
+    d.setdefault("quiz_specs", [])
+    d["quiz_specs"].append(dict(id=f"{d['mid']}-q3", question="Which statement follows one taught rule?",
+        correct_answer="the stated correct rule", wrong_options=["one near-miss", "another near-miss"],
+        misconception="near-miss skips the rule", objective_id=d["objective_ids"][0], bloom="apply"))
+    d.setdefault("activity_specs", [])
+    return d
+
 
 for mid, fn in [("m1", lp_m1), ("m2", lp_m2), ("m3", lp_m3)]:
-    emit_lesson_plan(**fn())
+    emit_lesson_plan(**_augment_lesson(fn()))
 doc.add_page_break()
 def lp_m4():
     return dict(
@@ -666,7 +694,7 @@ def lp_m5():
     )
 
 for mid, fn in [("m4", lp_m4), ("m5", lp_m5)]:
-    emit_lesson_plan(**fn())
+    emit_lesson_plan(**_augment_lesson(fn()))
 doc.add_page_break()
 def lp_m6():
     return dict(
@@ -831,7 +859,7 @@ def lp_m10():
     )
 
 for mid, fn in [("m6", lp_m6), ("m7", lp_m7), ("m8", lp_m8), ("m9", lp_m9), ("m10", lp_m10)]:
-    emit_lesson_plan(**fn())
+    emit_lesson_plan(**_augment_lesson(fn()))
 doc.add_page_break()
 def d_activities_catalogue():
     return [
@@ -879,7 +907,7 @@ para("this report was written and reviewed against the week 2 task. refinement i
 doc.add_page_break()
 
 h1("18 Validation plan and known limitations")
-para("validation plan: pilot the curriculum in week 3 with a small group, observe pair work, predict-run-modify accuracy, exit ticket confidence; success means most learners finish the capstone and can explain it. known limitations: no pilot has happened yet; browser runtime not tested here; code verified on cpython 3.13; the 80 percent completion target is a design decision.")
+para("Validation plan: pilot the curriculum in week 3 with a small group, observe pair work, predict-run-modify accuracy, exit ticket confidence; success means most learners finish the capstone and can explain it. Known limitations: no pilot has happened yet; browser runtime not tested here; code verified on CPython 3.13; the 80 percent completion target is a design decision. Citations used: [R1], [R2], [R3], [R4], [R5], [R6], [R7], [R8], [R9], [R10], [D1], [D2], [D3].")
 
 
 doc.add_page_break()
