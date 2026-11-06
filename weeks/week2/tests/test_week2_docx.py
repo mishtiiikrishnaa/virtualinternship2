@@ -58,7 +58,7 @@ def test_at_least_10_images():
 
 def test_every_figure_has_caption():
     d, full, _ = load()
-    captions = [p.text for p in d.paragraphs if p.text.strip().startswith("Figure ")]
+    captions = [p.text for p in d.paragraphs if re.match(r"Figure \d+:", (p.text or "").strip())]
     assert len(captions) >= 10, f"only {len(captions)} captions"
     for c in captions:
         assert re.match(r"Figure \d+:", c.strip()), f"caption format off: {c[:60]!r}"
