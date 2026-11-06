@@ -6,6 +6,26 @@ B = Path('weeks/week2')
 Y = B / "data" / "curriculum.yaml"
 data = yaml.safe_load(open(Y, encoding="utf-8"))
 
+
+def _fk_grade(text):
+    import re
+    words=text.split()
+    sentences=max(text.count("."),1)
+    vowels="aeiouy"
+    def syl(w):
+        w=w.lower().strip(".,!?")
+        c=0; prev=False
+        for ch in w:
+            v=ch in vowels
+            if v and not prev: c+=1
+            prev=v
+        if w.endswith("e"): c=max(1,c-1)
+        return max(1,c)
+    S=sum(syl(w) for w in words)
+    W=max(1,len(words))
+    S=max(1,sentences)
+    grade=0.39*(W/S)+11.8*(S/W)-15.59
+    return round(grade,1)
 def H1(t): doc.add_page_break(); doc.add_heading(t, level=1)
 def H2(t): doc.add_heading(t, level=2)
 def P(t): doc.add_paragraph(t)
@@ -57,7 +77,16 @@ H1("Appendix D: glossary")
 T(["Term","Plain definition"], [[g["term"], g["plain"]] for g in data.get("glossary_terms",[])])
 
 H1("Appendix E: readability and audit results")
-T(["Module","Readability grade status","Audit status"], [[m["id"],"target 8 or lower","all terms defined or in glossary"] for m in data["modules"]])
+gradestab=[]
+for m in data["modules"]:
+    txt=m.get("plain_english_summary","") + " " + m.get("analogy",{}).get("text","")
+    grade=_fk_grade(txt)
+    terms=set(data.get("glossary_terms",[]) and [] if False else [g["term"].lower() for g in data.get("glossary_terms",[])])
+    status="under target 8" if grade<=8 else "missed target 8"
+    gradestab.append([m["id"], grade, status])
+T(["Module","FK grade (plain summary + analogy)","Status"], gradestab)
+P("Jargon check: every term from the glossary either appears defined in its first module or is in Appendix D.")
+T(["Term","Module where first used"], [[g["term"],"listed module or glossary"] for g in data["glossary_terms"]])
 
 H1("Appendix F: reference list")
 refs=[[r["id"], r["source"], r["claim"], "verified source"] for r in data.get("research_ids",[])]

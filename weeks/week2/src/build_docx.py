@@ -87,11 +87,16 @@ def p(text, style_name=None, italic=False, bold=False, size=None, align=None, co
         para.alignment = align
     return para
 
+import re as _re
 def para(text):
     while ".." in text:
         text = text.replace("..", ".")
     text = " ".join(text.split())
+    if text and text[0].islower():
+        text = text[0].upper() + text[1:]
+    text = _re.sub(r"([.?!] )([a-z])", lambda m: m.group(1) + m.group(2).upper(), text)
     return doc.add_paragraph(text)
+
 
 def bullets(items):
     for it in items:
