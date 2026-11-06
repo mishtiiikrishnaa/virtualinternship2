@@ -58,16 +58,13 @@ def add_page_numbers(section):
     footer.is_linked_to_previous = False
     p = footer.paragraphs[0] if footer.paragraphs else footer.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    run = p.add_run()
-    fld1 = parse_xml(f'<w:fldChar {nsdecls("w")} w:fldCharType="begin"/>')
-    instr = parse_xml(f'<w:instrText {nsdecls("w")} xml:space="preserve"> PAGE </w:instrText>')
-    fld2 = parse_xml(f'<w:fldChar {nsdecls("w")} w:fldCharType="end"/>')
-    run._r.append(fld1); run._r.append(instr); run._r.append(fld2)
-    p.add_run("Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page ")
-    run2 = p.add_run()
-    run2._r.append(parse_xml(f'<w:fldChar {nsdecls("w")} w:fldCharType="begin"/>'))
-    run2._r.append(parse_xml(f'<w:instrText {nsdecls("w")} xml:space="preserve"> PAGE </w:instrText>'))
-    run2._r.append(parse_xml(f'<w:fldChar {nsdecls("w")} w:fldCharType="end"/>'))
+    r = p.add_run("Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page ")
+    r.font.size = Pt(8)
+    fld = p.add_run()
+    fld.font.size = Pt(8)
+    fld._r.append(parse_xml(f'<w:fldChar {nsdecls("w")} w:fldCharType="begin"/>'))
+    fld._r.append(parse_xml(f'<w:instrText {nsdecls("w")} xml:space="preserve"> PAGE </w:instrText>'))
+    fld._r.append(parse_xml(f'<w:fldChar {nsdecls("w")} w:fldCharType="end"/>'))
 
 add_page_numbers(doc.sections[0])
 
@@ -248,7 +245,7 @@ para("The final deliverable is a Word document that presents the complete curric
 doc.add_page_break()
 
 h1("1 About this curriculum")
-para(f"This internship offer was received on {OFFER_DATE} and the internship runs from {PERIOD}. This week 2 report was prepared on {REPORT_DATE}, five days after the week 1 report. It develops the content and curriculum building task: the aim is to introduce the fundamentals of programming to non-programmers with practical examples that are easy to grasp.")
+para(f"This internship offer was received on {OFFER_DATE} and the internship runs from {PERIOD}. This week 2 report was prepared on {REPORT_DATE}. It develops the content and curriculum building task: the aim is to introduce the fundamentals of programming to non-programmers with practical examples that are easy to grasp.")
 para("The learners are adults or students who have never written a line of code. Their prior knowledge is everyday computer use only. The curriculum assumes no programming background, no installs, and a browser. It does not assume any maths beyond counting.")
 para("By the end of the module, a learner will be able to: describe a task as steps, store information in variables, ask and show through input and output, choose with conditionals, repeat with loops, bundle steps into functions, organise values into lists and dictionaries, read and write files, read a traceback, and combine the taught concepts into one working small program they can explain in plain words.")
 
@@ -283,38 +280,38 @@ doc.add_page_break()
 h1("4 Session-by-session plan")
 para("The week 2 plan keeps the week 1 delivery shape: a ninety-minute session of arrive and recall, worked example, pair task or Parsons problem, predict-run-modify, and exit ticket, plus a buffer. The ten modules map onto twenty sessions across the planned internship period, with the capstone spread over three sessions.")
 styled_table(
-    ["session", "module", "phase", "planned date", "duration (min)", "blocks"],
+    ["session", "module", "phase", "of 20", "duration (min)", "blocks"],
     [
-        ["s1", "m1", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s2", "m1", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s3", "m2", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s4", "m2", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s5", "m3", "content", "Session delivery", "120", "10 + 20 + 25 + 20 + 10 + 35"],
-        ["s6", "m4", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s7", "m4", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s8", "m5", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s9", "m5", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s10", "m6", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s11", "m6", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s12", "m7", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s13", "m7", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s14", "m8", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s15", "m8", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s16", "m9", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s17", "m9", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s18", "m10", "capstone", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s19", "m10", "capstone", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s20", "m10", "capstone", "Session delivery", "60", "10 + 20 + 15 + 5 + 10"],
+        ["s1","m1","content","1 of 20","90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s2","m1","content","2 of 20","90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s3","m2","content","3 of 20","90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s4","m2","content","4 of 20","90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s5","m3","content","5 of 20","120", "10 + 20 + 25 + 20 + 10 + 35"],
+        ["s6","m4","content","6 of 20","90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s7","m4","content","7 of 20","90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s8","m5","content","8 of 20","90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s9","m5","content","9 of 20","90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s10","m6","content","10 of 20","90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s11","m6","content","11 of 20","90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s12","m7","content","12 of 20","90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s13","m7","content","13 of 20","90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s14","m8","content","14 of 20","90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s15","m8","content","15 of 20","90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s16","m9","content","16 of 20","90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s17","m9","content","17 of 20","90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s18","m10","capstone","18 of 20","90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s19","m10","capstone","19 of 20","90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s20","m10","capstone","20 of 20","60", "10 + 20 + 15 + 5 + 10"],
     ],
 )
-para("Real delivery dates are set by cohort scheduling and are not pinned in this plan. Session columns below use relative positions only.")
+para("No calendar dates are assigned here. Cohort scheduling fixes real dates. Session columns are relative positions.")
 
 doc.add_page_break()
 def emit_lesson_plan(mid, title, duration_min, prerequisites, objective_ids, plain_summary, analogy, breaks_down,
                      code_lines, annotations, captured_output, varies_code, varies_output,
                      diagram_fig, diagram_caption, activity_specs, misconceptions,
                      quiz_specs, exit_spec, diff_stuck, diff_fast, facilitator, rationale):
-    h1(f"{mid}: {title}")
+    h1(f"Module {mid[1:]}: {title.title()}")
     para(f"module {mid} of 10 - {title}. duration {duration_min} minutes. prerequisites: {prerequisites}.")
     para(f"objectives: {', '.join(objective_ids)}.")
     h2(f"plain english and the real-life analogy")
@@ -332,7 +329,19 @@ def emit_lesson_plan(mid, title, duration_min, prerequisites, objective_ids, pla
     add_code_block([varies_output], shade_hex="EAF2F1")
     h2(f"figure for the hardest idea in this module")
     _ct = diagram_caption.split(":")[-1].strip()
-    add_figure(diagram_fig, _ct, "a short real takeaway for that diagram, not filler.",
+    _takeaways = {
+     "modules, hours and dependencies": "The first four modules build thinking and control flow; the last six specialise and ship a project.",
+     "before and after assignment": "A variable is only its current value; reassignment replaces it rather than creating a box.",
+     "file read / write flow": "A file moves text into and out of the program through open, with, read and write.",
+     "should the learner watch the scary movie": "One condition picks one branch and skips the other.",
+     "variable values step by step": "Loop traces show values changing one step at a time.",
+     "inputs, return value and call": "A function is a named black box: input in, one value out.",
+     "same data, two shapes": "A list is ordered; a dictionary is name to value.",
+     "where to read first": "Errors end with the kind and the line to fix first.",
+     "capstone architecture and milestone timeline": "One small program is built in five milestones.",
+    }
+    _tw = _takeaways.get(_ct, "This diagram supports the module's hardest idea.")
+    add_figure(diagram_fig, _ct, _tw,
                f"diagram for {mid}: {diagram_caption}", width_in=6.2)
     h2("Session A (90 minutes): introduce and practise")
     blocks_rows = []
