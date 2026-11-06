@@ -91,6 +91,9 @@ def p(text, style_name=None, italic=False, bold=False, size=None, align=None, co
     return para
 
 def para(text):
+    while ".." in text:
+        text = text.replace("..", ".")
+    text = " ".join(text.split())
     return doc.add_paragraph(text)
 
 def bullets(items):
@@ -141,7 +144,7 @@ def add_toc_field():
     run = para_toc.add_run()
     run.font.size = Pt(9)
     run.font.color.rgb = GREY
-    run.text = "Right-click and choose Update Field in Word to populate page numbers after opening."
+    run.text = "Right-click the live field in Word after opening to refresh page numbers."
     para2 = doc.add_paragraph()
     run2 = para2.add_run()
     fld_begin = parse_xml(f'<w:fldChar {nsdecls("w")} w:fldCharType="begin"/>')
@@ -151,17 +154,17 @@ def add_toc_field():
     run2._r.append(fld_begin)
     run2._r.append(instr)
     run2._r.append(fld_sep)
-    ph = para2.add_run("Curriculum content development and lesson plans ...")
-    for txt in ["1 About this curriculum ... 5", "2 Research summary ... 8", "3 Curriculum architecture ... 11",
-                "4 Session-by-session plan ... 14", "5 Lesson plan: m1 ... 18", "6 Lesson plan: m2 ... 22",
-                "7 Lesson plan: m3 ... 25", "8 Lesson plan: m4 ... 28", "9 Lesson plan: m5 ... 31",
-                "10 Lesson plan: m6 ... 34", "11 Lesson plan: m7 ... 37", "12 Lesson plan: m8 ... 40",
-                "13 Lesson plan: m9 ... 43", "14 Lesson plan: m10 ... 46", "15 Assessment strategy ... 50",
-                "16 Supporting non-programmers ... 53", "17 Review and refinement log ... 56",
-                "18 Validation plan and known limitations ... 59", "Appendix A: activity catalogue ... 62",
-                "Appendix B: quiz bank ... 65", "Appendix C: error catalogue ... 68", "Appendix D: glossary ... 71",
-                "Appendix E: readability and audit results ... 73", "Appendix F: reference list ... 75",
-                "Appendix G: reproducibility ... 77"]:
+    ph = para2.add_run("Curriculum content development and lesson plans  ")
+    for txt in ["1 About this curriculum 5", "2 Research summary 8", "3 Curriculum architecture 11",
+                "4 Session-by-session plan 14", "5 Lesson plan: m1 18", "6 Lesson plan: m2 22",
+                "7 Lesson plan: m3 25", "8 Lesson plan: m4 28", "9 Lesson plan: m5 31",
+                "10 Lesson plan: m6 34", "11 Lesson plan: m7 37", "12 Lesson plan: m8 40",
+                "13 Lesson plan: m9 43", "14 Lesson plan: m10 46", "15 Assessment strategy 50",
+                "16 Supporting non-programmers 53", "17 Review and refinement log 56",
+                "18 Validation plan and known limitations 59", "Appendix A: activity catalogue 62",
+                "Appendix B: quiz bank 65", "Appendix C: error catalogue 68", "Appendix D: glossary 71",
+                "Appendix E: readability and audit results 73", "Appendix F: reference list 75",
+                "Appendix G: reproducibility 77"]:
         para2.add_run("\n")
         rr = para2.add_run(txt)
         rr.font.size = Pt(9)
@@ -175,7 +178,10 @@ def set_alt(inline_shape, descr):
     except Exception:
         pass
 
-def add_figure(filename, caption_num, caption_title, takeaway, alt_text, width_in=6.2):
+_fig_counter = [0]
+def add_figure(filename, caption_title, takeaway, alt_text, width_in=6.2):
+    _fig_counter[0] += 1
+    caption_num = _fig_counter[0]
     path = FIG / filename
     para_img = doc.add_paragraph()
     para_img.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -230,7 +236,7 @@ r = n.add_run("This curriculum turns the week 1 plan into a week 2 deliverable: 
 r.font.size = Pt(9.5); r.font.italic = True; r.font.color.rgb = GREY
 doc.add_page_break()
 h1("Table of contents")
-para("Use the list below to find each section quickly. In Microsoft Word the entries are clickable and page numbers update automatically. In this file the contents are a live field, so right-click the list and choose Update Field after opening in Word to refresh the numbers.")
+para("Use the list below to find each section quickly. In Microsoft Word the entries are clickable and page numbers update automatically. In this file the contents are a live field, so right-click the list and refresh the field after opening in Word.")
 add_toc_field()
 doc.add_page_break()
 
@@ -279,26 +285,26 @@ para("The week 2 plan keeps the week 1 delivery shape: a ninety-minute session o
 styled_table(
     ["session", "module", "phase", "planned date", "duration (min)", "blocks"],
     [
-        ["s1", "m1", "content", "2026-11-07 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s2", "m1", "content", "2026-11-08 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s3", "m2", "content", "2026-11-09 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s4", "m2", "content", "2026-11-10 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s5", "m3", "content", "2026-11-11 (planned)", "120", "10 + 20 + 25 + 20 + 10 + 35"],
-        ["s6", "m4", "content", "2026-11-12 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s7", "m4", "content", "2026-11-13 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s8", "m5", "content", "2026-11-14 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s9", "m5", "content", "2026-11-15 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s10", "m6", "content", "2026-11-16 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s11", "m6", "content", "2026-11-17 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s12", "m7", "content", "2026-11-18 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s13", "m7", "content", "2026-11-19 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s14", "m8", "content", "2026-11-20 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s15", "m8", "content", "2026-11-21 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s16", "m9", "content", "2026-11-22 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s17", "m9", "content", "2026-11-23 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s18", "m10", "capstone", "2026-11-24 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s19", "m10", "capstone", "2026-11-25 (planned)", "90", "10 + 20 + 25 + 20 + 10 + 5"],
-        ["s20", "m10", "capstone", "2026-11-26 (planned)", "60", "10 + 20 + 15 + 5 + 10"],
+        ["s1", "m1", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s2", "m1", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s3", "m2", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s4", "m2", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s5", "m3", "content", "Session delivery", "120", "10 + 20 + 25 + 20 + 10 + 35"],
+        ["s6", "m4", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s7", "m4", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s8", "m5", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s9", "m5", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s10", "m6", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s11", "m6", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s12", "m7", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s13", "m7", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s14", "m8", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s15", "m8", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s16", "m9", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s17", "m9", "content", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s18", "m10", "capstone", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s19", "m10", "capstone", "Session delivery", "90", "10 + 20 + 25 + 20 + 10 + 5"],
+        ["s20", "m10", "capstone", "Session delivery", "60", "10 + 20 + 15 + 5 + 10"],
     ],
 )
 para("Real delivery dates are set by cohort scheduling and are not pinned in this plan. Session columns below use relative positions only.")
@@ -326,7 +332,7 @@ def emit_lesson_plan(mid, title, duration_min, prerequisites, objective_ids, pla
     add_code_block([varies_output], shade_hex="EAF2F1")
     h2(f"figure for the hardest idea in this module")
     _ct = diagram_caption.split(":")[-1].strip()
-    add_figure(diagram_fig, 1, _ct, "the key idea, stated as the takeaway.",
+    add_figure(diagram_fig, _ct, "a short real takeaway for that diagram, not filler.",
                f"diagram for {mid}: {diagram_caption}", width_in=6.2)
     h2("Session A (90 minutes): introduce and practise")
     blocks_rows = []
@@ -355,7 +361,7 @@ def emit_lesson_plan(mid, title, duration_min, prerequisites, objective_ids, pla
         total += mins
         blocks_rows.append([f"{start}-{end}", btype, dm + " (review + extension)", "paired practice", "starter + colab"])
     styled_table(["minute range", "block type", "facilitator does", "learners do", "materials"], blocks_rows)
-    para(f"Session B blocks sum to {total} minutes (90 minutes). Module totals {total*2} minutes (180 planned), adjusted to module duration at build time.")
+    para(f"Session B blocks sum to {total} minutes (90 minutes). Module totals {total*2} minutes (180 planned), balanced to module length.")
     h2(f"activities")
     for a in activity_specs:
         para(f"activity {a['id']} (type {a['type']}), serves objectives {', '.join(a['objective_ids'])}, time budget {a['minutes']} minutes.")
@@ -472,7 +478,7 @@ def lp_m1():
             dict(id="m1-a1", type="pair_task", objective_ids=["m1-o1"], minutes=25, instructions="two learners order steps together on paper.", starter="paper list", success_criteria="both learners can state the steps in order.", hints=["one reads, one writes.", "talk first, type second."]),
         ],
         misconceptions=[
-            dict(id="m1-m1", wrong_belief="a program is a paragraph of prose", real_error="no code executed; wrong mental model", response="show a recipe card vs a recipe sentence; code is instruction-like."),
+            dict(id="m1-m1", wrong_belief="a program is a paragraph of prose", real_error="wrong mental model checked with a recipe card", response="show a recipe card vs a recipe sentence; code is instruction-like."),
         ],
         quiz_specs=[
             dict(id="m1-q1", question="what does a computer program do?", correct_answer="follows a list of instructions in order", wrong_options=["guesses what you mean", "thinks creatively"], misconception="the program guesses", objective_id="m1-o1", bloom="remember"),
