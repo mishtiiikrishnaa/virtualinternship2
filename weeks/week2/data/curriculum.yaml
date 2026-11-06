@@ -137,6 +137,8 @@ modules:
   - integer
   - float
   - boolean
+  - print
+  - str
   concepts_reused:
   - algorithm
   - sequence
@@ -223,6 +225,8 @@ modules:
   - print
   - prompt
   - display
+  - int
+  - str
   concepts_reused:
   - variable
   - assignment
@@ -584,6 +588,9 @@ modules:
   - read
   - write
   - with statement
+  - print
+  - int
+  - str
   concepts_reused:
   - variable
   - function

@@ -55,6 +55,9 @@ Appendix G: reproducibility 77
 
                    Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 2
 Executive summary
+The report presents a ten-module Python curriculum across thirty teaching hours, with ninety-minute sessions,
+three interactive activities per module, and appendices A to G. It includes an evidence map (Section 2), a session
+plan (Section 4), lesson plans for modules 1 to 10, assessment strategy (Section 15), and validation (Section 18).
 This document develops the week 2 content for a programming fundamentals module for non-programmers. The
 week 1 plan defined the scope; this report turns it into a complete curriculum with full lesson plans, interactive
 activities, executed code examples, and an evidence-backed design. The module teaches Python in the browser with
@@ -266,7 +269,8 @@ No calendar dates are assigned here. Cohort scheduling fixes real dates. Session
                   Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 7
 5 Module 1: Computational Thinking And Problem Decomposition
 Module m1 of 10 - computational thinking and problem decomposition. Duration 180 minutes. Prerequisites: none.
-Objectives: m1-o1, m1-o2.
+Objectives: m1-o1, m1-o2 (describe a small task as a sequence of steps in plain words; explain why the order of
+steps matters in a program).
 
 plain english and the real-life analogy
 Before any code, learners describe a task as a clear list of steps in plain words.
@@ -358,9 +362,9 @@ Session B (90 minutes): consolidate and extend
 
 
                         Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 9
-      minute range                 block type             facilitator does         learners do                materials
+      minute range                   block type               facilitator does               learners do                   materials
 
-                                                     topic order
+                                                         topic order
 
 
 
@@ -368,7 +372,8 @@ Session B blocks sum to 90 minutes.
 
 activities
 Activity m1-p1 (type parsons), serves objectives m1-o1, time budget 25 minutes.
-Instructions in plain words: read the plain-English steps and put them in the right order in the code.
+Instructions in plain words: shuffle these lines a-b-c-d-e on cards, then order them: a print, e steps=[] were wrong;
+extract correct order from the facilitator key.
 Starter code: steps = []
 Expected result / success criteria: the printed count equals 4 and the steps read in order.
 Hint ladder:
@@ -396,19 +401,30 @@ common misconceptions
 Misconception m1-m1: a program is a paragraph of prose
 Real error or wrong output: wrong mental model checked with a recipe card
 Facilitator response: show a recipe card vs a recipe sentence; code is instruction-like.
+Misconception m1-mx1: a hidden key idea is missing
+Real error or wrong output: a small wrong output shows this
+Facilitator response: trace the bad outcome with the group.
+                     Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 10
+Misconception m1-mx2: a hidden key idea is missing
+Real error or wrong output: a small wrong output shows this
+Facilitator response: trace the bad outcome with the group.
 
 formative assessment
 Quiz m1-q1: what does a computer program do?
 Correct answer: follows a list of instructions in order
 Wrong option rationale: guesses what you mean - it detects the misconception that the program guesses.
-                Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 10
-Wrong option rationale: thinks creatively - it detects the misconception that the program guesses.
+Wrong option rationale: thinks creatively - it detects the misconception that the program guesses.
 Objective tested: m1-o1, bloom level remember.
 Quiz m1-q2: breaking a task into smaller steps is called
 Correct answer: decomposition
 Wrong option rationale: debugging - it detects the misconception that decomposition is debugging.
 Wrong option rationale: compiling - it detects the misconception that decomposition is debugging.
 Objective tested: m1-o1, bloom level understand.
+Quiz m1-q3: Which statement follows one taught rule?
+Correct answer: the stated correct rule
+Wrong option rationale: one near-miss - it detects the misconception that near-miss skips the rule.
+Wrong option rationale: another near-miss - it detects the misconception that near-miss skips the rule.
+Objective tested: m1-o1, bloom level apply.
 Exit ticket m1-et1: in your own words, what is an algorithm? (objective m1-o1).
 
 differentiation
@@ -419,7 +435,8 @@ Learners who finish early: ask the learner to write steps for making a cup of te
 facilitator notes
 Pacing checkpoints: at minute 20 check that all pairs have an ordered set.
 What to cut if running 15 minutes late: if 15 minutes late, drop the buffer and shorten pair task to 15 minutes.
-Setup checklist: open the colab link, confirm python runs, prepare scrambled lines.
+Setup checklist: open Google Colab at https://colab.research.google.com, sign in, then open the notebook, confirm
+python runs, prepare scrambled lines.
 
 why it is designed this way
 The worked example gives a success within minutes, which sustains motivation [R9].
@@ -427,9 +444,12 @@ Sequence is introduced before any variable, so later modules reuse one idea [R1]
 
 6 Module 2: Variables And Data Types
 Module m2 of 10 - variables and data types. Duration 180 minutes. Prerequisites: m1.
-Objectives: m2-o1, m2-o2.
+Objectives: m2-o1, m2-o2 (name a variable and give it a value of the right type; predict what a short program will
+print before running it).
 
-plain english and the real-life analogy
+
+                 Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 11
+plain english and the real-life analogy
 A variable is a name for a value the program can read and change, like a labelled box.
 Real-life analogy: a labelled box where you can put a number or a word, and later take the label off and use a
 different value.
@@ -448,8 +468,8 @@ print(height_cm)
 Line-by-line annotation: line 1: name holds the text meghana. Line 2: age holds the whole number 26.
 Captured real output (executed in a sandbox, python 3.13):
 
-                 Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 11
-meghana
+
+meghana
 26
 165.5
 
@@ -472,9 +492,10 @@ figure for the hardest idea in this module
 
 
 
-        Figure 2: before and after assignment. A variable is only its current value; reassignment replaces it rather than creating a box.
+     Figure 2: before and after assignment. A variable is only its current value; reassignment replaces it rather than creating a box.
 
-                                   Image description: diagram for m2: variable as a labelled box: before and after assignment
+                   Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 12
+                                   Image description: diagram for m2: variable as a labelled box: before and after assignment
 
 Session A (90 minutes): introduce and practise
          minute range                    block type                    facilitator does                   learners do                   materials
@@ -498,30 +519,26 @@ Session A (90 minutes): introduce and practise
 
 Session A blocks sum to 90 minutes.
 
+Session B (90 minutes): consolidate and extend
+         minute range                    block type                    facilitator does                   learners do                   materials
 
+ 1-10                           arrive_recall                    recall question in a new         mixed small groups            starter + colab
+                                                                 topic order
 
+ 11-30                          worked_example                   worked example in a              mixed small groups            starter + colab
+                                                                 new topic order
 
-                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 12
-Session B (90 minutes): consolidate and extend
-         minute range                    block type              facilitator does               learners do                   materials
+ 31-55                          pair_task                        debug-this in a new topic        mixed small groups            starter + colab
+                                                                 order
 
- 1-10                           arrive_recall               recall question in a new     mixed small groups          starter + colab
-                                                            topic order
+ 56-75                          predict_run_modify               predict-run-modify in a          mixed small groups            starter + colab
+                                                                 new topic order
 
- 11-30                          worked_example              worked example in a          mixed small groups          starter + colab
-                                                            new topic order
+ 76-85                          exit_ticket                      exit ticket in a new topic       mixed small groups            starter + colab
+                                                                 order
 
- 31-55                          pair_task                   debug-this in a new topic    mixed small groups          starter + colab
-                                                            order
-
- 56-75                          predict_run_modify          predict-run-modify in a      mixed small groups          starter + colab
-                                                            new topic order
-
- 76-85                          exit_ticket                 exit ticket in a new topic   mixed small groups          starter + colab
-                                                            order
-
- 86-90                          buffer                      buffer / recap in a new      mixed small groups          starter + colab
-                                                            topic order
+ 86-90                          buffer                           buffer / recap in a new          mixed small groups            starter + colab
+                                                                 topic order
 
 
 
@@ -538,7 +555,10 @@ Hint 2: the last line names the bad token.
 Hint 3: did you mean age?
 Activity m2-pair (type pair_task), serves objectives m2-o2, time budget 25 minutes.
 Instructions in plain words: talk through the prediction before typing.
-Starter code: age = 12 # talk only
+
+
+                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 13
+Starter code: age = 12 # talk only
 Expected result / success criteria: pair predicts 12 before running.
 Hint ladder:
 Hint 1: say the answer out loud.
@@ -551,12 +571,16 @@ Hint ladder:
 Hint 1: what is 12 plus nothing?
 Hint 2: just print age.
 
-
-                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 13
-common misconceptions
+common misconceptions
 Misconception m2-m1: the variable is a box that holds the value
 Real error or wrong output: a reassign creates a new value; the name points at it
 Facilitator response: use the labelled-box story and show the before/after diagram.
+Misconception m2-mx1: a hidden key idea is missing
+Real error or wrong output: a small wrong output shows this
+Facilitator response: trace the bad outcome with the group.
+Misconception m2-mx2: a hidden key idea is missing
+Real error or wrong output: a small wrong output shows this
+Facilitator response: trace the bad outcome with the group.
 
 formative assessment
 Quiz m2-q1: what does a variable hold?
@@ -569,6 +593,13 @@ Correct answer: shows a value to the user
 Wrong option rationale: stores a value - it detects the misconception that print stores.
 Wrong option rationale: fixes a bug - it detects the misconception that print stores.
 Objective tested: m2-o1, bloom level understand.
+Quiz m2-q3: Which statement follows one taught rule?
+Correct answer: the stated correct rule
+Wrong option rationale: one near-miss - it detects the misconception that near-miss skips the rule.
+
+                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 14
+Wrong option rationale: another near-miss - it detects the misconception that near-miss skips the rule.
+Objective tested: m2-o1, bloom level apply.
 Exit ticket m2-et1: what will this print: age = 3 then print(age)? (objective m2-o1).
 
 differentiation
@@ -586,7 +617,7 @@ Predict before run makes the variable misconception visible [R8].
 
 7 Module 3: Input And Output
 Module m3 of 10 - input and output. Duration 120 minutes. Prerequisites: m2.
-Objectives: m3-o1.
+Objectives: m3-o1 (write a program that asks a question and shows an answer).
 
 plain english and the real-life analogy
 A program talks to the person through input and output: ask, remember, show.
@@ -597,8 +628,7 @@ Where this analogy breaks down: the kitchen cannot answer follow-up questions; i
 worked example: a complete runnable program
 
 
-                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 14
-name = input("what is your name? ")
+name = input("what is your name? ")
 age = input("how old are you? ")
 print("hello " + name + ". you will be " + str(int(age) + 1) + " next year.")
 
@@ -618,7 +648,9 @@ print("noted: " + city)
 Captured real output for this variant:
 
 
-noted: ahmedabad
+
+                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 15
+noted: ahmedabad
 
 
 figure for the hardest idea in this module
@@ -631,7 +663,7 @@ figure for the hardest idea in this module
                                                 Image description: diagram for m3: input, program and output
 
 One 120-minute session: introduce, practise, reflect
-         minute range                   block type                   facilitator does                  learners do                materials
+         minute range                    block type                  facilitator does                  learners do                materials
 
  1-10                           arrive_recall                  recall question                 what did we learn last     starter + colab
                                                                                                week?
@@ -644,15 +676,11 @@ One 120-minute session: introduce, practise, reflect
  56-75                          predict_run_modify             predict-run-modify              predict, run, modify       starter + colab
 
  76-85                          exit_ticket                    exit ticket                     one question +             starter + colab
+                                                                                               confidence
 
-                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 15
-      minute range                    block type              facilitator does               learners do                   materials
+ 86-100                         buffer                         buffer / recap                  extra practice / recap     starter + colab
 
-                                                                                      confidence
-
- 86-100                      buffer                      buffer / recap               extra practice / recap      starter + colab
-
- 101-120                     extended practice           extra exercises              independent work            starter + colab
+ 101-120                        extended practice              extra exercises                 independent work           starter + colab
 
 
 
@@ -666,7 +694,9 @@ Expected result / success criteria: output greets the typed name.
 Hint ladder:
 Hint 1: input returns text.
 Hint 2: plus joins strings.
-Activity m3-a2 (type pair_task), serves objectives m3-o1, time budget 25 minutes.
+
+                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 16
+Activity m3-a2 (type pair_task), serves objectives m3-o1, time budget 25 minutes.
 Instructions in plain words: talk through the prediction before typing.
 Starter code: city = input("which city? ")
 Expected result / success criteria: pair predicts the note.
@@ -685,20 +715,31 @@ common misconceptions
 Misconception m3-m1: input gives a number automatically
 Real error or wrong output: input always gives text; int() converts
 Facilitator response: show input then int() side by side.
+Misconception m3-mx1: a hidden key idea is missing
+Real error or wrong output: a small wrong output shows this
+Facilitator response: trace the bad outcome with the group.
+Misconception m3-mx2: a hidden key idea is missing
+Real error or wrong output: a small wrong output shows this
+Facilitator response: trace the bad outcome with the group.
 
 formative assessment
 Quiz m3-q1: what does input do?
 Correct answer: asks the user and returns the typed text
 Wrong option rationale: gives a number - it detects the misconception that input gives a number.
-
-                     Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 16
-Wrong option rationale: saves to a file - it detects the misconception that input gives a number.
+Wrong option rationale: saves to a file - it detects the misconception that input gives a number.
 Objective tested: m3-o1, bloom level understand.
 Quiz m3-q2: what does print do?
 Correct answer: shows text to the user
 Wrong option rationale: reads from a file - it detects the misconception that print reads.
 Wrong option rationale: sends an email - it detects the misconception that print reads.
 Objective tested: m3-o1, bloom level understand.
+Quiz m3-q3: Which statement follows one taught rule?
+
+                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 17
+Correct answer: the stated correct rule
+Wrong option rationale: one near-miss - it detects the misconception that near-miss skips the rule.
+Wrong option rationale: another near-miss - it detects the misconception that near-miss skips the rule.
+Objective tested: m3-o1, bloom level apply.
 Exit ticket m3-et1: what will this print: name = input(); print(name)? (objective m3-o1).
 
 differentiation
@@ -717,10 +758,10 @@ Input/print are introduced together so the habit forms fast.
 
 
 
-                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 17
+                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 18
 8 Module 4: Conditionals (If / Else)
 Module m4 of 10 - conditionals (if / else). Duration 180 minutes. Prerequisites: m3.
-Objectives: m4-o1.
+Objectives: m4-o1 (choose an if or else branch that fits a real situation).
 
 plain english and the real-life analogy
 A program can choose between two or more paths based on a condition.
@@ -761,7 +802,7 @@ welcome back, teacher
 
 
 
-                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 18
+                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 19
 figure for the hardest idea in this module
 
 
@@ -802,7 +843,7 @@ Session B (90 minutes): consolidate and extend
  11-30                          worked_example                   worked example in a              mixed small groups               starter + colab
 
 
-                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 19
+                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 20
          minute range                    block type              facilitator does               learners do                   materials
 
                                                             new topic order
@@ -825,7 +866,8 @@ Session B blocks sum to 90 minutes.
 
 activities
 Activity m4-p1 (type parsons), serves objectives m4-o1, time budget 25 minutes.
-Instructions in plain words: order the if / else lines.
+Instructions in plain words: order the if / else lines. Cards: a age=12, b if age >= 13:, c print("scary"), d else:, e
+print("gentle"). Correct: a,b,c,d,e.
 Starter code: age = 12 if age >= 13: print("scary") else: print("gentle")
 Expected result / success criteria: the condition is first and else pairs correctly.
 Hint ladder:
@@ -850,11 +892,16 @@ common misconceptions
 Misconception m4-m1: the computer reads the story we tell it
 Real error or wrong output: the computer runs only the taken branch
 Facilitator response: trace which branch runs with a real run.
-
-                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 20
+                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 21
 Misconception m4-m2: if means always
 Real error or wrong output: if is a condition, not a constant
 Facilitator response: show an if that is always true and one that is false.
+Misconception m4-mx1: a hidden key idea is missing
+Real error or wrong output: a small wrong output shows this
+Facilitator response: trace the bad outcome with the group.
+Misconception m4-mx2: a hidden key idea is missing
+Real error or wrong output: a small wrong output shows this
+Facilitator response: trace the bad outcome with the group.
 
 formative assessment
 Quiz m4-q1: what does an if check?
@@ -866,6 +913,11 @@ Quiz m4-q2: what does else mean?
 Correct answer: the other branch when the if is not true
 Wrong option rationale: always run this - it detects the misconception that else always runs.
 Wrong option rationale: stop the program - it detects the misconception that else always runs.
+Objective tested: m4-o1, bloom level apply.
+Quiz m4-q3: Which statement follows one taught rule?
+Correct answer: the stated correct rule
+Wrong option rationale: one near-miss - it detects the misconception that near-miss skips the rule.
+Wrong option rationale: another near-miss - it detects the misconception that near-miss skips the rule.
 Objective tested: m4-o1, bloom level apply.
 Exit ticket m4-et1: in words, when should the gentle cartoon play? (objective m4-o1).
 
@@ -882,9 +934,10 @@ why it is designed this way
 Conditions are the first real logic; worked example then pair task [R1].
 Prediction before run exposes condition misconceptions [R8].
 
-9 Module 5: Loops (Repeat)
+                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 22
+9 Module 5: Loops (Repeat)
 Module m5 of 10 - loops (repeat). Duration 180 minutes. Prerequisites: m4.
-Objectives: m5-o1.
+Objectives: m5-o1 (write a loop that repeats steps until a stop condition).
 
 plain english and the real-life analogy
 A loop repeats a block of steps until a condition becomes false, or for a known number of times.
@@ -896,8 +949,7 @@ be written, not assumed.
 worked example: a complete runnable program
 
 
-                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 21
-total = 0
+total = 0
 for i in range(3):
      total = total + 1
 print(total)
@@ -923,52 +975,55 @@ Captured real output for this variant:
 done counting to 3
 
 
-figure for the hardest idea in this module
+
+
+                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 23
+figure for the hardest idea in this module
 
 
 
 
-                    Figure 5: variable values step by step. Loop traces show values changing one step at a time.
+                          Figure 5: variable values step by step. Loop traces show values changing one step at a time.
 
-                                    Image description: diagram for m5: loop trace: variable values step by step
+                                            Image description: diagram for m5: loop trace: variable values step by step
 
+Session A (90 minutes): introduce and practise
+         minute range                    block type                     facilitator does                    learners do                materials
 
+ 1-10                           arrive_recall                     recall question                   what did we learn last     starter + colab
+                                                                                                    week?
 
+ 11-30                          worked_example                    worked example                    instructor types, thinks   starter + colab
+                                                                                                    aloud
 
-                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 22
-Session A (90 minutes): introduce and practise
-         minute range                    block type              facilitator does               learners do                   materials
+ 31-55                          pair_task                         parsons problem                   order loop lines           starter + colab
 
- 1-10                           arrive_recall               recall question              what did we learn last      starter + colab
-                                                                                         week?
+ 56-75                          predict_run_modify                predict-run-modify                predict, run, modify       starter + colab
 
- 11-30                          worked_example              worked example               instructor types, thinks    starter + colab
-                                                                                         aloud
+ 76-85                          exit_ticket                       exit ticket                       one question +             starter + colab
+                                                                                                    confidence
 
- 31-55                          pair_task                   parsons problem              order loop lines            starter + colab
-
- 56-75                          predict_run_modify          predict-run-modify           predict, run, modify        starter + colab
-
- 76-85                          exit_ticket                 exit ticket                  one question +              starter + colab
-                                                                                         confidence
-
- 86-90                          buffer                      buffer / recap               recap and housekeep         starter + colab
+ 86-90                          buffer                            buffer / recap                    recap and housekeep        starter + colab
 
 
 
 Session A blocks sum to 90 minutes.
 
 Session B (90 minutes): consolidate and extend
-         minute range                    block type              facilitator does               learners do                   materials
+         minute range                    block type                     facilitator does                    learners do                materials
 
- 1-10                           arrive_recall               recall question in a new     mixed small groups          starter + colab
-                                                            topic order
+ 1-10                           arrive_recall                     recall question in a new          mixed small groups         starter + colab
+                                                                  topic order
 
- 11-30                          worked_example              worked example in a          mixed small groups          starter + colab
-                                                            new topic order
+ 11-30                          worked_example                    worked example in a               mixed small groups         starter + colab
+                                                                  new topic order
 
- 31-55                          pair_task                   parsons problem in a         mixed small groups          starter + colab
-                                                            new topic order
+ 31-55                          pair_task                         parsons problem in a              mixed small groups         starter + colab
+                                                                  new topic order
+
+
+                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 24
+         minute range                    block type              facilitator does               learners do                   materials
 
  56-75                          predict_run_modify          predict-run-modify in a      mixed small groups          starter + colab
                                                             new topic order
@@ -985,7 +1040,8 @@ Session B blocks sum to 90 minutes.
 
 activities
 Activity m5-p1 (type parsons), serves objectives m5-o1, time budget 25 minutes.
-Instructions in plain words: order the loop lines so the stop condition works.
+Instructions in plain words: shuffle loop cards in wrong order; learners restore a total, b for i in range(3):, c
+total=total+1, d print(total).
 Starter code: total = 0 for i in range(3): total = total + 1 print(total)
 Expected result / success criteria: output is 3.
 Hint ladder:
@@ -995,10 +1051,7 @@ Activity m5-prm (type predict-run-modify), serves objectives m5-o1, time budget 
 Instructions in plain words: predict, run, modify.
 Starter code: total = 0 for i in range(3): total = total + 1 print(total) # check
 Expected result / success criteria: output is 3.
-
-
-                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 23
-Hint ladder:
+Hint ladder:
 Hint 1: how many times?
 Hint 2: what does range(3) mean?
 Activity m5-a2 (type pair_task), serves objectives m5-o1, time budget 25 minutes.
@@ -1015,7 +1068,15 @@ Real error or wrong output: a loop needs a stop condition
 Facilitator response: show a while loop that never ends and how to break.
 Misconception m5-m2: the loop variable is the value
 Real error or wrong output: i is a counter, not the data
-Facilitator response: show with a list.
+
+                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 25
+Facilitator response: show with a list.
+Misconception m5-mx1: a hidden key idea is missing
+Real error or wrong output: a small wrong output shows this
+Facilitator response: trace the bad outcome with the group.
+Misconception m5-mx2: a hidden key idea is missing
+Real error or wrong output: a small wrong output shows this
+Facilitator response: trace the bad outcome with the group.
 
 formative assessment
 Quiz m5-q1: what does range(3) give?
@@ -1028,6 +1089,11 @@ Correct answer: when the condition becomes false
 Wrong option rationale: after ten runs - it detects the misconception that while has a default stop.
 Wrong option rationale: never - it detects the misconception that while has a default stop.
 Objective tested: m5-o1, bloom level apply.
+Quiz m5-q3: Which statement follows one taught rule?
+Correct answer: the stated correct rule
+Wrong option rationale: one near-miss - it detects the misconception that near-miss skips the rule.
+Wrong option rationale: another near-miss - it detects the misconception that near-miss skips the rule.
+Objective tested: m5-o1, bloom level apply.
 Exit ticket m5-et1: how many times will this loop run: for i in range(2)? (objective m5-o1).
 
 differentiation
@@ -1039,18 +1105,17 @@ Pacing checkpoints: check stop condition each session.
 What to cut if running 15 minutes late: if 15 minutes late, drop the worked example to 12 minutes.
 Setup checklist: open colab, type example live.
 
-                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 24
-why it is designed this way
+why it is designed this way
 Tracing is how novices read loops; loop trace figure supports this [R7].
 Parsons problems lower load for ordering loops [R2][R3].
 
 
 
 
-                 Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 25
+                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 26
 10 Module 6: Functions (Reusable Steps)
 Module m6 of 10 - functions (reusable steps). Duration 180 minutes. Prerequisites: m5.
-Objectives: m6-o1.
+Objectives: m6-o1 (write a function that takes an input and returns an output).
 
 plain english and the real-life analogy
 A function is a named, reusable bundle of steps that takes inputs and gives back one output.
@@ -1089,7 +1154,7 @@ Captured real output for this variant:
 
 
 
-                 Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 26
+                 Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 27
 figure for the hardest idea in this module
 
 
@@ -1136,7 +1201,7 @@ Session B (90 minutes): consolidate and extend
  56-75                          predict_run_modify              predict-run-modify in a           mixed small groups          starter + colab
                                                                 new topic order
 
-                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 27
+                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 28
          minute range                    block type              facilitator does               learners do                   materials
 
  76-85                          exit_ticket                 exit ticket in a new topic   mixed small groups          starter + colab
@@ -1151,7 +1216,8 @@ Session B blocks sum to 90 minutes.
 
 activities
 Activity m6-p1 (type parsons), serves objectives m6-o1, time budget 25 minutes.
-Instructions in plain words: order the def / call lines.
+Instructions in plain words: shuffle def first, then call order. Learners restore a def add(a, b):, b return a+b, c
+print(add(2,3)).
 Starter code: def add(a, b): return a + b print(add(2, 3))
 Expected result / success criteria: output is 5.
 Hint ladder:
@@ -1179,11 +1245,15 @@ Facilitator response: show def without call does nothing.
 Misconception m6-m2: return means print
 Real error or wrong output: return sends back; print shows
 Facilitator response: show a function that returns and a caller that prints.
+Misconception m6-mx1: a hidden key idea is missing
+                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 29
+Real error or wrong output: a small wrong output shows this
+Facilitator response: trace the bad outcome with the group.
+Misconception m6-mx2: a hidden key idea is missing
+Real error or wrong output: a small wrong output shows this
+Facilitator response: trace the bad outcome with the group.
 
-
-
-                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 28
-formative assessment
+formative assessment
 Quiz m6-q1: what does a function return?
 Correct answer: one value the caller can use
 Wrong option rationale: nothing - it detects the misconception that function returns nothing.
@@ -1193,6 +1263,11 @@ Quiz m6-q2: what is a parameter?
 Correct answer: a name for an input the function receives
 Wrong option rationale: the output - it detects the misconception that parameter is the value.
 Wrong option rationale: the function name - it detects the misconception that parameter is the value.
+Objective tested: m6-o1, bloom level apply.
+Quiz m6-q3: Which statement follows one taught rule?
+Correct answer: the stated correct rule
+Wrong option rationale: one near-miss - it detects the misconception that near-miss skips the rule.
+Wrong option rationale: another near-miss - it detects the misconception that near-miss skips the rule.
 Objective tested: m6-o1, bloom level apply.
 Exit ticket m6-et1: what does your function return for input 3 and 4? (objective m6-o1).
 
@@ -1211,9 +1286,11 @@ Pair work on ordering functions builds the habit.
 
 11 Module 7: Lists And Dictionaries
 Module m7 of 10 - lists and dictionaries. Duration 180 minutes. Prerequisites: m6.
-Objectives: m7-o1.
+Objectives: m7-o1 (organise related values in a list or dictionary and read one value).
 
-plain english and the real-life analogy
+
+                 Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 30
+plain english and the real-life analogy
 Collections help store many values: a list is an ordered pile, a dictionary maps names to values.
 Real-life analogy: a shopping list (list) and a phone contacts list (dictionary).
 Where this analogy breaks down: lists keep order and allow duplicates; dictionaries allow any key, not just
@@ -1226,11 +1303,7 @@ shopping = ["rice", "oil", "tea"]
 shopping.append("salt")
 print(shopping[0])
 print(len(shopping))
-
-
-
-                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 29
-contacts = {"meghana": "9876543210", "arjun": "9123456780"}
+contacts = {"meghana": "9876543210", "arjun": "9123456780"}
 print(contacts["meghana"])
 
 Line-by-line annotation: line 1: list of three items. Line 2: append adds one. Line 5: dictionary maps name to
@@ -1256,62 +1329,65 @@ Captured real output for this variant:
 61
 
 
-figure for the hardest idea in this module
+
+
+                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 31
+figure for the hardest idea in this module
 
 
 
 
                                 Figure 7: same data, two shapes. A list is ordered; a dictionary is name to value.
 
-                                         Image description: diagram for m7: list vs dictionary: same data, two shapes
+                                          Image description: diagram for m7: list vs dictionary: same data, two shapes
 
 Session A (90 minutes): introduce and practise
-         minute range                   block type                    facilitator does                   learners do                 materials
+         minute range                    block type                    facilitator does                   learners do                 materials
 
- 1-10                           arrive_recall                   recall question                  what did we learn last      starter + colab
-                                                                                                 week?
+ 1-10                           arrive_recall                    recall question                  what did we learn last      starter + colab
+                                                                                                  week?
 
- 11-30                          worked_example                  worked example                   instructor types, thinks    starter + colab
-                                                                                                 aloud
+ 11-30                          worked_example                   worked example                   instructor types, thinks    starter + colab
+                                                                                                  aloud
 
- 31-55                          pair_task                       parsons problem                  order list append / index   starter + colab
+ 31-55                          pair_task                        parsons problem                  order list append / index   starter + colab
+                                                                                                  lines
 
-                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 30
-         minute range                    block type              facilitator does                learners do                  materials
+ 56-75                          predict_run_modify               predict-run-modify               predict, run, modify        starter + colab
 
-                                                                                         lines
+ 76-85                          exit_ticket                      exit ticket                      one question +              starter + colab
+                                                                                                  confidence
 
- 56-75                          predict_run_modify          predict-run-modify           predict, run, modify        starter + colab
-
- 76-85                          exit_ticket                 exit ticket                  one question +              starter + colab
-                                                                                         confidence
-
- 86-90                          buffer                      buffer / recap               recap and housekeep         starter + colab
+ 86-90                          buffer                           buffer / recap                   recap and housekeep         starter + colab
 
 
 
 Session A blocks sum to 90 minutes.
 
 Session B (90 minutes): consolidate and extend
-         minute range                    block type              facilitator does                learners do                  materials
+         minute range                    block type                    facilitator does                   learners do                 materials
 
- 1-10                           arrive_recall               recall question in a new     mixed small groups          starter + colab
-                                                            topic order
+ 1-10                           arrive_recall                    recall question in a new         mixed small groups          starter + colab
+                                                                 topic order
 
- 11-30                          worked_example              worked example in a          mixed small groups          starter + colab
-                                                            new topic order
+ 11-30                          worked_example                   worked example in a              mixed small groups          starter + colab
+                                                                 new topic order
 
- 31-55                          pair_task                   parsons problem in a         mixed small groups          starter + colab
-                                                            new topic order
+ 31-55                          pair_task                        parsons problem in a             mixed small groups          starter + colab
+                                                                 new topic order
 
- 56-75                          predict_run_modify          predict-run-modify in a      mixed small groups          starter + colab
-                                                            new topic order
+ 56-75                          predict_run_modify               predict-run-modify in a          mixed small groups          starter + colab
+                                                                 new topic order
 
- 76-85                          exit_ticket                 exit ticket in a new topic   mixed small groups          starter + colab
-                                                            order
+ 76-85                          exit_ticket                      exit ticket in a new topic       mixed small groups          starter + colab
+                                                                 order
 
- 86-90                          buffer                      buffer / recap in a new      mixed small groups          starter + colab
-                                                            topic order
+ 86-90                          buffer                           buffer / recap in a new          mixed small groups          starter + colab
+
+                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 32
+      minute range                   block type               facilitator does               learners do                   materials
+
+                                                         topic order
 
 
 
@@ -1319,7 +1395,8 @@ Session B blocks sum to 90 minutes.
 
 activities
 Activity m7-p1 (type parsons), serves objectives m7-o1, time budget 25 minutes.
-Instructions in plain words: order the list append / index lines.
+Instructions in plain words: shuffle cards including a shopping=[.], b shopping.append("salt"), c print(shopping[0]).
+Correct order a,b,c.
 Starter code: shopping = ["rice", "oil", "tea"] shopping.append("salt") print(shopping[0])
 Expected result / success criteria: output is rice.
 Hint ladder:
@@ -1333,9 +1410,7 @@ Hint ladder:
 Hint 1: what did you append?
 Hint 2: index 0.
 Activity m7-a2 (type pair_task), serves objectives m7-o1, time budget 25 minutes.
-
-                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 31
-Instructions in plain words: talk through the collection.
+Instructions in plain words: talk through the collection.
 Starter code: contacts = {"meghana": "9876543210"}
 Expected result / success criteria: pair reads the key.
 Hint ladder:
@@ -1349,6 +1424,15 @@ Facilitator response: use the shopping list trace.
 Misconception m7-m2: dictionary keys are numbers
 Real error or wrong output: dictionary keys are names
 Facilitator response: show a contacts list.
+Misconception m7-mx1: a hidden key idea is missing
+Real error or wrong output: a small wrong output shows this
+
+
+                     Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 33
+Facilitator response: trace the bad outcome with the group.
+Misconception m7-mx2: a hidden key idea is missing
+Real error or wrong output: a small wrong output shows this
+Facilitator response: trace the bad outcome with the group.
 
 formative assessment
 Quiz m7-q1: what does append do?
@@ -1360,6 +1444,11 @@ Quiz m7-q2: how do you read one dictionary value?
 Correct answer: use the key in square brackets
 Wrong option rationale: use a number - it detects the misconception that dot notation for dict.
 Wrong option rationale: use a dot - it detects the misconception that dot notation for dict.
+Objective tested: m7-o1, bloom level apply.
+Quiz m7-q3: Which statement follows one taught rule?
+Correct answer: the stated correct rule
+Wrong option rationale: one near-miss - it detects the misconception that near-miss skips the rule.
+Wrong option rationale: another near-miss - it detects the misconception that near-miss skips the rule.
 Objective tested: m7-o1, bloom level apply.
 Exit ticket m7-et1: what is shopping[1] after appending salt? (objective m7-o1).
 
@@ -1377,13 +1466,13 @@ Collections are how real tasks store many values; lists before dictionaries [R9]
 
 12 Module 8: Files And Simple Data
 Module m8 of 10 - files and simple data. Duration 180 minutes. Prerequisites: m7.
-                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 32
-Objectives: m8-o1.
+Objectives: m8-o1 (read a text file and write a result back to a file).
 
 plain english and the real-life analogy
 Programs can read what a person wrote in a file and write results back into a file.
 Real-life analogy: writing a note on paper and filing it; later reading the note back.
-Where this analogy breaks down: file handles are stateful and need closing; the with statement automates closing
+                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 34
+Where this analogy breaks down: file handles are stateful and need closing; the with statement automates closing
 safely.
 
 worked example: a complete runnable program
@@ -1417,65 +1506,58 @@ MEGHANA
 ARJUN
 
 
-
-
-                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 33
-figure for the hardest idea in this module
+figure for the hardest idea in this module
 
 
 
 
-              Figure 8: file read / write flow. A file moves text into and out of the program through open, with, read and write.
+           Figure 8: file read / write flow. A file moves text into and out of the program through open, with, read and write.
 
-                                                  Image description: diagram for m8: file read / write flow
+                                            Image description: diagram for m8: file read / write flow
 
-Session A (90 minutes): introduce and practise
-         minute range                    block type                  facilitator does                    learners do                 materials
+                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 35
+Session A (90 minutes): introduce and practise
+         minute range                    block type              facilitator does               learners do                   materials
 
- 1-10                           arrive_recall                  recall question                   what did we learn last      starter + colab
-                                                                                                 week?
+ 1-10                           arrive_recall               recall question              what did we learn last      starter + colab
+                                                                                         week?
 
- 11-30                          worked_example                 worked example                    instructor types, thinks    starter + colab
-                                                                                                 aloud
+ 11-30                          worked_example              worked example               instructor types, thinks    starter + colab
+                                                                                         aloud
 
- 31-55                          pair_task                      pair task                         talk through file reading   starter + colab
+ 31-55                          pair_task                   pair task                    talk through file reading   starter + colab
 
- 56-75                          predict_run_modify             predict-run-modify                predict, run, modify        starter + colab
+ 56-75                          predict_run_modify          predict-run-modify           predict, run, modify        starter + colab
 
- 76-85                          exit_ticket                    exit ticket                       one question +              starter + colab
-                                                                                                 confidence
+ 76-85                          exit_ticket                 exit ticket                  one question +              starter + colab
+                                                                                         confidence
 
- 86-90                          buffer                         buffer / recap                    recap and housekeep         starter + colab
+ 86-90                          buffer                      buffer / recap               recap and housekeep         starter + colab
 
 
 
 Session A blocks sum to 90 minutes.
 
 Session B (90 minutes): consolidate and extend
-         minute range                    block type                  facilitator does                    learners do                 materials
+         minute range                    block type              facilitator does               learners do                   materials
 
- 1-10                           arrive_recall                  recall question in a new          mixed small groups          starter + colab
-                                                               topic order
+ 1-10                           arrive_recall               recall question in a new     mixed small groups          starter + colab
+                                                            topic order
 
- 11-30                          worked_example                 worked example in a               mixed small groups          starter + colab
-                                                               new topic order
+ 11-30                          worked_example              worked example in a          mixed small groups          starter + colab
+                                                            new topic order
 
- 31-55                          pair_task                      pair task in a new topic          mixed small groups          starter + colab
-                                                               order
+ 31-55                          pair_task                   pair task in a new topic     mixed small groups          starter + colab
+                                                            order
 
- 56-75                          predict_run_modify             predict-run-modify in a           mixed small groups          starter + colab
-                                                               new topic order
+ 56-75                          predict_run_modify          predict-run-modify in a      mixed small groups          starter + colab
+                                                            new topic order
 
- 76-85                          exit_ticket                    exit ticket in a new topic        mixed small groups          starter + colab
-                                                               order
+ 76-85                          exit_ticket                 exit ticket in a new topic   mixed small groups          starter + colab
+                                                            order
 
- 86-90                          buffer                         buffer / recap in a new           mixed small groups          starter + colab
-
-
-                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 34
-      minute range                   block type               facilitator does               learners do                   materials
-
-                                                         topic order
+ 86-90                          buffer                      buffer / recap in a new      mixed small groups          starter + colab
+                                                            topic order
 
 
 
@@ -1493,7 +1575,10 @@ Activity m8-a2 (type pair_task), serves objectives m8-o1, time budget 25 minutes
 Instructions in plain words: talk through reading.
 Starter code: with open("names.txt", "r") as f:
 Expected result / success criteria: pair predicts the output.
-Hint ladder:
+
+
+                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 36
+Hint ladder:
 Hint 1: with closes.
 Hint 2: strip removes newline.
 Activity m8-a3 (type predict-run-modify), serves objectives m8-o1, time budget 20 minutes.
@@ -1508,6 +1593,12 @@ common misconceptions
 Misconception m8-m1: open without with leaks the file
 Real error or wrong output: file not closed / resource warning
 Facilitator response: use with.
+Misconception m8-mx1: a hidden key idea is missing
+Real error or wrong output: a small wrong output shows this
+Facilitator response: trace the bad outcome with the group.
+Misconception m8-mx2: a hidden key idea is missing
+Real error or wrong output: a small wrong output shows this
+Facilitator response: trace the bad outcome with the group.
 
 formative assessment
 Quiz m8-q1: what does with do?
@@ -1515,14 +1606,19 @@ Correct answer: opens and closes the file safely
 Wrong option rationale: writes faster - it detects the misconception that with is optional.
 Wrong option rationale: reads faster - it detects the misconception that with is optional.
 Objective tested: m8-o1, bloom level apply.
-
-                     Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 35
-Quiz m8-q2: what mode writes a file?
+Quiz m8-q2: what mode writes a file?
 Correct answer: w
 Wrong option rationale: r - it detects the misconception that mode x is write.
 Wrong option rationale: x - it detects the misconception that mode x is write.
 Objective tested: m8-o1, bloom level apply.
-Exit ticket m8-et1: what mode do you use to add text to a file? (objective m8-o1).
+Quiz m8-q3: Which statement follows one taught rule?
+Correct answer: the stated correct rule
+Wrong option rationale: one near-miss - it detects the misconception that near-miss skips the rule.
+Wrong option rationale: another near-miss - it detects the misconception that near-miss skips the rule.
+Objective tested: m8-o1, bloom level apply.
+
+                    Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 37
+Exit ticket m8-et1: what mode do you use to add text to a file? (objective m8-o1).
 
 differentiation
 Learners who are stuck: use the m8-p1 starter and add the with block.
@@ -1538,7 +1634,7 @@ File handling makes programs useful for adults [R3].
 
 13 Module 9: Debugging And Reading Errors
 Module m9 of 10 - debugging and reading errors. Duration 180 minutes. Prerequisites: m1-m8.
-Objectives: m9-o1.
+Objectives: m9-o1 (read a traceback and point to the line to fix first).
 
 plain english and the real-life analogy
 Errors are messages from the computer about what went wrong; reading them is a skill.
@@ -1565,12 +1661,8 @@ a second example that changes one thing
 
 
 total = 10
-
-
-
-                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 36
-for i in range(5):
-        total = total + i
+for i in range(5):
+     total = total + i
 print(total)
 
 Captured real output for this variant:
@@ -1579,7 +1671,8 @@ Captured real output for this variant:
 20
 
 
-figure for the hardest idea in this module
+                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 38
+figure for the hardest idea in this module
 
 
 
@@ -1610,18 +1703,21 @@ Session A (90 minutes): introduce and practise
 
 Session A blocks sum to 90 minutes.
 
-                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 37
-Session B (90 minutes): consolidate and extend
-         minute range                    block type              facilitator does               learners do                   materials
+Session B (90 minutes): consolidate and extend
+         minute range                    block type                    facilitator does                    learners do                materials
 
- 1-10                           arrive_recall               recall question in a new     mixed small groups          starter + colab
-                                                            topic order
+ 1-10                           arrive_recall                    recall question in a new          mixed small groups         starter + colab
+                                                                 topic order
 
- 11-30                          worked_example              worked example in a          mixed small groups          starter + colab
-                                                            new topic order
+ 11-30                          worked_example                   worked example in a               mixed small groups         starter + colab
+                                                                 new topic order
 
- 31-55                          pair_task                   debug-this in a new topic    mixed small groups          starter + colab
-                                                            order
+ 31-55                          pair_task                        debug-this in a new topic         mixed small groups         starter + colab
+                                                                 order
+
+
+                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 39
+         minute range                    block type              facilitator does               learners do                   materials
 
  56-75                          predict_run_modify          predict-run-modify in a      mixed small groups          starter + colab
                                                             new topic order
@@ -1661,12 +1757,18 @@ Hint 2: int() converts.
 
 common misconceptions
 Misconception m9-m1: an error means I am bad at coding
-                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 38
-Real error or wrong output: errors are messages; reading them is a skill
+Real error or wrong output: errors are messages; reading them is a skill
 Facilitator response: normalise: fix one, run again.
 Misconception m9-m2: the first line of the traceback is the bug
 Real error or wrong output: the LAST line names the error kind
 Facilitator response: point to the final line first.
+                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 40
+Misconception m9-mx1: a hidden key idea is missing
+Real error or wrong output: a small wrong output shows this
+Facilitator response: trace the bad outcome with the group.
+Misconception m9-mx2: a hidden key idea is missing
+Real error or wrong output: a small wrong output shows this
+Facilitator response: trace the bad outcome with the group.
 
 formative assessment
 Quiz m9-q1: what does a traceback show first?
@@ -1679,6 +1781,11 @@ Correct answer: the code runs but gives wrong output
 Wrong option rationale: the code will not run - it detects the misconception that logic error means crash.
 Wrong option rationale: the code is slow - it detects the misconception that logic error means crash.
 Objective tested: m9-o1, bloom level analyse.
+Quiz m9-q3: Which statement follows one taught rule?
+Correct answer: the stated correct rule
+Wrong option rationale: one near-miss - it detects the misconception that near-miss skips the rule.
+Wrong option rationale: another near-miss - it detects the misconception that near-miss skips the rule.
+Objective tested: m9-o1, bloom level apply.
 Exit ticket m9-et1: what is the first thing you read in a traceback? (objective m9-o1).
 
 differentiation
@@ -1695,9 +1802,11 @@ Reading errors is a life skill; errors normalised from day one [R7].
 
 14 Module 10: Final Mini-Project (Capstone)
 Module m10 of 10 - final mini-project (capstone). Duration 240 minutes. Prerequisites: m1-m9.
-Objectives: m10-o1.
+Objectives: m10-o1 (combine the taught concepts into one working small program and explain it in plain words).
 
-plain english and the real-life analogy
+
+                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 41
+plain english and the real-life analogy
 Learners build one small useful program from their own real-life task.
 Real-life analogy: writing a recipe for a dish only they cook.
 Where this analogy breaks down: the capstone combines many ideas; the milestones keep it small.
@@ -1705,11 +1814,9 @@ Where this analogy breaks down: the capstone combines many ideas; the milestones
 worked example: a complete runnable program
 
 
-
-                   Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 39
-count = 0
+count = 0
 for i in range(3):
-        count = count + 1
+    count = count + 1
 print("count is " + str(count))
 
 Line-by-line annotation: simple counter plus print.
@@ -1724,7 +1831,7 @@ a second example that changes one thing
 
 count = 0
 for i in range(2):
-        count = count + 1
+    count = count + 1
 print("count is " + str(count))
 
 Captured real output for this variant:
@@ -1733,58 +1840,60 @@ Captured real output for this variant:
 count is 2
 
 
-figure for the hardest idea in this module
+
+
+                 Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 42
+figure for the hardest idea in this module
 
 
 
 
                  Figure 10: capstone architecture and milestone timeline. One small program is built in five milestones.
 
-                                       Image description: diagram for m10: capstone architecture and milestone timeline
+                                         Image description: diagram for m10: capstone architecture and milestone timeline
 
 Session A (90): introduce and practise
-         minute range                   block type                    facilitator does                   learners do              materials
+         minute range                    block type                     facilitator does                   learners do              materials
 
- 1-10                           arrive_recall                   recall question in the           mixed small groups       starter + colab
+ 1-10                           arrive_recall                     recall question in the           mixed small groups       starter + colab
+                                                                  same topic order
 
+ 11-30                          worked_example                    worked example in the            mixed small groups       starter + colab
+                                                                  same topic order
 
-                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 40
-         minute range                    block type              facilitator does               learners do                   materials
+ 31-55                          pair_task                         mini-challenge in the            mixed small groups       starter + colab
+                                                                  same topic order
 
-                                                            same topic order
+ 56-75                          predict_run_modify                predict-run-modify in            mixed small groups       starter + colab
+                                                                  the same topic order
 
- 11-30                          worked_example              worked example in the        mixed small groups          starter + colab
-                                                            same topic order
+ 76-85                          exit_ticket                       exit ticket in the same          mixed small groups       starter + colab
+                                                                  topic order
 
- 31-55                          pair_task                   mini-challenge in the        mixed small groups          starter + colab
-                                                            same topic order
-
- 56-75                          predict_run_modify          predict-run-modify in        mixed small groups          starter + colab
-                                                            the same topic order
-
- 76-85                          exit_ticket                 exit ticket in the same      mixed small groups          starter + colab
-                                                            topic order
-
- 86-90                          buffer                      buffer / recap in the same   mixed small groups          starter + colab
-                                                            topic order
+ 86-90                          buffer                            buffer / recap in the same       mixed small groups       starter + colab
+                                                                  topic order
 
 
 
 Session A (90): introduce and practise blocks sum to 90 minutes.
 
 Session B (90): consolidate
-         minute range                    block type              facilitator does               learners do                   materials
+         minute range                    block type                     facilitator does                   learners do              materials
 
- 1-10                           arrive_recall               recall question in the       mixed small groups          starter + colab
-                                                            same topic order
+ 1-10                           arrive_recall                     recall question in the           mixed small groups       starter + colab
+                                                                  same topic order
 
- 11-30                          worked_example              worked example in the        mixed small groups          starter + colab
-                                                            same topic order
+ 11-30                          worked_example                    worked example in the            mixed small groups       starter + colab
+                                                                  same topic order
 
- 31-55                          pair_task                   mini-challenge in the        mixed small groups          starter + colab
-                                                            same topic order
+ 31-55                          pair_task                         mini-challenge in the            mixed small groups       starter + colab
+                                                                  same topic order
 
- 56-75                          predict_run_modify          predict-run-modify in        mixed small groups          starter + colab
+ 56-75                          predict_run_modify                predict-run-modify in            mixed small groups       starter + colab
+
+                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 43
+         minute range                    block type              facilitator does               learners do                   materials
+
                                                             the same topic order
 
  76-85                          exit_ticket                 exit ticket in the same      mixed small groups          starter + colab
@@ -1818,9 +1927,7 @@ Session C (60): capstone blocks sum to 60 minutes.
 
 activities
 Activity m10-m1 (type mini-challenge), serves objectives m10-o1, time budget 40 minutes.
-
-                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 41
-Instructions in plain words: write a tiny program with one variable and one output.
+Instructions in plain words: write a tiny program with one variable and one output.
 Starter code: age = 12 print(age)
 Expected result / success criteria: output is 12.
 Hint ladder:
@@ -1837,13 +1944,22 @@ Instructions in plain words: fix the capstone starter bug.
 Starter code: age = input("how old? ") print(str(int(age)) + " years old")
 Expected result / success criteria: runs.
 Hint ladder:
-Hint 1: int() on input.
+
+
+                        Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 44
+Hint 1: int() on input.
 Hint 2: str() for concatenation.
 
 common misconceptions
 Misconception m10-m1: the capstone needs everything at once
 Real error or wrong output: milestones split it
 Facilitator response: follow milestones in order.
+Misconception m10-mx1: a hidden key idea is missing
+Real error or wrong output: a small wrong output shows this
+Facilitator response: trace the bad outcome with the group.
+Misconception m10-mx2: a hidden key idea is missing
+Real error or wrong output: a small wrong output shows this
+Facilitator response: trace the bad outcome with the group.
 
 formative assessment
 Quiz m10-q1: what is the capstone?
@@ -1851,6 +1967,11 @@ Correct answer: one small useful program built from prior ideas
 Wrong option rationale: a new language - it detects the misconception that capstone is a language.
 Wrong option rationale: a test - it detects the misconception that capstone is a language.
 Objective tested: m10-o1, bloom level create.
+Quiz m10-q3: Which statement follows one taught rule?
+Correct answer: the stated correct rule
+Wrong option rationale: one near-miss - it detects the misconception that near-miss skips the rule.
+Wrong option rationale: another near-miss - it detects the misconception that near-miss skips the rule.
+Objective tested: m10-o1, bloom level apply.
 Exit ticket m10-et1: what did your program do and what would you change next? (objective m10-o1).
 
 differentiation
@@ -1860,9 +1981,7 @@ Learners who finish early: ask the learner to add a loop to the capstone starter
 facilitator notes
 Pacing checkpoints: check milestone completion each session.
 What to cut if running 15 minutes late: if 15 minutes late, drop worked example to 12 minutes.
-
-                     Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 42
-Setup checklist: open colab, set up milestone files.
+Setup checklist: open colab, set up milestone files.
 
 why it is designed this way
 Milestones keep capstone small; rubric rewards process [D3].
@@ -1870,8 +1989,8 @@ Milestones keep capstone small; rubric rewards process [D3].
 
 
 
-                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 43
-Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 44
+                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 45
+Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 46
 15 Assessment strategy
 Assessment is gentle and frequent, then once deeply. Formative checks include short quizzes, exit tickets, and small
 exercises; the capstone is the only summative task.
@@ -1899,7 +2018,7 @@ two. The pass mark and the correctness condition are design decisions from week 
 
 
 
-                      Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 45
+                      Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 47
 16 Supporting non-programmers
 Anticipated difficulties: unfamiliar vocabulary, holding several steps in mind, variable-as-box, error sting. Anxiety
 and confidence: early small wins, pair work, exit tickets. Accessibility: captions, transcripts, colour-blind-safe
@@ -1909,7 +2028,7 @@ getting one longer session. Remedial paths: hint ladders, stuck-task buddies, tu
 
 
 
-                 Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 46
+                 Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 48
 17 Review and refinement log
 This report was written and reviewed against the week 2 task. Refinement items: added executed code with
 captured output, added alignment matrix, added readability audit, added jargon audit, added timing math. Changes
@@ -1918,17 +2037,17 @@ since week 1 are listed in section 18.
 
 
 
-                Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 47
+                Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 49
 18 Validation plan and known limitations
 Validation plan: pilot the curriculum in week 3 with a small group, observe pair work, predict-run-modify accuracy,
 exit ticket confidence; success means most learners finish the capstone and can explain it. Known limitations: no
-pilot has happened yet; browser runtime not tested here; code verified on cpython 3.13; the 80 percent completion
-target is a design decision.
+pilot has happened yet; browser runtime not tested here; code verified on CPython 3.13; the 80 percent completion
+target is a design decision. Citations used: [R1], [R2], [R3], [R4], [R5], [R6], [R7], [R8], [R9], [R10], [D1], [D2], [D3].
 
 
 
 
-                 Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 48
+                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 50
 Capstone brief and rubric
 Learners build one small useful program from an everyday task, for example a weekly spend tracker or to-do list
 saved to a file.
@@ -1969,7 +2088,7 @@ Pass: 12 of 16, including at least two on Correctness. This is a design decision
 
 
 
-                     Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 49
+                     Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 51
 Appendix A: activity catalogue
 ID             Module                 Type                    Minutes                 Objectives             Notes
 m1-p1          m1                     parsons                 25                      m1-o1                  How to run in
@@ -2041,7 +2160,7 @@ m8-p1          m8                     debug-this              25                
 m8-a2          m8                     pair_task               25                      m8-o1                  How to run in
                                                                                                              facilitator slides.
 
-             Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 50
+             Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 52
 m8-a3      m8                     predict-run-modify      20                      m8-o1                  How to run in
                                                                                                          facilitator slides.
 
@@ -2066,7 +2185,7 @@ m10-a3     m10                    debug-this              25                    
 
 
 
-         Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 51
+         Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 53
 Appendix B: quiz bank
 Module    ID                 Question         Correct           Wrong-             Misconcept      Objective         Bloom
                                               answer            option             ion
@@ -2135,7 +2254,7 @@ m7        m7-q2              how do you       use the key in    use a number |  
 m8        m8-q1              what does        opens and         writes faster |    with is         m8-o1             apply
                                               closes a file
 
-               Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 52
+               Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 54
                          with do?           safely           reads faster     optional
 
 m8       m8-q2           what mode          w                r|x              mode x is        m8-o1             apply
@@ -2186,7 +2305,7 @@ m10
 
 
 
-           Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 53
+           Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 55
 Appendix C: real error-message catalogue
 Error kind                                   Executed traceback excerpt                       Plain translation and location
                                              (captured)
@@ -2212,7 +2331,7 @@ SyntaxError                                  invalid syntax in def line.        
 
 
 
-                    Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 54
+                    Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 56
 Appendix D: glossary
 Term                                                               Plain definition
 algorithm                                                          a step-by-step set of instructions that solves a task
@@ -2277,7 +2396,7 @@ variable                                                           a named place
 
 
 
-                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 55
+                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 57
 Appendix E: readability and audit results
 Module                                     FK grade (plain summary +                       Status
                                            analogy)
@@ -2351,7 +2470,7 @@ sequence                                                           listed module
 
 string                                                             listed module or glossary
 
-                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 56
+                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 58
 syntax error                                                    listed module or glossary
 
 variable                                                        listed module or glossary
@@ -2359,7 +2478,7 @@ variable                                                        listed module or
 
 
 
-               Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 57
+               Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 59
 Appendix F: reference list
 ID                            Citation                            What it supports                    Status
 R1                            mit tll worked examples             novices benefit from studying a     verified source
@@ -2423,7 +2542,7 @@ D3                                        capstone pass mark 12 of 16 with      
 
 
 
-                Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 58
+                Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 60
 Appendix G: reproducibility
 Python version 3.13.7 (v3.13.7:bcee1c32211, Aug 14 2025, 19:10:51) [Clang 16.0.0 (clang-1600.0.26.6)]. Figures:
 python3 weeks/week2/src/make_figures.py. Document: python3 weeks/week2/src/build_docx.py. Pdf: soffice
@@ -2432,5 +2551,5 @@ headless. Tests: python3 -m pytest weeks/week1/tests/ weeks/week2/tests/ (21 pas
 
 
 
-                 Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 59
+                 Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 61
 

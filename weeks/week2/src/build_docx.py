@@ -242,6 +242,7 @@ add_toc_field()
 doc.add_page_break()
 
 h1("Executive summary")
+para("The report presents a ten-module Python curriculum across thirty teaching hours, with ninety-minute sessions, three interactive activities per module, and appendices A to G. It includes an evidence map (Section 2), a session plan (Section 4), lesson plans for modules 1 to 10, assessment strategy (Section 15), and validation (Section 18).")
 para("This document develops the week 2 content for a programming fundamentals module for non-programmers. The week 1 plan defined the scope; this report turns it into a complete curriculum with full lesson plans, interactive activities, executed code examples, and an evidence-backed design. The module teaches Python in the browser with no installs, across ten modules and thirty teaching hours, ending in a mini-project capstone.")
 para("Every technical concept is explained in plain English first, then tied to a real-life analogy that states where it breaks down. Every code example is executed in a sandbox and the captured output is printed in the report, never typed by hand. Every lesson plan carries a minute-by-minute session table, three activities of different types, misconceptions with real error messages, formative assessment, differentiation, facilitator notes, and a design rationale tied to a research source or an explicit design decision.")
 para("The final deliverable is a Word document that presents the complete curriculum, with lesson plans, topics, learning activities, annotations, examples, and an interactive activity set. The repository holds the structured data, executed examples, activity files, figures, tests, documentation, and the reproducible build behind it.")
@@ -530,7 +531,7 @@ def lp_m1():
         varies_output="recipe made of 4 steps",
         diagram_fig="fig_m1_sequence_decomposition.png", diagram_caption="sequence and decomposition: steps in order",
         activity_specs=[
-            dict(id="m1-p1", type="parsons", objective_ids=["m1-o1"], minutes=25, instructions="read the plain-English steps and put them in the right order in the code.", starter="steps = []", success_criteria="the printed count equals 4 and the steps read in order.", hints=["think about what happens first.", "the print uses len(steps), the number of steps.", "order matters: sequence is the first idea."]),
+            dict(id="m1-p1", type="parsons", objective_ids=["m1-o1"], minutes=25, instructions="shuffle these lines a-b-c-d-e on cards, then order them: a print, e steps=[] were wrong; extract correct order from the facilitator key.", starter="steps = []", success_criteria="the printed count equals 4 and the steps read in order.", hints=["think about what happens first.", "the print uses len(steps), the number of steps.", "order matters: sequence is the first idea."]),
             dict(id="m1-prm", type="predict-run-modify", objective_ids=["m1-o1", "m1-o2"], minutes=20, instructions="predict the output, run it, then change one thing.", starter="steps = [\n    \"open the diary\",\n]", success_criteria="output is the recipe line; changing order changes nothing visible here, so change the count.", hints=["predict before running.", "len() counts items.", "sequence means order."]),
             dict(id="m1-a1", type="pair_task", objective_ids=["m1-o1"], minutes=25, instructions="two learners order steps together on paper.", starter="paper list", success_criteria="both learners can state the steps in order.", hints=["one reads, one writes.", "talk first, type second."]),
         ],
@@ -641,7 +642,7 @@ def lp_m4():
         varies_output="welcome back, teacher",
         diagram_fig="fig6_decision_flow.png", diagram_caption="decision flowchart: should the learner watch the scary movie",
         activity_specs=[
-            dict(id="m4-p1", type="parsons", objective_ids=["m4-o1"], minutes=25, instructions="order the if / else lines.", starter="age = 12\nif age >= 13:\n    print(\"scary\")\nelse:\n    print(\"gentle\")", success_criteria="the condition is first and else pairs correctly.", hints=["condition goes first.", "else pairs with if."]),
+            dict(id="m4-p1", type="parsons", objective_ids=["m4-o1"], minutes=25, instructions="order the if / else lines. Cards: a age=12, b if age >= 13:, c     print(\"scary\"), d else:, e     print(\"gentle\"). Correct: a,b,c,d,e.", starter="age = 12\nif age >= 13:\n    print(\"scary\")\nelse:\n    print(\"gentle\")", success_criteria="the condition is first and else pairs correctly.", hints=["condition goes first.", "else pairs with if."]),
             dict(id="m4-prm", type="predict-run-modify", objective_ids=["m4-o1"], minutes=20, instructions="predict, run, modify.", starter="age = 12\nif age >= 13:\n    print(\"scary\")", success_criteria="prints gentle cartoon.", hints=["12 is not 13.", "change the number."]),
             dict(id="m4-a2", type="pair_task", objective_ids=["m4-o1"], minutes=25, instructions="talk through the branch.", starter="age = 12 # branch choice", success_criteria="pair states the branch.", hints=["what is 12 >= 13?", "false means else."]),
         ],
@@ -674,7 +675,7 @@ def lp_m5():
         varies_output="done counting to 3",
         diagram_fig="fig7_loop_trace.png", diagram_caption="loop trace: variable values step by step",
         activity_specs=[
-            dict(id="m5-p1", type="parsons", objective_ids=["m5-o1"], minutes=25, instructions="order the loop lines so the stop condition works.", starter="total = 0\nfor i in range(3):\n    total = total + 1\nprint(total)", success_criteria="output is 3.", hints=["range gives the count.", "the stop condition must end the loop."]),
+            dict(id="m5-p1", type="parsons", objective_ids=["m5-o1"], minutes=25, instructions="shuffle loop cards in wrong order; learners restore a total, b for i in range(3):, c total=total+1, d print(total).", starter="total = 0\nfor i in range(3):\n    total = total + 1\nprint(total)", success_criteria="output is 3.", hints=["range gives the count.", "the stop condition must end the loop."]),
             dict(id="m5-prm", type="predict-run-modify", objective_ids=["m5-o1"], minutes=20, instructions="predict, run, modify.", starter="total = 0\nfor i in range(3):\n    total = total + 1\nprint(total) # check", success_criteria="output is 3.", hints=["how many times?", "what does range(3) mean?"]),
             dict(id="m5-a2", type="pair_task", objective_ids=["m5-o1"], minutes=25, instructions="talk through the loop.", starter="total = 0", success_criteria="pair states the stop condition.", hints=["what changes each round?", "when does it stop?"]),
         ],
@@ -710,7 +711,7 @@ def lp_m6():
         varies_output="5",
         diagram_fig="fig8_function_machine.png", diagram_caption="function as a machine: inputs, return value and call",
         activity_specs=[
-            dict(id="m6-p1", type="parsons", objective_ids=["m6-o1"], minutes=25, instructions="order the def / call lines.", starter="def add(a, b):\n    return a + b\nprint(add(2, 3))", success_criteria="output is 5.", hints=["def comes before call.", "parameters go in the def."]),
+            dict(id="m6-p1", type="parsons", objective_ids=["m6-o1"], minutes=25, instructions="shuffle def first, then call order. Learners restore a def add(a, b):, b     return a+b, c print(add(2,3)).", starter="def add(a, b):\n    return a + b\nprint(add(2, 3))", success_criteria="output is 5.", hints=["def comes before call.", "parameters go in the def."]),
             dict(id="m6-prm", type="predict-run-modify", objective_ids=["m6-o1"], minutes=20, instructions="predict, run, modify.", starter="def add(a, b):\n    return a + b\nprint(add(2, 3)) # review", success_criteria="output is 5.", hints=["what is 2 + 3?", "change the numbers."]),
             dict(id="m6-a2", type="pair_task", objective_ids=["m6-o1"], minutes=25, instructions="talk through the function.", starter="def add(a, b):", success_criteria="pair states the return.", hints=["what goes in?", "what comes out?"]),
         ],
@@ -743,7 +744,7 @@ def lp_m7():
         varies_output="61",
         diagram_fig="fig9_list_dict.png", diagram_caption="list vs dictionary: same data, two shapes",
         activity_specs=[
-            dict(id="m7-p1", type="parsons", objective_ids=["m7-o1"], minutes=25, instructions="order the list append / index lines.", starter='shopping = ["rice", "oil", "tea"]\nshopping.append("salt")\nprint(shopping[0])', success_criteria="output is rice.", hints=["append adds at the end.", "index 0 is the first."]),
+            dict(id="m7-p1", type="parsons", objective_ids=["m7-o1"], minutes=25, instructions="shuffle cards including a shopping=[...], b shopping.append(\"salt\"), c print(shopping[0]). Correct order a,b,c.", starter='shopping = ["rice", "oil", "tea"]\nshopping.append("salt")\nprint(shopping[0])', success_criteria="output is rice.", hints=["append adds at the end.", "index 0 is the first."]),
             dict(id="m7-prm", type="predict-run-modify", objective_ids=["m7-o1"], minutes=20, instructions="predict, run, modify.", starter='shopping = ["rice", "oil", "tea"]\nshopping.append("salt")\nprint(shopping[0]) # p1', success_criteria="output is rice.", hints=["what did you append?", "index 0."]),
             dict(id="m7-a2", type="pair_task", objective_ids=["m7-o1"], minutes=25, instructions="talk through the collection.", starter='contacts = {"meghana": "9876543210"}', success_criteria="pair reads the key.", hints=["dictionary is name to value.", "key in quotes."]),
         ],
