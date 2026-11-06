@@ -60,7 +60,7 @@ Across the four weeks, the internship designs a programming fundamentals module 
 
 Each week builds on the one before it. Every week lives in its own folder, so nothing from a later week overwrites an earlier one.
 
-Week 1 is done. Every piece of jargon in the plan is explained, and the whole report is generated from scripts rather than edited by hand, so the document, its figures and its tests always agree with each other.
+Weeks 1 and 2 are done. Week 2 ships a ten-module Python curriculum. in the plan is explained, and the whole report is generated from scripts rather than edited by hand, so the document, its figures and its tests always agree with each other.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -91,7 +91,7 @@ The plan describes a module that:
 | Week | Task                                       | Deliverable (Word document)                                   | Status          |
 |:----:|--------------------------------------------|---------------------------------------------------------------|-----------------|
 | 1    | Project Planning and Scope Definition      | Project plan and scope definition                             | Ready to submit |
-| 2    | Content Development and Curriculum Building | Curriculum with lesson plans, topics and learning activities  | Not started     |
+| 2    | Content Development and Curriculum Building | Curriculum with lesson plans, topics and learning activities  | Ready to submit |
 | 3    | Practical Application and Interactive Module Design | Interactive module with activity steps, delivery notes and rubrics | Not started |
 | 4    | Reflection, Evaluation, and Future Planning | Evaluation, personal reflection and future-planning proposal  | Not started     |
 
