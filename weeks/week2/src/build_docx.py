@@ -105,7 +105,7 @@ def shade_cell(cell, hex_colour):
     shading = parse_xml(f'<w:shd {nsdecls("w")} w:fill="{hex_colour}"/>')
     cell._tc.get_or_add_tcPr().append(shading)
 
-def styled_table(headers, rows, col_widths=None):
+def table(headers, rows, col_widths=None):
     table = doc.add_table(rows=1, cols=len(headers))
     table.style = "Table Grid"
     table.alignment = WD_TABLE_ALIGNMENT.CENTER
@@ -251,15 +251,27 @@ para("By the end of the module, a learner will be able to: describe a task as st
 
 doc.add_page_break()
 
-h1("2 Research summary and evidence map")
-para("Good planning starts with honest evidence. Public beginner courses and teaching studies point in the same direction: the ideas in programming are not especially hard, but the way we introduce them can make them feel hard. Learners struggle with unfamiliar words, with holding many steps in mind at once, with mistaking a variable for a box, and with the emotional sting of an error message.")
-para("This curriculum therefore sequences ideas carefully, uses worked examples and ordering tasks before free writing, makes errors normal, pairs learners, gives quick feedback, and ends with a useful personal project. The design decisions in the lesson plans are traceable to sources in the week 2 research register, or are explicitly labelled design decisions.")
+h1("2 Evidence map")
+table(["ID","Full citation (title, venue, year)","Finding used here","Design decision","Module"], [
+ ["R1", "Parsons, D. and Haden, P. (2006). Parsons programming puzzles. Australasian Computing Education Conference (ACE).", "Ordering scrambled lines teaches sequence with less load.", "Worked examples then Parsons", "m1, m4-m7"],
+ ["R2", "Sweller, J., van Merrienboer, J. and Paas, F. (1998). Cognitive architecture and instructional design. Educational Psychology Review.", "Worked examples reduce cognitive overload for novices.", "Worked-example first", "all"],
+ ["R3", "Qian, Y. and Lehman, J. (2017). Novice programming misconceptions. ACM TOCE.", "Variable-as-box misconception persists.", "Misconception checklists", "m2"],
+ ["R4", "Sentance, S., Waite, J. and Kallia, M. (2019). Teaching with PRIMM. Computer Science Education.", "Predict-run-modify cycle makes thinking visible.", "Predict-run-modify activities", "m3-m10"],
+ ["R5", "Python for Everybody (py4e.com), Severance, C. Accessed Nov 2026.", "Small wins within minutes sustain motivation.", "Tiny first success", "m1"],
+])
+para("Unverified leads: none rest a load-bearing claim. The remaining IDs R6-R9 are listed in Appendix F but do not support a claim beyond their names.")
+doc.add_heading("Design decisions (not research-backed)", level=2)
+table(["ID","Decision","Rationale"], [
+ ["D1", "Teach Python in the browser via Google Colab", "Zero installs"],
+ ["D2", "90-minute sessions, one third instruction", "Consistent rhythm"],
+ ["D3", "Capstone pass 12/16 and correctness at least two", "Keeps runnability above neatness"],
+])
 
 doc.add_page_break()
 
 h1("3 Curriculum architecture")
 para("The curriculum is ten modules totalling thirty teaching hours, built from the week 1 module list and kept consistent with it.")
-styled_table(
+table(
     ["module", "hours", "minutes", "prerequisites", "concepts introduced"],
     [
         ["m1", "3", "180", "none", "computational thinking, algorithm, sequence, decomposition, pseudocode"],
@@ -279,7 +291,7 @@ para("Hours add up to 30 (1800 minutes). The capstone module is longer at four h
 doc.add_page_break()
 h1("4 Session-by-session plan")
 para("The week 2 plan keeps the week 1 delivery shape: a ninety-minute session of arrive and recall, worked example, pair task or Parsons problem, predict-run-modify, and exit ticket, plus a buffer. The ten modules map onto twenty sessions across the planned internship period, with the capstone spread over three sessions.")
-styled_table(
+table(
     ["session", "module", "phase", "of 20", "duration (min)", "blocks"],
     [
         ["s1","m1","content","1 of 20","90", "10 + 20 + 25 + 20 + 10 + 5"],
@@ -355,7 +367,7 @@ def emit_lesson_plan(mid, title, duration_min, prerequisites, objective_ids, pla
         t = end
         total += mins
         blocks_rows.append([f"{start}-{end}", btype, dm, action, "starter + colab"])
-    styled_table(["minute range", "block type", "facilitator does", "learners do", "materials"], blocks_rows)
+    table(["minute range", "block type", "facilitator does", "learners do", "materials"], blocks_rows)
     para(f"Session A blocks sum to {total} minutes (90 minutes).")
     h2("Session B (90 minutes): consolidate and extend")
     blocks_rows = []
@@ -369,7 +381,7 @@ def emit_lesson_plan(mid, title, duration_min, prerequisites, objective_ids, pla
         t = end
         total += mins
         blocks_rows.append([f"{start}-{end}", btype, dm + " (review + extension)", "paired practice", "starter + colab"])
-    styled_table(["minute range", "block type", "facilitator does", "learners do", "materials"], blocks_rows)
+    table(["minute range", "block type", "facilitator does", "learners do", "materials"], blocks_rows)
     para(f"Session B blocks sum to {total} minutes (90 minutes). Module totals {total*2} minutes (180 planned), balanced to module length.")
     h2(f"activities")
     for a in activity_specs:
@@ -823,7 +835,7 @@ doc.add_page_break()
 
 h1("15 Assessment strategy")
 para("assessment is gentle and frequent, then once deeply. formative checks include short quizzes, exit tickets, and small exercises; the capstone is the only summative task.")
-styled_table(
+table(
     ["assessment", "when", "what it checks", "linked objectives"],
     [
         ["quiz", "start of module practice", "facts and one-step reasoning", "m1-o1, m2-o1, m3-o1, m4-o1, m5-o1, m6-o1, m7-o1, m8-o1, m9-o1"],

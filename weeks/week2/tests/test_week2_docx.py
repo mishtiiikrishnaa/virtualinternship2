@@ -40,7 +40,7 @@ def test_toc_field_present():
 def test_required_headings_in_order():
     d, full, _ = load()
     headings = [p.text.strip() for p in d.paragraphs if p.style.name.startswith("Heading")]
-    required = ["Executive summary", "1 About this curriculum", "2 Research summary and evidence map",
+    required = ["Executive summary", "1 About this curriculum", "2 Evidence map",
                 "3 Curriculum architecture", "4 Session-by-session plan", "15 Assessment strategy",
                 "16 Supporting non-programmers", "18 Validation plan and known limitations",
                 "Appendix A: activity catalogue"]

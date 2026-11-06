@@ -91,20 +91,61 @@ working small program they can explain in plain words.
 
 
                   Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 4
-2 Research summary and evidence map
-Good planning starts with honest evidence. Public beginner courses and teaching studies point in the same
-direction: the ideas in programming are not especially hard, but the way we introduce them can make them feel
-hard. Learners struggle with unfamiliar words, with holding many steps in mind at once, with mistaking a variable
-for a box, and with the emotional sting of an error message.
-This curriculum therefore sequences ideas carefully, uses worked examples and ordering tasks before free writing,
-makes errors normal, pairs learners, gives quick feedback, and ends with a useful personal project. The design
-decisions in the lesson plans are traceable to sources in the week 2 research register, or are explicitly labelled design
-decisions.
+2 Evidence map
+          ID             Full citation (title, venue,      Finding used here             Design decision                  Module
+                                     year)
+
+ R1                      Parsons, D. and Haden,         Ordering scrambled lines   Worked examples then          m1, m4-m7
+                         P. (2006). Parsons             teaches sequence with      Parsons
+                         programming puzzles.           less load.
+                         Australasian Computing
+                         Education Conference
+                         (ACE).
+
+ R2                      Sweller, J., van               Worked examples reduce     Worked-example first          all
+                         Merrienboer, J. and Paas,      cognitive overload for
+                         F. (1998). Cognitive           novices.
+                         architecture and
+                         instructional design.
+                         Educational Psychology
+                         Review.
+
+ R3                      Qian, Y. and Lehman, J.        Variable-as-box            Misconception checklists      m2
+                         (2017). Novice                 misconception persists.
+                         programming
+                         misconceptions. ACM
+                         TOCE.
+
+ R4                      Sentance, S., Waite, J.        Predict-run-modify cycle   Predict-run-modify            m3-m10
+                         and Kallia, M. (2019).         makes thinking visible.    activities
+                         Teaching with PRIMM.
+                         Computer Science
+                         Education.
+
+ R5                      Python for Everybody           Small wins within          Tiny first success            m1
+                         (py4e.com), Severance, C.      minutes sustain
+                         Accessed Nov 2026.             motivation.
+
+
+
+Unverified leads: none rest a load-bearing claim. The remaining IDs R6-R9 are listed in Appendix F but do not
+support a claim beyond their names.
+
+Design decisions (not research-backed)
+                  ID                                            Decision                                      Rationale
+
+ D1                                          Teach Python in the browser via Google          Zero installs
+                                             Colab
+
+ D2                                          90-minute sessions, one third instruction       Consistent rhythm
+
+ D3                                          Capstone pass 12/16 and correctness at least    Keeps runnability above neatness
+                                             two
 
 
 
 
-                  Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 5
+                 Virtual Programming Fundamentals Internship - Content Development and Curriculum Building | Page 5
 3 Curriculum architecture
 The curriculum is ten modules totalling thirty teaching hours, built from the week 1 module list and kept consistent
 with it.
