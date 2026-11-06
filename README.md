@@ -1,16 +1,5 @@
 <a id="readme-top"></a>
 
-<!-- PROJECT SHIELDS -->
-<div align="center">
-
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![Python][python-shield]][python-url]
-
-</div>
-
 <!-- PROJECT HEADER -->
 <br />
 <div align="center">
@@ -259,15 +248,12 @@ This is a solo internship repository, so contributions are not open in the usual
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[contributors-shield]: https://img.shields.io/github/contributors/mishtiiikrishnaa/virtualinternship2.svg?style=for-the-badge
-[contributors-url]: https://github.com/mishtiiikrishnaa/virtualinternship2/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/mishtiiikrishnaa/virtualinternship2.svg?style=for-the-badge
 [forks-url]: https://github.com/mishtiiikrishnaa/virtualinternship2/network/members
 [stars-shield]: https://img.shields.io/github/stars/mishtiiikrishnaa/virtualinternship2.svg?style=for-the-badge
 [stars-url]: https://github.com/mishtiiikrishnaa/virtualinternship2/stargazers
 [issues-shield]: https://img.shields.io/github/issues/mishtiiikrishnaa/virtualinternship2.svg?style=for-the-badge
 [issues-url]: https://github.com/mishtiiikrishnaa/virtualinternship2/issues
-[license-shield]: https://img.shields.io/badge/license-none-red.svg?style=for-the-badge
 [product-screenshot]: weeks/week2/figures/fig1_curriculum_map.png
 [python-shield]: https://img.shields.io/badge/python-3.13-blue.svg?style=for-the-badge
 [python-shield-flat]: https://img.shields.io/badge/python-3.13-3776AB.svg?style=for-the-badge&logo=python&logoColor=white
