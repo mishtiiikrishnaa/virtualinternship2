@@ -210,6 +210,10 @@ h("Peer feedback methodology", 1)
 para("Learners review each other's mini-project using a structured form: correctness, readability, completeness, creativity.")
 
 # ---- 19 rubrics ----
+h("Comprehensive evaluation framework", 1)
+para("Diagnostic pre-assessment (10 marks) identifies prior knowledge. Module-level formative assessments provide ongoing feedback. Post-module assessment (20 marks) measures achievement. Practical challenges test application. Engagement checklist and self-assessment capture learner perception. Peer feedback and facilitator observation provide external perspectives. The 100-mark rubric differentiates performance levels. Measurable indicators include pre/post gain, completion rate, error reduction, and time on task.")
+para("Assessment results identify misconceptions such as confusion between assignment and comparison, off-by-one loops, and missing return statements, informing future instruction.")
+
 h("Detailed evaluation rubrics", 1)
 table(["Criterion","Excellent (4)","Good (3)","Fair (2)","Poor (1)"],[["Variables","Correct types and names","Minor issues","Some errors","Incorrect"],["Logic","Correct output","Mostly correct","Partial","Wrong"],["Style","Clean","Acceptable","Messy","Poor"],["Debugging","All fixed","Most","Some","None"]])
 

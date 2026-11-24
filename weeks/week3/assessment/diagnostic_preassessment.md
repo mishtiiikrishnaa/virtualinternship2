@@ -1,0 +1,6 @@
+# Diagnostic Pre-Assessment (10 marks)
+1. What is a variable? (2)
+2. Predict output: x=2; x=x+3; print(x) (2)
+3. Which is comparison? (2)
+4. What repeats code? (2)
+5. What is a function? (2)
