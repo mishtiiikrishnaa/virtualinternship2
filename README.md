@@ -92,6 +92,8 @@ Week 1 deliverable: [`Project_Plan_Scope_Definition_Week1.docx`](weeks/week1/rep
 
 Week 2 deliverable: [`Curriculum_Lesson_Plans_Week2.docx`](weeks/week2/reports/Curriculum_Lesson_Plans_Week2.docx), with a PDF preview in the same folder.
 
+Week 3 deliverable: [`Interactive_Module_Week3.docx`](weeks/week3/reports/Interactive_Module_Week3.docx), with a PDF preview and the interactive app in `weeks/week3/app/`.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
