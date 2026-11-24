@@ -1,0 +1,9 @@
+Answer keys
+Variables quiz: 8
+Operators quiz: 14
+Conditionals quiz: even
+Loops quiz: 0 1 2
+Functions quiz: 5
+Parsons: score=60, if score >= 50:, print pass, else:, print fail
+Debugging 1: prints 6
+Debugging 2: age: 20

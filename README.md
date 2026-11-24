@@ -85,7 +85,7 @@ Every report is generated from source files by a script, so the documents, figur
 |------|---------------------------------------------|-----------------|
 | 1    | Project planning and scope definition       | Submitted       |
 | 2    | Content development and curriculum building | Ready to submit |
-| 3    | Not started (focus added when announced)    | Not started     |
+| 3    | Interactive learning module                 | Ready to submit |
 | 4    | Not started (focus added when announced)    | Not started     |
 
 Week 1 deliverable: [`Project_Plan_Scope_Definition_Week1.docx`](weeks/week1/reports/Project_Plan_Scope_Definition_Week1.docx), with a PDF preview in the same folder.
@@ -218,7 +218,7 @@ The four weeks belong together. They share the same cohort of learners, the same
     - [x] Executed, annotated code examples with captured output
     - [x] Capstone brief and rubric
     - [x] Assessment strategy, quiz bank, error catalogue and glossary
-- [ ] Week 3: Not started (focus added when announced)
+- [x] Week 3: Interactive learning module (ready to submit)
 - [ ] Week 4: Not started (focus added when announced)
 
 See the [open issues](https://github.com/mishtiiikrishnaa/virtualinternship2/issues) for a full list of proposed features and known issues.

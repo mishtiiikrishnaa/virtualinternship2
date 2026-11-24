@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programming Fundamentals Interactive Module</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">Programming Fundamentals</div>
+    <nav class="top-nav" aria-label="Primary">
+      <button data-nav="home" class="nav-btn active">Home</button>
+      <button data-nav="variables" class="nav-btn">Variables</button>
+      <button data-nav="operators" class="nav-btn">Operators</button>
+      <button data-nav="conditionals" class="nav-btn">Conditionals</button>
+      <button data-nav="loops" class="nav-btn">Loops</button>
+      <button data-nav="functions" class="nav-btn">Functions</button>
+      <button data-nav="debugging" class="nav-btn">Debugging</button>
+      <button data-nav="project" class="nav-btn">Mini-project</button>
+    </nav>
+    <div class="progress-wrap" aria-label="Overall progress">
+      <span id="progress-text">0% complete</span>
+      <div class="progress-bar"><div id="progress-fill"></div></div>
+    </div>
+  </header>
+
+  <main id="app" class="container"></main>
+
+  <footer class="site-footer">
+    <p>Week 3 interactive learning module. Python examples run in-browser via Pyodide. Progress saved in your browser.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
