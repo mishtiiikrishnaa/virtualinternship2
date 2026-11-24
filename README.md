@@ -15,7 +15,7 @@
     <a href="#usage"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="weeks/week2/reports/Curriculum_Lesson_Plans_Week2.docx">View the Week 2 Report</a>
+    <a href="weeks/week3/reports/Interactive_Module_Week3.docx">View the Week 3 Report</a>
     &middot;
     <a href="https://github.com/mishtiiikrishnaa/virtualinternship2/issues/new?labels=bug">Report Bug</a>
     &middot;
