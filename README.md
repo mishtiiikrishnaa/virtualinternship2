@@ -216,12 +216,14 @@ The four weeks belong together. They share the same cohort of learners, the same
 
 - [x] Week 1: Project planning and scope definition
 - [x] Week 2: Content development and curriculum building
+- [x] Week 3: Interactive learning module
+- [x] Week 4: Reflection, Evaluation, and Future Planning
     - [x] Ten module lesson plans with minute-by-minute session tables
     - [x] Executed, annotated code examples with captured output
     - [x] Capstone brief and rubric
     - [x] Assessment strategy, quiz bank, error catalogue and glossary
 - [x] Week 3: Interactive learning module (ready to submit)
-- [ ] Week 4: Not started (focus added when announced)
+- [x] Week 4: Reflection, Evaluation, and Future Planning
 
 See the [open issues](https://github.com/mishtiiikrishnaa/virtualinternship2/issues) for a full list of proposed features and known issues.
 
